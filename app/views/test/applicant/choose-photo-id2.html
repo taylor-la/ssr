@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Choose your second photo ID
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/test/applicant/choose-photo-id1",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+<form action="/test/applicant/choose-poa" method="post" class="form">
+
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Choose your second photo ID
+      </h1>
+    </legend>
+
+
+    <div class="nhsuk-hint nhsuk-u-margin-bottom-2">
+        Your document must be in date... info about expiry dates
+      </div>
+
+      <br>
+
+    <div class="nhsuk-radios">
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="eu-identity2" name="photoid2" type="radio" value="eu-identity" aria-describedby="eu-identity-hint">
+        <label class="nhsuk-label nhsuk-radios__label" for="eu-identity-hint">
+          EU identity card
+        </label>
+        <div class="nhsuk-hint nhsuk-radios__hint" id="eu-identity-hint">
+          You will need to send 2 photos - one of the front and one of the back.
+        </div>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="uk-driving2" name="photoid2" type="radio" value="uk-driving" aria-describedby="uk-driving-hint">
+        <label class="nhsuk-label nhsuk-radios__label" for="uk-driving-hints">
+          UK driving licence
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="int-driving2" name="photoid2" type="radio" value="int-driving" aria-describedby="int-driving-hint">
+        <label class="nhsuk-label nhsuk-radios__label" for="int-driving-hint">
+          EU or international driving licence
+        </label>
+        <div class="nhsuk-hint nhsuk-radios__hint" id="eu-identity-hint">
+          You will need to send 2 photos - one of the front and one of the back.
+        </div>
+      </div>
+
+    </div>
+  </fieldset>
+
+<br>
+
+{{ button({
+  "text": "Continue",
+  "id": "btn_submit"
+}) }}
+
+      </form>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I don't have one of these photo IDs
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Info about who to contact</p>
+
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+{% endblock %}
