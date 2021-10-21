@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  What you need
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v1/applicant/start",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+      <h1>
+        What you need
+      </h1>
+
+      <h3>Documents you need</h3>
+
+      <p>lists of documents</p>
+
+      <h3>technology needed</h3>
+
+      <p>info about technology</p>
+
+      <p>it will take roughly ?? minutes to complete</p>
+
+      <p>you won't be able to save your progress etc</p>
+
+
+
+
+      <a href="/v1/applicant/your-name" class="nhsuk-button">
+        Continue
+      </a>
+
+
+      <p><a href="#">How to prove who you are without sending photos of your ID</a></p>
+
+
+
+
+    </div>
+
+  </div>
+{% endblock %}

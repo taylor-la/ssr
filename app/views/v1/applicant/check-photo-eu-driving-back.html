@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your EU or International driving licence photo before you send it
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v1/applicant/take-photo-eu-driving-back",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <h2>Check your EU or International driving licence back photo before you send it</h2>
+
+
+
+      <p><a href="#">
+        What to do if you are visually impaired</a></p>
+
+        <p>Make sure:</p>
+
+        <ul>
+          <li>you can see all 4 corners of the back of the driving licence</li>
+          <li>you have not covered up any part of the driving licence with text on it</li>
+
+        </ul>
+
+        <img src="/images/passport-photo.jpg" style="max-width:600px;width:100%; margin-bottom:25px">
+
+
+        <div class="nhsuk-grid-row" style="margin-top:25px">
+                  <div class="nhsuk-grid-column-one-third">
+                    <a href="/v1/applicant/take-photo-eu-driving-back" class="nhsuk-button nhsuk-button--secondary">
+                      Retake photo
+                    </a>
+                  </div>
+                  <div class="nhsuk-grid-column-one-third">
+                    <a href="/v1/applicant/spinner-eu-driving-back" class="nhsuk-button">
+                      Send photo
+                    </a>
+                  </div>
+                </div>
+
+
+
+
+    </div>
+
+  </div>
+{% endblock %}

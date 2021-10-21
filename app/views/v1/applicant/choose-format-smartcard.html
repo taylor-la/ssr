@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Choose how to send a photo for your smartcard
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <div class="nhsuk-grid-row-two-thirds" style="background: #005eb8; padding:24px; margin-bottom:32px;">
+
+
+        <p class="nhsuk-body-s" style="color: white; margin-bottom:4px;">Step 5 of 5</p>
+
+        <h2 class="nhsuk-heading-l" style="color: white; margin-bottom:0px; padding-top:0px;">Send us a photo for your smartcard</h2>
+      </div>
+
+      <h2 style="margin-top:0px;">Send us a photo for your smartcard</h2>
+
+<p>info about what smartcard photo is used for + info about photo guidelines (can you smile etc)</p>
+
+<br>
+
+      <form action="/v1/applicant/take-photo-smartcard" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset" style="margin-bottom:50px;">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h1 class="nhsuk-fieldset__heading">
+              Choose how to send a photo for your smartcard
+            </h1>
+          </legend>
+
+          <div class="nhsuk-radios">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="take-photo2" name="format-eu-driving" type="radio" value="take-photo" aria-describedby="take-photo-hint">
+              <label class="nhsuk-label nhsuk-radios__label" for="take-photo-hints">
+                Take a photo on this device
+              </label>
+              <div class="nhsuk-hint nhsuk-radios__hint" id="take-photo1-hint">
+                        To take a photo on your device, you must have a camera... device info
+                      </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="upload-photo2" name="format-eu-driving" type="radio" value="upload-photo" aria-describedby="upload-photo-hint">
+              <label class="nhsuk-label nhsuk-radios__label" for="upload-photo-hints">
+                Upload a photo
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

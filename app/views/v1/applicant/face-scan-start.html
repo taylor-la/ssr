@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Scan your face
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+
+      <div class="nhsuk-grid-row-two-thirds" style="background: #005eb8; padding:24px; margin-bottom:32px;">
+
+
+        <p class="nhsuk-body-s" style="color: white; margin-bottom:4px;">Step 4 of 5</p>
+
+        <h2 class="nhsuk-heading-l" style="color: white; margin-bottom:0px; padding-top:0px;">Scan your face</h2>
+      </div>
+
+
+      <h2 style="margin-top:0px;">Scan your face</h2>
+<p>We need to scan your face using your device’s camera. This is to match your face to your photo I.D.</p>
+
+      <p>You must allow us access to your camera for the scan.</p>
+
+      <p><strong>During the scan the screen will flash and change colour.</strong></p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            What you can do if flashing lights or colours make you feel unwell
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>If flashing lights or colours make you feel unwell, you do not need to do the scan. Instead, you can ????</p>
+
+        </div>
+      </details>
+
+      <a href="/v1/applicant/spinner-scan-start" class="nhsuk-button">
+        Continue to scan
+      </a>
+
+
+
+    </div>
+
+  </div>
+{% endblock %}
