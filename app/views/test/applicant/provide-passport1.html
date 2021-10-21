@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Provide a photo of your passport
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/test/applicant/choose-poa",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+      <div class="nhsuk-grid-row-two-thirds" style="background: #005eb8; padding:24px; margin-bottom:32px;">
+        <p class="nhsuk-body-s" style="color: white; margin-bottom:4px;">Step 3 of 5</p>
+        <h2 class="nhsuk-heading-l" style="color: white; margin-bottom:0px; padding-top:0px;">Send us photos of your documents</h2>
+      </div>
+
+<h1 class="nhsuk-heading-l">Choose how to send a photo of your passport</h1>
+
+
+<p>We need a clear photo of your passport at the page with your photo on it.</p>
+
+      <p>Make sure:</p>
+
+      <ul>
+        <li>your photo includes all 4 corners</li>
+        <li>you can see all words, numbers and codes</li>
+        <li>there are no bright spots caused by reflection from a bright light</li>
+        <li>the text is not blurred</li>
+      </ul>
+
+<h3>Take a photo on this device</h3>
+
+<p>To take a photo on your device, you must have a camera... device info. Do not use a front-facing camera</p>
+
+      <a href="#" class="nhsuk-button">
+        Open camera
+      </a>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I can't open my camera or similar tech issue
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Info on what to do</p>
+
+        </div>
+      </details>
+
+      <h3>Upload a photo</h3>
+
+      <p>We accept the following file types... Your file must be no larger than...</p>
+
+            <a href="#" class="nhsuk-button nhsuk-button--secondary">
+              Choose a file
+            </a>
+
+            <details class="nhsuk-details">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  I can't upload my photo
+                </span>
+              </summary>
+              <div class="nhsuk-details__text">
+                <p>Info on what to do</p>
+
+              </div>
+            </details>
+
+    </div>
+
+  </div>
+{% endblock %}
