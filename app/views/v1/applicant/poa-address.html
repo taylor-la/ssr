@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Provide your address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+<div class="nhsuk-grid-row-two-thirds" style="background: #005eb8; padding:24px; margin-bottom:32px;">
+
+
+  <p class="nhsuk-body-s" style="color: white; margin-bottom:4px;">Step 3 of 5</p>
+
+  <h2 class="nhsuk-heading-l" style="color: white; margin-bottom:0px; padding-top:0px;">Provide proof of your address</h2>
+</div>
+
+<form action="/v1/applicant/address-lookup" method="post" class="form">
+
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        What is your address?
+      </h1>
+    </legend>
+
+
+    <div class="nhsuk-hint">
+        We'll check your address matches... to prove your identity.
+      </div>
+
+      <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="address-postcode">
+            Postcode
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+        </div>
+  </fieldset>
+
+{{ button({
+  "text": "Find address",
+  "id": "btn_submit"
+}) }}
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}
