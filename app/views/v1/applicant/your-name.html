@@ -76,6 +76,19 @@
         value: data['last-name']
         }) }}
 
+        {{ input({
+        label: {
+        text: "Preferred name (if applicable)"
+        },
+        "hint": {
+    "text": "This name will be printed on your identification / smartcard"
+  },
+        classes: "nhsuk-u-width-two-thirds",
+        id: "preferred-name",
+        name: "preferred-name",
+        value: data['preferred-name']
+        }) }}
+
 
 {{ button({
   "text": "Continue",
