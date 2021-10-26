@@ -42,20 +42,41 @@
         <img src="/images/passport-photo.jpg" style="max-width:600px;width:100%; margin-bottom:25px">
 
 
-        <div class="nhsuk-grid-row" style="margin-top:25px">
-                  <div class="nhsuk-grid-column-one-third">
-                    <a href="/v1/applicant/take-eu-driving-front" class="nhsuk-button nhsuk-button--secondary">
-                      Retake photo
-                    </a>
-                  </div>
-                  <div class="nhsuk-grid-column-one-third">
-                    <a href="/v1/applicant/spinner-eu-driving-front" class="nhsuk-button">
-                      Send photo
-                    </a>
-                  </div>
-                </div>
+                <form action="/v1/applicant/spinner-eu-driving-front" method="post" class="form">
 
+              <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+              Is this photo correct
+              </h1>
+              </legend>
 
+              <div class="nhsuk-radios">
+
+              <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                Yes, send this photo
+              </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                No, I want to take another photo
+              </label>
+              </div>
+
+              </fieldset>
+
+              <br>
+
+              {{ button({
+              "text": "Continue",
+              "id": "btn_submit"
+              }) }}
+
+              </form>
 
 
 

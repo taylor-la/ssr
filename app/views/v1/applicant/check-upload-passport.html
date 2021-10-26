@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Check your smartcard photo before you send it
+  Check your passport photo before you send it
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/v1/applicant/take-photo-smartcard",
+    "href": "/v1/applicant/upload-photo-passport",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -24,7 +24,7 @@
 
       <!-- Add your content here -->
 
-      <h2>Check your smartcard photo before you send it</h2>
+      <h2>Check your passport photo before you send it</h2>
 
 
 
@@ -34,19 +34,21 @@
         <p>Make sure:</p>
 
         <ul>
-          <li>advice on smartcard photo</li>
+          <li>you can see all 4 corners of the passport page that has your name on it</li>
+          <li>you have not covered up any part of the passport with your name on it</li>
 
         </ul>
 
-        <img src="/images/passport-photo.jpg" style="max-width:600px;width:100%; margin-bottom:25px">
+        <img src="/images/passport-photo.jpg" style="max-width:600px;width:100%; margin-bottom:16px;">
 
+        <p>passport-photo.jpg</p>
 
-                <form action="/v1/applicant/spinner-smartcard" method="post" class="form">
+                <form action="/v1/applicant/spinner-passport" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
-              Is this photo correct
+              Is this file correct
             </h1>
           </legend>
 
@@ -55,15 +57,14 @@
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                Yes, send this photo
+                Yes, send this file
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
               <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                No, I want to take another photo
-              </label>
+                No, I want to select a different file
             </div>
 
         </fieldset>
@@ -77,7 +78,19 @@
 
         </form>
 
-    </div>
 
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              I want to take a photo instead
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>Info about who to contact</p>
+
+          </div>
+        </details>
+
+    </div>
   </div>
 {% endblock %}
