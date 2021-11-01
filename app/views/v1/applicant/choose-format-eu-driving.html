@@ -30,7 +30,7 @@
           <div class="nhsuk-radios">
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="format-eu-driving-1" name="format-eu-driving" type="radio" value="take-photo" aria-describedby="take-photo-hint">
+              <input class="nhsuk-radios__input" id="format-eu-driving-1" name="format-eu-driving" type="radio" value="take-photo" aria-describedby="take-photo-hint" {{ checked("format-eu-driving", "take-photo") }}>
               <label class="nhsuk-label nhsuk-radios__label" for="take-photo-hints">
                 Take a photo on this device
               </label>
@@ -40,7 +40,7 @@
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="format-eu-driving-2" name="format-eu-driving" type="radio" value="upload-photo" aria-describedby="upload-photo-hint">
+              <input class="nhsuk-radios__input" id="format-eu-driving-2" name="format-eu-driving" type="radio" value="upload-photo" aria-describedby="upload-photo-hint" {{ checked("format-eu-driving", "upload-photo") }}>
               <label class="nhsuk-label nhsuk-radios__label" for="format-eu-driving-1-hints">
                 Upload a photo
               </label>

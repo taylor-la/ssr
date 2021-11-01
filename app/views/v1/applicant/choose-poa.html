@@ -41,28 +41,28 @@
     <div class="nhsuk-radios">
 
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="bank" name="poa" type="radio" value="bank" aria-describedby="bank-hint">
+        <input class="nhsuk-radios__input" id="bank" name="poa" type="radio" value="bank" aria-describedby="bank-hint" {{ checked("poa", "bank") }}>
         <label class="nhsuk-label nhsuk-radios__label" for="bank-hint">
           Bank account statement (from the last 3 months)
         </label>
       </div>
 
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="credit-card" name="poa" type="radio" value="credit-card" aria-describedby="credit-card-hint">
+        <input class="nhsuk-radios__input" id="credit-card" name="poa" type="radio" value="credit-card" aria-describedby="credit-card-hint" {{ checked("poa", "credit-card") }}>
         <label class="nhsuk-label nhsuk-radios__label" for="credit-card-hints">
           Credit card statement (from the last 3 months)
         </label>
       </div>
 
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="loan" name="poa" type="radio" value="loan" aria-describedby="loan-hint">
+        <input class="nhsuk-radios__input" id="loan" name="poa" type="radio" value="loan" aria-describedby="loan-hint" {{ checked("poa", "loan") }}>
         <label class="nhsuk-label nhsuk-radios__label" for="loan-hints">
           Loan or car finance statement (from the last 3 months)
         </label>
       </div>
 
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="mortgage" name="poa" type="radio" value="mortgage" aria-describedby="mortgage-hint">
+        <input class="nhsuk-radios__input" id="mortgage" name="poa" type="radio" value="mortgage" aria-describedby="mortgage-hint" {{ checked("poa", "mortgage") }}>
         <label class="nhsuk-label nhsuk-radios__label" for="mortgage-hints">
           Mortgage statement (from the last 12 months)
         </label>

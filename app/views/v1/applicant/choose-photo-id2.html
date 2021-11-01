@@ -41,7 +41,7 @@
     <div class="nhsuk-radios">
 
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="eu-identity2" name="photoid2" type="radio" value="eu-identity" aria-describedby="eu-identity-hint">
+        <input class="nhsuk-radios__input" id="eu-identity2" name="photoid2" type="radio" value="eu-identity" aria-describedby="eu-identity-hint" {{ checked("photoid2", "eu-identity") }}>
         <label class="nhsuk-label nhsuk-radios__label" for="eu-identity-hint">
           EU identity card
         </label>
@@ -51,14 +51,14 @@
       </div>
 
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="uk-driving2" name="photoid2" type="radio" value="uk-driving" aria-describedby="uk-driving-hint">
+        <input class="nhsuk-radios__input" id="uk-driving2" name="photoid2" type="radio" value="uk-driving" aria-describedby="uk-driving-hint" {{ checked("photoid2", "uk-driving") }}>
         <label class="nhsuk-label nhsuk-radios__label" for="uk-driving-hints">
           UK driving licence
         </label>
       </div>
 
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="int-driving2" name="photoid2" type="radio" value="int-driving" aria-describedby="int-driving-hint">
+        <input class="nhsuk-radios__input" id="int-driving2" name="photoid2" type="radio" value="int-driving" aria-describedby="int-driving-hint" {{ checked("photoid2", "int-driving") }}>
         <label class="nhsuk-label nhsuk-radios__label" for="int-driving-hint">
           EU or international driving licence
         </label>

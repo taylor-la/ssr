@@ -33,7 +33,7 @@
           <div class="nhsuk-radios">
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="format-bank-1" name="format-bank" type="radio" value="take-photo" aria-describedby="take-photo-hint">
+              <input class="nhsuk-radios__input" id="format-bank-1" name="format-bank" type="radio" value="take-photo" aria-describedby="take-photo-hint" {{ checked("format-bank", "take-photo") }}>
               <label class="nhsuk-label nhsuk-radios__label" for="format-bank-1">
                 Take a photo on this device
               </label>
@@ -43,7 +43,7 @@
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="format-bank-2" name="format-bank" type="radio" value="upload-photo" aria-describedby="upload-photo-hint">
+              <input class="nhsuk-radios__input" id="format-bank-2" name="format-bank" type="radio" value="upload-photo" aria-describedby="upload-photo-hint" {{ checked("format-bank", "upload-photo") }}>
               <label class="nhsuk-label nhsuk-radios__label" for="format-bank-2-hints">
                 Upload a photo
               </label>

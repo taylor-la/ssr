@@ -14,7 +14,7 @@
     <div class="nhsuk-grid-column-two-thirds">
 
 
-      <div class="nhsuk-grid-row-two-thirds" style="background: #005eb8; padding:24px; margin-bottom:32px;">
+
 
 
       <p class="nhsuk-body" style="color: #4c6272; ">Step 6 of 6: Send us a photo for your smartcard</p>
@@ -37,7 +37,7 @@
           <div class="nhsuk-radios">
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="format-smartcard-1" name="format-smartcard" type="radio" value="take-photo" aria-describedby="take-photo-hint">
+              <input class="nhsuk-radios__input" id="format-smartcard-1" name="format-smartcard" type="radio" value="take-photo" aria-describedby="take-photo-hint" {{ checked("format-smartcard", "take-photo") }}>
               <label class="nhsuk-label nhsuk-radios__label" for="format-smartcard-hints">
                 Take a photo on this device
               </label>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="format-smartcard-2" name="format-smartcard" type="radio" value="upload-photo" aria-describedby="upload-photo-hint">
+              <input class="nhsuk-radios__input" id="format-smartcard-2" name="format-smartcard" type="radio" value="upload-photo" aria-describedby="upload-photo-hint" {{ checked("format-smartcard", "upload-photo") }}>
               <label class="nhsuk-label nhsuk-radios__label" for="format-smartcard-2-hints">
                 Upload a photo
               </label>

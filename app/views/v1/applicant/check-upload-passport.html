@@ -55,14 +55,14 @@
           <div class="nhsuk-radios">
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="check-upload-passport-1" name="check-upload-passport" type="radio" value="yes">
+              <input class="nhsuk-radios__input" id="check-upload-passport-1" name="check-upload-passport" type="radio" value="yes" {{ checked("check-upload-passport", "yes") }}>
               <label class="nhsuk-label nhsuk-radios__label" for="check-upload-passport-1">
                 Yes, send this file
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="check-upload-passport-2" name="check-upload-passport" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="check-upload-passport-2" name="check-upload-passport" type="radio" value="no" {{ checked("check-upload-passport", "no") }}>
               <label class="nhsuk-label nhsuk-radios__label" for="check-upload-passport-2">
                 No, I want to select a different file
             </div>
