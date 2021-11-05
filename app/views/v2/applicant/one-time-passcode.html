@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your mobile phone
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v2/applicant/what-you-need",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/v2/applicant/spinner-otp" method="post" class="form">
+
+        {{ fieldset({
+          "legend": {
+            "text": "Check your mobile phone",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+        }) }}
+
+        <p>Enter the 6 digit security code we have sent to <strong>07834687435</strong></p>
+
+        <p>Your one time passcode will expire after...</p>
+
+        {% from 'input/macro.njk' import input %}
+
+        {{ input({
+          "label": {
+            "text": "Security code"
+          },
+            "hint": {
+            "text": "The code is 6 numbers"
+          },
+          id: "otp",
+          name: "otp",
+          classes: "nhsuk-input--width-10",
+          inputmode: "numeric",
+          value: data['otp']
+        }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+
+
+      </form>
+
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Not received a security code?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Info about who to contact</p>
+
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+{% endblock %}

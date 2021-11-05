@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h2>
+        Check your answers
+      </h2>
+
+      <dl class="nhsuk-summary-list">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      {{ data['first-name'] }} {{ data['middle-name'] }} {{ data['last-name'] }}
+    </dd>
+
+    <dd class="nhsuk-summary-list__actions">
+
+      <a href="/v2/applicant/enter-your-details">
+        Change<span class="nhsuk-u-visually-hidden"> first name</span>
+      </a>
+
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Preferred name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      {{ data['preferred-name'] }}
+    </dd>
+
+    <dd class="nhsuk-summary-list__actions">
+
+      <a href="/v2/applicant/enter-your-details">
+        Change<span class="nhsuk-u-visually-hidden"> preferred name</span>
+      </a>
+
+    </dd>
+
+  </div>
+
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      National Insurance number
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      {{ data['ni-number'] }}
+    </dd>
+
+    <dd class="nhsuk-summary-list__actions">
+
+      <a href="/v2/applicant/ni-number">
+        Change<span class="nhsuk-u-visually-hidden"> national insurance number</span>
+      </a>
+
+    </dd>
+
+  </div>
+</dl>
+
+
+      <p>
+        By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+      </p>
+
+      <p>
+        Your details will be...
+      </p>
+
+      <a href="/v2/applicant/spinner-details" class="nhsuk-button">
+        Submit now
+      </a>
+
+    </div>
+  </div>
+{% endblock %}
