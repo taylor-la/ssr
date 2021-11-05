@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/v1/applicant/ni-number",
+    "href": "/v1/applicant/what-you-need",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,7 +21,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/v1/applicant/check-your-answers" method="post" class="form">
+      <form action="/v1/applicant/spinner-otp" method="post" class="form">
 
         {{ fieldset({
           "legend": {
@@ -32,6 +32,8 @@
         }) }}
 
         <p>Enter the 6 digit security code we have sent to <strong>07834687435</strong></p>
+
+        <p>Your one time passcode will expire after...</p>
 
         {% from 'input/macro.njk' import input %}
 
