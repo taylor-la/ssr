@@ -29,7 +29,7 @@
       <fieldset class="nhsuk-fieldset">
   <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
     <h1 class="nhsuk-fieldset__heading">
-      Enter invitee's personal information
+      Enter their personal details
     </h1>
   </legend>
 
@@ -37,28 +37,28 @@
     <label class="nhsuk-label" for="first-name">
       First name
     </label>
-    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="first-name-1" name="first-name-1" type="text" value="{{ data['first-name-1'] }}">
+    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name-1" name="first-name-1" type="text" value="{{ data['first-name-1'] }}">
   </div>
 
   <div class="nhsuk-form-group">
     <label class="nhsuk-label" for="middle-name">
       Middle names - if applicable
     </label>
-    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="middle-name-1" name="middle-name-1" type="text" value="{{ data['middle-name-1'] }}">
+    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="middle-name-1" name="middle-name-1" type="text" value="{{ data['middle-name-1'] }}">
   </div>
 
   <div class="nhsuk-form-group">
     <label class="nhsuk-label" for="Last name">
       Last name
     </label>
-    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="last-name-1" name="last-name-1" type="text" value="{{ data['last-name-1'] }}">
+    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name-1" name="last-name-1" type="text" value="{{ data['last-name-1'] }}">
   </div>
 
   <div class="nhsuk-form-group">
     <label class="nhsuk-label" for="email-address">
       Work email address
     </label>
-    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email-address-1" name="email-address" type="text" value="{{ data['email-address'] }}">
+    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="email-address-1" name="email-address" type="text" value="{{ data['email-address'] }}">
   </div>
 
   <div class="nhsuk-form-group">
@@ -75,7 +75,7 @@
     <div class="nhsuk-hint" id="ods-code-1-hint">
     You can find the organisation's ODS code by...
   </div>
-    <input class="nhsuk-input nhsuk-input--width-10" id="ods-code-1" name="ods-code" type="text" value="{{ data['ods-code'] }}">
+    <input class="nhsuk-input nhsuk-input--width-5" id="ods-code-1" name="ods-code" type="text" value="{{ data['ods-code'] }}">
   </div>
 
 </fieldset>
@@ -83,25 +83,31 @@
 <br>
 
 <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
         <h1 class="nhsuk-fieldset__heading">
-          Has the invitee completed right to work and DBS checks?
+          Confirm DBS and right to work checks
         </h1>
       </legend>
+
+<p>Before you can invite someone you must ensure all the following checks have been completed:</p>
+<ul class="nhsuk-list nhsuk-list--bullet">
+    <li>DBS check</li>
+    <li>Right to work check</li>
+</ul>
 
       <div class="nhsuk-checkboxes">
 
         <div class="nhsuk-checkboxes__item">
           <input class="nhsuk-checkboxes__input" id="dbs-1" name="dbs" type="checkbox" value="yes"  {{ checked("dbs", "yes") }}>
           <label class="nhsuk-label nhsuk-checkboxes__label" for="dbs-1">
-            Yes - I confirm the invitee has completed right to work and DBS checks
+            I confirm the invitee has completed right to work and DBS checks
           </label>
         </div>
 
       </div>
     </fieldset>
 
-    <br>
+<br>
 
 {{ button({
   "text": "Continue",
