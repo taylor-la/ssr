@@ -12,23 +12,44 @@
 
         <div class="nhsuk-card__content">
 
-          <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
-            Invite sent
+          <h1 class="nhsuk-card__title">
+            Invite sent successfully
           </h1>
-
         </div>
 
       </div>
 
+<p>We have sent an invite to <strong>{{ data['email-address'] }}</strong> </p>
+
       <h2>What happens next</h2>
 
-      <p>Tell the user what happens next.</p>
+      <p>The user has 72 hours to complete their application.</p>
 
-      <h3>Heading about creating more invites</h3>
+      <p>They will be asked to:</p>
 
-      <a href="/v2/inviter/create-invite" class="nhsuk-button">
-        Create another invite
-      </a>
+<ul>
+<li>Confirm their details</li>
+<li>
+  Download a mobile app
+</li>
+<li>
+  Take photos of their ID documents and complete a facescan to prove their identity
+</li>
+</ul>
+
+<p>Their application will undergo automated checks and may be reviewed manually if needed. This should take XX hours.</p>
+
+<p>Their information will then be automatically passed over to CIS for...</p>
+
+      <h2>Create more invites </h2>
+
+      <div><a href="/v2/inviter/create-invite" class="nhsuk-button">
+        Create invite
+      </a></div>
+
+      <p><a href="/v2/inviter/dashboard" class="nhsuk-link">
+        Or return to dashboard</a></p>
+
 
 
     </div>
