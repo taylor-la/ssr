@@ -15,7 +15,7 @@
     <div class="nhsuk-grid-column-two-thirds">
 
 
-      <form action="/v2/applicant/ni-number" method="post" class="form">
+      <form action="/v2/applicant/date-of-birth" method="post" class="form">
 
         {{ fieldset({
           "legend": {
@@ -29,9 +29,19 @@
 
         {{ input({
         label: {
+        text: "Title (optional)"
+        },
+        classes: "nhsuk-input--width-5",
+        id: "title",
+        name: "title",
+        value: data['title']
+        }) }}
+
+        {{ input({
+        label: {
         text: "First name"
         },
-        classes: "nhsuk-u-width-two-thirds",
+        classes: "nhsuk-u-width-three-quarters",
         id: "first-name",
         name: "first-name",
         value: data['first-name']
@@ -41,7 +51,7 @@
         label: {
         text: "Middle names (if applicable)"
         },
-        classes: "nhsuk-u-width-two-thirds",
+        classes: "nhsuk-u-width-three-quarters",
         id: "middle-name",
         name: "middle-name",
         value: data['middle-name']
@@ -51,7 +61,7 @@
         label: {
         text: "Last name"
         },
-        classes: "nhsuk-u-width-two-thirds",
+        classes: "nhsuk-u-width-three-quarters",
         id: "last-name",
         name: "last-name",
         value: data['last-name']
@@ -64,7 +74,7 @@
         "hint": {
     "text": "This name will be printed on your smartcard (20 characters max)"
   },
-        classes: "nhsuk-u-width-two-thirds",
+        classes: "nhsuk-u-width-three-quarters",
         id: "preferred-name",
         name: "preferred-name",
         value: data['preferred-name']
