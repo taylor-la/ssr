@@ -1,0 +1,185 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v2/inviter/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+
+      <h1 class="nhsuk-heading-l">
+        Invite sent to James Bond
+      </h1>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+
+<dl class="nhsuk-summary-list">
+
+
+<div class="nhsuk-summary-list__row">
+<dt class="nhsuk-summary-list__key">
+Sender
+</dt>
+<dd class="nhsuk-summary-list__value">
+UUDNEN123
+</dd>
+
+</div>
+
+<div class="nhsuk-summary-list__row">
+<dt class="nhsuk-summary-list__key">
+Date sent
+</dt>
+<dd class="nhsuk-summary-list__value">
+10/12/21
+</dd>
+
+</div>
+
+<div class="nhsuk-summary-list__row">
+<dt class="nhsuk-summary-list__key">
+Status
+</dt>
+<dd class="nhsuk-summary-list__value">
+  <strong class="nhsuk-tag nhsuk-tag--blue">
+  In progress
+  </strong>
+</dd>
+
+</div>
+
+</dl>
+
+</div>
+</div>
+
+      <div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+    <h3 class="nhsuk-card__heading">
+      Personal details
+    </h3>
+
+
+      <dl class="nhsuk-summary-list">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      James Bond
+    </dd>
+
+    <dd class="nhsuk-summary-list__actions">
+
+      <a href="/v2/inviter/create-invite">
+        Change<span class="nhsuk-u-visually-hidden"> name</span>
+      </a>
+
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      James.bond@nhs.net
+    </dd>
+
+    <dd class="nhsuk-summary-list__actions">
+
+      <a href="/v2/inviter/create-invite">
+        Change<span class="nhsuk-u-visually-hidden"> email address</span>
+      </a>
+
+    </dd>
+
+  </div>
+
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Mobile number
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      079946823098
+    </dd>
+
+    <dd class="nhsuk-summary-list__actions">
+
+      <a href="/v2/inviter/create-invite">
+        Change<span class="nhsuk-u-visually-hidden"> mobile number</span>
+      </a>
+
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Organisation ODS code
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      JN345
+    </dd>
+
+    <dd class="nhsuk-summary-list__actions">
+
+      <a href="/v2/inviter/create-invite">
+        Change<span class="nhsuk-u-visually-hidden"> ods code</span>
+      </a>
+
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      DBS and right to work checks
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Completed
+    </dd>
+
+    <dd class="nhsuk-summary-list__actions">
+
+      <a href="/v2/inviter/dbs-check">
+        Change<span class="nhsuk-u-visually-hidden"> dbs</span>
+      </a>
+
+    </dd>
+
+  </div>
+
+</dl>
+
+</div>
+</div>
+
+<button class="nhsuk-button nhsuk-button--secondary" type="submit">
+  Resend invite
+</button>
+
+<p><a href="#" style="color:#d5281b; font-size:19px;" >Delete invite</a></p>
+
+    </div>
+  </div>
+{% endblock %}
