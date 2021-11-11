@@ -25,7 +25,6 @@
           }
         }) }}
 
-        <p>The name you enter here should match the name on your ID documents.</p>
 
         {{ input({
         label: {
@@ -69,12 +68,12 @@
 
         {{ input({
         label: {
-        text: "Preferred name (optional)"
+        text: "Preferred full name (optional)"
         },
         "hint": {
     "text": "This name will be printed on your smartcard (20 characters max)"
   },
-        classes: "nhsuk-u-width-three-quarters",
+        classes: "nhsuk-input--width-20",
         id: "preferred-name",
         name: "preferred-name",
         value: data['preferred-name']
@@ -87,18 +86,6 @@
 }) }}
 
       </form>
-
-      <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            What to do if your name differs from your ID documents
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-          <p>If your name differs from your ID documents you can <a href="#">prove who you are without sending a photo of your ID</a>.</p>
-
-        </div>
-      </details>
 
     </div>
   </div>
