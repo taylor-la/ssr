@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Invite sent successfully
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+        <div class="nhsuk-card__content">
+
+          <h1 class="nhsuk-card__title">
+            Invite re-sent successfully
+          </h1>
+        </div>
+
+      </div>
+
+<p>We have sent an invite to <strong>{{ data['email-address'] }}</strong> </p>
+
+      <h2>What happens next</h2>
+
+      <p>The user has 72 hours to complete their application.</p>
+
+      <p>They will be asked to:</p>
+
+<ul>
+<li>Confirm their details</li>
+<li>
+  Download a mobile app
+</li>
+<li>
+  Take photos of their ID documents and complete a facescan to prove their identity
+</li>
+</ul>
+
+<p>Their application will undergo automated checks and may be reviewed manually if needed. This should take XX hours.</p>
+
+<p>You will be notified when an ID has been checked and is ready to send to CIS</p>
+
+      <div><a href="/v2/inviter/create-invite" class="nhsuk-button">
+        Create another invite
+      </a></div>
+
+      <p><a href="/v2/inviter/dashboard" class="nhsuk-link">
+        Or return to dashboard</a></p>
+
+
+
+    </div>
+  </div>
+{% endblock %}

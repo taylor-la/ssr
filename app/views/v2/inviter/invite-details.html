@@ -88,7 +88,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/v2/inviter/create-invite">
+      <a href="/v2/inviter/resend-invite">
         Change<span class="nhsuk-u-visually-hidden"> name</span>
       </a>
 
@@ -106,7 +106,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/v2/inviter/create-invite">
+      <a href="/v2/inviter/resend-invite">
         Change<span class="nhsuk-u-visually-hidden"> email address</span>
       </a>
 
@@ -125,7 +125,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/v2/inviter/create-invite">
+      <a href="/v2/inviter/resend-invite">
         Change<span class="nhsuk-u-visually-hidden"> mobile number</span>
       </a>
 
@@ -143,7 +143,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/v2/inviter/create-invite">
+      <a href="/v2/inviter/resend-invite">
         Change<span class="nhsuk-u-visually-hidden"> ods code</span>
       </a>
 
@@ -161,7 +161,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/v2/inviter/create-invite">
+      <a href="/v2/inviter/resend-invite">
         Change<span class="nhsuk-u-visually-hidden"> dbs</span>
       </a>
 
@@ -174,9 +174,13 @@ Status
 </div>
 </div>
 
+<form action="/v2/inviter/invite-resent" method="post" class="form">
+
 <button class="nhsuk-button nhsuk-button--secondary" type="submit">
   Resend invite
 </button>
+
+</form>
 
 <p><a href="#" style="color:#d5281b; font-size:19px;" >Delete invite</a></p>
 
