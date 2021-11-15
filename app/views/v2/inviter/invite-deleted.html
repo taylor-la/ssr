@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Invite deleted successfully
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+        <div class="nhsuk-card__content">
+
+          <h1 class="nhsuk-card__title">
+            Invite deleted successfully
+          </h1>
+        </div>
+
+      </div>
+
+<p>Your invite to <strong>{{ data['email-address'] }}</strong> has been deleted </p>
+
+  <p>The user will be longer be able to use the invite link in the email.</p>
+
+      <div><a href="/v2/inviter/create-invite" class="nhsuk-button">
+        Create an invite
+      </a></div>
+
+      <p><a href="/v2/inviter/dashboard" class="nhsuk-link">
+        Or manage invites</a></p>
+
+
+
+    </div>
+  </div>
+{% endblock %}
