@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Delete invite
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v2/inviter/invite-details",
+    "text": "Back to invite",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+      <h1>
+        Delete invite sent to James Stenberg
+      </h1>
+
+      <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>The user will not be able to use the link in the invite email if you delete the invite. Other imporatnt information about deleting invites</p>
+</div>
+
+
+<form action="/v2/inviter/invite-deleted" method="post" class="form">
+
+<button class="nhsuk-button nhsuk-button--secondary" style="background-color:#d5281b;" type="submit">
+  Delete invite
+</button>
+
+</form>
+
+
+
+    </div>
+
+  </div>
+{% endblock %}
