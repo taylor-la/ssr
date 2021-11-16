@@ -4,6 +4,17 @@
   Log in
 {% endblock %}
 
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v2/inviter/start",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
 {% block content %}
   <div class="nhsuk-grid-row">
 
@@ -11,13 +22,15 @@
 
       <!-- Add your content here -->
 
-              <h1>LOG IN USING SMARTCARD CREDENTIALS</h1>
+              <h1>Log in</h1>
 
+              <p>Info about roles and permissions</p>
 
+              <a href="/v2/inviter/smartcard-passcode" class="nhsuk-button">
+                Log in
+              </a>
 
-  <script>
-    setTimeout(function () {
-      window.location.href = '/v2/inviter/dashboard';
-    }, 1500);
-  </script>
+  </div>
+
+  <div>
 {% endblock %}
