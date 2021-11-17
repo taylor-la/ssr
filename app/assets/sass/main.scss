@@ -12,3 +12,44 @@
 {
     display: inline-block;
 }
+
+.success-alert
+{
+    background-color:#f0f4f5;
+    border-width:4px;
+    border-color:#007f3b;
+
+}
+
+.success-alert-content
+{
+  display:inline;
+  vertical-align: middle;
+}
+
+.email
+{
+  background-color: white;
+}
+
+.passport-photo
+{
+  max-width:600px;
+  width:100%;
+}
+
+.small-button
+{
+  padding: 3px 16px 3px 16px;
+}
+
+.delete-button
+{
+  background-color:#d5281b;
+}
+
+.delete-link
+{
+  color:#d5281b; 
+  font-size:19px;
+}
