@@ -3,91 +3,19 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Invite details
+  Check your answers
 {% endblock %}
 
 {% block beforeContent %}
 {% endblock %}
 
-{% block outerContent %}
-  {{ backLink({
-    "href": "/v2/inviter/dashboard",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
-  }) }}
-{% endblock %}
-
 {% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
-
-      <h1 class="nhsuk-heading-xl">
-        Invite sent to James Stenberg
-      </h1>
-
-          <div class="nhsuk-card">
-      <div class="nhsuk-card__content">
-        <h3 class="nhsuk-card__heading">
-          Invite summary
-        </h3>
-
-<dl class="nhsuk-summary-list">
-
-  <div class="nhsuk-summary-list__row">
-  <dt class="nhsuk-summary-list__key">
-  Invite ID
-  </dt>
-  <dd class="nhsuk-summary-list__value">
-  08267
-  </dd>
-
-  </div>
-
-<div class="nhsuk-summary-list__row">
-<dt class="nhsuk-summary-list__key">
-Sent by
-</dt>
-<dd class="nhsuk-summary-list__value">
-malcolm@nhs.net
-</dd>
-
-</div>
-
-<div class="nhsuk-summary-list__row">
-<dt class="nhsuk-summary-list__key">
-Date sent
-</dt>
-<dd class="nhsuk-summary-list__value">
-10 Sep 2021 14:13
-</dd>
-
-</div>
-
-<div class="nhsuk-summary-list__row">
-<dt class="nhsuk-summary-list__key">
-Status
-</dt>
-<dd class="nhsuk-summary-list__value">
-  <strong class="nhsuk-tag nhsuk-tag--white">
-  Sent
-  </strong>
-</dd>
-
-</div>
-
-</dl>
-
-</div>
-</div>
-
-
-      <div class="nhsuk-card">
-  <div class="nhsuk-card__content">
-    <h3 class="nhsuk-card__heading">
-      Edit invite details
-    </h3>
-
+      <h2>
+        Check your answers
+      </h2>
 
       <dl class="nhsuk-summary-list">
 
@@ -96,7 +24,7 @@ Status
       Name
     </dt>
     <dd class="nhsuk-summary-list__value">
-      James Stenberg
+      {{ data['first-name-2'] }} {{ data['middle-name-2'] }} {{ data['last-name-2'] }}
     </dd>
 
     <dd class="nhsuk-summary-list__actions">
@@ -114,7 +42,7 @@ Status
       Email address
     </dt>
     <dd class="nhsuk-summary-list__value">
-      James.stenberg@nhs.net
+      {{ data['email-address-2'] }}
     </dd>
 
     <dd class="nhsuk-summary-list__actions">
@@ -133,7 +61,7 @@ Status
       Mobile number
     </dt>
     <dd class="nhsuk-summary-list__value">
-      079946823098
+      {{ data['mobile-number-2'] }}
     </dd>
 
     <dd class="nhsuk-summary-list__actions">
@@ -151,7 +79,7 @@ Status
       Organisation ODS code
     </dt>
     <dd class="nhsuk-summary-list__value">
-      JN345
+      {{ data['ods-code-2'] }}
     </dd>
 
     <dd class="nhsuk-summary-list__actions">
@@ -169,7 +97,7 @@ Status
       DBS and right to work checks
     </dt>
     <dd class="nhsuk-summary-list__value">
-      Completed
+      {{ data['dbs-2'] }}
     </dd>
 
     <dd class="nhsuk-summary-list__actions">
@@ -184,18 +112,24 @@ Status
 
 </dl>
 
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label--m nhsuk-u-margin-bottom-2"  for="sender-email-address">
+    What's your email address?
+  </label>
+  <div class="nhsuk-hint" id="sender-email-address-hint">
+    We'll use your email address to contact you with updates about this invite.
+  </div>
+  <input class="nhsuk-input nhsuk-u-width-three-quarters" id="sender-email-address" name="sender-email-address" type="text" aria-describedby="sender-email-address-hint" inputmode="numeric">
 </div>
-</div>
 
-<form action="/v2/inviter/resend-invite" method="post" class="form">
 
-<button class="nhsuk-button nhsuk-button--secondary" type="submit">
-  Resend invite
-</button>
 
-</form>
 
-<p><a  href="/v2/inviter/delete-invite" class="delete-link" >Delete invite</a></p>
+
+      <a href="/v2/inviter/invite-details-resent" class="nhsuk-button">
+        Re-send invite
+      </a>
 
     </div>
   </div>

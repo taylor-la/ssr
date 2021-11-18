@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Enter their personal details
+  Delete invite
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,94 +23,22 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <!-- Add your content here -->
+      <h1>
+        Re-send invite sent to James Stenberg
+      </h1>
 
-      <form action="/v2/inviter/invite-details-resent" method="post" class="form">
-
-      <fieldset class="nhsuk-fieldset">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-    <h1 class="nhsuk-fieldset__heading">
-      Enter their personal details
-    </h1>
-  </legend>
-
-  <div class="nhsuk-form-group">
-    <label class="nhsuk-label" for="first-name">
-      First name
-    </label>
-    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name-2" name="first-name-2" type="text" value="James">
-  </div>
-
-  <div class="nhsuk-form-group">
-    <label class="nhsuk-label" for="middle-name">
-      Middle names - if applicable
-    </label>
-    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="middle-name-2" name="middle-name-2" type="text" value="{{ data['middle-name-2'] }}">
-  </div>
-
-  <div class="nhsuk-form-group">
-    <label class="nhsuk-label" for="Last name">
-      Last name
-    </label>
-    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name-2" name="last-name-2" type="text" value="Stenberg">
-  </div>
+  <p>The user will receive a new email invite, they will have another 72 hours to complete their application. Other important info</p>
 
 
-  <div class="nhsuk-form-group">
-    <label class="nhsuk-label" for="email-address">
-      Work email address
-    </label>
-    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="email-address-2" name="email-address-2" type="text" value="james.stenberg@nhs.net">
-  </div>
 
-  <div class="nhsuk-form-group">
-    <label class="nhsuk-label" for="mobile-number">
-      Mobile number
-    </label>
-    <input class="nhsuk-input nhsuk-input--width-10" id="mobile-number-2" name="mobile-number-2" type="text" value="079946823098">
-  </div>
+<form action="/v2/inviter/invite-details-resent" method="post" class="form">
 
-  <div class="nhsuk-form-group">
-    <label class="nhsuk-label" for="ods-code">
-      Organisation's ODS code
-    </label>
-    <div class="nhsuk-hint" id="ods-code-1-hint">
-    You can find the organisation's ODS code by <a href="https://odsportal.digital.nhs.uk/Organisation/Search" target="_blank">checking the NHS Digital ODS portal (link opens in a new tab)</a>
-  </div>
-    <input class="nhsuk-input nhsuk-input--width-5" id="ods-code-2" name="ods-code-2" type="text" value="JN345">
-  </div>
-
-</fieldset>
-
-<div class="nhsuk-u-padding-bottom-4"></div>
-
-<fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-        <h2 class="nhsuk-fieldset__heading">
-          Confirm DBS and right to work checks
-        </h2>
-      </legend>
-
-      <div class="nhsuk-checkboxes">
-
-        <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="dbs-1" name="dbs" type="checkbox" value="completed"  {{ checked("dbs", "completed") }}>
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="dbs-1">
-            I confirm Right to Work and DBS checks have been completed
-          </label>
-        </div>
-
-      </div>
-    </fieldset>
-
-<div class="nhsuk-u-padding-bottom-4"></div>
-
-{{ button({
-  "text": "Resend invite",
-  "id": "btn_submit"
-}) }}
-
+<button class="nhsuk-button"  type="submit">
+  Re-send invite
+</button>
 
 </form>
+
 
 
     </div>
