@@ -15,34 +15,48 @@
       </h1>
 
 <form action="/v2/inviter/create-invite" method="post" class="form">
-      <button class="nhsuk-button" type="submit">
+      <button class="nhsuk-button nhsuk-u-margin-bottom-8" type="submit">
         Create an invite
       </button>
 
       </form>
 
-    <div class="nhsuk-u-padding-bottom-4"></div>
-
 <h2>Find an invite</h2>
 
-<form action="/v2/inviter/dashboard-search" method="post" class="form">
+  <form action="#" method="post" class="form">
 
 <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="searchinput">
-            Search by last name or email address
+  <label class="nhsuk-label" for="search">
+    Search by applicant name or email address
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search" type="text">
+</div>
+
+<div class="nhsuk-checkboxes">
+
+<div class="nhsuk-checkboxes__item nhsuk-u-margin-bottom-4">
+          <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+            Only show invites I have sent
           </label>
-          <input class="nhsuk-input nhsuk-input--width-20 nhsuk-u-margin-bottom-2" id="searchinput" name="searchinput" type="text" value="">
-          <button class="nhsuk-button nhsuk-button--secondary small-button" type="submit">
-            Search
-          </button>
+        </div>
 
         </div>
+
+        {{ button({
+          "text": "Search",
+          "classes": "nhsuk-button--secondary nhsuk-u-margin-bottom-8",
+          "id": "btn_submit"
+        }) }}
+
+
+        </form>
 
       </div>
 
     </div>
 
-    <form>
+
 
         <div class="nhsuk-grid-row">
 
