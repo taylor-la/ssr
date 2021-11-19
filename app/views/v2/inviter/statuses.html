@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Invite statuses
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <!-- Add your content here -->
+      <h1>
+        Invite statuses
+      </h1>
+
+      <table class="nhsuk-table">
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              Tag
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Description
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--white">
+            Sent
+            </strong></td>
+            <td class="nhsuk-table__cell ">Invitation created successfully and delivered to an email address</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--white">
+            Re-sent
+            </strong></td>
+            <td class="nhsuk-table__cell ">Invitation re-sent successfully and delivered to an email address</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--yellow">
+            Expired
+            </strong></td>
+            <td class="nhsuk-table__cell ">Invitation has expired and user has not taken action</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--blue">
+            In progress
+            </strong></td>
+            <td class="nhsuk-table__cell ">Email invite link has been clicked on by recipient</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--orange">
+            OTP failed
+            </strong></td>
+            <td class="nhsuk-table__cell ">User has failed OTP check</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--orange">
+            Duplicate
+            </strong></td>
+            <td class="nhsuk-table__cell ">User has failed CIS duplicate check</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--purple">
+            ID checking
+            </strong></td>
+            <td class="nhsuk-table__cell ">Application is within ID checking queue or in progress or on hold</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--red">
+            Failed
+            </strong></td>
+            <td class="nhsuk-table__cell ">Application ID check has failed</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--aqua-green">
+            Verified
+            </strong></td>
+            <td class="nhsuk-table__cell ">Application has passed ID check and is ready to be sent to CIS</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--green">
+            Identity created</strong></td>
+            <td class="nhsuk-table__cell ">CIS identity has been created for user</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+{% endblock %}
