@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Delete invite
+  Re-send application
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,7 +12,7 @@
 {% block outerContent %}
   {{ backLink({
     "href": "/v2/inviter/invite-details",
-    "text": "Back to invite",
+    "text": "Back to application",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
 {% endblock %}
@@ -24,17 +24,17 @@
 
       <!-- Add your content here -->
       <h1>
-        Re-send invite sent to James Stenberg
+        Re-send application sent to James Stenberg
       </h1>
 
-  <p>The user will receive a new email invite, they will have another 72 hours to complete their application. Other important info</p>
+  <p>After you have submitted the applicant's details they will be sent an email with instructions on how to carry out the identity checks required to complete the application.</p>
 
 
 
 <form action="/v2/inviter/invite-details-resent" method="post" class="form">
 
 <button class="nhsuk-button"  type="submit">
-  Re-send invite
+  Submit
 </button>
 
 </form>

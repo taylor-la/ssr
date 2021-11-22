@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Enter their personal details
+  Enter applicant's personal details
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,7 +29,7 @@
       <fieldset class="nhsuk-fieldset">
   <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
     <h1 class="nhsuk-fieldset__heading">
-      Enter their personal details
+      Enter applicant's personal details
     </h1>
   </legend>
 
@@ -60,7 +60,7 @@
       Work email address
     </label>
     <div class="nhsuk-hint" id="email-address-hint">
-    This email must be an nhs.net email or on the CIS whitelist.
+      This email must be an NHS email or an NHS approved email address from the <a href="#">CIS whitelist</a>. We will use this to send the applicant further information about the application.
   </div>
     <input class="nhsuk-input nhsuk-u-width-three-quarters" id="email-address-1" name="email-address" type="text" value="{{ data['email-address'] }}">
   </div>
@@ -70,14 +70,14 @@
       Mobile number
     </label>
     <div class="nhsuk-hint" id="mobile-hint">
-    This should be a current mobile number.
+      This should be a current mobile number. We will use this to send further information about the application.
   </div>
     <input class="nhsuk-input nhsuk-input--width-10" id="mobile-number-1" name="mobile-number" type="text" value="{{ data['mobile-number'] }}">
   </div>
 
   <div class="nhsuk-form-group">
     <label class="nhsuk-label" for="ods-code">
-      Organisation's ODS code
+      ODS code for the applicant's organisation
     </label>
     <div class="nhsuk-hint" id="ods-code-1-hint">
     You can find the organisation's ODS code by <a href="https://odsportal.digital.nhs.uk/Organisation/Search" target="_blank">checking the NHS Digital ODS portal (link opens in a new tab)</a>
@@ -89,12 +89,16 @@
 
 <div class="nhsuk-u-padding-bottom-4"></div>
 
-<fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+<fieldset class="nhsuk-fieldset" aria-describedby="dbs-1-hint">
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
         <h2 class="nhsuk-fieldset__heading">
           Confirm DBS and right to work checks
         </h2>
       </legend>
+
+      <div class="nhsuk-hint" id="dbs-1-hint">
+        Your HR department will be able to inform you if DBS and right to work checks have been done.
+      </div>
 
       <div class="nhsuk-checkboxes">
 
@@ -126,7 +130,8 @@
     </span>
   </summary>
   <div class="nhsuk-details__text">
-    <p>Info on what to do</p>
+    <p>Contact your HR or personnel department if you need help accessing information about the applicant or their employment status.
+</p>
 
   </div>
 </details>

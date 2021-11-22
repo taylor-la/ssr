@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Enter their personal details
+  Enter applicant's personal details
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,7 +12,7 @@
 {% block outerContent %}
   {{ backLink({
     "href": "/v2/inviter/invite-details",
-    "text": "Back to invite",
+    "text": "Back to application",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
 {% endblock %}
@@ -29,7 +29,7 @@
       <fieldset class="nhsuk-fieldset">
   <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
     <h1 class="nhsuk-fieldset__heading">
-      Enter their personal details
+      Enter applicant's personal details
     </h1>
   </legend>
 
@@ -60,7 +60,7 @@
       Work email address
     </label>
     <div class="nhsuk-hint" id="email-address-hint">
-    This email must be an nhs.net email or on the CIS whitelist.
+    This email must be an NHS email or an NHS approved email address from the <a href="#">CIS whitelist</a>. We will use this to send the applicant further information about the application.
   </div>
     <input class="nhsuk-input nhsuk-u-width-three-quarters" id="email-address-2" name="email-address-2" type="text" value="james.stenberg@nhs.net">
   </div>
@@ -70,14 +70,14 @@
       Mobile number
     </label>
     <div class="nhsuk-hint" id="mobile-hint">
-    This should be a current mobile number.
+    This should be a current mobile number. We will use this to send further information about the application.
   </div>
     <input class="nhsuk-input nhsuk-input--width-10" id="mobile-number-2" name="mobile-number-2" type="text" value="079946823098">
   </div>
 
   <div class="nhsuk-form-group">
     <label class="nhsuk-label" for="ods-code-2">
-      Organisation's ODS code
+      ODS code for the applicant's organisation
     </label>
     <div class="nhsuk-hint" id="ods-code-1-hint">
     You can find the organisation's ODS code by <a href="https://odsportal.digital.nhs.uk/Organisation/Search" target="_blank">checking the NHS Digital ODS portal (link opens in a new tab)</a>
@@ -96,6 +96,10 @@
         </h2>
       </legend>
 
+      <div class="nhsuk-hint" id="dbs-2-hint">
+        Your HR department will be able to inform you if DBS and right to work checks have been done.
+      </div>
+
       <div class="nhsuk-checkboxes">
 
         <div class="nhsuk-checkboxes__item">
@@ -111,7 +115,7 @@
 <div class="nhsuk-u-padding-bottom-4"></div>
 
 {{ button({
-  "text": "Resend invite",
+  "text": "Continue",
   "id": "btn_submit"
 }) }}
 

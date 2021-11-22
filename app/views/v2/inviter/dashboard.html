@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Manage Invites
+  Manage Applications
 {% endblock %}
 
 
@@ -11,23 +11,25 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        Manage Invites
+        Manage applications
       </h1>
+
+      <p>Start a new application or manage current applications.</p>
 
 <form action="/v2/inviter/create-invite" method="post" class="form">
       <button class="nhsuk-button nhsuk-u-margin-bottom-8" type="submit">
-        Create an invite
+        New application
       </button>
 
       </form>
 
-<h2>Find an invite</h2>
+<h2>Find an application</h2>
 
   <form action="#" method="post" class="form">
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="search">
-    Search by applicant name or email address
+    Enter name or email address
   </label>
   <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search" type="text">
 </div>
@@ -37,7 +39,7 @@
 <div class="nhsuk-checkboxes__item nhsuk-u-margin-bottom-4">
           <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-            Only show invites I have sent
+            Only show applications I have sent
           </label>
         </div>
 
@@ -63,7 +65,7 @@
           <div class="nhsuk-grid-column-full">
 
         <table role="table" class="nhsuk-table-responsive">
-          <caption class="nhsuk-table__caption">All invites</caption>
+          <caption class="nhsuk-table__caption">Applications</caption>
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
               <th role="columnheader" class="" scope="col">

@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Check your answers
+  Check details
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,14 +14,14 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h2>
-        Check your answers
+        Check details
       </h2>
 
       <dl class="nhsuk-summary-list">
 
   <div class="nhsuk-summary-list__row">
     <dt class="nhsuk-summary-list__key">
-      Name
+      Full name
     </dt>
     <dd class="nhsuk-summary-list__value">
       {{ data['first-name-2'] }} {{ data['middle-name-2'] }} {{ data['last-name-2'] }}
@@ -39,7 +39,7 @@
 
   <div class="nhsuk-summary-list__row">
     <dt class="nhsuk-summary-list__key">
-      Email address
+      Work email address
     </dt>
     <dd class="nhsuk-summary-list__value">
       {{ data['email-address-2'] }}
@@ -76,7 +76,7 @@
 
   <div class="nhsuk-summary-list__row">
     <dt class="nhsuk-summary-list__key">
-      Organisation ODS code
+      ODS code
     </dt>
     <dd class="nhsuk-summary-list__value">
       {{ data['ods-code-2'] }}
@@ -115,21 +115,21 @@
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label--m nhsuk-u-margin-bottom-2"  for="sender-email-address">
-    What's your email address?
+    Your email address
   </label>
   <div class="nhsuk-hint" id="sender-email-address-hint">
-    We'll use your email address to contact you with updates about this invite.
+    We'll use this to contact you with updates about this application.
   </div>
   <input class="nhsuk-input nhsuk-u-width-three-quarters" id="sender-email-address" name="sender-email-address" type="text" aria-describedby="sender-email-address-hint" inputmode="numeric">
 </div>
 
 
-
-
-
       <a href="/v2/inviter/invite-details-resent" class="nhsuk-button">
-        Re-send invite
+        Submit
       </a>
+
+      <p>After you have submitted the applicant's details they will be sent an email with instructions on how to carry out the identity checks required to complete the application.
+</p>
 
     </div>
   </div>

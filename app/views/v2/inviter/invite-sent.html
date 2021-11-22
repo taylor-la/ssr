@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Invite sent successfully
+  Application sent
 {% endblock %}
 
 {% block content %}
@@ -13,11 +13,11 @@
         <div class="nhsuk-card__content">
 
           <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
-            Invite sent successfully
+            Application sent
           </h1>
 
           <p class="nhsuk-u-font-size-24">
-            Invite ID
+            Application ID
             <br>
             <strong class="nhsuk-u-font-size-32">08267</strong>
           </p>
@@ -25,34 +25,36 @@
 
       </div>
 
-<p>We have sent an invite to <strong>{{ data['email-address'] }}</strong> </p>
+      <h2 class="nhsuk-u-margin-top-7">What happens next</h2>
 
-      <h2>What happens next</h2>
+      <p>The applicant will be asked to submit documents and use a secure mobile app to complete the identity verification process.
+</p>
 
-      <p>The user has 72 hours to complete their application.</p>
-
-      <p>They will be asked to:</p>
+      <p>They will need to:</p>
 
 <ul>
-<li>Confirm their details</li>
+<li>confirm their details</li>
 <li>
-  Download a mobile app
+  download a secure mobile app
 </li>
 <li>
-  Take photos of their ID documents and complete a facescan to prove their identity
+  photograph their ID documents
 </li>
+<li>complete a facescan to prove their identity</li>
 </ul>
 
-<p>Their application will undergo automated checks and may be reviewed manually if needed. This should take XX hours.</p>
+<p>Their application will undergo automated checks and may be reviewed manually. </p>
 
-<p>You will be notified when an ID has been checked and is ready to send to CIS</p>
+<p>The applicant will receive an email that explains what they need to do and how to use the mobile app.</p>
+
+<p class="nhsuk-u-margin-bottom-5">You will be notified when an ID has been checked and is ready to progress to the next stage.</p>
 
       <div><a href="/v2/inviter/create-invite" class="nhsuk-button">
-        Create another invite
+        New application
       </a></div>
 
       <p><a href="/v2/inviter/dashboard" class="nhsuk-link">
-        Or manage invites</a></p>
+        Or manage applications</a></p>
 
 
 
