@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Prove your identity
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+      <h1>
+        Prove your identity using the NHS app
+      </h1>
+
+      <p>What you will be asked to do</p>
+
+      <ol>
+        <li>task 1</li>
+        <li>task 2</li>
+        <li>task 3</li>
+      </ol>
+
+    <p>Your device needs a camera and must be XX OS to continue with your application. </p>
+
+    <p>You will need to download the app, it will use XX storage on your phone. </p>
+
+
+      <div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="#">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">Download the NHS app</span>
+  </a>
+</div>
+
+<p>You will also be sent a text message with a link to the app. </p>
+
+
+<div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>If you leave the app and need to return to it, you will need to click on the link in the text message again. </p>
+</div>
+
+
+    </div>
+
+  </div>
+{% endblock %}
