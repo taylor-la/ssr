@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Prove who you are
+  Confirm your mobile number
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,17 +21,26 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1 class="nhsuk-heading-l">
-        Verify your mobile number
+        Send a security code to your phone
       </h1>
 
-      <p>We will send you a 6 digit security code to your phone to confirm your phone number </p>
+      <p>We will send you a 6 digit security code to ******<strong>7435</strong> to confirm your phone number. </p>
 
 
       <a href="/v2/applicant/one-time-passcode" class="nhsuk-button">
         Send security code
       </a>
 
-
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Have we got the wrong phone number?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Get in touch with... to update your phone number. Or contact your RA to...</p>
+        </div>
+      </details>
 
     </div>
 

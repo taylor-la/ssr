@@ -91,38 +91,45 @@
 
   </div>
 
-
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Agree to terms of use
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      {{ data['terms-1'] }}
-    </dd>
-
-    <dd class="nhsuk-summary-list__actions">
-
-      <a href="/v2/applicant/agree-terms">
-        Change<span class="nhsuk-u-visually-hidden"> terms of use</span>
-      </a>
-
-    </dd>
-
-  </div>
 </dl>
 
+<form action="/v2/applicant/spinner-details" method="post" class="form">
 
-      <p>
-        By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
-      </p>
+<fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+        <h1 class="nhsuk-fieldset__heading">
+          Agree to our terms of use and privacy policy
+        </h1>
+      </legend>
 
-      <p>
-        Your details will be...
-      </p>
+      <p>By submitting this information you are confirming that, to the best of your knowledge, the details you are providing are correct. </p>
 
-      <a href="/v2/applicant/spinner-details" class="nhsuk-button">
-        Submit now
-      </a>
+      <div class="nhsuk-checkboxes">
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="terms-1" name="terms-1" type="checkbox" value="completed"  {{ checked("terms-1", "completed") }}>
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="terms-1">
+            I agree to our <a href="#">terms of use</a> and <a href="#">privacy policy</a>
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+
+    <div class="nhsuk-u-padding-bottom-4"></div>
+
+    {{ button({
+      "text": "Submit now",
+      "id": "btn_submit"
+    }) }}
+
+    </form>
+
+
+
+
+
+
 
     </div>
   </div>
