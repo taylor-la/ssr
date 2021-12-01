@@ -9,6 +9,14 @@
 {% block beforeContent %}
 {% endblock %}
 
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v2/applicant/one-time-passcode",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
 
 {% block content %}
   <div class="nhsuk-grid-row">
