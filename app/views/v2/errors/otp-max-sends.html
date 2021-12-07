@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  You have sent too many security codes
+  You cannot continue
 {% endblock %}
 
 {% block content %}
@@ -9,10 +9,25 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        You have sent too many security codes
+        You cannot continue
       </h1>
 
-      <p>Try getting in touch with your RA or the person who invited you...</p>
+      <p>You have asked for a security code too many times.</p>
+
+      <p>You must wait up to XX time before trying again.</p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Have we got the wrong phone number?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Get in touch with... to update your phone number. Or contact your RA to...</p>
+        </div>
+      </details>
+
+
 
     </div>
 

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  You have been locked out
+  You cannot continue
 {% endblock %}
 
 {% block content %}
@@ -9,12 +9,12 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        You have exceeded the max number of attempts
+        You cannot continue
       </h1>
 
-      <p>What to do if you are locked out</p>
+      <p>You have entered a wrong security code too many times.</p>
 
-    <p><a href="#">send a new security code</a></p>
+    <p>You must wait up to XX hour before trying again.</p>
 
     </div>
 
