@@ -30,7 +30,7 @@
 .warning-alert
 {
     border-width:4px;
-    border-color:#d5281b;
+    border-color:	#d5281b;
 }
 
 .warning-alert-content
@@ -45,10 +45,6 @@
   width:100%;
 }
 
-.small-button
-{
-  padding: 3px 16px 3px 16px;
-}
 
 .delete-button
 {
@@ -71,4 +67,10 @@
 .nav-bar-item
 {
   display: inline;
+}
+
+.summary-color
+
+{
+  background-color:	#f0f4f5;
 }
