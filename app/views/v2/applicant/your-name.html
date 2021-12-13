@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  What is your name
+  Enter your name
 {% endblock %}
 
 {% block beforeContent %}
@@ -27,7 +27,7 @@
 
         {{ fieldset({
           "legend": {
-            "text": "What is your name?",
+            "text": "Enter your name",
             "classes": "nhsuk-fieldset__legend--l",
             "isPageHeading": true
           }
@@ -79,7 +79,7 @@
         text: "Preferred full name (optional)"
         },
         "hint": {
-    "text": "This name will be printed on your smartcard (20 characters max)"
+    "text": "This name will appear on your staff ID and can be no longer than 20 characters."
   },
         classes: "nhsuk-input--width-20",
         id: "preferred-name",

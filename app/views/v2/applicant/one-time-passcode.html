@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Check your mobile phone
+  Enter your security code
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,15 +25,15 @@
 
         {{ fieldset({
           "legend": {
-            "text": "Check your mobile phone",
+            "text": "Enter your security code",
             "classes": "nhsuk-fieldset__legend--l",
             "isPageHeading": true
           }
         }) }}
 
-        <p>Enter the 4 digit security code we have sent to ******<strong>7435</strong>.</p>
+        <p>A 4 digit security code has been sent to your mobile phone number ending  *********<strong>5314</strong>.</p>
 
-        <p>You need to use this code within <strong>15 minutes</strong> or it will expire.</p>
+        <p>You need to enter this security code within 15 minutes or it will expire and you will need to request another.</p>
 
         {% from 'input/macro.njk' import input %}
 
@@ -42,7 +42,7 @@
             "text": "Security code"
           },
             "hint": {
-            "text": "The code is 4 numbers"
+            "text": "The code contains 4 numbers"
           },
           id: "otp",
           name: "otp",
@@ -60,7 +60,7 @@
 
       </form>
 
-      <p>If you have not received the security code, <a href="#">send the security code again</a></p>
+      <p><a href="#">Send the security code again</a> if you have not received it.</p>
 
     </div>
   </div>

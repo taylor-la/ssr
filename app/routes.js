@@ -126,4 +126,6 @@ router.post('/v1/applicant/take-photo-passport', function (req, res) {
 })
 
 
+
+
 module.exports = router;

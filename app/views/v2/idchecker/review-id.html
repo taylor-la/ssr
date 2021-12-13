@@ -4,6 +4,14 @@
   Review ID
 {% endblock %}
 
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v2/idchecker/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
 
 {% block content %}
   <div class="nhsuk-grid-row">
@@ -19,7 +27,7 @@
   <p><a href="#" class="nhsuk-link--no-visited-state">View ID checking guidance (link opens in a new tab)</a></p>
 
   <p>
-    <a href="#" class="nhsuk-button nhsuk-button--secondary">Refer ID</a>
+    <a href="#" class="nhsuk-button nhsuk-button--secondary">Move to holding list</a>
   </p>
 
 
@@ -171,6 +179,11 @@
     <div class="nhsuk-grid-column-one-half" >
 
       <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+
+      <ul class="nav-bar nhsuk-u-margin-bottom-4">
+        <li class="nav-bar-item nhsuk-u-padding-right-2"><a href="#">front</a></li>
+        <li class="nav-bar-item"><a href="#">back</a></li>
+      </ul>
 
       <img class="passport-photo" src="/images/passport-photo.jpg">
 
@@ -603,6 +616,8 @@
 
 </div>
 </div>
+
+
 
   <!-- end content -->
 

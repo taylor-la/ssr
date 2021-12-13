@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  What's your National Insurance Number?
+  Enter your National Insurance Number
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,11 +25,19 @@
 
         {{ fieldset({
           "legend": {
-            "text": "What is your National Insurance number?",
+            "text": "Enter your National Insurance number",
             "classes": "nhsuk-fieldset__legend--l",
             "isPageHeading": true
           }
         }) }}
+
+        <p>You can find your National Insurance number:</p>
+
+        <ul>
+          <li>on your payslip</li>
+          <li>on your P60</li>
+          <li>on letters about your tax, pension or benefits</li>
+        </ul>
 
         {% from 'input/macro.njk' import input %}
 
@@ -38,7 +46,7 @@
             "html": '<span class="nhsuk-u-visually-hidden">National Insurance number</span>'
           },
             "hint": {
-            "text": "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+            "text": "Your National Insurance number contains 3 letters and 6 numbers, for example: “QQ 12 34 56 C”."
           },
           id: "ni-number",
           name: "ni-number",
