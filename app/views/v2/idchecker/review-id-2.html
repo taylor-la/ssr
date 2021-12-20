@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Review ID v2
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v2/idchecker/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+
+          <h1>
+            Review ID
+          </h1>
+
+
+  <p><a href="#" class="nhsuk-link--no-visited-state">View ID checking guidance (link opens in a new tab)</a></p>
+
+      <div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+
+    <h3 class="nhsuk-card__heading">
+
+      UK passport
+    </h3>
+
+
+        <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+        <div class="container">
+          <img src="/images/id-front.jpg">
+        </div>
+      </div>
+
+      </div>
+
+      <div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+
+    <h3 class="nhsuk-card__heading">
+
+      UK Driving licence
+    </h3>
+
+
+        <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+        <div class="container">
+          <img src="/images/id-front.jpg">
+        </div>
+        <div class="container">
+          <img src="/images/id-back.jpg">
+        </div>
+
+    </div>
+
+      </div>
+
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+
+    <h3 class="nhsuk-card__heading">
+
+      Proof of address
+    </h3>
+
+
+        <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+        <div class="container">
+          <img src="/images/poa.jpg">
+          <button class="nhsuk-button nhsuk-button--reverse">Compare</button>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+
+    <h3 class="nhsuk-card__heading">
+
+      Face scan
+    </h3>
+
+
+        <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+        <div class="container">
+          <img src="/images/face-scan.jpg">
+          <button class="nhsuk-button nhsuk-button--reverse">Compare</button>
+        </div>
+      </div>
+
+      </div>
+
+      <button class="nhsuk-button nhsuk-u-margin-right-3" type="submit">
+  Approve
+</button>
+
+  <button class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-right-3">Decline</button>
+
+  <button class="nhsuk-button nhsuk-button--secondary">Refer</button>
+
+
+  <!-- end content -->
+
+  </div>
+
+</div>
+
+{% endblock %}

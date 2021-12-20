@@ -41,8 +41,8 @@
 
 .passport-photo
 {
-  max-width:600px;
   width:100%;
+  height: auto;
 }
 
 
@@ -73,4 +73,31 @@
 
 {
   background-color:	#f0f4f5;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .nhsuk-button--reverse {
+  position: absolute;
+  top: 4%;
+  left: 91%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+.key-width {
+  width: 40%;
 }
