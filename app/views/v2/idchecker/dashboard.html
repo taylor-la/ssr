@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Dashboard
+  Review applications
 {% endblock %}
 
 
@@ -11,46 +11,58 @@
     <div class="nhsuk-grid-column-full">
 
       <h1>
-        Dashboard
+        Review applications
       </h1>
 
       <ul class="nhsuk-grid-row nhsuk-card-group">
-  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
     <div class="nhsuk-card">
       <div class="nhsuk-card__content">
-        <p class="nhsuk-u-margin-bottom-1">Queue</p>
-        <p class="nhsuk-heading-xl nhsuk-u-font-size-64">4</p>
+        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">5 </p>
+        <p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Queue</p>
       </div>
     </div>
 
   </li>
 
-  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
-    <div class="nhsuk-card">
+    <div class="nhsuk-card yellow-card">
       <div class="nhsuk-card__content">
-        <p class="nhsuk-u-margin-bottom-1">Holding list</p>
-        <p class="nhsuk-heading-xl nhsuk-u-font-size-64">1</p>
+        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">2</p>
+        <p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Holding list</p>
       </div>
     </div>
 
   </li>
-  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
     <div class="nhsuk-card">
       <div class="nhsuk-card__content">
-        <p class="nhsuk-u-margin-bottom-1">Completed</p>
-        <p class="nhsuk-heading-xl nhsuk-u-font-size-64">7</p>
+        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">6</p>
+        <p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Passed</p>
+      </div>
+    </div>
+
+  </li>
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">3</p>
+        <p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Failed</p>
       </div>
     </div>
 
   </li>
 </ul>
 
-      <a href="/v2/idchecker/review-id" class="nhsuk-button">
-        Review next ID
-      </a>
+<a href="/v2/idchecker/review-id" class="nhsuk-button">
+  Review next application
+</a>
+
+      <p><a href="/v2/idchecker/holding-list">View holding list</a></p>
 
     </div>
 
