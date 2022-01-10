@@ -1,5 +1,17 @@
 {% extends 'layout.html' %}
 
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "Check staff IDs",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
 {% block pageTitle %}
   Check staff IDs
 {% endblock %}
