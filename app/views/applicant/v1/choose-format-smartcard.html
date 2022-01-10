@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Choose how to send a photo for your smartcard
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+
+
+      <p class="nhsuk-body" style="color: #4c6272; ">Step 6 of 6: Send us a photo for your smartcard</p>
+
+      <h2 style="margin-top:0px;">Send us a photo for your smartcard</h2>
+
+<p>info about what smartcard photo is used for + info about photo guidelines (can you smile etc)</p>
+
+<br>
+
+      <form action="/applicant/v1/take-photo-smartcard" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset" style="margin-bottom:50px;">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h1 class="nhsuk-fieldset__heading">
+              Choose how to send a photo for your smartcard
+            </h1>
+          </legend>
+
+          <div class="nhsuk-radios">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="format-smartcard-1" name="format-smartcard" type="radio" value="take-photo" aria-describedby="take-photo-hint" {{ checked("format-smartcard", "take-photo") }}>
+              <label class="nhsuk-label nhsuk-radios__label" for="format-smartcard-hints">
+                Take a photo on this device
+              </label>
+              <div class="nhsuk-hint nhsuk-radios__hint" id="format-smartcard-1-hint">
+                        To take a photo on your device, you must have a camera... device info
+                      </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="format-smartcard-2" name="format-smartcard" type="radio" value="upload-photo" aria-describedby="upload-photo-hint" {{ checked("format-smartcard", "upload-photo") }}>
+              <label class="nhsuk-label nhsuk-radios__label" for="format-smartcard-2-hints">
+                Upload a photo
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

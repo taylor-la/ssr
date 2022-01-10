@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Take a photo of your EU or international driving licence
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/v1/applicant/choose-format-eu-driving",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <h2>Take a photo of the front of your EU or International Driving licence</h2>
+<p>We need a clear photo of the front of your EU or International Driving licence.</p>
+
+<p>Any other device specific info.</p>
+
+      <p>Make sure:</p>
+
+      <ul>
+        <li>your photo includes all 4 corners</li>
+        <li>you can see all words, numbers and codes</li>
+        <li>there are no bright spots caused by reflection from a bright light</li>
+        <li>the text is not blurred</li>
+        <li>you do not use a front-facing camera</li>
+      </ul>
+
+
+      <a href="/applicant/v1/camera-eu-driving-front" class="nhsuk-button">
+        Open camera
+      </a>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I can't open my camera or similar tech issue
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Info on what to do</p>
+
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}

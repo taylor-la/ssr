@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Choose your proof of address document
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+<div class="nhsuk-grid-row-two-thirds" style="background: #005eb8; padding:24px; margin-bottom:32px;">
+
+
+  <p class="nhsuk-body-s" style="color: white; margin-bottom:4px;">Step 3 of 5</p>
+
+  <h2 class="nhsuk-heading-l" style="color: white; margin-bottom:0px; padding-top:0px;">Send us photos of your proof of address</h2>
+</div>
+
+<form action="/applicant/v1/choose-format-bank" method="post" class="form">
+
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Choose your proof of address document
+      </h1>
+    </legend>
+
+
+    <div class="nhsuk-hint nhsuk-u-margin-bottom-2">
+        Make sure your name and address is on the document and that it has the name or logo of the company it is from.
+      </div>
+
+      <br>
+
+
+    <div class="nhsuk-radios">
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="bank" name="poa" type="radio" value="bank" aria-describedby="bank-hint" {{ checked("poa", "bank") }}>
+        <label class="nhsuk-label nhsuk-radios__label" for="bank-hint">
+          Bank account statement (from the last 3 months)
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="credit-card" name="poa" type="radio" value="credit-card" aria-describedby="credit-card-hint" {{ checked("poa", "credit-card") }}>
+        <label class="nhsuk-label nhsuk-radios__label" for="credit-card-hints">
+          Credit card statement (from the last 3 months)
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="loan" name="poa" type="radio" value="loan" aria-describedby="loan-hint" {{ checked("poa", "loan") }}>
+        <label class="nhsuk-label nhsuk-radios__label" for="loan-hints">
+          Loan or car finance statement (from the last 3 months)
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="mortgage" name="poa" type="radio" value="mortgage" aria-describedby="mortgage-hint" {{ checked("poa", "mortgage") }}>
+        <label class="nhsuk-label nhsuk-radios__label" for="mortgage-hints">
+          Mortgage statement (from the last 12 months)
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+
+<br>
+
+{{ button({
+  "text": "Continue",
+  "id": "btn_submit"
+}) }}
+
+      </form>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I don't have one of these proof of address documents
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Info about who to contact</p>
+
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+{% endblock %}

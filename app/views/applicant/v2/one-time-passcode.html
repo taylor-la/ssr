@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your security code
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v2/send-otp",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v2/your-name" method="post" class="form">
+
+        {{ fieldset({
+          "legend": {
+            "text": "Enter your security code",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+        }) }}
+
+        <p>A 4 digit security code has been sent to your mobile phone number ending  *********<strong>5314</strong>.</p>
+
+        <p>You need to enter this security code within 15 minutes or it will expire and you will need to request another.</p>
+
+        {% from 'input/macro.njk' import input %}
+
+        {{ input({
+          "label": {
+            "text": "Security code"
+          },
+            "hint": {
+            "text": "The code contains 4 numbers"
+          },
+          id: "otp",
+          name: "otp",
+          classes: "nhsuk-input--width-10",
+          inputmode: "numeric",
+          value: data['otp']
+        }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+
+
+      </form>
+
+      <p><a href="#">Send the security code again</a> if you have not received it.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

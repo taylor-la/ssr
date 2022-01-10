@@ -1,0 +1,639 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "Check staff IDs",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Review ID v1
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v1/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+
+          <h1>
+            Review application
+          </h1>
+
+
+  <p><a href="#" class="nhsuk-link--no-visited-state">View ID checking guidance (link opens in a new tab)</a></p>
+
+  <p>
+    <a href="#" class="nhsuk-button nhsuk-button--secondary">Move to holding list</a>
+  </p>
+
+
+
+  <div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+
+
+    <div class="nhsuk-card warning-alert nhsuk-u-margin-bottom-5">
+    <div class="nhsuk-card__content nhsuk-u-padding-4">
+
+    <h3 class="nhsuk-heading-s">
+    This ID was flagged during automated checks
+    </h3>
+
+    <p>Make sure to check the following items:</p>
+
+    <ul>
+      <li>There is a document number</li>
+      <li>The document has a watermark</li>
+    </ul>
+
+    </div>
+
+    </div>
+
+    <h3 class="nhsuk-card__heading">
+
+      UK passport
+    </h3>
+
+
+    <div class="nhsuk-grid-row">
+
+      <div class="nhsuk-grid-column-one-half" >
+
+        <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+
+        <img class="passport-photo" src="/images/id-front.jpg">
+
+      </div>
+
+      <div class="nhsuk-grid-column-one-half" >
+
+
+
+    <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+      <h1 class="nhsuk-fieldset__heading">
+        Can you see everything you need to do your identity checks?
+      </h1>
+    </legend>
+
+    <div class="nhsuk-radios nhsuk-radios--inline">
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          Yes
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+          No
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+
+  <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+      <h1 class="nhsuk-fieldset__heading">
+        Does the photo id look genuine?
+      </h1>
+    </legend>
+
+    <div class="nhsuk-radios nhsuk-radios--inline">
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          Yes
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+          No
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+
+  <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+      <h1 class="nhsuk-fieldset__heading">
+        Is the photo id valid?
+      </h1>
+    </legend>
+
+    <div class="nhsuk-radios nhsuk-radios--inline">
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          Yes
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+          No
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+
+</div>
+
+</div>
+
+</div>
+
+  </div>
+</div>
+
+
+<div class="nhsuk-card">
+<div class="nhsuk-card__content">
+
+
+  <h3 class="nhsuk-card__heading">
+
+    UK driving licence
+  </h3>
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-one-half" >
+
+      <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+
+      <img class="passport-photo nhsuk-u-padding-bottom-2" src="/images/id-front.jpg">
+      <img class="passport-photo" src="/images/id-back.jpg">
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-half" >
+
+
+
+  <div class="nhsuk-form-group">
+
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Can you see everything you need to do your identity checks?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Does the photo id look genuine?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Is the photo id valid?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="nhsuk-card">
+<div class="nhsuk-card__content">
+
+
+  <h3 class="nhsuk-card__heading">
+
+    Proof of address
+  </h3>
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-one-half" >
+
+      <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+
+      <div class="container">
+        <img src="/images/poa.jpg">
+        <button class="nhsuk-button nhsuk-button--reverse">Compare</button>
+      </div>
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-half" >
+
+
+
+  <div class="nhsuk-form-group">
+
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Can you see everything you need to do your identity checks?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Is the document provided by a trusted source?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Does the address match a photo ID?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="nhsuk-card">
+<div class="nhsuk-card__content">
+
+
+  <h3 class="nhsuk-card__heading">
+
+    Compare the photo ID and personal details
+  </h3>
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-one-half" >
+
+      <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+
+      <img class="passport-photo" src="/images/id-front.jpg">
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-half" >
+
+      <dl class="nhsuk-summary-list nhsuk-summary-list--no-border summary-color nhsuk-u-padding-3">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key key-width">
+      First Name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Karen
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key key-width">
+      Middle Names
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Francis
+    </dd>
+
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key key-width">
+      Last Name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Turner
+    </dd>
+
+  </div>
+
+
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key key-width">
+      Date of birth
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      15 March 1984
+    </dd>
+
+  </div>
+
+</dl>
+
+
+
+  <div class="nhsuk-form-group">
+
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Do the date of births match?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Do the first and middle names match?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Do the last names match?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="nhsuk-card">
+<div class="nhsuk-card__content">
+
+
+  <h3 class="nhsuk-card__heading">
+
+    Face scan
+  </h3>
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-one-half" >
+
+      <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+
+      <img class="passport-photo" src="/images/face-scan.jpg">
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-half" >
+
+
+
+  <div class="nhsuk-form-group">
+
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+    <h1 class="nhsuk-fieldset__heading">
+      Do the faces from the face scan and photo ID match?
+    </h1>
+  </legend>
+
+  <div class="nhsuk-radios nhsuk-radios--inline">
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+        Yes
+      </label>
+    </div>
+
+    <div class="nhsuk-radios__item">
+      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+        No
+      </label>
+    </div>
+
+  </div>
+</fieldset>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+  <!-- end content -->
+
+  </div>
+
+</div>
+
+{% endblock %}

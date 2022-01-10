@@ -1,0 +1,330 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+  Manage Applications
+{%endblock %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Manage applications</h1>
+
+    <p>Start a new application or manage current applications.</p>
+
+    <form action="/inviter/v1/create-invite" method="post" class="form">
+      <button class="nhsuk-button nhsuk-u-margin-bottom-8" type="submit">
+        New application
+      </button>
+    </form>
+
+    <h2>Find an application</h2>
+
+    <form action="/inviter/v1/dashboard" method="get" class="form">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="search">
+          Enter name or email address
+        </label>
+        <input
+          class="nhsuk-input nhsuk-input--width-20"
+          id="search-1"
+          name="search"
+          type="text"
+        />
+      </div>
+
+      <div class="nhsuk-checkboxes">
+        <div class="nhsuk-checkboxes__item nhsuk-u-margin-bottom-4">
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-1"
+            name="example"
+            type="checkbox"
+            value="email"
+          />
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+            Only show applications I have sent
+          </label>
+        </div>
+      </div>
+      {{ button({ "text": "Search", "classes": "nhsuk-button--secondary
+      nhsuk-u-margin-bottom-8", "id": "btn_submit" }) }}
+    </form>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <table role="table" class="nhsuk-table-responsive">
+      <caption class="nhsuk-table__caption">
+        Applications
+      </caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">Full name</th>
+          <th role="columnheader" class="" scope="col">Email address</th>
+          <th role="columnheader" class="" scope="col">Sender</th>
+          <th role="columnheader" class="" scope="col">Date sent</th>
+          <th role="columnheader" class="" scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details"> James Stenberg</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >james.stenberg@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >Emerson@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>10
+            September 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--white">Sent</strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details"> Tavish Sydney</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >tavish.sydney@nhs.uk
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >Kris@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>29
+            August 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--orange"> Duplicate </strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details">Shirin Peters</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >shirin.peters@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >Nathaniel@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>4
+            August 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--blue"> In progress </strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details"> Diana Ingram</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >diana.ingram@nhs.gov.uk
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >Randal@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>28
+            July 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--yellow"> Expired </strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details">Charita Dane</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >charita.dane@careuk.com
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >Connie@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>16
+            July 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--red"> Failed </strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details">Joyce Chung</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >joyce.chung@ramsayhealth.co.uk
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >Nina@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>4 July
+            2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--purple"> Checking ID </strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details"> Christoper Ruiz</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >Christoper.Ruiz@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >Leola@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>5 July
+            2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--purple"> Checking ID </strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details">Henrietta Wilkerson</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >Henrietta.Wilkerson@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >darin@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>22
+            June 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--aqua-green"> Verified </strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details">Arnold Meyer</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >arnold.meyer@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >darin@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>15
+            June 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--aqua-green"> Verified </strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v1/invite-details"> Laurel Stenberg</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >laurel.stenberg@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >vincent@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>23 May
+            2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--aqua-green"> Verified </strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+      <ul class="nhsuk-list nhsuk-pagination__list">
+        <li class="nhsuk-pagination-item--next">
+          <a
+            class="nhsuk-pagination__link nhsuk-pagination__link--next"
+            href="#"
+          >
+            <span class="nhsuk-pagination__title">Next</span>
+            <span class="nhsuk-u-visually-hidden">:</span>
+            <span class="nhsuk-pagination__page">2 of 6</span>
+            <svg
+              class="nhsuk-icon nhsuk-icon__arrow-right"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              width="34"
+              height="34"
+            >
+              <path
+                d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% endblock %}

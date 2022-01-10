@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "Check staff IDs",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Log in
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+              <h1>LOG IN USING SMARTCARD CREDENTIALS</h1>
+
+</div>
+
+</div>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = '/idchecker/v1/dashboard';
+    }, 1500);
+  </script>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Take a photo for your smartcard
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v1/choose-format-smartcard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <h2>Take a photo for your smartcard</h2>
+
+      <p>Any other device specific info.</p>
+
+      <p>Make sure the photo:</p>
+
+      <ul>
+        <li>is clear and in focus</li>
+        <li>does not contain any other people or objects</li>
+        <li>shows you facing forwards, eyes open, with a plain expression</li>
+        <li>not have hair or other objects obscuring the face</li>
+      </ul>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Check your photo is suitable
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Info on gov guidance and link out</p>
+
+        </div>
+      </details>
+
+
+      <a href="/applicant/v1/camera-smartcard" class="nhsuk-button">
+        Open camera
+      </a>
+
+
+
+    </div>
+
+  </div>
+{% endblock %}

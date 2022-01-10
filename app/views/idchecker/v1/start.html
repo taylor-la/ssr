@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "Check staff IDs",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Check staff IDs
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Service name
+      </h1>
+
+      <p>Use this service to:</p>
+
+      <ul>
+        <li>do something</li>
+        <li>update your name, address or other details</li>
+        <li>do something else</li>
+      </ul>
+
+
+
+
+      <a href="/idchecker/v1/log-in" class="nhsuk-button">
+        Log in
+      </a>
+
+      <h2 class="nhsuk-heading-m">Before you start</h2>
+
+      <p>You can only use this service if you have smartcard access.</p>
+
+    </div>
+
+  </div>
+{% endblock %}

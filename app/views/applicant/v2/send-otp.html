@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Send a security code to your phone
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v2/start",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-l">
+        Send a security code to your phone
+      </h1>
+
+      <p>To continue with the application you will need to enter a 4 digit security code.</p>
+
+      <p>This code will be sent to your mobile phone number ending ******<strong>7435</strong></p>
+
+        <p>The code needs to be <strong>used within 15 minutes</strong> from when it is sent.</p>
+
+
+      <a href="/applicant/v2/one-time-passcode" class="nhsuk-button">
+        Send code
+      </a>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Mobile number is incorrect
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>TBC</p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}
