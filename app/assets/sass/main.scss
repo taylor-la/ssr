@@ -96,7 +96,18 @@
   -ms-transform: translate(-50%, -50%);
 }
 
+.container .show-id {
+  position: absolute;
+  top: 6%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 
+.show-id {
+  background-color: #ffffff;
+  padding:0.4rem;
+}
 
 .key-width {
   width: 40%;

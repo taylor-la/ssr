@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  Review ID v1
+  Review Application
 {% endblock %}
 
 {% block outerContent %}
@@ -26,614 +26,471 @@
 
 
 {% block content %}
-  <div class="nhsuk-grid-row">
+<div class="nhsuk-grid-row">
 
-    <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-full">
 
+    <h1>Review application</h1>
 
-          <h1>
-            Review application
-          </h1>
+    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-5" href="/idchecker/v1/move-to-holding">Move to holding</a>
 
-
-  <p><a href="#" class="nhsuk-link--no-visited-state">View ID checking guidance (link opens in a new tab)</a></p>
-
-  <p>
-    <a href="#" class="nhsuk-button nhsuk-button--secondary">Move to holding list</a>
-  </p>
-
-
-
-  <div class="nhsuk-card">
-  <div class="nhsuk-card__content">
-
-
-    <div class="nhsuk-card warning-alert nhsuk-u-margin-bottom-5">
-    <div class="nhsuk-card__content nhsuk-u-padding-4">
-
-    <h3 class="nhsuk-heading-s">
-    This ID was flagged during automated checks
-    </h3>
-
-    <p>Make sure to check the following items:</p>
-
-    <ul>
-      <li>There is a document number</li>
-      <li>The document has a watermark</li>
-    </ul>
-
-    </div>
-
-    </div>
-
-    <h3 class="nhsuk-card__heading">
-
-      UK passport
-    </h3>
-
-
-    <div class="nhsuk-grid-row">
-
-      <div class="nhsuk-grid-column-one-half" >
-
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Photo ID 1</h2>
+        <p class="nhsuk-card__description">Any information from paycasso goes here</p>
         <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+        <div class="container">
+          <img src="/images/id-front.jpg">
+        </div>
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
 
-        <img class="passport-photo" src="/images/id-front.jpg">
-
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Is this ID acceptable?
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="yes-1" name="photo-id-1" type="radio" value="yes" aria-controls="yes-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="yes-1">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-1" name="photo-id-1" type="radio" value="no" aria-controls="conditional-no-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="no-1">
+                  No
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-1">
+        
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject application</a>
+        
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
       </div>
+    </div>
 
-      <div class="nhsuk-grid-column-one-half" >
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Photo ID 2</h2>
+        <p class="nhsuk-card__description">Any information from paycasso goes here</p>
+        <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <div class="container">
+              <img src="/images/id-front.jpg">
+              <a class="show-id" href="">Expand</a>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half">
+            <div class="container">
+              <img src="/images/id-back.jpg">
+              <a class="show-id" href="#">Expand</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
 
-
-
-    <div class="nhsuk-form-group">
-
-  <fieldset class="nhsuk-fieldset">
-    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-      <h1 class="nhsuk-fieldset__heading">
-        Can you see everything you need to do your identity checks?
-      </h1>
-    </legend>
-
-    <div class="nhsuk-radios nhsuk-radios--inline">
-
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-          Yes
-        </label>
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Is this ID acceptable?
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="yes-2" name="photo-id-2" type="radio" value="yes" aria-controls="conditional-yes-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="yes-2">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-2" name="photo-id-2" type="radio" value="no" aria-controls="conditional-no-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="no-2">
+                  No
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-2">
+        
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject application</a>
+        
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
       </div>
+    </div>
 
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-          No
-        </label>
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Proof of address</h2>
+        <p class="nhsuk-card__description">Any information from paycasso goes here</p>
+        <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <div class="container">
+              <img src="/images/poa.jpg">
+              <a class="show-id" href="#">Expand</a>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-expander-group">
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Photo ID 1
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/id-front.jpg">
+                  </div>
+                </div>
+              </details>
+            
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Photo ID 2
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/id-front.jpg">
+                  </div>
+                </div>
+              </details>
+
+            </div>
+          </div>
+        </div>
+        
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Is this proof of address acceptable?
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="yes-3" name="poa" type="radio" value="yes" aria-controls="conditional-yes-3" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="yes-3">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-3" name="poa" type="radio" value="no" aria-controls="conditional-no-3" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="no-3">
+                  No
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-3">
+        
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject application</a>
+        
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
       </div>
-
     </div>
-  </fieldset>
 
-  <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
-    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-      <h1 class="nhsuk-fieldset__heading">
-        Does the photo id look genuine?
-      </h1>
-    </legend>
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Personal Details</h2>
+        <p class="nhsuk-card__description">Any information from paycasso goes here</p>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-expander-group">
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Photo ID 1
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/id-front.jpg">
+                  </div>
+                </div>
+              </details>
+            
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Photo ID 2
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/id-front.jpg">
+                  </div>
+                </div>
+              </details>
 
-    <div class="nhsuk-radios nhsuk-radios--inline">
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Proof of address
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/poa.jpg">
+                  </div>
+                </div>
+              </details>
 
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-          Yes
-        </label>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half">
+            
+            <dl class="nhsuk-summary-list nhsuk-summary-list--no-border summary-color nhsuk-u-padding-3">
+
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key key-width">
+                  First Name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Karen
+                </dd>
+              </div>
+
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key key-width">
+                  Middle Names
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Francis
+                </dd>
+
+              </div>
+
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key key-width">
+                  Last Name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Turner
+                </dd>
+
+              </div>
+
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key key-width">
+                  Date of birth
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  15 March 1984
+                </dd>
+
+              </div>
+
+            </dl>
+          </div>
+        </div>
+        
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Do the personal details match the photo IDs and proof of address?
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="yes-4" name="personal-details" type="radio" value="yes" aria-controls="conditional-yes-4" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="yes-4">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-4" name="personal-details" type="radio" value="no" aria-controls="conditional-no-4" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="no-4">
+                  No
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-4">
+        
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject application</a>
+        
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
       </div>
+    </div>
 
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-          No
-        </label>
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Face scan</h2>
+        <p class="nhsuk-card__description">Any information from paycasso goes here</p>
+        <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <div class="container">
+              <img src="/images/face-scan.jpg">
+              <a class="show-id" href="#">Expand</a>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-expander-group">
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Photo ID 1
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/id-front.jpg">
+                  </div>
+                </div>
+              </details>
+            
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Photo ID 2
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/id-front.jpg">
+                  </div>
+                </div>
+              </details>
+
+            </div>
+          </div>
+        </div>
+        
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Does the face scan match the photo IDs?
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="yes-5" name="face-scan" type="radio" value="yes" aria-controls="conditional-yes-5" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="yes-5">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-5" name="face-scan" type="radio" value="no" aria-controls="conditional-no-5" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="no-5">
+                  No
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-5">
+        
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject application</a>
+        
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
       </div>
-
     </div>
-  </fieldset>
 
-  <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
-    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-      <h1 class="nhsuk-fieldset__heading">
-        Is the photo id valid?
-      </h1>
-    </legend>
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Smartcard photo</h2>
+        <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+        <div class="container">
+          <img src="/images/id-front.jpg">
+        </div>
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
 
-    <div class="nhsuk-radios nhsuk-radios--inline">
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Is the smartcard photo acceptable?
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="yes-6" name="smartcard" type="radio" value="yes" aria-controls="conditional-yes-6" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="yes-6">
+                  Yes
+                </label>
+              </div>
 
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-          Yes
-        </label>
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-yes-6">
+        
+                <a class="nhsuk-button nhsuk-u-margin-top-3" href="/idchecker/v1/approval">Appove application</a>
+        
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-6" name="smartcard" type="radio" value="no" aria-controls="conditional-no-6" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="no-6">
+                  No
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-6">
+        
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject application</a>
+        
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
       </div>
-
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-          No
-        </label>
-      </div>
-
     </div>
-  </fieldset>
 
-</div>
+    
 
-</div>
 
-</div>
+<!-- end content -->
 
   </div>
 </div>
-
-
-<div class="nhsuk-card">
-<div class="nhsuk-card__content">
-
-
-  <h3 class="nhsuk-card__heading">
-
-    UK driving licence
-  </h3>
-
-
-  <div class="nhsuk-grid-row">
-
-    <div class="nhsuk-grid-column-one-half" >
-
-      <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
-
-      <img class="passport-photo nhsuk-u-padding-bottom-2" src="/images/id-front.jpg">
-      <img class="passport-photo" src="/images/id-back.jpg">
-
-    </div>
-
-    <div class="nhsuk-grid-column-one-half" >
-
-
-
-  <div class="nhsuk-form-group">
-
-<fieldset class="nhsuk-fieldset">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Can you see everything you need to do your identity checks?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Does the photo id look genuine?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Is the photo id valid?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-<div class="nhsuk-card">
-<div class="nhsuk-card__content">
-
-
-  <h3 class="nhsuk-card__heading">
-
-    Proof of address
-  </h3>
-
-
-  <div class="nhsuk-grid-row">
-
-    <div class="nhsuk-grid-column-one-half" >
-
-      <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
-
-      <div class="container">
-        <img src="/images/poa.jpg">
-        <button class="nhsuk-button nhsuk-button--reverse">Compare</button>
-      </div>
-
-    </div>
-
-    <div class="nhsuk-grid-column-one-half" >
-
-
-
-  <div class="nhsuk-form-group">
-
-<fieldset class="nhsuk-fieldset">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Can you see everything you need to do your identity checks?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Is the document provided by a trusted source?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Does the address match a photo ID?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-<div class="nhsuk-card">
-<div class="nhsuk-card__content">
-
-
-  <h3 class="nhsuk-card__heading">
-
-    Compare the photo ID and personal details
-  </h3>
-
-
-  <div class="nhsuk-grid-row">
-
-    <div class="nhsuk-grid-column-one-half" >
-
-      <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
-
-      <img class="passport-photo" src="/images/id-front.jpg">
-
-    </div>
-
-    <div class="nhsuk-grid-column-one-half" >
-
-      <dl class="nhsuk-summary-list nhsuk-summary-list--no-border summary-color nhsuk-u-padding-3">
-
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key key-width">
-      First Name
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      Karen
-    </dd>
-
-  </div>
-
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key key-width">
-      Middle Names
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      Francis
-    </dd>
-
-  </div>
-
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key key-width">
-      Last Name
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      Turner
-    </dd>
-
-  </div>
-
-
-
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key key-width">
-      Date of birth
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      15 March 1984
-    </dd>
-
-  </div>
-
-</dl>
-
-
-
-  <div class="nhsuk-form-group">
-
-<fieldset class="nhsuk-fieldset">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Do the date of births match?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Do the first and middle names match?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Do the last names match?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-<div class="nhsuk-card">
-<div class="nhsuk-card__content">
-
-
-  <h3 class="nhsuk-card__heading">
-
-    Face scan
-  </h3>
-
-
-  <div class="nhsuk-grid-row">
-
-    <div class="nhsuk-grid-column-one-half" >
-
-      <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
-
-      <img class="passport-photo" src="/images/face-scan.jpg">
-
-    </div>
-
-    <div class="nhsuk-grid-column-one-half" >
-
-
-
-  <div class="nhsuk-form-group">
-
-<fieldset class="nhsuk-fieldset">
-  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-    <h1 class="nhsuk-fieldset__heading">
-      Do the faces from the face scan and photo ID match?
-    </h1>
-  </legend>
-
-  <div class="nhsuk-radios nhsuk-radios--inline">
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-        No
-      </label>
-    </div>
-
-  </div>
-</fieldset>
-
-
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-
-
-  <!-- end content -->
-
-  </div>
-
-</div>
-
 {% endblock %}
