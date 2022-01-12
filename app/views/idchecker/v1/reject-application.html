@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  Reject application
+  Decline application
 {% endblock %}
 
 {% block outerContent %}
@@ -33,53 +33,90 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1 class="nhsuk-heading-xl">Reject application</h1>
+      <h1 class="nhsuk-heading-xl">Decline application</h1>
 
       <form action="/idchecker/v1/dashboard" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-2">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
             <h1 class="nhsuk-fieldset__heading">
-              Reason for rejecting
+              Why are you declining photo ID 1?
             </h1>
           </legend>
 
-          <div class="nhsuk-radios">
+          <div class="nhsuk-radios nhsuk-radios--conditional">
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="reason1" name="reject" type="radio" value="passport" aria-describedby="reason1-hint">
+              <input class="nhsuk-radios__input" id="reason1" name="decline" type="radio" value="passport" aria-describedby="reason1-hint">
               <label class="nhsuk-label nhsuk-radios__label" for="reason1-hints">
-                Reason 1
+                User has not sent an ID
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="reason2" name="reject" type="radio" value="reason2" aria-describedby="reason2-hint">
+              <input class="nhsuk-radios__input" id="reason2" name="decline" type="radio" value="reason2" aria-describedby="reason2-hint">
               <label class="nhsuk-label nhsuk-radios__label" for="reason2-hints">
-                Reason 2
+                It is not a type of ID we accept
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="reason3" name="reject" type="radio" value="reason3" aria-describedby="reason3-hint">
+              <input class="nhsuk-radios__input" id="reason3" name="decline" type="radio" value="reason3" aria-describedby="reason3-hint">
               <label class="nhsuk-label nhsuk-radios__label" for="reason3-hints">
-                Reason 3
+                Whole document is fake
               </label>
             </div>
 
-          </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="reason3" name="decline" type="radio" value="reason3" aria-describedby="reason3-hint">
+              <label class="nhsuk-label nhsuk-radios__label" for="reason3-hints">
+                Photo or information has been tampered with
+              </label>
+            </div>
 
-          <div class="nhsuk-form-group nhsuk-u-margin-top-5">
-            <label class="nhsuk-label" for="example">
-              Additional information
-            </label>
-            <textarea class="nhsuk-textarea" id="example" name="example" rows="3" aria-describedby="example-hint"></textarea>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="reason3" name="decline" type="radio" value="reason3" aria-describedby="reason3-hint">
+              <label class="nhsuk-label nhsuk-radios__label" for="reason3-hints">
+                Expired
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="other" name="decline" type="radio" value="other" aria-describedby="rother-hint" aria-controls="conditional-other" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="other-hints">
+                Cannot see everything clearly
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-other">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="other">
+                  Which part of the ID is affected, and how?
+                </label>
+                <div class="nhsuk-hint" id="example-hint">
+                  Tell us if:
+                  <ul>
+                    <li>anything is covered up, and how</li> 
+                    <li>anything is cut off</li>
+                    <li>there is glare</li>
+                    <li>there is blur</li>
+                    <li>it's too light</li>
+                    <li>it's too dark</li>
+                    <li>anything else is making it difficult for you to see the information clearly</li>
+                  </ul>
+                </div>
+                <textarea class="nhsuk-textarea" id="example" name="decline" rows="3" aria-describedby="example-hint"></textarea>
+              </div>
+      
+            </div>
+
           </div>
 
         </fieldset>
 
-        <button class="nhsuk-button nhsuk-button--secondary delete-button"  type="submit">
-          Reject
+        <button class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-5"  type="submit">
+          Decline
         </button>
 
       </form>

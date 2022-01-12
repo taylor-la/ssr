@@ -40,38 +40,84 @@
         <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-2">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
             <h1 class="nhsuk-fieldset__heading">
-              Reason for moving
+              Why are you moving this application?
             </h1>
           </legend>
 
-          <div class="nhsuk-radios">
+          <div class="nhsuk-radios nhsuk-radios--conditional">
 
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="reason1" name="holding" type="radio" value="passport" aria-describedby="reason1-hint">
               <label class="nhsuk-label nhsuk-radios__label" for="reason1-hints">
-                Reason 1
+                Potential fraud
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="reason2" name="holding" type="radio" value="reason2" aria-describedby="reason2-hint">
               <label class="nhsuk-label nhsuk-radios__label" for="reason2-hints">
-                Reason 2
+                Potential safeguarding
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="reason3" name="holding" type="radio" value="reason3" aria-describedby="reason3-hint">
               <label class="nhsuk-label nhsuk-radios__label" for="reason3-hints">
-                Reason 3
+                Spelling mistake / 1 letter difference
               </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="reason3" name="holding" type="radio" value="reason3" aria-describedby="reason3-hint">
+              <label class="nhsuk-label nhsuk-radios__label" for="reason3-hints">
+                Shortened name / nickname
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="reason3" name="holding" type="radio" value="reason3" aria-describedby="reason3-hint">
+              <label class="nhsuk-label nhsuk-radios__label" for="reason3-hints">
+                Names switched
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="reason3" name="holding" type="radio" value="reason3" aria-describedby="reason3-hint">
+              <label class="nhsuk-label nhsuk-radios__label" for="reason3-hints">
+                System issue
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="reason3" name="holding" type="radio" value="reason3" aria-describedby="reason3-hint">
+              <label class="nhsuk-label nhsuk-radios__label" for="reason3-hints">
+                Automation issue
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="other" name="holding" type="radio" value="other" aria-describedby="rother-hint" aria-controls="conditional-other" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="other-hints">
+                Other
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-other">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="other">
+                  Please specify
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="other" name="other" type="text">
+              </div>
+      
             </div>
 
           </div>
 
           <div class="nhsuk-form-group nhsuk-u-margin-top-5">
             <label class="nhsuk-label" for="example">
-              Additional information
+              Additional information (optional)
             </label>
             <textarea class="nhsuk-textarea" id="example" name="holding" rows="3" aria-describedby="example-hint"></textarea>
           </div>
