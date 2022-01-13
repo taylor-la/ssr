@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Delete application
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v2/invite-details",
+    "text": "Back to application",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+      <h1>
+        Delete application for James Stenberg
+      </h1>
+
+  <p>When you delete the application it will be removed from your applications list.</p>
+
+<p>The applicant will not be able to continue the application.</p>
+
+<p>If you need to return to the application for this person you will need to start the process again.</p>
+
+
+<form action="/inviter/v2/invite-deleted" method="post" class="form">
+
+<button class="nhsuk-button nhsuk-button--secondary delete-button"  type="submit">
+  Delete application
+</button>
+
+</form>
+
+
+
+    </div>
+
+  </div>
+{% endblock %}

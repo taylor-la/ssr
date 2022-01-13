@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your National Insurance Number
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v3/date-of-birth",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v3/check-your-answers" method="post" class="form">
+
+        {{ fieldset({
+          "legend": {
+            "text": "Enter your National Insurance number",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+        }) }}
+
+        <p>You can find your National Insurance number:</p>
+
+        <ul>
+          <li>on your payslip</li>
+          <li>on your P60</li>
+          <li>on letters about your tax, pension or benefits</li>
+        </ul>
+
+        {% from 'input/macro.njk' import input %}
+
+        {{ input({
+          "label": {
+            "html": '<span class="nhsuk-u-visually-hidden">National Insurance number</span>'
+          },
+            "hint": {
+            "text": "Your National Insurance number contains 3 letters and 6 numbers, for example: “QQ 12 34 56 C”."
+          },
+          id: "ni-number",
+          name: "ni-number",
+          classes: "nhsuk-input--width-10",
+          inputmode: "numeric",
+          value: data['ni-number']
+        }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

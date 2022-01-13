@@ -32,78 +32,104 @@
     <div class="nhsuk-grid-column-three-quarters">
 
       <!-- Change the page title here -->
-      <h1>
-        SSR Prototype
+      <h1 class="nhsuk-u-margin-bottom-5">
+        Apply for a Staff ID
       </h1>
 
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <p class="nhsuk-body-l">Prototypes for the Apply for a Staff ID service (SSR project).</p>
 
-      <div class="nhsuk-card" >
-        <div class="nhsuk-card__content">
-          <h2>In development</h2>
+      <div class="nhsuk-expander-group">
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Aligned to test
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <h4><a class="nhsuk-link nhsuk-link--no-visited-state" href="/inviter/v1/start">Inviter (v1)</a></h4>
 
-          <h3>Inviter (v1)</h3>
+            <p>Basic inviter journey including create, edit and delete invites.</p>
 
-          <ul class="nhsuk-list nhsuk-list--bullet">
-            <li><a href="/inviter/v1/start" class="nhsuk-link--no-visited-state">Start</a></li>
-            <li><a href="/inviter/v1/create-invite" class="nhsuk-link--no-visited-state">Create an application</a></li>
-            <li><a href="/inviter/v1/dashboard" class="nhsuk-link--no-visited-state">Manage applications</a></li>
-            <li><a href="/inviter/v1/invite-details" class="nhsuk-link--no-visited-state">Application details</a></li>
-          </ul>
-    
-          <h3>Applicant (v2)</h3>
+            <h4><a class="nhsuk-link nhsuk-link--no-visited-state" href="/applicant/v2/start">Applicant (v2)</a></h4>
 
-          <ul class="nhsuk-list nhsuk-list--bullet">
-            <li><a href="/applicant/v2/invite-email" class="nhsuk-link--no-visited-state">Email</a></li>
-            <li><a href="/applicant/v2/start" class="nhsuk-link--no-visited-state">Start</a></li>
-            <li><a href="/applicant/v2/send-otp" class="nhsuk-link--no-visited-state">Security code</a></li>
-            <li><a href="/applicant/v2/your-name" class="nhsuk-link--no-visited-state">Confirm your details</a></li>
-          </ul>
-        </div>
-      </div>
+            <p>Basic applicant journey including email, security code, personal details and handover to paycasso.</p>
       
-      <div class="nhsuk-card">
-        <div class="nhsuk-card__content">
-          <h2>In design</h2>
-          <h3>ID checker (v1)</h3>
+          </div>
+        </details>
+      
+      <!-- 
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Ready for development
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>N/A</p>
+          </div>
+        </details>
 
-          <ul class="nhsuk-list nhsuk-list--bullet">
-            <li><a href="/idchecker/v1/start" class="nhsuk-link--no-visited-state">Start</a></li>
-            <li><a href="/idchecker/v1/dashboard" class="nhsuk-link--no-visited-state">Dashboard</a></li>
-            <li><a href="/idchecker/v1/review-id" class="nhsuk-link--no-visited-state">Review Application</a></li>
-            <li><a href="/idchecker/v1/holding-list" class="nhsuk-link--no-visited-state">Holding list</a></li>
-          </ul>
+      -->
 
-        <h3>Errors (v1)</h3>
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              In design
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <h4><a class="nhsuk-link nhsuk-link--no-visited-state" href="/idchecker/v1/start">ID checker (v1)</a></h4>
+            <p>Basic ID checker journey including review application, and holding list.</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li><a href="/idchecker/v1/dashboard" class="nhsuk-link--no-visited-state">Dashboard</a></li>
+              <li><a href="/idchecker/v1/review-application" class="nhsuk-link--no-visited-state">Review application</a></li>
+              <li><a href="/idchecker/v1/holding-list" class="nhsuk-link--no-visited-state">Holding list</a></li>
+              <li><a href="/idchecker/v1/move-to-holdinh" class="nhsuk-link--no-visited-state">Move to holding</a></li>
+              <li><a href="/idchecker/v1/reject-application" class="nhsuk-link--no-visited-state">Decline application</a></li>
+            </ul>
+            <h4>Errors (v1)</h4>
+            <p>Generic error pages across all user journeys.</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li><a href="/errors/v1/404" class="nhsuk-link--no-visited-state">Page not found</a></li>
+              <li><a href="/errors/v1/500" class="nhsuk-link--no-visited-state">Technical problem</a></li>
+              <li><a href="/errors/v1/503" class="nhsuk-link--no-visited-state">Service not available</a></li>
+              <li><a href="/errors/v1/401" class="nhsuk-link--no-visited-state">Access denied</a></li>
+              <li><a href="/errors/v1/time-out" class="nhsuk-link--no-visited-state">Time out</a></li>
+            </ul>
+          </div>
+        </details>
 
-          <ul class="nhsuk-list nhsuk-list--bullet">
-            <li><a href="/errors/create-invite-error" class="nhsuk-link--no-visited-state">Create application email error</a></li>
-            <li><a href="/errors/404" class="nhsuk-link--no-visited-state">Page not found</a></li>
-            <li><a href="/errors/500" class="nhsuk-link--no-visited-state">Technical problem</a></li>
-            <li><a href="/errors/503" class="nhsuk-link--no-visited-state">Service not available</a></li>
-            <li><a href="/errors/401" class="nhsuk-link--no-visited-state">Access denied</a></li>
-            <li><a href="/errors/time-out" class="nhsuk-link--no-visited-state">Time out</a></li>
-            <li><a href="/errors/invite-expired" class="nhsuk-link--no-visited-state">Invite expired</a></li>
-            <li><a href="/errors/invite-invalid" class="nhsuk-link--no-visited-state">Invite invalid</a></li>
-            <li><a href="/errors/otp-failed" class="nhsuk-link--no-visited-state">Security code failed to send</a></li>
-            <li><a href="/errors/otp-max-sends" class="nhsuk-link--no-visited-state">Too many security codes sent</a></li>
-            <li><a href="/errors/otp-expired" class="nhsuk-link--no-visited-state">Security code expired</a></li>
-            <li><a href="/errors/otp-locked" class="nhsuk-link--no-visited-state">Wrong security code entered too many times</a></li>
-            <li><a href="/errors/dup-failed" class="nhsuk-link--no-visited-state">Duplicate record found</a></li>
-          </ul>
-        </div>
+        <!-- 
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Features that have gone live
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>N/A</p>
+          </div>
+        </details>
+
+      -->
+
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Legacy
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <h4><a class="nhsuk-link nhsuk-link--no-visited-state" href="/applicant/v1/start">Applicant (v1)</a></h4>
+
+            <p>Proof of concept for applicant journey, including PYI.</p>
+      
+          </div>
+        </details>
+
+      
       </div>
 
-      <div class="nhsuk-card">
-        <div class="nhsuk-card__content"> 
-          <h2>Not in use</h2>
-
-          <h3>Applicant (v1)</h3>
-
-          <p><a href="/applicant/v1/start">Custom PYI journey with Paycasso APIs</a></p>
-        </div>
-      </div>
   
       <!-- End of content -->
 

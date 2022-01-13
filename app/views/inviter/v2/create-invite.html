@@ -1,0 +1,135 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter applicant's personal details
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v2/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <form action="/inviter/v2/check-your-answers" method="post" class="form">
+
+      <fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+    <h1 class="nhsuk-fieldset__heading">
+      Enter applicant's personal details
+    </h1>
+  </legend>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="first-name-1">
+      First name
+    </label>
+    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name-1" name="first-name-1" type="text" value="{{ data['first-name-1'] }}">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="last-name-1">
+      Last name
+    </label>
+    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name-1" name="last-name-1" type="text" value="{{ data['last-name-1'] }}">
+  </div>
+
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="email-address-1">
+      Work email address
+    </label>
+    <div class="nhsuk-hint" id="email-address-hint">
+      This email must be an NHS email or an NHS approved email address from the CIS allow list. We will use this to send the applicant further information about the application.
+  </div>
+    <input class="nhsuk-input nhsuk-u-width-three-quarters" id="email-address-1" name="email-address" type="text" value="{{ data['email-address'] }}">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="mobile-number-1">
+      Mobile number
+    </label>
+    <div class="nhsuk-hint" id="mobile-hint">
+      This should be a current mobile number. We will use this to send further information about the application.
+  </div>
+    <input class="nhsuk-input nhsuk-input--width-10" id="mobile-number-1" name="mobile-number" type="text" value="{{ data['mobile-number'] }}">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="ods-code-1">
+      ODS code for the applicant's organisation
+    </label>
+    <div class="nhsuk-hint" id="ods-code-1-hint">
+    You can find the organisation's ODS code by <a href="https://odsportal.digital.nhs.uk/Organisation/Search" target="_blank">checking the NHS Digital ODS portal (link opens in a new tab)</a>
+  </div>
+    <input class="nhsuk-input nhsuk-input--width-5" id="ods-code-1" name="ods-code" type="text" value="{{ data['ods-code'] }}">
+  </div>
+
+</fieldset>
+
+<div class="nhsuk-u-padding-bottom-4"></div>
+
+<fieldset class="nhsuk-fieldset" aria-describedby="dbs-1-hint">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+        <h2 class="nhsuk-fieldset__heading">
+          Confirm DBS and right to work checks
+        </h2>
+      </legend>
+
+      <div class="nhsuk-hint" id="dbs-1-hint">
+        Your HR department will be able to inform you if DBS and right to work checks have been done.
+      </div>
+
+      <div class="nhsuk-checkboxes">
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="dbs-1" name="dbs" type="checkbox" value="completed"  {{ checked("dbs", "completed") }}>
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="dbs-1">
+            I confirm Right to Work and DBS checks have been completed
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+
+  <div class="nhsuk-u-padding-bottom-4"></div>
+
+{{ button({
+  "text": "Continue",
+  "id": "btn_submit"
+}) }}
+
+
+</form>
+
+
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      What to do if you don't have all the information
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <p>Contact your HR or personnel department if you need help accessing information about the applicant or their employment status.
+</p>
+
+  </div>
+</details>
+
+    </div>
+
+  </div>
+{% endblock %}

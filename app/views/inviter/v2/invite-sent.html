@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Application sent
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4 success-alert" style="background-color:#f0f4f5;">
+
+        <div class="nhsuk-card__content">
+
+          <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+            Application sent
+          </h1>
+
+          <p class="nhsuk-u-font-size-24">
+            Application ID
+            <br>
+            <strong class="nhsuk-u-font-size-32">08267</strong>
+          </p>
+        </div>
+
+      </div>
+
+      <h2 class="nhsuk-u-margin-top-7">What happens next</h2>
+
+      <p>The applicant will be asked to submit documents and use a secure mobile app to complete the identity verification process.
+</p>
+
+      <p>They will need to:</p>
+
+<ul>
+<li>confirm their details</li>
+<li>
+  download a secure mobile app
+</li>
+<li>
+  photograph their ID documents
+</li>
+<li>complete a facescan to prove their identity</li>
+</ul>
+
+<p>Their application will undergo automated checks and may be reviewed manually. </p>
+
+<p>The applicant will receive an email that explains what they need to do and how to use the mobile app.</p>
+
+<p class="nhsuk-u-margin-bottom-5">You will be notified when an ID has been checked and is ready to progress to the next stage.</p>
+
+      <div><a href="/inviter/v2/create-invite" class="nhsuk-button">
+        New application
+      </a></div>
+
+      <p><a href="/inviter/v2/dashboard" class="nhsuk-link">
+        Or manage applications</a></p>
+
+
+
+    </div>
+  </div>
+{% endblock %}
