@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your mobile number
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v3/send-otp",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v3/mobile-confirmation" method="post" class="form">
+
+        {{ fieldset({
+          "legend": {
+            "text": "Enter your mobile number",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+        }) }}
+
+        {% from 'input/macro.njk' import input %}
+
+        {{ input({
+          "label": {
+            "html": '<span class="nhsuk-u-visually-hidden">Mobile number</span>'
+          },
+          id: "mobile-1",
+          name: "mobile-1",
+          classes: "nhsuk-input--width-10",
+          inputmode: "numeric",
+          value: data['mobile-1']
+        }) }}
+
+        {{ button({
+          "text": "Submit",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
