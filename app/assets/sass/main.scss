@@ -88,13 +88,6 @@
 }
 
 /* Style the button and place it in the middle of the container/image */
-.container .nhsuk-button--reverse {
-  position: absolute;
-  top: 4%;
-  left: 91%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
 
 .container .show-id {
   position: absolute;
@@ -135,4 +128,11 @@
   background-color: #fff9c4;
   border-color:		#ffeb3b;
 
+}
+
+.expand-button {
+  float:right;
+  padding: 6px 10px 6px 10px;
+  margin:16px;
+  font-size: 16px;
 }
