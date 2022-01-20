@@ -1,19 +1,8 @@
 {% extends 'layout.html' %}
 
-{% block header %}
-  {{ header({
-    "service": {
-        "name": "Check staff IDs",
-        "href": "/"
-      },
-      "showNav": "false",
-      "showSearch": "false"
-    })
-  }}
-{% endblock %}
 
 {% block pageTitle %}
-  Review applications
+  Review Care ID application documents
 {% endblock %}
 
 
@@ -23,52 +12,63 @@
     <div class="nhsuk-grid-column-full">
 
       <h1>
-        Review applications
+        Review Care ID application documents
       </h1>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <p>Check and approve, reject or place application documents on a holding list for further review by another ID checker.</p>
+
+          <a href="/idchecker/v1/review-id" class="nhsuk-button nhsuk-u-margin-bottom-9">
+            Review ID documents
+          </a>
+        </div>
+      </div>
+
+      
+
+      <h2>Application status</h2>
 
       <ul class="nhsuk-grid-row nhsuk-card-group">
         <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
       
           <div class="nhsuk-card">
             <div class="nhsuk-card__content">
-              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">7 <span class="nhsuk-u-visually-hidden">Queue</span></p><p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Queue</p>
+              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">7 <span class="nhsuk-u-visually-hidden">Waiting for review</span></p><p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Waiting for review</p>
             </div>
           </div>
       
         </li>
+
         <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
       
           <div class="nhsuk-card nhsuk-card--clickable yellow-card">
             <div class="nhsuk-card__content">
-              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">11 <span class="nhsuk-u-visually-hidden">Holding list</span></p><a href="/idchecker/v1/holding-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Holding list</a>
+              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">11 <span class="nhsuk-u-visually-hidden">On hold</span></p><a href="/idchecker/v1/holding-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">On hold</a>
+            </div>
+          </div>
+      
+        </li>
+
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+      
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">33 <span class="nhsuk-u-visually-hidden">Approved</span></p><a href="/idchecker/v1/passed" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Approved</a>
             </div>
           </div>
       
         </li>
         <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-      
+
           <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
-              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">4 <span class="nhsuk-u-visually-hidden">Failed</span></p><a href="/idchecker/v1/failed" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Failed</a>
-            </div>
-          </div>
-      
-        </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-      
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">33 <span class="nhsuk-u-visually-hidden">Passed</span></p><a href="/idchecker/v1/passed" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Passed</a>
+              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">4 <span class="nhsuk-u-visually-hidden">Rejected</span></p><a href="/idchecker/v1/failed" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Rejected</a>
             </div>
           </div>
       
         </li>
       </ul>
-
-
-      <a href="/idchecker/v1/review-id" class="nhsuk-button">
-        Review next application
-      </a>
 
     </div>
 

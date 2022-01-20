@@ -1,19 +1,7 @@
 {% extends 'layout.html' %}
 
-{% block header %}
-  {{ header({
-    "service": {
-        "name": "Check staff IDs",
-        "href": "/"
-      },
-      "showNav": "false",
-      "showSearch": "false"
-    })
-  }}
-{% endblock %}
-
 {% block pageTitle %}
-  Review Application
+  Review documents
 {% endblock %}
 
 {% block outerContent %}
@@ -30,9 +18,9 @@
 
   <div class="nhsuk-grid-column-full">
 
-    <h1 class="nhsuk-u-margin-bottom-5">Review application</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">Review documents</h1>
 
-    <p class="nhsuk-u-margin-bottom-7"><a href="">ID checking guidance (opens in a new tab)</a></p>
+    <p class="nhsuk-u-margin-bottom-7"><a href="">Review Care ID documents guidance (opens in a new tab)</a></p>
 
     <div class="nhsuk-card">
       <div class="nhsuk-card__content">
@@ -45,9 +33,9 @@
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-              <h1 class="nhsuk-fieldset__heading">
-                Is this ID acceptable?
-              </h1>
+              <h3 class="nhsuk-fieldset__heading">
+                Does this ID meet the required standards in the ID checking guidance?
+              </h3>
             </legend>
         
             <div class="nhsuk-radios nhsuk-radios--conditional">
@@ -68,7 +56,23 @@
         
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-1">
         
-                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Decline application</a>
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject</a>
+        
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="not-sure-1" name="photo-id-1" type="radio" value="not-sure" aria-controls="conditional-not-sure-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="not-sure-1">
+                  Not sure
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-not-sure-1">
+
+                <p class="nhsuk-u-margin-top-3">You can move the application to “On hold” if you are unsure that the application meets NHS guidelines. Another ID checker will then review the application.
+                </p>
+        
+                <a class="nhsuk-button nhsuk-button--secondary" href="/idchecker/v1/move-to-holding">Move</a>
         
               </div>
         
@@ -86,7 +90,7 @@
           <h3 class="nhsuk-warning-callout__label">
             <span role="text">
               <span class="nhsuk-u-visually-hidden">Important: </span>
-              This ID has failed automated checks
+              Important
             </span>
           </h3>
           <p>Make sure the text is readable and not handwritten.</p>
@@ -103,9 +107,9 @@
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-              <h1 class="nhsuk-fieldset__heading">
-                Is this ID acceptable?
-              </h1>
+              <h3 class="nhsuk-fieldset__heading">
+                Does this ID meet the required standards in the ID checking guidance?
+              </h3>
             </legend>
         
             <div class="nhsuk-radios nhsuk-radios--conditional">
@@ -126,7 +130,23 @@
         
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-2">
         
-                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject application</a>
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject</a>
+        
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="not-sure-2" name="photo-id-2" type="radio" value="not-sure" aria-controls="conditional-not-sure-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="not-sure-2">
+                  Not sure
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-not-sure-2">
+
+                <p class="nhsuk-u-margin-top-3">You can move the application to “On hold” if you are unsure that the application meets NHS guidelines. Another ID checker will then review the application.
+                </p>
+        
+                <a class="nhsuk-button nhsuk-button--secondary" href="/idchecker/v1/move-to-holding">Move</a>
         
               </div>
         
@@ -153,7 +173,7 @@
               <details class="nhsuk-details nhsuk-expander">
                 <summary class="nhsuk-details__summary">
                   <span class="nhsuk-details__summary-text">
-                    Photo ID 1
+                    Compare to photo ID 1
                   </span>
                 </summary>
                 <div class="nhsuk-details__text">
@@ -166,7 +186,7 @@
               <details class="nhsuk-details nhsuk-expander">
                 <summary class="nhsuk-details__summary">
                   <span class="nhsuk-details__summary-text">
-                    Photo ID 2
+                    Compare to photo ID 2
                   </span>
                 </summary>
                 <div class="nhsuk-details__text">
@@ -184,9 +204,9 @@
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-              <h1 class="nhsuk-fieldset__heading">
-                Is this proof of address acceptable?
-              </h1>
+              <h3 class="nhsuk-fieldset__heading">
+                Does this proof of address meet the required standards in the ID checking guidance?
+              </h3>
             </legend>
         
             <div class="nhsuk-radios nhsuk-radios--conditional">
@@ -207,7 +227,23 @@
         
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-3">
         
-                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Decline application</a>
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject</a>
+        
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="not-sure-3" name="poa" type="radio" value="not-sure" aria-controls="conditional-not-sure-3" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="not-sure-3">
+                  Not sure
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-not-sure-3">
+
+                <p class="nhsuk-u-margin-top-3">You can move the application to “On hold” if you are unsure that the application meets NHS guidelines. Another ID checker will then review the application.
+                </p>
+        
+                <a class="nhsuk-button nhsuk-button--secondary" href="/idchecker/v1/move-to-holding">Move</a>
         
               </div>
         
@@ -220,53 +256,9 @@
 
     <div class="nhsuk-card">
       <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading">Personal Details</h2>
+        <h2 class="nhsuk-card__heading">Name and date of birth</h2>
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half">
-            <div class="nhsuk-expander-group">
-              <details class="nhsuk-details nhsuk-expander">
-                <summary class="nhsuk-details__summary">
-                  <span class="nhsuk-details__summary-text">
-                    Photo ID 1
-                  </span>
-                </summary>
-                <div class="nhsuk-details__text">
-                  <div class="container">
-                    <img src="/images/id-front.jpg">
-                  </div>
-                </div>
-              </details>
-            
-              <details class="nhsuk-details nhsuk-expander">
-                <summary class="nhsuk-details__summary">
-                  <span class="nhsuk-details__summary-text">
-                    Photo ID 2
-                  </span>
-                </summary>
-                <div class="nhsuk-details__text">
-                  <div class="container">
-                    <img src="/images/id-front.jpg">
-                  </div>
-                </div>
-              </details>
-
-              <details class="nhsuk-details nhsuk-expander">
-                <summary class="nhsuk-details__summary">
-                  <span class="nhsuk-details__summary-text">
-                    Proof of address
-                  </span>
-                </summary>
-                <div class="nhsuk-details__text">
-                  <div class="container">
-                    <img src="/images/poa.jpg">
-                  </div>
-                </div>
-              </details>
-
-            </div>
-          </div>
-          <div class="nhsuk-grid-column-one-half">
-            
             <dl class="nhsuk-summary-list nhsuk-summary-list--no-border summary-color nhsuk-u-padding-3">
 
               <div class="nhsuk-summary-list__row">
@@ -310,15 +302,58 @@
 
             </dl>
           </div>
+          <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-expander-group">
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Compare to photo ID 1
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/id-front.jpg">
+                  </div>
+                </div>
+              </details>
+            
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Compare to photo ID 2
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/id-front.jpg">
+                  </div>
+                </div>
+              </details>
+
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Compare to proof of address
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/poa.jpg">
+                  </div>
+                </div>
+              </details>
+
+            </div>
+          </div>
         </div>
         
         <div class="nhsuk-form-group nhsuk-u-margin-top-5">
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-              <h1 class="nhsuk-fieldset__heading">
-                Do the personal details match the photo IDs and proof of address?
-              </h1>
+              <h3 class="nhsuk-fieldset__heading">
+                Do the name and date of birth match the photo IDs and proof of address?
+              </h3>
             </legend>
         
             <div class="nhsuk-radios nhsuk-radios--conditional">
@@ -339,7 +374,23 @@
         
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-4">
         
-                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Decline application</a>
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject</a>
+        
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="not-sure-4" name="personal-details" type="radio" value="not-sure" aria-controls="conditional-not-sure-4" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="not-sure-4">
+                  Not sure
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-not-sure-4">
+
+                <p class="nhsuk-u-margin-top-3">You can move the application to “On hold” if you are unsure that the application meets NHS guidelines. Another ID checker will then review the application.
+                </p>
+        
+                <a class="nhsuk-button nhsuk-button--secondary" href="/idchecker/v1/move-to-holding">Move</a>
         
               </div>
         
@@ -366,7 +417,7 @@
               <details class="nhsuk-details nhsuk-expander">
                 <summary class="nhsuk-details__summary">
                   <span class="nhsuk-details__summary-text">
-                    Photo ID 1
+                    Compare to photo ID 1
                   </span>
                 </summary>
                 <div class="nhsuk-details__text">
@@ -379,7 +430,7 @@
               <details class="nhsuk-details nhsuk-expander">
                 <summary class="nhsuk-details__summary">
                   <span class="nhsuk-details__summary-text">
-                    Photo ID 2
+                    Compare to photo ID 2
                   </span>
                 </summary>
                 <div class="nhsuk-details__text">
@@ -397,9 +448,9 @@
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-              <h1 class="nhsuk-fieldset__heading">
+              <h3 class="nhsuk-fieldset__heading">
                 Does the face scan match the photo IDs?
-              </h1>
+              </h3>
             </legend>
         
             <div class="nhsuk-radios nhsuk-radios--conditional">
@@ -420,7 +471,23 @@
         
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-5">
         
-                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Decline application</a>
+                <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject</a>
+        
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="not-sure-5" name="face-scan" type="radio" value="not-sure" aria-controls="conditional-not-sure-5" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="not-sure-5">
+                  Not sure
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-not-sure-5">
+
+                <p class="nhsuk-u-margin-top-3">You can move the application to “On hold” if you are unsure that the application meets NHS guidelines. Another ID checker will then review the application.
+                </p>
+        
+                <a class="nhsuk-button nhsuk-button--secondary" href="/idchecker/v1/move-to-holding">Move</a>
         
               </div>
         
@@ -433,7 +500,9 @@
 
     <div class="nhsuk-card">
       <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading nhsuk-u-padding-bottom-3">Smartcard photo</h2>
+        <h2 class="nhsuk-card__heading ">Smartcard photo</h2>
+        <p class="nhsuk-body nhsuk-u-padding-bottom-1">Smartcard photos must meet passport photo rules and be taken against a plain background with adequate lighting.
+        </p>
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half">
             <div class="container">
@@ -445,10 +514,20 @@
 
               <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
                 <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                  <h1 class="nhsuk-fieldset__heading">
-                    Is the smartcard photo acceptable?
-                  </h1>
+                  <h3 class="nhsuk-fieldset__heading">
+                    Does the smartcard photo meet the following rules?
+                  </h3>
                 </legend>
+
+                <div class="nhsuk-hint">
+                  <ul>
+                    <li>it is clear and in focus</li>
+                    <li>the person shown is facing forward</li>
+                    <li>their  face is not  hidden by hair or other objects</li>
+                    <li>the photo does not contain any other people or objects</li>
+                  </ul>
+
+                </div>
             
                 <div class="nhsuk-radios nhsuk-radios--conditional">
             
@@ -461,7 +540,7 @@
     
                   <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-yes-6">
             
-                    <a class="nhsuk-button nhsuk-u-margin-top-3" href="/idchecker/v1/dashboard">Appove application</a>
+                    <a class="nhsuk-button nhsuk-u-margin-top-3" href="/idchecker/v1/dashboard">Appove</a>
             
                   </div>
             
@@ -474,9 +553,32 @@
             
                   <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-6">
             
-                    <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Decline application</a>
+                    <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="/idchecker/v1/reject-application">Reject</a>
             
                   </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="not-sure-6" name="smartcard" type="radio" value="not-sure" aria-controls="conditional-not-sure-6" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="not-sure-6">
+                      Not sure
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-not-sure-6">
+    
+                    <p class="nhsuk-u-margin-top-3">You can move the application to “On hold” if you are unsure that the application meets NHS guidelines. Another ID checker will then review the application.
+                    </p>
+            
+                    <a class="nhsuk-button nhsuk-button--secondary" href="/idchecker/v1/move-to-holding">Move</a>
+            
+                  </div>
+
+                  <div class="nhsuk-hint nhsuk-u-margin-top-5">
+                    <p>For further information please see the <a href="https://www.gov.uk/photos-for-passports">Home Office passport photo rules</a></p>
+  
+                  </div>
+
+                 
             
                 </div>
               </fieldset>
@@ -487,11 +589,6 @@
       </div>
     </div>
 
-    <h2>Move to holding list</h2>
-
-    <p>If you are unsure whether an application meets the NHS standard, you can move it to the holding list. Another ID checker will review the application.</p>
-
-    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-5" href="/idchecker/v1/move-to-holding">Move to holding</a>
 
 
 <!-- end content -->

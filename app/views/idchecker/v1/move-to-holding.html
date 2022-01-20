@@ -2,20 +2,8 @@
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
-{% block header %}
-  {{ header({
-    "service": {
-        "name": "Check staff IDs",
-        "href": "/"
-      },
-      "showNav": "false",
-      "showSearch": "false"
-    })
-  }}
-{% endblock %}
-
 {% block pageTitle %}
-  Move to holding list
+  Move to on hold
 {% endblock %}
 
 {% block outerContent %}
@@ -33,16 +21,18 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1 class="nhsuk-heading-xl">Move to holding list</h1>
-
       <form action="/idchecker/v1/dashboard" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-2">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
-              Why are you moving this application?
+              Why are you moving this application to on hold?
             </h1>
           </legend>
+
+          <div class="nhsuk-hint" id="example-hint">
+            Select all options that apply
+          </div>
 
           <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
 

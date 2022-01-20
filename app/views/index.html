@@ -12,7 +12,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  SSR
+  CIS2 - Apply for Care ID
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -33,10 +33,10 @@
 
       <!-- Change the page title here -->
       <h1 class="nhsuk-u-margin-bottom-5">
-        Apply for a Staff ID
+        Apply for Care ID
       </h1>
 
-      <p class="nhsuk-body-l">Prototypes for the Apply for a Staff ID service (SSR project).</p>
+      <p class="nhsuk-body-l">Prototypes for the Apply for Care ID service (SSR project).</p>
 
       <div class="nhsuk-expander-group">
         <details class="nhsuk-details nhsuk-expander">
@@ -57,24 +57,10 @@
           </div>
         </details>
       
-      <!-- 
         <details class="nhsuk-details nhsuk-expander">
           <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text">
               Ready for development
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            <p>N/A</p>
-          </div>
-        </details>
-
-      -->
-
-        <details class="nhsuk-details nhsuk-expander">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              In design
             </span>
           </summary>
           <div class="nhsuk-details__text">
@@ -83,10 +69,29 @@
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li><a href="/idchecker/v1/dashboard" class="nhsuk-link--no-visited-state">Dashboard</a></li>
               <li><a href="/idchecker/v1/review-id" class="nhsuk-link--no-visited-state">Review application</a></li>
-              <li><a href="/idchecker/v1/holding-list" class="nhsuk-link--no-visited-state">Holding list</a></li>
-              <li><a href="/idchecker/v1/move-to-holding" class="nhsuk-link--no-visited-state">Move to holding</a></li>
-              <li><a href="/idchecker/v1/reject-application" class="nhsuk-link--no-visited-state">Decline application</a></li>
+              <li><a href="/idchecker/v1/move-to-holding" class="nhsuk-link--no-visited-state">Move to On Hold</a></li>
+              <li><a href="/idchecker/v1/reject-application" class="nhsuk-link--no-visited-state">Reject application</a></li>
+              <li><a href="/idchecker/v1/holding-list" class="nhsuk-link--no-visited-state">On hold list</a></li>
+              <li><a href="/idchecker/v1/review-id-holding" class="nhsuk-link--no-visited-state">Review an On hold application</a></li>
+              <li><a href="/idchecker/v1/passed" class="nhsuk-link--no-visited-state">Approved applications</a></li>
+              <li><a href="/idchecker/v1/failed" class="nhsuk-link--no-visited-state">Rejected applications</a></li>
             </ul>
+          </div>
+        </details>
+
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              In design
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <h4><a class="nhsuk-link nhsuk-link--no-visited-state" href="/inviter/v2/start">Inviter (v2)</a></h4>
+            <p>Content updates to align with service name, business rules and improve user experience.</p>
+            
+            <h4><a class="nhsuk-link nhsuk-link--no-visited-state" href="/applicant/v3/invite-email">Applicant (v3)</a></h4>
+            <p>Content updates to align with service name, business rules and improve user experience.</p>
+
             <h4>Errors (v1)</h4>
             <p>Generic error pages across all user journeys.</p>
             <ul class="nhsuk-list nhsuk-list--bullet">

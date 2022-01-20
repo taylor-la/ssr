@@ -1,19 +1,7 @@
 {% extends 'layout.html' %}
 
-{% block header %}
-  {{ header({
-    "service": {
-        "name": "Check staff IDs",
-        "href": "/"
-      },
-      "showNav": "false",
-      "showSearch": "false"
-    })
-  }}
-{% endblock %}
-
 {% block pageTitle %}
-  Check staff IDs
+  Review Care ID application documents
 {% endblock %}
 
 {% block content %}
@@ -21,27 +9,27 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        Service name
+        Review Care ID application documents
       </h1>
 
-      <p>Use this service to:</p>
+      <p>Log in with your smartcard to:</p>
 
       <ul>
-        <li>do something</li>
-        <li>update your name, address or other details</li>
-        <li>do something else</li>
+        <li>review ID documents</li>
+        <li>approve or reject application documents</li>
+        <li>submit documents for further review by another ID checker</li>
+          
+          
       </ul>
 
-
+      <p>You will need the right permissions or roles on your smartcard to use this service.</p>
 
 
       <a href="/idchecker/v1/log-in" class="nhsuk-button">
         Log in
       </a>
 
-      <h2 class="nhsuk-heading-m">Before you start</h2>
-
-      <p>You can only use this service if you have smartcard access.</p>
+      <p>If you do not have the right roles and permissions on your smartcard contact your <a href="">organisation's registration authority</a>.</p>
 
     </div>
 

@@ -1,19 +1,8 @@
 {% extends 'layout.html' %}
 
-{% block header %}
-  {{ header({
-    "service": {
-        "name": "Check staff IDs",
-        "href": "/"
-      },
-      "showNav": "false",
-      "showSearch": "false"
-    })
-  }}
-{% endblock %}
 
 {% block pageTitle %}
-  Failed applications
+  Rejected applications
 {%endblock %}
 
 {% block outerContent %}
@@ -27,7 +16,7 @@
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h1>Failed applications</h1>
+    <h1>Rejected applications</h1>
       
     <table role="table" class="nhsuk-table-responsive">
       <thead role="rowgroup" class="nhsuk-table__head">
