@@ -1,0 +1,126 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+  Manage Applications
+{%endblock %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Manage applications</h1>
+
+    <p>Start a new application or manage current applications.</p>
+
+    <form action="/inviter/v2/create-invite" method="post" class="form">
+      <button class="nhsuk-button nhsuk-u-margin-bottom-8" type="submit">
+        New application
+      </button>
+    </form>
+
+    <h2>Find an application</h2>
+
+    <form action="/inviter/v2/dashboard" method="get" class="form">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="search">
+          Enter last name or email address
+        </label>
+        <input
+          class="nhsuk-input nhsuk-input--width-20"
+          id="search-1"
+          name="search"
+          type="text"
+          value="stenberg"
+        />
+      </div>
+
+      <div class="nhsuk-checkboxes">
+        <div class="nhsuk-checkboxes__item nhsuk-u-margin-bottom-4">
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-1"
+            name="example"
+            type="checkbox"
+            value="email"
+          />
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+            Only show applications I have sent
+          </label>
+        </div>
+      </div>
+      {{ button({ "text": "Search", "classes": "nhsuk-button--secondary
+      nhsuk-u-margin-bottom-5", "id": "btn_submit" }) }}
+    </form>
+    <p class="nhsuk-u-margin-bottom-9"><a href="/inviter/v2/dashboard">Clear all filters</a></p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <table role="table" class="nhsuk-table-responsive">
+      <caption class="nhsuk-table__caption nhsuk-u-margin-bottom-4">
+        Showing 2 results for 'Stenberg'
+      </caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">Full name</th>
+          <th role="columnheader" class="" scope="col">Email address</th>
+          <th role="columnheader" class="" scope="col">Sender</th>
+          <th role="columnheader" class="" scope="col">Date sent</th>
+          <th role="columnheader" class="" scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v2/invite-details"> James Stenberg</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >james.stenberg@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >Emerson@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>10
+            September 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--grey">
+              Sent
+              </strong>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Full name </span
+            ><a href="/inviter/v2/invite-details"> Laurel Stenberg</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email address</span
+            >laurel.stenberg@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Sender</span
+            >vincent@nhs.net
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date sent</span>23 May
+            2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span
+            ><strong class="nhsuk-tag nhsuk-tag--red">
+              Rejected
+              </strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+{% endblock %}
