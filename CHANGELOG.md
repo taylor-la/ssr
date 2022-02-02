@@ -1,11 +1,28 @@
 # NHS.UK prototype kit Changelog
 
+## 4.7.3 - 8 December 2021
+
+:wrench: **Fixes**
+
+- Install NHS.UK frontend v6.0.1
+- Update Health A-Z with new Nav A-Z
+- Add list-border css to `_list-border.scss`
+- Add support for Node 16.x
+
+Node 16.x recently became the long term supported version of Nodejs. The `gulp-sass` dependency had a peer dependency pinned to specific version `node-sass` that doesn't work on Node 16.x. Node 16.x support got added to `node-sass` in `6.0.0` and above
+
+## 4.7.2 - 28 October 2021
+
+:wrench: **Fixes**
+
+- Install NHS.UK frontend v5.2.1
+- Update package dependencies to latest versions
+
 ## 4.7.1 - 12 October 2021
 
 :wrench: **Fixes**
 
 - Update download link for the prototype-kit to use the latest release instead of the master branch
-
 
 ## 4.7.0 - 22 September 2021
 
