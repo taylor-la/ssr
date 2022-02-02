@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v1/dashboard",
+    "href": "/inviter/v2/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -102,9 +102,7 @@
 
 </fieldset>
 
-<div class="nhsuk-u-padding-bottom-4"></div>
-
-<fieldset class="nhsuk-fieldset" aria-describedby="dbs-1-hint">
+<fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5" aria-describedby="dbs-1-hint">
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
         <h2 class="nhsuk-fieldset__heading">
           Confirm DBS and right to work checks
@@ -127,7 +125,22 @@
       </div>
     </fieldset>
 
-  <div class="nhsuk-u-padding-bottom-4"></div>
+    <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-8" aria-describedby="positions-1-hint">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+        <h2 class="nhsuk-fieldset__heading">
+          Positions and authenticators (optional)
+        </h2>
+      </legend>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="positions-1">
+          What positions and authenticators does the applicant need? (optional)
+        </label>
+        <div class="nhsuk-hint" id="positions-1-hint">
+          This information will be passed over to the RA to add positions and authenticators to the applicant's profile in CIS2.
+        </div>
+        <textarea class="nhsuk-textarea" id="positions-1" name="positions-1" rows="4" aria-describedby="example-hint" value="{{ data['positions-1'] }}"></textarea>
+      </div>
+    </fieldset>
 
 {{ button({
   "text": "Continue",
