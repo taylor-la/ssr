@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Log in
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v1/start",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+              <h1>Log in</h1>
+
+              <p>Use your Smartcard to log in to the smartcard application.</p>
+
+              <p>You can scan your card with a smartcard reader or enter your smartcard number.</p>
+
+              <p>To continue with the application you will need the right permissions or roles on your smartcard.</p>
+
+              <a href="/idchecker/v1/spinner-login" class="nhsuk-button nhsuk-u-margin-bottom-7">
+                Log in
+              </a>
+
+              <p>If you do not have the right roles and permissions on your smartcard contact your <a href="https://digital.nhs.uk/services/registration-authorities-and-smartcards/primary-care-service-provider-contact-details"> NHS Trust’s registration authority </a></p>
+
+  </div>
+
+  <div>
+{% endblock %}
