@@ -103,20 +103,17 @@
       </div>
     </fieldset>
 
-    <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-8" aria-describedby="positions-2-hint">
+    <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-8" aria-describedby="positions-1-hint">
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
         <h2 class="nhsuk-fieldset__heading">
-          Positions and authenticators (optional)
+          What the applicant needs (optional)
         </h2>
       </legend>
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="positions-2">
-          What positions and authenticators does the applicant need? (optional)
-        </label>
-        <div class="nhsuk-hint" id="positions-2-hint">
-          This information will be passed over to the RA to add positions and authenticators to the applicant's profile in CIS2.
+        <div class="nhsuk-hint" id="positions-1-hint">
+          Use this box to let the Registration Authority know what the applicant needs as part of their Care ID. For example, an authenticator like a smartcard, roles and permissions required and where cards or devices should be delivered.
         </div>
-        <textarea class="nhsuk-textarea" id="positions-2" name="positions-2" rows="4" aria-describedby="positions-2-hint" value="smartcard with nurse practitioner role"></textarea>
+        <textarea class="nhsuk-textarea" id="positions-1" name="positions-1" rows="4" aria-describedby="example-hint" value="{{ data['positions-1'] }}"></textarea>
       </div>
     </fieldset>
 
