@@ -174,13 +174,10 @@
 }
 
 .logged-in-banner {
-  background-color: #005eb8;
+  background-color: #ffffff;
 }
 
 .logged-in-border {
-  border-top: 1px solid rgba(255,255,255,0.2);
-}
-
-.logged-in-item {
-  text-align: right;
+  border-top: 8px solid #aeb7bd;
+  border-bottom: 1px solid #aeb7bd;
 }
