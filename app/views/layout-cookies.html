@@ -5,7 +5,7 @@
 -->
 
 <!-- Extends the layout from /docs/views/template.html -->
-{% extends "template-logout.html" %}
+{% extends "template-cookies.html" %}
 
 <!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 {% block headCSS %}
@@ -19,7 +19,6 @@
 
 <!-- Edit the header -->
 <!-- Header code examples can be found at https://service-manual.nhs.uk/design-system/components/header -->
-
 {% block header %}
   {{ header({
     "service": {
@@ -34,7 +33,6 @@
 
 <!-- Edit the footer -->
 <!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
-
 {% block footer %}
   {{ footer({
     "links": [

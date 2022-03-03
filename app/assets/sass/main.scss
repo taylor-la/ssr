@@ -181,3 +181,22 @@
   border-top: 8px solid #aeb7bd;
   border-bottom: 1px solid #aeb7bd;
 }
+
+.cookie-banner {
+  background-color: #ffffff;
+}
+
+.cookie-success-banner {
+  background-color: #007f3b;
+  color: #ffffff;
+  display: none;
+}
+
+.nhsuk-link.white-link {
+  color:#ffffff;
+  text-decoration: none;
+}
+
+.nhsuk-link.white-link:hover {
+  text-decoration: underline;
+}
