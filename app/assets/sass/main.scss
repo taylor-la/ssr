@@ -16,25 +16,11 @@
 
 .success-alert
 {
-
     border-width:4px;
     border-color:#007f3b;
-
 }
 
 .success-alert-content
-{
-  display:inline;
-  vertical-align: middle;
-}
-
-.warning-alert
-{
-    border-width:4px;
-    border-color:	#d5281b;
-}
-
-.warning-alert-content
 {
   display:inline;
   vertical-align: middle;
@@ -46,28 +32,13 @@
   height: auto;
 }
 
-
 .delete-button
 {
   background-color:#d5281b;
-
 }
 
 .nhsuk-button--secondary.delete-button:hover {
   background-color:#B02A20;
-}
-
-
-.nav-bar
-{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-bar-item
-{
-  display: inline;
 }
 
 .summary-color
@@ -107,23 +78,6 @@
   width: 40%;
 }
 
-.blue-card {
-  background-color: #005eb8;
-  color: white;
-  border-color:	#005eb8;
-}
-
-.green-card {
-  background-color: #007f3b;
-  color: white;
-  border-color:	#007f3b;
-}
-
-.red-card {
-  background-color: #d5281b;
-  color: white;
-  border-color:	#d5281b;
-}
 
 .yellow-card {
   background-color: #fff9c4;
@@ -171,15 +125,6 @@
   max-width: 540px;
   margin: auto;
   margin-top: 80px;
-}
-
-.logged-in-banner {
-  background-color: #ffffff;
-}
-
-.logged-in-border {
-  border-top: 8px solid #aeb7bd;
-  border-bottom: 1px solid #aeb7bd;
 }
 
 .cookie-banner {
