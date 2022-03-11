@@ -1,0 +1,112 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Reject application
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v2/review-id",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/idchecker/v2/dashboard" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-2">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Why are you rejecting this photo ID?
+            </h1>
+          </legend>
+
+          <div class="nhsuk-hint" id="example-hint">
+            Select all options that apply
+          </div>
+
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason1" name="decline" type="checkbox" value="passport" aria-describedby="reason1-hint">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason1-hints">
+                Duplicate evidence
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason2" name="decline" type="checkbox" value="reason2" aria-describedby="reason2-hint">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason2-hints">
+                Expired evidence
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason3" name="decline" type="checkbox" value="reason3" aria-describedby="reason3-hint">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason3-hints">
+                Illegible evidence
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason3" name="decline" type="checkbox" value="reason4" aria-describedby="reason4-hint">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason4-hints">
+                Incomplete evidence
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason3" name="decline" type="checkbox" value="reason4" aria-describedby="reason4-hint">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason4-hints">
+                Suspected fraud
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason3" name="decline" type="checkbox" value="reason4" aria-describedby="reason4-hint">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason4-hints">
+                Unacceptable evidence
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="other" name="decline" type="checkbox" value="other" aria-describedby="rother-hint" aria-controls="conditional-other" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="other-hints">
+                Other
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-other">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="other">
+                  Please provide additional information
+                </label>
+                <textarea class="nhsuk-textarea" id="example" name="decline" rows="3" aria-describedby="example-hint"></textarea>
+              </div>
+      
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <button class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-5"  type="submit">
+          Reject
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

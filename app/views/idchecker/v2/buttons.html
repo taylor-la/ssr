@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Buttons
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Buttons
+      </h1>
+
+      <h2>Reject button</h2>
+
+      <p>Button for rejecting an application. Default colour is NHS red #d5281b and hover colour is #B02A20. Inherits all other styles from NHS primary button.</p>
+
+
+      <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3" href="#">Reject</a>
+
+      <h2>Expand button</h2>
+
+      <p>Button should be aligned to the top right of the image, with NHS spacing unit 3 margin on the top and right. (16px on large screens and 8px on small screens)</p>
+
+      <p>Button is a smaller version of the NHS reverse button, with padding: 6px 10px 6px 10px and font size 16px.</p>
+
+      <p>When photo is expanded, text for the button should be 'reduce'</p>
+
+      <p><a href="https://service-manual.nhs.uk/design-system/styles/spacing">More on NHS spacing</a></p>
+
+      <p><a href="https://service-manual.nhs.uk/design-system/components/buttons">More on NHS buttons</a></p>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--visible">
+
+      <button class="nhsuk-button nhsuk-button--reverse expand-button" type="submit">
+        Expand
+      </button>
+
+      
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,169 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Confirm application details
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v2/review-id",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="nhsuk-grid-row">
+
+  <div class="nhsuk-grid-column-full">
+
+    <h1 class="nhsuk-u-margin-bottom-5">Confirm document details</h1>
+
+    <p class="nhsuk-u-width-two-thirds">The document details will be added to the applicant's Care ID profile.</p>
+
+    <p class="nhsuk-u-width-two-thirds">Check the document details match the photo provided. Update the details if they are incorrect or missing.</p>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Photo ID 1</h2>
+        
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+            <div class="container">
+              <img src="/images/id-front.jpg">
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-5">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="id-number-1">
+                ID number
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-three-quarters" id="id-number-1" name="id-number-1" type="numeric" value="7456459209">
+            </div>
+
+            <p class="nhsuk-u-margin-bottom-2">Issue date</p>
+
+            <div class="nhsuk-date-input" id="example">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="day-1">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day-1" name="day" type="text" pattern="[0-9]*" inputmode="numeric" value="22">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="month-1">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month-1" name="month" type="text" pattern="[0-9]*" inputmode="numeric" value="02">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="year-1">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year-1" name="year" type="text"  pattern="[0-9]*" inputmode="numeric" value="2012">
+                </div>
+              </div>
+            </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              Issuing country
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1">United Kingdom</option>
+              <option value="2" selected>Country 2</option>
+              <option value="3" disabled>Country 3</option>
+            </select>
+          </div>
+
+          </div>
+        </div>
+        
+      
+      </div>
+    </div>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Photo ID 2</h2>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <p class="nhsuk-body-s">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="#">Reset</a></p>
+            <div class="container">
+              <img src="/images/id-front.jpg">
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-5">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="id-number-1">
+                ID number
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="id-number-1" name="id-number-1" type="numeric" value="7456459209">
+            </div>
+
+            <p class="nhsuk-u-margin-bottom-2">Issue date</p>
+
+            <div class="nhsuk-date-input" id="example">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="day-1">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day-1" name="day" type="text" pattern="[0-9]*" inputmode="numeric" value="31">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="month-1">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month-1" name="month" type="text" pattern="[0-9]*" inputmode="numeric" value="04">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="year-1">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year-1" name="year" type="text" pattern="[0-9]*" inputmode="numeric" value="2017">
+                </div>
+              </div>
+            </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              Issuing country
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1">GBR - United Kingdom</option>
+              <option value="2" selected>GBR - United Kingdom</option>
+              <option value="3" disabled>GBR - United Kingdom</option>
+            </select>
+          </div>
+          
+
+          </div>
+        </div>
+        
+      
+      </div>
+    </div>
+
+  
+
+    <a class="nhsuk-button" href="/idchecker/v2/dashboard">Submit</a>
+
+
+
+    <!-- end content -->
+
+  </div>
+</div>
+{% endblock %}
