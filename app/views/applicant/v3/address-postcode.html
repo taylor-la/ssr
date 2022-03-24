@@ -23,29 +23,20 @@
 
       <form action="/applicant/v3/address-select" method="post" class="form">
 
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              Enter a postal address
-            </h1>
-          </legend>
-
-          <div class="nhsuk-hint">
+        <div class="nhsuk-form-group">
+          <h1 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--l" for="address-postcode-1">
+              Enter a postcode
+            </label>
+          </h1>
+          <div class="nhsuk-hint" id="address-postcode-1-hint">
             This address may be used to send a physical ID card, fob or other ID devices. This could be your home or work address.
             </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-postcode-1">
-              Postcode
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode-1" name="address-postcode-1" type="text">
-          </div>
-        
-        </fieldset>
+          <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode-1" name="address-postcode-1" type="text" aria-describedby="address-postcode-1-hint">
+        </div>
 
         {{ button({
-          "text": "Continue",
-          "id": "btn_submit"
+          "text": "Continue"
         }) }}
 
       </form>

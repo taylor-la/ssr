@@ -30,7 +30,7 @@
             </h1>
           </legend>
 
-          <div class="nhsuk-hint">
+          <div class="nhsuk-hint" id="address-hint">
             This address may be used to send a physical ID card, fob or other ID devices. This could be your home or work address.
             </div>
       
@@ -63,18 +63,17 @@
             </div>
 
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="address-postcode-1">
+              <label class="nhsuk-label" for="address-postcode">
                 Postcode
               </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode-1" name="address-postcode-1" type="text">
+              <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
             </div>
           
       
         </fieldset>
       
         {{ button({
-          "text": "Continue",
-          "id": "btn_submit"
+          "text": "Continue"
         }) }}
       
       </form>

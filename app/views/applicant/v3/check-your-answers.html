@@ -96,12 +96,12 @@
       Postal address
     </dt>
     <dd class="nhsuk-summary-list__value">
-      {{ data['address-line-1'] }} {{ data['address-line-2'] }} {{ data['address-town'] }} {{ data['address-county'] }} {{ data['address-postcode-1'] }}
+      {{ data['address-line-1'] }} {{ data['address-line-2'] }} {{ data['address-town'] }} {{ data['address-county'] }} {{ data['address-postcode'] }}
     </dd>
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/applicant/v3/address-postcode">
+      <a href="/applicant/v3/address-manual-v2">
         Change<span class="nhsuk-u-visually-hidden"> delivery address</span>
       </a>
 
@@ -117,8 +117,7 @@
     <p>Check and confirm the information you have provided is correct before you submit it.</p>
 
     {{ button({
-      "text": "Submit now",
-      "id": "btn_submit"
+      "text": "Submit now"
     }) }}
 
     </form>
