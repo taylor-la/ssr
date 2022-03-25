@@ -14,76 +14,58 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-
       <form action="/applicant/v3/date-of-birth" method="post" class="form">
 
-        {{ fieldset({
-          "legend": {
-            "text": "Enter your name",
-            "classes": "nhsuk-fieldset__legend--l",
-            "isPageHeading": true
-          }
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Enter your name
+            </h1>
+          </legend>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="title">
+              Title (optional)
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-5" id="title" name="title" type="text" value="{{ data['title'] }}">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              First name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" type="text" value="{{ data['first-name'] }}">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="middle-name">
+              Middle name (if applicable)
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="middle-name" name="middle-name" type="text" value="{{ data['middle-name'] }}">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Last name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" type="text" value="{{ data['last-name'] }}">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="preferred-name">
+              Preferred name (optional)
+            </label>
+            <div class="nhsuk-hint" id="preferred-name-hint">
+              This name will appear on your Care ID and must be no longer than 20 characters.
+              </div>
+            <input class="nhsuk-input nhsuk-input--width-20" id="preferred-name" name="preferred-name" type="text" aria-describedby="preferred-name-hint" value="{{ data['preferred-name'] }}">
+          </div>
+        
+        </fieldset>
+        
+        {{ button({
+          "text": "Continue"
         }) }}
-
-
-        {{ input({
-        label: {
-        text: "Title (optional)"
-        },
-        classes: "nhsuk-input--width-5",
-        id: "title",
-        name: "title",
-        value: data['title']
-        }) }}
-
-        {{ input({
-        label: {
-        text: "First name"
-        },
-        classes: "nhsuk-u-width-three-quarters",
-        id: "first-name",
-        name: "first-name",
-        value: data['first-name']
-        }) }}
-
-        {{ input({
-        label: {
-        text: "Middle names (if applicable)"
-        },
-        classes: "nhsuk-u-width-three-quarters",
-        id: "middle-name",
-        name: "middle-name",
-        value: data['middle-name']
-        }) }}
-
-        {{ input({
-        label: {
-        text: "Last name"
-        },
-        classes: "nhsuk-u-width-three-quarters",
-        id: "last-name",
-        name: "last-name",
-        value: data['last-name']
-        }) }}
-
-        {{ input({
-        label: {
-        text: "Preferred full name (optional)"
-        },
-        "hint": {
-    "text": "This name will appear on your Care ID and must be no longer than 20 characters."
-  },
-        classes: "nhsuk-input--width-20",
-        id: "preferred-name",
-        name: "preferred-name",
-        value: data['preferred-name']
-        }) }}
-
-
-{{ button({
-  "text": "Continue",
-  "id": "btn_submit"
-}) }}
 
       </form>
 
