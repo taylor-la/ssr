@@ -91,9 +91,9 @@
                   Issuing country
                 </label>
                 <select class="nhsuk-select" id="select-1" name="select-1">
-                  <option value="1">GBR - United Kingdom</option>
+                  <option value="1">Select country</option>
                   <option value="2" selected>GBR - United Kingdom</option>
-                  <option value="3" disabled>GBR - United Kingdom</option>
+                  <option value="3">GBR - United Kingdom</option>
                 </select>
               </div>
             </fieldset>
@@ -172,9 +172,9 @@
                   Issuing country
                 </label>
                 <select class="nhsuk-select" id="select-2" name="select-2">
-                  <option value="1">GBR - United Kingdom</option>
-                  <option value="2" selected>GBR - United Kingdom</option>
-                  <option value="3" disabled>GBR - United Kingdom</option>
+                  <option value="1" selected>Select country</option>
+                  <option value="2">GBR - United Kingdom</option>
+                  <option value="3">GBR - United Kingdom</option>
                 </select>
               </div>
             </fieldset>
@@ -206,6 +206,14 @@
                   <span class="nhsuk-u-visually-hidden">Proof of address details</span>
                 </h2>
               </legend>
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="id-number-3">
+                  ID number
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="id-number-3" name="id-number-3" type="numeric" value="GN2463">
+              </div>
+
               <div class="nhsuk-form-group">
                 <fieldset class="nhsuk-fieldset" role="group">
                   <legend class="nhsuk-fieldset__legend nhsuk-label--s nhsuk-u-margin-bottom-2">
@@ -247,11 +255,27 @@
                   Issuing country
                 </label>
                 <select class="nhsuk-select" id="select-3" name="select-3">
-                  <option value="1">GBR - United Kingdom</option>
-                  <option value="2" selected>select country</option>
-                  <option value="3" disabled>GBR - United Kingdom</option>
+                  <option value="1" selected>Select country</option>
+                  <option value="2">GBR - United Kingdom</option>
+                  <option value="3">GBR - United Kingdom</option>
                 </select>
               </div>
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="select-4">
+                  Document type
+                </label>
+                <select class="nhsuk-select" id="select-4" name="select-4">
+                  <option value="1" selected>Select document type</option>
+                  <option value="2">Utility bill</option>
+                  <option value="3">Financial statement</option>
+                  <option value="4">Local authority tax bill</option>
+                  <option value="5">Mortgage statement</option>
+                  <option value="6">Driving licence</option>
+                </select>
+              </div>
+
+
             </fieldset>
 
           </div>
