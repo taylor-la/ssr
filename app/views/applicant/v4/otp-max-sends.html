@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  You cannot continue
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        You cannot continue
+      </h1>
+
+      <p>A security code has been sent too many times.</p>
+
+      <p>A new email with a link to continue your application will be sent to you shortly.</p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Is the phone number correct?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Contact your application sponsor to get your mobile number updated.</p>
+          <p>If you do not know who sponsored your application, contact the <a href="https://digital.nhs.uk/services/registration-authorities-and-smartcards/primary-care-service-provider-contact-details">NHS Trust registration authority</a> that manages Care IDs or speak to your manager to complete your Care ID application.</p>
+        </div>
+      </details>
+
+
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your preferred name
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v4/your-name",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v4/date-of-birth" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-label--l" for="preferred-name">
+            Preferred name (optional)
+          </label>
+          <p>This name will appear on your Care ID. Some additional text</p>
+          <div class="nhsuk-hint" id="preferred-name-hint">
+              For example, L Taylor
+            </div>
+          <input class="nhsuk-input nhsuk-input--width-20" id="preferred-name" name="preferred-name" type="text" aria-describedby="preferred-name-hint" value="{{ data['preferred-name'] }}">
+          <div class="nhsuk-hint nhsuk-u-padding-top-2" id="character-count-hint">
+            You have 20 characters remaining
+            </div>
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

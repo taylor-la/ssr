@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your security code
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v4/send-otp",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v4/your-name" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+          <h1 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--l" for="otp">
+              Enter your security code
+            </label>
+          </h1>
+
+          <p>Use the 4 digit security code that has been sent to your mobile phone number ending *********<strong>5314</strong>.</p>
+
+          <p>The security code will expire in 15 minutes from when it was sent.</p>
+
+          <div class="nhsuk-hint" id="otp-hint">
+            The code contains 4 numbers
+            </div>
+          <input class="nhsuk-input nhsuk-input--width-4" id="otp" name="otp" type="text" inputmode="numeric" aria-describedby="otp-hint" value="{{ data['otp'] }}">
+        </div>
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+
+
+      </form>
+
+      <p><a href="#">Send the security code again</a> if you have not received it or if it has expired.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

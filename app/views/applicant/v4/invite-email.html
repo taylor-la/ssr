@@ -1,0 +1,95 @@
+{% extends 'layout-email.html' %}
+
+{% block pageTitle %}
+  Invite email
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row" >
+
+    <div class="nhsuk-grid-column-two-thirds email-layout">
+
+      <!-- Add your content here -->
+
+      <div class="email-header">
+        <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+          <path class="nhsuk-logo__background" fill="#ffffff" d="M0 0h40v16H0z"></path>
+          <path class="nhsuk-logo__text" fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+        </svg>
+      </div>
+
+      <div class="nhsuk-u-padding-5">
+
+        <h2 class="nhsuk-heading-l">Apply for your Care ID</h2>
+
+      <p class="nhsuk-body">Dear...</p>
+      <p class="nhsuk-body">This email is being sent to you to complete a secure NHS application for your Care ID. </p>
+      <p class="nhsuk-body">A Care ID may be a security code, card, fob or a device that will allow you to access:</p>
+      <ul>
+        <li>national systems</li>
+        <li>clinical data</li>
+        <li>patient information</li>
+      </ul>
+
+      <p>You will need a Care ID if you are starting a new role or moving to a new NHS Trust. </p>
+
+      <p>Your application <strong>needs to be completed by 4pm Friday 18 March 2022</strong>. It will expire after this date and you will be sent a new email to start the application process.</p>
+
+      
+
+      <h2>Documents you need for your application</h2>
+
+      <h3>2 photo IDs from this list:</h3>
+      <ul>
+        <li>UK or international passport</li>
+        <li>UK, EU or international driving licence</li>
+        <li>UK Biometric residence permit card</li>
+        <li>HM Armed Forces identity card</li>
+      </ul>
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You will need original, physical documents and they must be current.</p>
+      </div>
+
+      <h3>1 document from this list:</h3>
+      <ul>
+        <li>bank account or credit card statement, this must be from the last 6 months</li>
+        <li>mortgage statement, this must be from the last 6 months</li>
+        <li>utility bill, this must be from the last 6 months</li>
+        <li>council tax statement, this must be from the last 12 months</li>
+        <li>UK driving licence (if you are using your driving licence as a photo ID you cannot use it as proof of address)</li>
+      </ul>
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You will need documents that have been sent to your address or printed and stamped by the service provider.</p>
+      </div>
+
+      <h3>Additional information you need to provide:</h3>
+      <ul>
+        <li>National insurance number</li>
+      </ul>
+
+      <h2>How to submit your documents</h2>
+
+      <p>You will need to download a secure mobile app called Verify Care ID on a mobile phone connected to the internet to submit your documents to be checked and verified.</p>
+
+      <p>A link to the Verify Care ID app will be sent to you as you progress through the application.</p>
+
+      <a href="/applicant/v4/spinner-start" class="nhsuk-button nhsuk-u-margin-top-2">
+        Start application
+      </a>
+
+      <p>Contact <a href="">enquiries@nhsdigital.nhs.uk</a> for help and support using the app or verifying your identity.</p>
+
+      <p>Please do not reply to this email</p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+{% endblock %}
