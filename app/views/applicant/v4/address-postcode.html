@@ -23,18 +23,25 @@
 
       <form action="/applicant/v4/address-select" method="post" class="form">
 
-        <div class="nhsuk-form-group">
-          <h1 class="nhsuk-label-wrapper">
-            <label class="nhsuk-label nhsuk-label--l" for="address-postcode-1">
-              Enter a postcode
-            </label>
-          </h1>
-          <div class="nhsuk-hint" id="address-postcode-1-hint">
-            This address may be used to send a physical ID card, fob or other ID devices. This could be your home or work address.
-            </div>
-          <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode-1" name="address-postcode-1" type="text" aria-describedby="address-postcode-1-hint" value="{{ data['address-postcode-1'] }}">
-        </div>
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-padding-bottom-3">
+              Enter a postal address
+            </h1>
+          </legend>
 
+          <p>This address may be used to send a physical ID card, fob or other ID devices. This could be your home or work address.</p>
+
+          <div class="nhsuk-form-group">
+            <h1 class="nhsuk-label-wrapper">
+              <label class="nhsuk-label" for="address-postcode-1">
+                Postcode
+              </label>
+            </h1>
+            <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode-1" name="address-postcode-1" type="text" value="{{ data['address-postcode-1'] }}">
+          </div>
+        
+        </fieldset>
         {{ button({
           "text": "Continue"
         }) }}

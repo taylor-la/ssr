@@ -6,121 +6,83 @@ const router = express.Router();
 // Add your routes here - above the module.exports line
 
 // Run this code when a form is submitted to 'juggling-balls-answer'
-router.post('/applicant/v1/spinner-bank', function (req, res) {
+
+router.post('/applicant/v4/suitability-id-1', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var checkPhotoBank = req.session.data['check-photo-bank']
+  var suitMobile = req.session.data['suit-mobile']
 
   // Check whether the variable matches a condition
-  if (checkPhotoBank == "yes"){
+  if (suitMobile == "no"){
     // Send user to next page
-    res.redirect('/applicant/v1/spinner-bank')
+    res.redirect('/applicant/v4/not-suitable')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v1/take-photo-bank')
+    res.redirect('/applicant/v4/suitability-id-1')
   }
 
 })
 
-
-router.post('/applicant/v1/spinner-eu-driving-back', function (req, res) {
+router.post('/applicant/v4/suitability-id-2', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var checkPhotoEuDrivingBack = req.session.data['check-photo-eu-driving-back']
+  var id1 = req.session.data['photo-id-1']
 
   // Check whether the variable matches a condition
-  if (checkPhotoEuDrivingBack == "yes"){
+  if (id1 == "none"){
     // Send user to next page
-    res.redirect('/applicant/v1/spinner-eu-driving-back')
+    res.redirect('/applicant/v4/not-suitable')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v1/take-photo-eu-driving-back')
+    res.redirect('/applicant/v4/suitability-id-2')
   }
 
 })
 
-
-router.post('/applicant/v1/spinner-eu-driving-front', function (req, res) {
+router.post('/applicant/v4/suitability-poa', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var checkPhotoEuDrivingFront = req.session.data['check-photo-eu-driving-front']
+  var id2 = req.session.data['photo-id-2']
 
   // Check whether the variable matches a condition
-  if (checkPhotoEuDrivingFront == "yes"){
+  if (id2 == "none"){
     // Send user to next page
-    res.redirect('/applicant/v1/spinner-eu-driving-front')
+    res.redirect('/applicant/v4/not-suitable')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v1/take-photo-eu-driving-front')
+    res.redirect('/applicant/v4/suitability-poa')
   }
 
 })
 
-
-router.post('/applicant/v1/spinner-passport', function (req, res) {
+router.post('/applicant/v4/suitability-poa-format', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var checkPhotoPassport = req.session.data['check-photo-passport']
+  var poa = req.session.data['poa']
 
   // Check whether the variable matches a condition
-  if (checkPhotoPassport == "yes"){
+  if (poa == "none"){
     // Send user to next page
-    res.redirect('/applicant/v1/spinner-passport')
+    res.redirect('/applicant/v4/not-suitable')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v1/take-photo-passport')
+    res.redirect('/applicant/v4/suitability-poa-format')
   }
 
 })
 
-
-router.post('/applicant/v1/spinner-smartcard', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var checkPhotoSmartcard = req.session.data['check-photo-smartcard']
-
-  // Check whether the variable matches a condition
-  if (checkPhotoSmartcard == "yes"){
-    // Send user to next page
-    res.redirect('/applicant/v1/spinner-smartcard')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/v1/take-photo-smartcard')
-  }
-
-})
-
-
-
-router.post('/applicant/v1/spinner-passport-upload', function (req, res) {
+router.post('/applicant/v4/suitable', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var checkUploadPassport = req.session.data['check-upload-passport']
+  var poaFormat = req.session.data['suit-format']
 
   // Check whether the variable matches a condition
-  if (checkUploadPassport == "yes"){
+  if (poaFormat == "yes"){
     // Send user to next page
-    res.redirect('/applicant/v1/spinner-passport-upload')
+    res.redirect('/applicant/v4/not-suitable')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v1/upload-photo-passport')
-  }
-
-})
-
-
-router.post('/applicant/v1/take-photo-passport', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var formatPassport = req.session.data['format-passport']
-
-  // Check whether the variable matches a condition
-  if (formatPassport == "take-photo"){
-    // Send user to next page
-    res.redirect('/applicant/v1/take-photo-passport')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/v1/upload-photo-passport')
+    res.redirect('/applicant/v4/suitable')
   }
 
 })

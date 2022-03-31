@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Do you have a mobile phone with a camera?
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v4/suitability-id-1" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+              <h1 class="nhsuk-fieldset__heading">
+                Do you have a mobile phone with a camera?
+              </h1>
+            </legend>
+
+            <p>Your phone must also connect to the internet.</p>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="mobile-yes" name="suit-mobile" type="radio" value="yes" {{ checked("suit-mobile", "yes") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="mobile-yes">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="mobile-no" name="suit-mobile" type="radio" value="no" {{ checked("suit-mobile", "no") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="mobile-no">
+                  No
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
