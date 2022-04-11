@@ -88,4 +88,21 @@ router.post('/applicant/v4/suitability/suitable', function (req, res) {
 })
 
 
+router.post('/applicant/v4/one-time-passcode', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var mobileCorrect = req.session.data['mobile-3']
+
+  // Check whether the variable matches a condition
+  if (mobileCorrect == "yes"){
+    // Send user to next page
+    res.redirect('/applicant/v4/one-time-passcode')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v4/update-mobile')
+  }
+
+})
+
+
 module.exports = router;
