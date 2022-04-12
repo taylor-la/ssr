@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Send a security code to your phone
+  Confirm your mobile number
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,14 +21,12 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        Send a security code to your phone
+        Confirm your mobile number
       </h1>
 
-      <p>To continue with the application you will need to enter a 4 digit security code.</p>
+      <p>To continue with the application you will need to confirm your mobile number by entering a 4 digit security code.</p>
 
       <p>The security code needs to be <strong>used within 15 minutes</strong> from when it is sent.</p>
-
-      <p>This security code will be sent to your mobile phone number ending <strong>0786347435</strong>.</p>
 
       <form action="/applicant/v4/one-time-passcode" method="post" class="form">
 
@@ -37,7 +35,7 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
               <h2 class="nhsuk-fieldset__heading">
-                Is this mobile number correct?
+                Is your mobile number 0786347435?
               </h2>
             </legend>
         
