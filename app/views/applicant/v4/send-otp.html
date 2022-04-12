@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Confirm your mobile number
+  Send a security code to your phone
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,53 +20,32 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>
-        Confirm your mobile number
+      <h1 class="nhsuk-heading-xl">
+        Send a security code to your phone
       </h1>
 
-      <p>To continue with the application you will need to confirm your mobile number by entering a 4 digit security code.</p>
+      <p>To continue with the application you will need to enter a 4 digit security code.</p>
 
-      <p>The security code needs to be <strong>used within 15 minutes</strong> from when it is sent.</p>
+      <p>This security code will be sent to your mobile phone number ending ******<strong>7435</strong>.</p>
 
-      <form action="/applicant/v4/one-time-passcode" method="post" class="form">
+        <p>The security code needs to be <strong>used within 15 minutes</strong> from when it is sent.</p>
 
-        <div class="nhsuk-form-group">
 
-          <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-              <h2 class="nhsuk-fieldset__heading">
-                Is your mobile number 0786347435?
-              </h2>
-            </legend>
-        
-            <div class="nhsuk-radios">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mobile-yes-2" name="mobile-3" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="mobile-yes-2">
-                  Yes
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mobile-no-2" name="mobile-3" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="mobile-no-2">
-                 No
-                </label>
-              </div>
-        
-            </div>
-          </fieldset>
-        
+      <a href="/applicant/v4/one-time-passcode" class="nhsuk-button">
+        Send code
+      </a>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Mobile number is incorrect
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Contact your application sponsor to get your mobile number updated.</p>
+          <p>If you do not know who sponsored your application, contact the <a href="https://digital.nhs.uk/services/registration-authorities-and-smartcards/primary-care-service-provider-contact-details">NHS Trust registration authority</a> that manages Care IDs or speak to your manager to complete your Care ID application.</p>
         </div>
-
-
-        {{ button({
-          "text": "Continue"
-        }) }}
-
-      </form>
-      
+      </details>
 
     </div>
 
