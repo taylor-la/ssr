@@ -8,7 +8,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/idchecker/v3/review-id",
+    "href": "/idchecker/v3/review-id-a",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -26,7 +26,7 @@
         <fieldset class="nhsuk-fieldset" aria-describedby="reject-1-hint">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
             <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
-              Why are you rejecting this application?
+              Select which evidence to reject
             </h1>
           </legend>
 
@@ -37,172 +37,219 @@
           <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
 
             <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="duplicate-1" name="reject-1" type="checkbox" value="duplicate" aria-controls="conditional-duplicate-1" aria-expanded="false">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="duplicate-1">
-                Duplicate evidence
+              <input class="nhsuk-checkboxes__input" id="photo-id-one-1" name="reject-1" type="checkbox" value="id-1" aria-controls="conditional-photo-id-one-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-one-1">
+                Photo ID 1
               </label>
             </div>
-            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-duplicate-1">
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-photo-id-one-1">
+              <div class="nhsuk-hint" id="photo-1-hint">
+                Select reasons for rejecting
+              </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-1-1" name="reject-1" type="checkbox" value="id-1">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-1-1">
-                  Photo ID 1
+                <input class="nhsuk-checkboxes__input" id="expired-1" name="reject-1" type="checkbox" value="expired">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="expired-1">
+                  Expired
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-2-1" name="reject-1" type="checkbox" value="id-2">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-2-1">
-                  Photo ID 2
+                <input class="nhsuk-checkboxes__input" id="quality-1" name="reject-1" type="checkbox" value="quality">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="quality-1">
+                  Image quality
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="poa-1" name="reject-1" type="checkbox" value="poa">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="poa-1">
-                  Proof of address
-                </label>
-              </div>
-            </div>
-
-
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="expired-1" name="reject-1" type="checkbox" value="expired" aria-controls="conditional-expired-1" aria-expanded="false">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="expired-1">
-                Expired evidence
-              </label>
-            </div>
-            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-expired-1">
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-1-2" name="reject-1" type="checkbox" value="id-1">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-1-2">
-                  Photo ID 1
+                <input class="nhsuk-checkboxes__input" id="incomplete-1" name="reject-1" type="checkbox" value="incomplete">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="incomplete-1">
+                  Missing information
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-2-2" name="reject-1" type="checkbox" value="id-2">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-2-2">
-                  Photo ID 2
+                <input class="nhsuk-checkboxes__input" id="fraud-1" name="reject-1" type="checkbox" value="fraud">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-1">
+                  Suspected fraud
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="poa-2" name="reject-1" type="checkbox" value="poa">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="poa-2">
-                  Proof of address
+                <input class="nhsuk-checkboxes__input" id="unacceptable-1" name="reject-1" type="checkbox" value="unacceptable">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="unacceptable-1">
+                  Not accepted
                 </label>
               </div>
             </div>
 
             <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="liveness" name="reject-1" type="checkbox" value="failed-liveness">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="liveness">
-                Failed liveness / likeness check
+              <input class="nhsuk-checkboxes__input" id="photo-id-one-2" name="reject-1" type="checkbox" value="id-2" aria-controls="conditional-photo-id-one-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-one-2">
+                Photo ID 2
               </label>
             </div>
-
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="incomplete-1" name="reject-1" type="checkbox" value="incomplete" aria-controls="conditional-incomplete-1" aria-expanded="false">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="incomplete-1">
-                Incomplete evidence
-              </label>
-            </div>
-
-            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-incomplete-1">
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-photo-id-one-2">
+              <div class="nhsuk-hint" id="photo-2-hint">
+                Select reasons for rejecting
+              </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-1-3" name="reject-1" type="checkbox" value="id-1">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-1-3">
-                  Photo ID 1
+                <input class="nhsuk-checkboxes__input" id="duplicate-2" name="reject-1" type="checkbox" value="duplicate">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="duplicate-2">
+                  Duplicate
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-2-3" name="reject-1" type="checkbox" value="id-2">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-2-3">
-                  Photo ID 2
+                <input class="nhsuk-checkboxes__input" id="expired-2" name="reject-1" type="checkbox" value="expired">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="expired-2">
+                  Expired
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="poa-3" name="reject-1" type="checkbox" value="poa">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="poa-3">
-                  Proof of address
-                </label>
-              </div>
-            </div>
-
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="non-conformant" name="reject-1" type="checkbox" value="non-comformant">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="non-conformant">
-                Non conformant photo
-              </label>
-            </div>
-
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="fraud-1" name="reject-1" type="checkbox" value="fraud" aria-controls="conditional-fraud-1" aria-expanded="false">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-1">
-                Suspected fraud
-              </label>
-            </div>
-
-            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-fraud-1">
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-1-5" name="reject-1" type="checkbox" value="id-1">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-1-5">
-                  Photo ID 1
+                <input class="nhsuk-checkboxes__input" id="quality-2" name="reject-1" type="checkbox" value="quality">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="quality-2">
+                  Image quality
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-2-5" name="reject-1" type="checkbox" value="id-2">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-2-5">
-                  Photo ID 2
+                <input class="nhsuk-checkboxes__input" id="incomplete-2" name="reject-1" type="checkbox" value="incomplete">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="incomplete-2">
+                  Missing information
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="poa-5" name="reject-1" type="checkbox" value="poa">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="poa-5">
-                  Proof of address
+                <input class="nhsuk-checkboxes__input" id="fraud-2" name="reject-1" type="checkbox" value="fraud">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-2">
+                  Suspected fraud
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="details-5" name="reject-1" type="checkbox" value="details">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="details-5">
-                  Name and date of birth
-                </label>
-              </div>
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="face-scan-5" name="reject-1" type="checkbox" value="face-scan">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="face-scan-5">
-                  Face scan
-                </label>
-              </div>
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="smartcard-5" name="reject-1" type="checkbox" value="smartcard">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="smartcard-5">
-                  Face scan
+                <input class="nhsuk-checkboxes__input" id="unacceptable-2" name="reject-1" type="checkbox" value="unacceptable">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="unacceptable-2">
+                  Not accepted
                 </label>
               </div>
             </div>
 
             <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="unacceptable-1" name="reject-1" type="checkbox" value="unacceptable" aria-controls="conditional-unacceptable-1" aria-expanded="false">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="unacceptable-1">
-                Unacceptable evidence
+              <input class="nhsuk-checkboxes__input" id="poa-1" name="reject-1" type="checkbox" value="poa" aria-controls="conditional-poa-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="poa-1">
+                Proof of address
               </label>
             </div>
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-poa-1">
+              <div class="nhsuk-hint" id="poa-1-hint">
+                Select reasons for rejecting
+              </div>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="duplicate-3" name="reject-1" type="checkbox" value="duplicate">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="duplicate-3">
+                  Duplicate
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="expired-3" name="reject-1" type="checkbox" value="expired">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="expired-3">
+                  Expired
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="quality-3" name="reject-1" type="checkbox" value="quality">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="quality-3">
+                  Image quality
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="incomplete-3" name="reject-1" type="checkbox" value="incomplete">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="incomplete-3">
+                  Missing information
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="fraud-3" name="reject-1" type="checkbox" value="fraud">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-3">
+                  Suspected fraud
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="unacceptable-3" name="reject-1" type="checkbox" value="unacceptable">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="unacceptable-3">
+                  Not accepted
+                </label>
+              </div>
+            </div>
 
-            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-unacceptable-1">
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="details-1" name="reject-1" type="checkbox" value="poa" aria-controls="conditional-details-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="details-1">
+                Name and date of birth
+              </label>
+            </div>
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-details-1">
+              <div class="nhsuk-hint" id="details-1-hint">
+                Select reasons for rejecting
+              </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-1-4" name="reject-1" type="checkbox" value="id-1">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-1-4">
-                  Photo ID 1
+                <input class="nhsuk-checkboxes__input" id="option-1" name="reject-1" type="checkbox" value="option">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="option-1">
+                  Placeholder
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="photo-id-2-4" name="reject-1" type="checkbox" value="id-2">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="photo-id-2-4">
-                  Photo ID 2
+                <input class="nhsuk-checkboxes__input" id="fraud-3" name="reject-1" type="checkbox" value="fraud">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-3">
+                  Suspected fraud
+                </label>
+              </div>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="face-1" name="reject-1" type="checkbox" value="face" aria-controls="conditional-face-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="face-1">
+                Face scan
+              </label>
+            </div>
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-face-1">
+              <div class="nhsuk-hint" id="face-1-hint">
+                Select reasons for rejecting
+              </div>
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="liveness-5" name="reject-1" type="checkbox" value="liveness">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="liveness-5">
+                  Liveness failed
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="poa-4" name="reject-1" type="checkbox" value="poa">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="poa-4">
-                  Proof of address
+                <input class="nhsuk-checkboxes__input" id="quality-5" name="reject-1" type="checkbox" value="quality">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="quality-5">
+                  Image quality
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="fraud-5" name="reject-1" type="checkbox" value="fraud">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-5">
+                  Suspected fraud
+                </label>
+              </div>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="smartcard-1" name="reject-1" type="checkbox" value="face" aria-controls="conditional-smartcard-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="smartcard-1">
+                Smartcard photo
+              </label>
+            </div>
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden nhsuk-u-margin-top-4" id="conditional-smartcard-1">
+              <div class="nhsuk-hint" id="smartcard-1-hint">
+                Select reasons for rejecting
+              </div>
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="non-conformant-6" name="reject-1" type="checkbox" value="non-conformant">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="non-conformant-6">
+                  Does not meet passport guidelines
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="quality-6" name="reject-1" type="checkbox" value="quality">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="quality-6">
+                  Image quality
                 </label>
               </div>
             </div>
