@@ -181,8 +181,8 @@
 }
 
 .yellow-inset-text {
-  background-color: 	#FFECC2;
-  border-left: 8px solid 	$color_nhsuk-warm-yellow;
+  background-color: 	#FFE3E0;
+  border-left: 8px solid 	$color_nhsuk-red;
 }
 
 
@@ -218,7 +218,7 @@
     ========================================================================== */
  
  .nhsuk-alert--warning {
-   border-color: $color_nhsuk-warm-yellow;
+   border-color: $color_nhsuk-red;
  }
  
  .nhsuk-alert--success {
@@ -258,7 +258,7 @@
  }
  
  .nhsuk-icon__warning {
-   fill: $color_nhsuk-warm-yellow;
+   fill: $color_nhsuk-red;
    padding: 4px;
  }
  
