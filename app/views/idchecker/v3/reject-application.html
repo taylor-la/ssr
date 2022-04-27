@@ -6,6 +6,14 @@
   Check rejection reasons
 {% endblock %}
 
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v3/review-id-warning",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
 {% block beforeContent %}
 {% endblock %}
 
@@ -17,107 +25,20 @@
         Reject application
       </h1>
 
-      <p>Confirm reasons for rejecting this application.</p>
+      <p>You are rejecting this application because:</p>
 
-      <dl class="nhsuk-summary-list">
+      <ul>
+        <li>Photo ID 2 has expired</li>
+        <li>Face scan is not live</li>
+      </ul>
 
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Photo ID 1
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            
-          </dd>
+      <p>The applicant will be notified that their application has been rejected and will be sent a link to retry.</p>
 
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/idchecker/v3/review-id-warning#photo-id-1">
-              Change<span class="nhsuk-u-visually-hidden"> photo id 1</span>
-            </a>
-          </dd>
+      <p>A notification will not be sent if fraud is suspected, or the applicant has already retried 3 times.</p>
 
-        </div>
+      
+      
 
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Photo ID 2
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            ID has expired
-          </dd>
-
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/idchecker/v3/review-id-warning#photo-id-2">
-              Change<span class="nhsuk-u-visually-hidden"> photo id 2</span>
-            </a>
-          </dd>
-
-        </div>
-
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Proof of address
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-          </dd>
-
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/idchecker/v3/review-id-warning#poa">
-              Change<span class="nhsuk-u-visually-hidden"> proof of address</span>
-            </a>
-          </dd>
-
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Name and date of birth
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            
-          </dd>
-
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/idchecker/v3/review-id-warning#name">
-              Change<span class="nhsuk-u-visually-hidden"> name</span>
-            </a>
-          </dd>
-
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Face scan
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            
-          </dd>
-
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/idchecker/v3/review-id-warning#face-scan">
-              Change<span class="nhsuk-u-visually-hidden"> face scan</span>
-            </a>
-          </dd>
-
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Smartcard photo
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            
-          </dd>
-
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/idchecker/v3/review-id-warning#smartcard">
-              Change<span class="nhsuk-u-visually-hidden">smartcard photo</span>
-            </a>
-          </dd>
-
-        </div>
-
-      </dl>
 
       <a href="/idchecker/v4/dashboard" class="nhsuk-button nhsuk-button--secondary delete-button">
         Reject application
