@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Add your Care ID profile photo
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>Add your Care ID profile photo</h1>
+      <p>This photo will appear on your Care ID card.</p>
+
+      <form action="/applicant/test/smartcard-upload" method="post" class="form">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m nhsuk-u-margin-bottom-4">
+              <h2 class="nhsuk-fieldset__heading">
+                Choose how you want to add your photo
+              </h2>
+            </legend>
+
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="camera-1" name="format-smartcard" type="radio" value="camera" {{ checked("format-smartcard", "camera") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="camera-1">
+                  Take a photo now
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="upload-1" name="format-smartcard" type="radio" value="upload" {{ checked("format-smartcard", "upload") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="upload-1">
+                  Upload a photo
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

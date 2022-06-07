@@ -104,5 +104,21 @@ router.post('/applicant/test/one-time-passcode', function (req, res) {
 
 })
 
+router.post('/applicant/test/smartcard-upload', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var formatSmartcard = req.session.data['format-smartcard']
+
+  // Check whether the variable matches a condition
+  if (formatSmartcard == "camera"){
+    // Send user to next page
+    res.redirect('/applicant/test/smartcard-camera')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/test/smartcard-upload')
+  }
+
+})
+
 
 module.exports = router;
