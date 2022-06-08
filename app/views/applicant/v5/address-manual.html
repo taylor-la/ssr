@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter a delivery address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v5/address-postcode",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v5/smartcard-format" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-padding-bottom-3">
+              Enter a delivery address
+            </h1>
+          </legend>
+      
+            <p class="nhsuk-u-margin-bottom-1">Postcode</p>
+      
+            <p><strong>{{ data['address-postcode-1'] }} </strong><a class="nhsuk-u-padding-left-3" href="/applicant/v5/address-postcode">
+              Change<span class="nhsuk-u-visually-hidden"> postcode</span>
+            </a></p>
+      
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-1">
+                Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+              </label>
+              <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" value="{{ data['address-line-1'] }}">
+            </div>
+          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-2">
+                <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
+              </label>
+              <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" value="{{ data['address-line-2'] }}">
+            </div>
+          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text" value="{{ data['address-town'] }}">
+            </div>
+          
+      
+        </fieldset>
+      
+        {{ button({
+          "text": "Continue"
+        }) }}
+      
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

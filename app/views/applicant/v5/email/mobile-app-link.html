@@ -1,0 +1,50 @@
+{% extends 'layout-email.html' %}
+
+{% block pageTitle %}
+Complete your Care ID application
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full"> 
+      <p class="nhsuk-u-padding-top-5"><strong>Subject:</strong> Complete your Care ID application</p>
+      <p><strong>From:</strong> NHS Care ID (noreply@paycasso.com) </p>
+      <p><strong>To:</strong> name@nhs.net</p>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row" >
+
+    <div class="nhsuk-grid-column-two-thirds email-layout">
+
+      <!-- Add your content here -->
+
+      <div class="email-header">
+        <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+          <path class="nhsuk-logo__background" fill="#ffffff" d="M0 0h40v16H0z"></path>
+          <path class="nhsuk-logo__text" fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+        </svg>
+      </div>
+
+      <div class="nhsuk-u-padding-5">
+
+        <h1>Complete your Care ID application</h1>
+
+        <p class="nhsuk-body">Hello [name],</p>
+        <p class="nhsuk-body">To complete your Care ID application you will need to verify your identity by using the secure NHS Verify Care ID app.</p>
+        <p class="nhsuk-body">A link to the Verify Care ID app has also been sent by text message to your mobile phone.</p>
+        <p>The app can only be used from the link in this email or from the link sent to your mobile phone.</p>
+        <p>You will need to use a mobile phone with a camera and internet connection to verify your identity on the app.</p>
+        <p><a href="#">Download the Verify Care ID to your mobile phone</a></p>
+        <p>The app will photograph and submit the documents needed to verify your identity before you can be given access to NHS national systems.</p>
+        <p>When you receive confirmation that your Care ID has been set up you can delete the app from your phone.</p>
+        <p>Contact<a href="#"> enquiries@nhsdigital.nhs.uk</a> for help and support using the app or verifying your identity.</p>
+        <p>Do not reply to this email</p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+{% endblock %}

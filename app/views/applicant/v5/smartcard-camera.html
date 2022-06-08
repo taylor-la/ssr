@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/test/smartcard-format",
+    "href": "/applicant/v5/smartcard-format",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,9 +21,9 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>Take your photo</h1>
+      <h1>Take a photo</h1>
 
-      <p>Your photo must:</p>
+      <p>Your Care ID profile photo must:</p>
       <ul>
         <li>be clear and in focus</li>
         <li>be taken against a plain, light coloured background</li>
@@ -32,7 +32,7 @@
         <li>not have hair or other objects obscuring the face</li>
       </ul>
 
-      <form id="save-image" action="/v14/create-new-user/identity-verification" method="post">
+      <form id="save-image" action="/applicant/v5/check-your-answers" method="post">
 
         <div class="nhsuk-form-group nhsuk-u-visually-hidden">
           <label class="nhsuk-label" for="fileInput">

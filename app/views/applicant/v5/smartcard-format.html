@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Add your Care ID profile photo
+Choose how to send your Care ID profile photo
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "#",
+    "href": "/applicant/v5/address-select",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,20 +21,22 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>Add your Care ID profile photo</h1>
-      <p>This photo will appear on your Care ID card.</p>
+      
+      
 
-      <form action="/applicant/test/smartcard-upload" method="post" class="form">
+      <form action="/applicant/v5/smartcard-upload" method="post" class="form">
 
         <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
 
           <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m nhsuk-u-margin-bottom-4">
-              <h2 class="nhsuk-fieldset__heading">
-                Choose how you want to add your photo
-              </h2>
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+              <h1 class="nhsuk-fieldset__heading">
+                Choose how to send your Care ID profile photo
+              </h1>
             </legend>
 
+            <p class="nhsuk-u-padding-top-4">This photo will appear on your Care ID card.</p>
+        
             <div class="nhsuk-radios">
         
               <div class="nhsuk-radios__item">

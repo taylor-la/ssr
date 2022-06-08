@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Security code could not be sent
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Security code could not be sent
+      </h1>
+
+      <p>The security code could not be sent to ******<strong>7435</strong>.</p>
+
+      <p><a href="/applicant/v5/send-otp">Send a new security code</a></p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Mobile number is incorrect
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Contact your manager, Registration Authority agent or application sponsor to get your mobile number updated.</p>
+
+          <p>Use the <a href="https://digital.nhs.uk/services/registration-authorities-and-smartcards/primary-care-service-provider-contact-details">NHS Trust Registration Authority website</a> to find your Registration Authority manager or agent.</p>
+
+          <p>Email <a href="">enquiries@nhsdigital.nhs.uk</a> for help and support using the website or app to verify your identity.</p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}

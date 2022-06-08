@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Add your photo
+  Upload your Care ID profile photo
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/test/smartcard-format",
+    "href": "/applicant/v5/smartcard-format",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,30 +21,29 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>Upload your photo</h1>
-
-      <p>Your photo must:</p>
-      <ul>
-        <li>be clear and in focus</li>
-        <li>be taken against a plain, light coloured background</li>
-        <li>show you facing forwards</li>
-        <li>not contain other people or objects in the background</li>
-        <li>not have hair or other objects obscuring the face</li>
-      </ul>
-
-
-      <form id="save-image" action="/v14/create-new-user/identity-verification" method="post">
-
+      <form id="save-image" action="/applicant/v5/check-your-answers" method="post">
 
         <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="fileInput">
-            Upload an image file
-          </label>
-          <div class="nhsuk-hint" id="example-with-hint-text-hint">
-            Must be .jpeg, .jpg, .png, .bmp
+          <h1 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--xl" for="example-heading">
+              Upload your Care ID profile photo
+            </label>
+          </h1>
+          <p>Your Care ID profile photo must:</p>
+          <ul>
+            <li>be clear and in focus</li>
+            <li>be taken against a plain, light coloured background</li>
+            <li>show you facing forwards</li>
+            <li>not contain other people or objects in the background</li>
+            <li>not have hair or other objects obscuring the face</li>
+          </ul>
+
+          <div class="nhsuk-hint" id="fileInput-hint">
+            Image file must be .jpeg, .jpg, .png, .bmp format
           </div>
-          <input type="file" id="fileInput" class="nhsuk-file-upload nhsuk-u-margin-top-3" name="fileInput">
+          <input type="file" id="fileInput" class="nhsuk-u-margin-top-3" name="fileInput">
         </div>
+
 
         </div>
       </div>
@@ -54,7 +53,7 @@
         <!-- Photo edit -->
 
         <div id="image-editing" style="display: none;">
-          <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-4" >
+          <div class="nhsuk-grid-row nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-3" >
             <div class="nhsuk-grid-column-one-half">
               <h2>
                 Edit image
@@ -89,7 +88,7 @@
 
         </div>
 
-        <button id="<!-- jsmain-contact-submit -->" class="nhsuk-button nhsuk-u-margin-top-4" type="submit">
+        <button id="jsmain-contact-submit" class="nhsuk-button nhsuk-u-margin-top-3" type="submit">
           Continue
         </button>
 
