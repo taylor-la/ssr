@@ -17,6 +17,8 @@
         Check your answers
       </h1>
 
+      <h2>Personal details</h2>
+
       <dl class="nhsuk-summary-list">
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
@@ -28,20 +30,6 @@
           <dd class="nhsuk-summary-list__actions">
             <a href="/applicant/v5/your-name">
               Change<span class="nhsuk-u-visually-hidden"> first name</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Preferred name
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['preferred-name'] }}
-          </dd>
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/applicant/v5/your-name">
-              Change<span class="nhsuk-u-visually-hidden"> preferred name</span>
             </a>
           </dd>
         </div>
@@ -74,16 +62,22 @@
           </dd>
         </div>
 
+      </dl>
+
+      <h2>Care ID details</h2>
+
+      <dl class="nhsuk-summary-list">
+
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Delivery address
+            Preferred name
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['address-line-1'] }} {{ data['address-line-2'] }} {{ data['address-town'] }} {{ data['address-postcode-1'] }}
+            {{ data['preferred-name'] }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/applicant/v5/address-postcode">
-              Change<span class="nhsuk-u-visually-hidden"> delivery address</span>
+            <a href="/applicant/v5/your-name">
+              Change<span class="nhsuk-u-visually-hidden"> preferred name</span>
             </a>
           </dd>
         </div>
@@ -98,6 +92,20 @@
           <dd class="nhsuk-summary-list__actions">
             <a href="/applicant/v5/smartcard-format">
               Change<span class="nhsuk-u-visually-hidden"> profile photo</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Delivery address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['address-line-1'] }} {{ data['address-line-2'] }} {{ data['address-town'] }} {{ data['address-postcode-1'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v5/address-postcode">
+              Change<span class="nhsuk-u-visually-hidden"> delivery address</span>
             </a>
           </dd>
         </div>
