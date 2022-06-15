@@ -1,0 +1,175 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your personal details
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>Enter your personal details</h1>
+
+      <form action="/applicant/v5/non-js/pyi-start" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              Your name
+            </h2>
+          </legend>
+  
+          <p>The name you enter must be the same as it appears on the documents you use for your photo ID.</p>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="title">
+              Title (optional)
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-5" id="title" name="title" type="text">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              Given name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" type="text" >
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="middle-name">
+              Middle name (if you have one)
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="middle-name" name="middle-name" type="text">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Family name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" type="text">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="preferred-name">
+              Smartcard name
+            </label>
+            <div class="nhsuk-hint" id="preferred-name-hint">
+              You can choose a preferred name to appear on your smartcard. For example, if your name is Mathew Smith you can choose Matt Smith.
+              </div>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="preferred-name" name="preferred-name" type="text">
+          </div>
+        
+        </fieldset>
+
+
+        <h2 class="nhsuk-u-margin-top-5">Your details</h2>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" role="group">
+            <legend class="nhsuk-fieldset__legend nhsuk-label--s nhsuk-u-margin-bottom-2">
+              <p class="nhsuk-fieldset__heading nhsuk-u-font-weight-normal">
+                Date of birth
+              </p>
+            </legend>
+            <div class="nhsuk-hint" id="dob-hint">
+              For example, 15 03 1984
+            </div>
+            <div class="nhsuk-date-input" id="date-2">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="day-2">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day-2" name="day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="month-2">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month-2" name="month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="year-2">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year-2" name="year" type="text"  pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="ni-number">
+            National Insurance number
+          </label>
+          <div class="nhsuk-hint" id="ni-number-hint">
+            Your National Insurance number contains 3 letters and 6 numbers, for example: “QQ 12 34 56 C”.
+            </div>
+          <input class="nhsuk-input nhsuk-input--width-10" id="ni-number" name="ni-number" type="text" aria-describedby="ni-number-hint">
+        </div>
+
+        
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l ">
+            <h2 class="nhsuk-fieldset__heading nhsuk-u-margin-top-5">
+              Your delivery address
+            </h2>
+          </legend>
+
+          <p>This address may be used to send a physical ID card, fob or other ID devices. This could be your home or work address.</p>
+      
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-1">
+                Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+              </label>
+              <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
+            </div>
+          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-2">
+                <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
+              </label>
+              <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
+            </div>
+          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+            </div>
+          
+      
+        </fieldset>
+
+
+        <p>Check and confirm the information you have provided is correct before you submit it.</p>
+        
+        {{ button({
+          "text": "Submit"
+        }) }}
+
+      </form>
+      
+    </div>
+  </div>
+
+{% endblock %}
