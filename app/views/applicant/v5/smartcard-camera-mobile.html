@@ -9,18 +9,27 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        Your details may already be in the system
+        Take a photo
       </h1>
 
+      <p>Your Care ID profile photo must:</p>
+      <ul>
+        <li>be clear and in focus</li>
+        <li>be taken against a plain, light coloured background</li>
+        <li>show you facing forwards</li>
+        <li>not contain other people or objects in the background</li>
+        <li>not have hair or other objects obscuring the face</li>
+      </ul>
+
       <label for="cameraFileInput">
-        <span class="btn">Open camera</span>
+        <span class="nhsuk-button">Open camera</span>
   
         <!-- The hidden file `input` for opening the native camera -->
-        <input
+        <input class="nhsuk-u-visually-hidden"
           id="cameraFileInput"
           type="file"
           accept="image/*"
-          capture="environment"
+          capture="user"
         />
       </label>
 
