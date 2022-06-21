@@ -18,32 +18,55 @@
 
       <p>We use Javascript to improve the experience of using this website.</p>
 
-      <p>Follow the instructions to enable Javascript, or start your application without Javascript.</p>
+      <p>Start your application without Javascript, or follow the instructions to enable Javascript.</p>
 
-      <h2>How to enable Javascript</h2>
+      <p>Javascript is not required to run this application. </p>
 
-      <p>To enable JavaScript on Google Chrome or Edge Chromimum follow the steps below:</p>
+      <p>If you run this application without Javascript you may experience some visual changes, but these changes will not affect performance. </p>
+
+      
+
+      <h2>Continue without javascript</h2>
+
+    
+      <form action="/applicant/v5/non-js/start" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+          <h3 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-2" for="otp">
+              Enter the application ID
+            </label>
+          </h3>
+
+
+          <div class="nhsuk-hint" id="otp-hint">
+            Your application ID can be found at the top of your Apply for Care ID email. 
+            </div>
+          <input class="nhsuk-input nhsuk-u-width-three-quarters" id="otp" name="otp" type="text" inputmode="numeric" aria-describedby="otp-hint" value="{{ data['otp'] }}">
+        </div>
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+
+
+      </form>
+
+      
+
+      <h2 class="nhsuk-u-margin-top-5">How to enable Javascript</h2>
+
+      <p>To enable Javascript on Google Chrome or Edge Chromium follow the steps below:</p>
 
       <ol>
-        <li>From your browser's menu (shown as three dots) select "Settings".</li>
-        <li>Search for JavaScript using the search box.</li>
-        <li>Find the 'JavaScript' section.</li>
-        <li>Choose your preferred JavaScript settings.</li>
+        <li>From your browser’s menu (shown as three dots) select “Settings”.</li>
+        <li>Search for Javascript using the search box.</li>
+        <li>Find the ‘Javascript’ section.</li>
+        <li>Choose your preferred Javascript settings.</li>
       </ol>
-
-      <p>If you are unable to change your JavaScript settings, please contact your local IT support for help.</p>
-
-      <h2>Continue without Javascript</h2>
-      <p>Some features may not be available without Javascript.</p>
-      <a href="/applicant/v5/non-js/start" class="nhsuk-button">
-        Continue
-      </a>
-
-      
-
-      
      
-
+      <p>If you are unable to change your Javascript settings, please contact your local IT support for help.</p>
       
 
     </div>
