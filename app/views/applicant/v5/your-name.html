@@ -16,7 +16,7 @@
 
       <form action="/applicant/v5/date-of-birth" method="post" class="form">
 
-        <fieldset class="nhsuk-fieldset">
+        <fieldset class="nhsuk-fieldset" aria-describedby="name-hint">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
             <h1 class="nhsuk-fieldset__heading">
               Enter your full name
@@ -24,7 +24,7 @@
           </legend>
 
           
-          <p>The name you enter must be the same as it appears on the documents you use for your photo ID.</p>
+          <p id="name-hint">The name you enter must be the same as it appears on the documents you use for your photo ID.</p>
         
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="title">
