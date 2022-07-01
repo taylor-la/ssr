@@ -1,0 +1,89 @@
+{% extends 'layout-inviter.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter applicant's personal details
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v3/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <form action="/inviter/v3/add-notes" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-3">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-5">
+              Enter applicant's personal details
+            </h1>
+          </legend>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-first-name-1">
+              First name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-first-name-1" name="app-first-name-1" type="text" value="{{ data['app-first-name-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-last-name-1">
+              Last name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-last-name-1" name="app-last-name-1" type="text" value="{{ data['app-last-name-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-email-address-1">
+              Work email address
+            </label>
+            <div class="nhsuk-hint" id="app-email-address-1-hint">
+              This must be an NHS or NHS approved email address.
+            </div>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-email-address-1" name="app-email-address-1" type="text" inputmode="email" aria-describedby="app-email-address-1-hint" value="{{ data['app-email-address-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-mobile-1">
+              Mobile number
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-10" id="app-mobile-1" name="app-mobile-1" type="text" inputmode="tel" aria-describedby="app-mobile-1-hint" value="{{ data['app-mobile-1'] }}">
+          </div>
+
+        </fieldset>
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+      </form>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            What to do if you don’t have the information required to complete this form
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Contact <a href="">enquiries@nhsdigital.nhs.uk</a> for help and support.</p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}
