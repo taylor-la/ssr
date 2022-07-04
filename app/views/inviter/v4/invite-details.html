@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout-inviter.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v3/dashboard",
+    "href": "/inviter/v4/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -102,7 +102,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/inviter/v3/edit-invite">
+      <a href="/inviter/v4/edit-invite">
         Change<span class="nhsuk-u-visually-hidden"> name</span>
       </a>
 
@@ -120,7 +120,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/inviter/v3/edit-invite">
+      <a href="/inviter/v4/edit-invite">
         Change<span class="nhsuk-u-visually-hidden"> email address</span>
       </a>
 
@@ -139,7 +139,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/inviter/v3/edit-invite">
+      <a href="/inviter/v4/edit-invite">
         Change<span class="nhsuk-u-visually-hidden"> mobile number</span>
       </a>
 
@@ -157,7 +157,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/inviter/v3/edit-invite">
+      <a href="/inviter/v4/edit-invite">
         Change<span class="nhsuk-u-visually-hidden"> ods code</span>
       </a>
 
@@ -175,7 +175,7 @@ Status
 
     <dd class="nhsuk-summary-list__actions">
 
-      <a href="/inviter/v3/edit-invite">
+      <a href="/inviter/v4/edit-invite">
         Change<span class="nhsuk-u-visually-hidden"> positions</span>
       </a>
 
@@ -188,7 +188,7 @@ Status
 </div>
 </div>
 
-<form action="/inviter/v3/edit-invite" method="post" class="form">
+<form action="/inviter/v4/edit-invite" method="post" class="form">
 
 <button class="nhsuk-button nhsuk-button--secondary" type="submit">
   Re-send application
@@ -196,7 +196,7 @@ Status
 
 </form>
 
-<p><a  href="/inviter/v3/delete-invite" class="nhsuk-link--no-visited-state" style="color:#d5281b;" >Delete application</a></p>
+<p><a  href="/inviter/v4/delete-invite" class="nhsuk-link--no-visited-state" style="color:#d5281b;" >Delete application</a></p>
 
     </div>
   </div>

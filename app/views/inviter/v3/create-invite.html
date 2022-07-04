@@ -1,0 +1,135 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter applicant's personal details
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v3/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <form action="/inviter/v3/check-your-answers" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Enter applicant's personal details
+            </h1>
+          </legend>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-first-name-1">
+              First name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-first-name-1" name="app-first-name-1" type="text" value="{{ data['app-first-name-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-last-name-1">
+              Last name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-last-name-1" name="app-last-name-1" type="text" value="{{ data['app-last-name-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-email-address-1">
+              Work email address
+            </label>
+            <div class="nhsuk-hint" id="app-email-address-1-hint">
+              This must be an NHS or NHS approved email address. It will be used to contact the applicant throughout the application and identity verification process.
+            </div>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-email-address-1" name="app-email-address-1" type="text" inputmode="email" aria-describedby="app-email-address-1-hint" value="{{ data['app-email-address-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-mobile-1">
+              Mobile number
+            </label>
+            <div class="nhsuk-hint" id="app-mobile-1-hint">
+              For international numbers include the country code. This will be used to send the applicant information about their application.
+            </div>
+            <input class="nhsuk-input nhsuk-input--width-10" id="app-mobile-1" name="app-mobile-1" type="text" inputmode="tel" aria-describedby="app-mobile-1-hint" value="{{ data['app-mobile-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="ods-code-1">
+              ODS code for the applicant's organisation
+            </label>
+            <div class="nhsuk-hint" id="ods-code-1-hint">
+            You can find the organisation's ODS code by <a href="https://odsportal.digital.nhs.uk/Organisation/Search" target="_blank">checking the NHS Digital ODS portal (link opens in a new tab)</a>
+            </div>
+            <input class="nhsuk-input nhsuk-input--width-5" id="ods-code-1" name="ods-code-1" type="text" aria-describedby="ods-code-1-hint" value="{{ data['ods-code-1'] }}">
+          </div>
+
+        </fieldset>
+
+        <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5" aria-describedby="dbs-1-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h2 class="nhsuk-fieldset__heading">
+              Confirm DBS and right to work checks
+            </h2>
+          </legend>
+
+          <div class="nhsuk-hint" id="dbs-1-hint">
+            Your HR department will be able to inform you if DBS and right to work checks have been done.
+          </div>
+
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="dbs-1" name="dbs" type="checkbox" value="completed">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="dbs-1">
+                I confirm Right to Work and DBS checks have been completed
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+
+        <div class="nhsuk-form-group nhsuk-u-margin-top-6">
+          <label class="nhsuk-label nhsuk-label--m nhsuk-u-margin-bottom-2" for="positions-1">
+            What the applicant needs (optional)
+          </label>
+          <div class="nhsuk-hint" id="positions-1-hint">
+            Use this box to let the Registration Authority know what the applicant needs as part of their Care ID. For example, an authenticator like a smartcard, roles and permissions required and where cards or devices should be delivered.
+          </div>
+          <textarea class="nhsuk-textarea" id="positions-1" name="positions-1" rows="4" aria-describedby="positions-1-hint" value="{{ data['positions-1'] }}"></textarea>
+        </div>
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+      </form>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            What to do if you don’t have the information required to complete this form
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Contact <a href="">enquiries@nhsdigital.nhs.uk</a> for help and support.</p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}

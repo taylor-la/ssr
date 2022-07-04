@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout-inviter.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v3/invite-details",
+    "href": "/inviter/v4/invite-details",
     "text": "Back to application",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -34,7 +34,7 @@
 <p>If you need to return to the application for this person you will need to start the process again.</p>
 
 
-<form action="/inviter/v3/invite-deleted" method="post" class="form">
+<form action="/inviter/v4/invite-deleted" method="post" class="form">
 
 <button class="nhsuk-button nhsuk-button--secondary delete-button"  type="submit">
   Delete application

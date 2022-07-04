@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Applications awaiting action
+  Approved applications
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v3/dashboard",
+    "href": "/inviter/v4/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -24,18 +24,17 @@
 
       <!-- Add your content here -->
 
-      <h1>Applications awaiting action</h1>
+      <h1>Approved applications</h1>
       <table role="table" class="nhsuk-table-responsive">
         <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
-          Awaiting action list
+          Approved applications list
         </caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
             <th role="columnheader" class="" scope="col">Full name</th>
             <th role="columnheader" class="" scope="col">Email address</th>
-            <th role="columnheader" class="" scope="col">Created by</th>
-            <th role="columnheader" class="" scope="col">Date sent</th>
-            <th role="columnheader" class="" scope="col">Status</th>
+            <th role="columnheader" class="" scope="col">Date approved</th>
+            <th role="columnheader" class="" scope="col">UUID</th>
             <th role="columnheader" class="" scope="col">Action</th>
           </tr>
         </thead>
@@ -50,22 +49,16 @@
               james.stenberg@nhs.net
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Created by</span>
-              Tim Bond
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Date sent</span>
+              <span class="nhsuk-table-responsive__heading">Date approved</span>
               10 September 2021
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Status</span>
-                <strong class="nhsuk-tag nhsuk-tag--yellow">
-                Locked
-                </strong>
+              <span class="nhsuk-table-responsive__heading">UUID</span>
+                7463467109
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action</span>
-                <a href="/inviter/v3/invite-details">View</a>
+                <a href="/inviter/v4/approved-application">View</a>
             </td>
           </tr>
   
@@ -79,22 +72,16 @@
               laurel.stenberg@nhs.net
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Created by</span>
-              Vincent Douglas
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Date sent</span>
+              <span class="nhsuk-table-responsive__heading">Date approved</span>
               23 May 2021
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Status</span>
-                <strong class="nhsuk-tag nhsuk-tag--yellow">
-                Expired
-                </strong>
+              <span class="nhsuk-table-responsive__heading">UUID</span>
+                7342923813
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action</span>
-              <a href="/inviter/v3/invite-details">View</a> 
+              <a href="/inviter/v4/approved-application">View</a>
             </td>
           </tr>
         </tbody>

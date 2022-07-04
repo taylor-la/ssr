@@ -1,4 +1,4 @@
-{% extends 'layout-inviter.html' %}
+{% extends 'layout.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -21,22 +21,22 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form id="save-image" action="/inviter/v3/check-your-answers-upload" method="post">
+      <h1>Create multiple applications</h1>
+
+      <p><a href="">Download a template</a> and add applicants' details to create multiple applications.</p>
+      <p>The template includes an example of how to format your file.</p>
+      <p>You must include applicants' given names, family names, mobile numbers, and work email addresses.</p>
+
+      <form action="/inviter/v3/check-your-answers-bulk" method="post">
 
         <div class="nhsuk-form-group">
-          <h1 class="nhsuk-label-wrapper">
-            <label class="nhsuk-label nhsuk-label--xl" for="fileInput">
-              Upload a file to create bulk applications
+            <label class="nhsuk-label" for="bulk-upload-1">
+              Upload a file
             </label>
-          </h1>
-          <p>Upload a file with the personal details of the applicants you want to create applications for.</p>
-          <p>The file must contain mandatory information and in a specific format. You can <a href="">download a template and instructions (2 files)</a> on how to create your file first.</p>
-          
-
-          <div class="nhsuk-hint" id="fileInput-hint">
+          <div class="nhsuk-hint" id="bulk-upload-hint">
             File must be .csv format
           </div>
-          <input type="file" id="fileInput" class="nhsuk-u-margin-top-3" name="fileInput">
+          <input type="file" id="bulk-upload-1" name="bulk-upload" value="{{ data['bulk-upload'] }}" aria-describedby="bulk-upload-hint">
         </div>
 
         {{ button({

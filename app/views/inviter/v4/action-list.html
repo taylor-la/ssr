@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Approved applications
+  Applications awaiting action
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v3/dashboard",
+    "href": "/inviter/v4/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -24,22 +24,35 @@
 
       <!-- Add your content here -->
 
-      <h1>Approved applications</h1>
+      <h1>Applications awaiting action</h1>
+
+      <a class="nhsuk-button nhsuk-button--secondary" href="#">Re-send applications</a>
       <table role="table" class="nhsuk-table-responsive">
         <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
-          Approved applications list
+          Awaiting action list
         </caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
+            <th role="columnheader" class="" scope="col">Select</th>
             <th role="columnheader" class="" scope="col">Full name</th>
             <th role="columnheader" class="" scope="col">Email address</th>
-            <th role="columnheader" class="" scope="col">Date approved</th>
-            <th role="columnheader" class="" scope="col">UUID</th>
+            <th role="columnheader" class="" scope="col">Created by</th>
+            <th role="columnheader" class="" scope="col">Date sent</th>
+            <th role="columnheader" class="" scope="col">Status</th>
             <th role="columnheader" class="" scope="col">Action</th>
           </tr>
         </thead>
         <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                  
+                </label>
+              </div>
+            </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Full name </span>
               James Stenberg
@@ -49,20 +62,35 @@
               james.stenberg@nhs.net
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Date approved</span>
+              <span class="nhsuk-table-responsive__heading">Created by</span>
+              Tim Bond
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Date sent</span>
               10 September 2021
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">UUID</span>
-                7463467109
+              <span class="nhsuk-table-responsive__heading">Status</span>
+                <strong class="nhsuk-tag nhsuk-tag--yellow">
+                Locked
+                </strong>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action</span>
-                <a href="/inviter/v3/approved-application">View</a>
+                <a href="/inviter/v4/invite-details">View</a>
             </td>
           </tr>
   
           <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                  
+                </label>
+              </div>
+            </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Full name </span>
               Laurel Stenberg
@@ -72,16 +100,22 @@
               laurel.stenberg@nhs.net
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Date approved</span>
+              <span class="nhsuk-table-responsive__heading">Created by</span>
+              Vincent Douglas
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Date sent</span>
               23 May 2021
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">UUID</span>
-                7342923813
+              <span class="nhsuk-table-responsive__heading">Status</span>
+                <strong class="nhsuk-tag nhsuk-tag--yellow">
+                Expired
+                </strong>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action</span>
-              <a href="/inviter/v3/approved-application">View</a>
+              <a href="/inviter/v4/invite-details">View</a> 
             </td>
           </tr>
         </tbody>

@@ -1,0 +1,82 @@
+{% extends 'layout-inviter.html' %}
+{% block pageTitle %}
+  Manage Applications
+{%endblock %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h1>Apply for Care ID</h1>
+
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+      <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="/inviter/v4/enter-details">Create an application</a>
+            </h2>
+            <p class="nhsuk-card__description">Start a new application</p>
+          </div>
+        </div>
+    
+      </li>
+      <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="/inviter/v4/upload-file">Create multiple applications</a>
+            </h2>
+            <p class="nhsuk-card__description">Send applications to multiple applicants using a file upload</p>
+          </div>
+        </div>
+    
+      </li>
+    </ul>
+
+    <h2>Application status</h2>
+
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">7 <span class="nhsuk-u-visually-hidden">Awaiting action</span></p><a href="/inviter/v4/action-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Awaiting action</a>
+          </div>
+        </div>
+    
+      </li>
+
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">11 <span class="nhsuk-u-visually-hidden">In progress</span></p><a href="/inviter/v4/in-progress-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">In progress</a>
+          </div>
+        </div>
+    
+      </li>
+
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">33 <span class="nhsuk-u-visually-hidden">Approved</span></p><a href="/inviter/v4/approved-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Approved</a>
+          </div>
+        </div>
+    
+      </li>
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">4 <span class="nhsuk-u-visually-hidden">Rejected</span></p><a href="/inviter/v4/rejected-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Rejected</a>
+          </div>
+        </div>
+    
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% endblock %}

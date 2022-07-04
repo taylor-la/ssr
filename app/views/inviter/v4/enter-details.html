@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v3/dashboard",
+    "href": "/inviter/v4/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -24,9 +24,9 @@
 
       <!-- Add your content here -->
 
-      <form action="/inviter/v3/add-notes" method="post" class="form">
+      <form action="/inviter/v4/add-notes" method="post" class="form">
 
-        <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-3">
+        <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
             <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-5">
               Enter applicant's personal details
@@ -35,14 +35,14 @@
 
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="app-first-name-1">
-              First name
+              Given name
             </label>
             <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-first-name-1" name="app-first-name-1" type="text" value="{{ data['app-first-name-1'] }}">
           </div>
 
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="app-last-name-1">
-              Last name
+              Family name
             </label>
             <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-last-name-1" name="app-last-name-1" type="text" value="{{ data['app-last-name-1'] }}">
           </div>
@@ -64,6 +64,25 @@
             <input class="nhsuk-input nhsuk-input--width-10" id="app-mobile-1" name="app-mobile-1" type="text" inputmode="tel" aria-describedby="app-mobile-1-hint" value="{{ data['app-mobile-1'] }}">
           </div>
 
+        </fieldset>
+
+        <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-5">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h2 class="nhsuk-fieldset__heading nhsuk-u-visually-hidden">
+              Confirm appropiate checks
+            </h2>
+          </legend>
+
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="dbs-1" name="dbs" type="checkbox" value="completed">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="dbs-1">
+                I confirm the organisation has done appropriate checks for this member of staff
+              </label>
+            </div>
+
+          </div>
         </fieldset>
 
         {{ button({

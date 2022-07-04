@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Check your file
+      </h1>
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            File name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['bulk-upload'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/inviter/v3/upload-file">
+              Remove<span class="nhsuk-u-visually-hidden"> file</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label--m nhsuk-u-margin-bottom-2"  for="sender-email-address-2">
+          Your email address
+        </label>
+        <div class="nhsuk-hint" id="sender-email-address-hint">
+          This will be used to send you updates about this application.
+        </div>
+        <input class="nhsuk-input nhsuk-u-width-three-quarters" id="sender-email-address-2" name="sender-email-address-2" type="text" aria-describedby="sender-email-address-hint" inputmode="email">
+      </div>
+
+      <a href="/inviter/v3/invite-sent" class="nhsuk-button">
+        Submit
+      </a>
+
+    </div>
+  </div>
+{% endblock %}
