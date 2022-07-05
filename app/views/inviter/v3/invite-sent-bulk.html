@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Application sent
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4 success-alert">
+
+        <div class="nhsuk-card__content success-alert-content">
+
+          <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+            Applications sent
+          </h1>
+
+        </div>
+
+      </div>
+
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Applications created
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            106
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Applications failed
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            0
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="nhsuk-u-margin-top-7">What happens next</h2>
+
+      <p>The applicant will be sent a link to an online form to enter their personal details. </p>
+
+      <p>Then they will be sent a link to an NHS app called Verify Care ID to upload documents and photograph their face to verify their identity.</p>
+
+      <p>Automated checks will be carried out on the applications and it may also be reviewed manually.</p>
+
+      <p>The applicant will receive an email that explains what they need to do and how to use the mobile app.</p>
+
+      <p class="nhsuk-u-margin-bottom-5">You will be notified when an ID has been checked and is ready to progress to the next stage.</p>
+
+      <div><a href="/inviter/v3/create-invite" class="nhsuk-button">
+        New application
+      </a></div>
+
+      <p><a href="/inviter/v3/dashboard" class="nhsuk-link">
+        Or manage applications</a></p>
+
+
+
+    </div>
+  </div>
+{% endblock %}
