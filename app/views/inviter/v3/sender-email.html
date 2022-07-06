@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your email address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v3/upload-file",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <form action="/inviter/v3/check-your-answers-bulk" method="post">
+
+        <div class="nhsuk-form-group">
+          <h1 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--xl" for="sender-email-address-2">
+              Enter your email address
+            </label>
+          </h1>
+          <div class="nhsuk-hint" id="sender-email-address-hint">
+            This will be used to send you updates about this application.
+          </div>
+          <input class="nhsuk-input nhsuk-u-width-three-quarters" id="sender-email-address-2" name="sender-email-address-2" type="text"  value="{{ data['sender-email-address-2'] }}"aria-describedby="sender-email-address-hint" inputmode="email">
+        </div>
+  
+          
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+  
+    </div>
+  </div>
+
+        
+
+      
+
+{% endblock %}
