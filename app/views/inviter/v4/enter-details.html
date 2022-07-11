@@ -24,7 +24,7 @@
 
       <!-- Add your content here -->
 
-      <form action="/inviter/v4/add-notes" method="post" class="form">
+      <form action="/inviter/v4/check-your-answers" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
@@ -64,26 +64,26 @@
             <input class="nhsuk-input nhsuk-input--width-10" id="app-mobile-1" name="app-mobile-1" type="text" inputmode="tel" aria-describedby="app-mobile-1-hint" value="{{ data['app-mobile-1'] }}">
           </div>
 
+          <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="positions-1">
+                What does the applicant need (optional)?
+              </label>
+            <div class="nhsuk-hint" id="positions-1-hint">For example, an authenticator like a smartcard, roles and permissions required.</div>
+            <textarea class="nhsuk-textarea" id="positions-1" name="positions-1" rows="4" aria-describedby="positions-1-hint" value="{{ data['positions-1'] }}"></textarea>
+          </div>
+
         </fieldset>
 
-        <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-5">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-            <h2 class="nhsuk-fieldset__heading nhsuk-u-visually-hidden">
-              Confirm appropiate checks
-            </h2>
-          </legend>
-
-          <div class="nhsuk-checkboxes">
+          <div class="nhsuk-checkboxes nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-5">
 
             <div class="nhsuk-checkboxes__item">
               <input class="nhsuk-checkboxes__input" id="dbs-1" name="dbs" type="checkbox" value="completed">
               <label class="nhsuk-label nhsuk-checkboxes__label" for="dbs-1">
-                I confirm the organisation has done appropriate checks for this member of staff
+                I confirm that this individual has been through relevant employment checks to work for their organisation.
               </label>
             </div>
 
           </div>
-        </fieldset>
 
         {{ button({
           "text": "Continue",

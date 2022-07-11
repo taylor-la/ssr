@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Your file could not be processed
+  Applications could not be sent 
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,18 +13,11 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>Your file could not be processed</h1>
+      <h1>Applications could not be sent </h1>
 
-      <p class="nhsuk-body-l">Your file contains formatting and data errors.</p>
+      <p class="nhsuk-body-l">Your file contains the following errors.</p>
 
-      <p>Before you can send applications you should:</p>
-
-      <ul>
-        <li>correct all errors in your file</li>
-        <li><a href="/inviter/v3/upload-file">upload your file </a>and submit it again</li>
-      </ul>
-
-      <p></p>
+      <p>To resubmit your applications correct these errors and <a href="/inviter/v3/upload-file">reupload your file</a>.</p>
 
       <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-8" id="error-table">
         <caption class="nhsuk-table__caption">Errors found</caption>
