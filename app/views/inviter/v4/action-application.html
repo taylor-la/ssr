@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v4/approved-list",
+    "href": "/inviter/v4/action-list",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -26,7 +26,7 @@
       Application: James Stenberg
     </h1>
 
-    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: approved</p>
+    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: Expired</p>
 
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-5">
@@ -53,7 +53,7 @@
             Sent by
             </dt>
             <dd class="nhsuk-summary-list__value">
-            Vincent Douglas on 8 June 2022
+            Vincent Douglas on 8 July 2022
             </dd>
           </div>
 
@@ -80,14 +80,7 @@
 
         <dl class="nhsuk-summary-list">
 
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              UUID
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              76398409824
-            </dd>
-          </div>
+          
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
@@ -95,6 +88,11 @@
             </dt>
             <dd class="nhsuk-summary-list__value">
               James Stenberg
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v4/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
             </dd>
           </div>
 
@@ -105,6 +103,11 @@
             <dd class="nhsuk-summary-list__value">
               James.stenberg@nhs.net
             </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v4/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
+            </dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
@@ -114,6 +117,11 @@
             <dd class="nhsuk-summary-list__value">
               079946823098
             </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v4/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
+            </dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
@@ -121,7 +129,12 @@
               Delivery address
             </dt>
             <dd class="nhsuk-summary-list__value">
-              Flat 10, Street Name, Town, DL45 7DU
+              -
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v4/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
             </dd>
           </div>
 
@@ -132,13 +145,22 @@
             <dd class="nhsuk-summary-list__value">
               smartcard with nurse practitioner role
             </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v4/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
+            </dd>
           </div>
 
         </dl>
 
       </div>
     </div>
-   
+
+    <a class="nhsuk-button nhsuk-button--secondary" href="">Resend application</a>
+
+    <p><a  href="/inviter/v4/delete-invite" class="nhsuk-link--no-visited-state" style="color:#d5281b;" >Delete application</a></p>
+
 
   </div>
 </div>
