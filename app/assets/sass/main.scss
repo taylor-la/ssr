@@ -5,6 +5,7 @@
 @import 'components/related-nav';
 @import 'components/list-border';
 @import 'components/spinner';
+@import 'components/small-checkboxes';
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
@@ -210,6 +211,15 @@
 
 .grey-text {
   color:  $nhsuk-secondary-text-color;
+}
+
+.max-width-1100 {
+  max-width: 1100px;
+}
+
+.overflow-filter {
+  height: 160px;
+  overflow: auto;
 }
 
 /* ==========================================================================

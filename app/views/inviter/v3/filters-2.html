@@ -1,0 +1,304 @@
+{% extends 'layout-idchecker.html' %}
+{% block pageTitle %}
+  Manage Applications
+{%endblock %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Manage applications</h1>
+
+    <p>Start a new application or manage current applications.</p>
+
+    <form action="/inviter/v3/create-invite" method="post" class="form">
+      <button class="nhsuk-button nhsuk-u-margin-bottom-5" type="submit">
+        New application
+      </button>
+    </form>
+
+    <p class=" nhsuk-u-margin-bottom-6"><a class="nhsuk-link" href="/inviter/v3/upload-file">Upload multiple applications</a></p>
+
+    <h2 id="show-filters" class="nhsuk-u-margin-bottom-6">Find an application</h2>
+
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-third">
+
+    <h3 class="nhsuk-u-margin-top-3">Filter</h3>
+    <form action="/inviter/v3/filters-selected#show-filters" method="post" class="form">
+    
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
+            Name, email address or application ID
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-full" id="search-1" name="search-1" type="text">
+        </div>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--visible">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+          <label class="nhsuk-label  nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-2">
+            ODS code
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-5" id="search-2" name="search-2" type="text">
+        </div>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--visible">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+        
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+              <h4 class="nhsuk-fieldset__heading">
+                Status
+              </h4>
+            </legend>
+      
+            <div class="nhsuk-checkboxes nhsuk-checkboxes--small overflow-filter">
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                  Sent
+                </label>
+              </div>
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                  Duplicate check in progress
+                </label>
+              </div>
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                  Awaiting documents
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-4" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-4">
+                  Expired
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-5" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-5">
+                  Locked
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-6" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-6">
+                  Duplicate information
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-7" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-7">
+                  ID review
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-8" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-8">
+                  On hold
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-9" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-9">
+                  Approved
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-10" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-10">
+                  Rejected
+                </label>
+              </div>
+      
+            </div>
+          </fieldset>
+      
+        </div>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--visible">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+        
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+              <h4 class="nhsuk-fieldset__heading">
+                Sender
+              </h4>
+            </legend>
+      
+            <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="my-apps-1" name="search-filter-1" type="checkbox" value="my-apps">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="my-apps-1">
+                  My applications
+                </label>
+              </div>   
+      
+            </div>
+          </fieldset>
+      
+        </div>
+
+
+      {{ button({ "text": "Apply filters", 
+      "classes": "nhsuk-button
+      nhsuk-u-margin-bottom-8" }) }}
+     
+    </form>
+  </div>
+
+  <div class="nhsuk-grid-column-two-thirds">
+    <a class="nhsuk-button nhsuk-button--secondary" href="/inviter/v3/dashboard#hide-filters">Hide filters</a>
+
+    <h4><a href="">James Stenberg</a></h4>
+    <dl class="nhsuk-summary-list">
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Application ID
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+        08267-737823hc-bcsyc63
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Email address
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+        james.stenberg@nhs.net
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Organisation
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          Barsetshire NHS Foundation Trust (RWA)
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Sent by
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+        Vincent Douglas on 8 June 2022
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Status
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          <strong class="nhsuk-tag nhsuk-tag--white">
+            Awaiting documents
+            </strong>
+        </dd>
+      </div>
+
+    </dl>
+    
+    <h4><a href="">James Stenberg</a></h4>
+    <dl class="nhsuk-summary-list">
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Application ID
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+        08267-737823hc-bcsyc63
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Email address
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+        james.stenberg@nhs.net
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Organisation
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          Barsetshire NHS Foundation Trust (RWA)
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Sent by
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+        Vincent Douglas on 8 June 2022
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+        Status
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          <strong class="nhsuk-tag nhsuk-tag--white">
+            Awaiting documents
+            </strong>
+        </dd>
+      </div>
+
+    </dl>
+
+    <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+      <ul class="nhsuk-list nhsuk-pagination__list">
+        <li class="nhsuk-pagination-item--next">
+          <a
+            class="nhsuk-pagination__link nhsuk-pagination__link--next"
+            href="#"
+          >
+            <span class="nhsuk-pagination__title">Next</span>
+            <span class="nhsuk-u-visually-hidden">:</span>
+            <span class="nhsuk-pagination__page">2 of 6</span>
+            <svg
+              class="nhsuk-icon nhsuk-icon__arrow-right"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              width="34"
+              height="34"
+            >
+              <path
+                d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v3H5a1 1 0 0 0 0 2h11v3a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% endblock %}
