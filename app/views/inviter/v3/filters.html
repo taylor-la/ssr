@@ -1,4 +1,4 @@
-{% extends 'layout-idchecker.html' %}
+{% extends 'layout-loggedin.html' %}
 {% block pageTitle %}
   Manage Applications
 {%endblock %}
@@ -25,7 +25,7 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-one-quarter">
 
-    <h3 class="nhsuk-u-margin-top-3">Filter</h3>
+    <h3 class="nhsuk-u-margin-top-3">Filters</h3>
     <form action="/inviter/v3/filters-selected#show-filters" method="post" class="form">
     
         <div class="nhsuk-form-group">
@@ -42,6 +42,31 @@
             ODS code
           </label>
           <input class="nhsuk-input nhsuk-input--width-5" id="search-2" name="search-2" type="text">
+        </div>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--visible">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+        
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+              <h4 class="nhsuk-fieldset__heading">
+                Sender
+              </h4>
+            </legend>
+      
+            <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="my-apps-1" name="search-filter-1" type="checkbox" value="my-apps">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="my-apps-1">
+                  My applications
+                </label>
+              </div>   
+      
+            </div>
+          </fieldset>
+      
         </div>
 
         <hr class="nhsuk-section-break nhsuk-section-break--visible">
@@ -132,30 +157,9 @@
       
         </div>
 
-        <hr class="nhsuk-section-break nhsuk-section-break--visible">
+       
 
-        <div class="nhsuk-form-group nhsuk-u-margin-top-3">
         
-          <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-              <h4 class="nhsuk-fieldset__heading">
-                Sender
-              </h4>
-            </legend>
-      
-            <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
-      
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="my-apps-1" name="search-filter-1" type="checkbox" value="my-apps">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="my-apps-1">
-                  My applications
-                </label>
-              </div>   
-      
-            </div>
-          </fieldset>
-      
-        </div>
 
 
       {{ button({ "text": "Apply filters", 
@@ -179,7 +183,7 @@
         <tr role="row">
           <th role="columnheader" class="" scope="col">Full name</th>
           <th role="columnheader" class="" scope="col">Email address</th>
-          <th role="columnheader" class="" scope="col">Org</th>
+          <th role="columnheader" class="" scope="col">ODS code</th>
           <th role="columnheader" class="" scope="col">Sender</th>
           <th role="columnheader" class="" scope="col">Date sent</th>
           <th role="columnheader" class="" scope="col">Application ID</th>
