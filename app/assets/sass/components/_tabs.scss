@@ -1,0 +1,68 @@
+// =========================================================
+// Tabs
+// =========================================================
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 4px;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 14px 24px;
+  background-color: #d8dde0;
+  color: #005eb8;
+  @include nhsuk-font($size: 19);
+  text-decoration: underline;
+  
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  text-decoration: none;
+}
+
+.tab button:focus {
+  background-color: #ffeb3b;
+    box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+    color: #212b32;
+    outline: 4px solid transparent;
+    text-decoration: none;
+}
+
+
+/* Create an active/current tablink class */
+.tab button.active {
+  margin-bottom: -1px;
+    padding-top: 15px;
+    padding-right: 23px;
+    padding-bottom: 17px;
+    padding-left: 23px;
+    border: 1px solid #d8dde0;
+    border-bottom: 0;
+    background-color: #FFF;
+    text-decoration: none;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+  @include nhsuk-responsive-margin(0, 'bottom');
+  background-color: $color_nhsuk-white;
+  border: 1px solid $nhsuk-border-color;
+  border-top: 0;
+  padding: nhsuk-spacing(6) nhsuk-spacing(4);
+  border-bottom-width: 4px;
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
