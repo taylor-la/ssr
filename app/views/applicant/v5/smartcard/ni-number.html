@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v5/date-of-birth",
+    "href": "/applicant/v5/smartcard/date-of-birth",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,7 +21,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/v5/address-postcode" method="post" class="form">
+      <form action="/applicant/v5/smartcard/preferred-name" method="post" class="form">
 
         <div class="nhsuk-form-group">
           <h1 class="nhsuk-label-wrapper">
@@ -29,8 +29,6 @@
               Enter your National Insurance number
             </label>
           </h1>
-
-          <p>This information will be used to check if your details are already in the NHS staff database.</p>
           <p>You can find your National Insurance number on:</p>
 
           <ul>
