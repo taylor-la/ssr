@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Take a smartcard photo
+  Upload a smartcard photo
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v5/smartcard/smartcard-format",
+    "href": "/applicant/v5/smartcard/format",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -20,73 +20,41 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <!-- Instructions -->
-      <div id="instructions">
-        <h1>Take a smartcard photo</h1>
 
-        <p>Your smartcard photo must:</p>
-        <ul>
-          <li>be clear and in focus</li>
-          <li>be taken against a plain, light coloured background</li>
-          <li>show you facing forwards</li>
-          <li>not contain other people or objects in the background</li>
-          <li>not have hair or other objects obscuring the face</li>
-        </ul>
+      <form id="save-image" action="/applicant/v5/smartcard/check-your-answers" method="post">
 
-        <form id="save-image" action="/applicant/v5/smartcard/address-postcode" method="post">
-
-          <div class="nhsuk-form-group nhsuk-u-visually-hidden">
-            <label class="nhsuk-label" for="fileInput">
-              Upload an image file
+        <div class="nhsuk-form-group">
+          <h1 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--xl" for="example-heading">
+              Upload a smartcard photo
             </label>
-            <div class="nhsuk-hint" id="example-with-hint-text-hint">
-              Must be .jpeg, .jpg, .png, .bmp
-            </div>
-            <input type="file" id="fileInput" class="nhsuk-file-upload nhsuk-u-margin-top-3" name="fileInput">
+          </h1>
+          <p>Your smartcard photo must:</p>
+          <ul>
+            <li>be clear and in focus</li>
+            <li>be taken against a plain, light coloured background</li>
+            <li>show you facing forwards</li>
+            <li>not contain other people or objects in the background</li>
+            <li>not have hair or other objects obscuring the face</li>
+          </ul>
+
+          <div class="nhsuk-hint" id="fileInput-hint">
+            Image file must be .jpeg, .jpg, .png, .bmp format
           </div>
-  
-          <a id="take-photo-option" class="nhsuk-button" href="#00">Open camera</a>
-      </div>
-      
-    </div>
-  </div>
-
-      <!-- Show the relevant bit depending on how they want to take a picture -->
-
-      <!-- Photo booth -->
-
-        <div id="photo-booth" style="display:none;" >
-
-          <img id="photo" width="400" height="273" src="" style="display: none;" />
-
-
-          <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-4" >
-            <div class="nhsuk-grid-column-one-half">
-              <h2>
-                Take photo
-              </h2>
-              <video id='target' width="500" height="400"></video>
-              <a id="capture" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-4">Take photo</a>
-            </div>
-            <div class="nhsuk-grid-column-one-third">
-            </div>
-          </div>
+          <input type="file" id="fileInput" class="nhsuk-u-margin-top-3" name="fileInput">
+        </div>
 
 
         </div>
+      </div>
+
+      
 
         <!-- Photo edit -->
 
         <div id="image-editing" style="display: none;">
-          <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-              <p><a href="#">Re-take photo</a></p>
-            </div>
-          </div>
-          <div class="nhsuk-grid-row nhsuk-u-margin-bottom-4" >
-  
+          <div class="nhsuk-grid-row nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-3" >
             <div class="nhsuk-grid-column-one-half">
-              
               <h2>
                 Edit image
               </h2>
@@ -106,7 +74,6 @@
                 <a href="#07">Clockwise</a> |
                 <a href="#08">Anticlockwise</a>
               </p>
-              <a class="nhsuk-button" href="/applicant/v5/smartcard/address-postcode">Continue</a>
             </div>
             <div class="nhsuk-grid-column-one-third">
               <h2>
@@ -120,6 +87,10 @@
 
 
         </div>
+
+        <button id="jsmain-contact-submit" class="nhsuk-button nhsuk-u-margin-top-3" type="submit">
+          Continue
+        </button>
 
       </div>
 
@@ -301,131 +272,7 @@
         }
 
 
-        /// Take photo functionality
-
-        // Trigger the photo capture when link is pressed
-
-        var video = document.getElementById('target'),
-            canvas = document.getElementById('edit-canvas'),
-            previewCanvas = document.getElementById('preview-canvas'),
-            context = canvas.getContext('2d'),
-            context2 = previewCanvas.getContext('2d'),
-            photo = document.getElementById('photo'),
-            takePhotoOption = document.getElementById('take-photo-option'),
-            takePhoto = document.getElementById('capture'),
-            photoBooth = document.getElementById('photo-booth'),
-            editBooth = document.getElementById('image-editing');
-            instructions = document.getElementById('instructions');
-
-       takePhotoOption.addEventListener("click", function() {
-         photoBooth.style.display = "block";
-         editBooth.style.display = "none";
-         instructions.style.display = "none";
-
-         navigator.mediaDevices.getUserMedia({
-           video: true,
-           audio:false
-         }).then( stream => {
-           video.srcObject = stream;
-           video.play();
-         }).catch( error => console.log(error) );
-
-         takePhoto.addEventListener("click", function() {
-           context.drawImage(video, 0, 0, 400, 300);
-           // Outer portrait image edge
-           context.beginPath();
-           context.lineWidth = "4";
-           context.strokeStyle = "red";
-           context.rect(94, 1, 213, 270);
-           context.stroke();
-           // Resize container
-           context.beginPath();
-           context.lineWidth = "4";
-           context.strokeStyle = "red";
-           context.rect(267, 233, 40, 50);
-           context.stroke();
-           // Resize arrow - smaller
-           context.beginPath();
-           context.moveTo(291, 242);
-           context.lineTo(276, 242);
-           context.lineTo(276, 257);
-           context.closePath();
-           context.fillStyle = "red";
-           context.fill();
-           // Resize arrow - larger
-           context.beginPath();
-           context.moveTo(281, 261);
-           context.lineTo(296, 261);
-           context.lineTo(296, 246);
-           context.closePath();
-           context.fillStyle = "red";
-           context.fill();
-           // Directional arrow - top
-           context.beginPath();
-           context.moveTo(190, 100);
-           context.lineTo(210, 100);
-           context.lineTo(200, 90);
-           context.closePath();
-           context.fillStyle = "red";
-           context.fill();
-           // Directional arrow - right
-           context.beginPath();
-           context.moveTo(220, 110);
-           context.lineTo(220, 130);
-           context.lineTo(230, 120);
-           context.closePath();
-           context.fillStyle = "red";
-           context.fill();
-           // Directional arrow - bottom
-           context.beginPath();
-           context.moveTo(190, 140);
-           context.lineTo(210, 140);
-           context.lineTo(200, 150);
-           context.closePath();
-           context.fillStyle = "red";
-           context.fill();
-           // Directional arrow - Left
-           context.beginPath();
-           context.moveTo(180, 110);
-           context.lineTo(180, 130);
-           context.lineTo(170, 120);
-           context.closePath();
-           context.fillStyle = "red";
-           context.fill();
-           // Directional centre point
-           context.beginPath();
-           context.arc(200, 120, 10, 0, 2 * Math.PI, false);
-           context.fillStyle = "red";
-           context.fill();
-           // Face placement guide
-           context.beginPath();
-           context.translate(1, 1);
-           context.scale(0.75, 1);
-           context.arc(265, 120, 80, 0, 2 * Math.PI, false);
-           context.restore(); // restore to original state
-           context.lineWidth = "4";
-           context.strokeStyle = "red";
-           context.stroke();
-           context.strokeStyle = 'rgba(0,0,0,0.0)';
-
-           context2.drawImage(video, -96, 0, 400, 300);
-           photo.setAttribute('src', canvas.toDataURL('image/png'));
-           editBooth.style.display = "block";
-           photoBooth.style.display = "none";
-           takePhotoOption.innerHTML = "Retake photo";
-         })
-
-       });
-
-
-        $("#save-image").on("submit", function(e) {
-          e.preventDefault();
-          var previewCanvas = document.getElementById('preview-canvas');
-          var imgDataURL = previewCanvas.toDataURL("image/png");
-          console.log("data url: " + imgDataURL);
-          localStorage.setItem("createUserImgDataURL", imgDataURL);
-          window.location.href = "/v14/create-new-user/check-answers";
-        });
+       
 
 
       </script>
