@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout-inviter-v5.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v4/dashboard",
+    "href": "/inviter/v5/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -50,7 +50,7 @@
         <li>ODS codes</li>
       </ul>
 
-      <form action="/inviter/v4/sender-email" method="post">
+      <form action="/inviter/v5/sender-email" method="post">
 
         <div class="nhsuk-form-group nhsuk-form-group--error nhsuk-u-margin-bottom-6">
             <label class="nhsuk-label nhsuk-label--m" for="bulk-upload-1">

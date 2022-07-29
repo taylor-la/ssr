@@ -1,7 +1,7 @@
 {% extends 'layout-email.html' %}
 
 {% block pageTitle %}
-  Application locked
+  Expired applications
 {% endblock %}
 
 {% block content %}
@@ -20,16 +20,16 @@
 
       <div class="nhsuk-u-padding-5">
 
-        <h1 class="nhsuk-heading-l nhsuk-u-visually-hidden">Apply for a Care ID - approved applications</h1>
+        <h1 class="nhsuk-heading-l nhsuk-u-visually-hidden">Apply for a Care ID - resend applications</h1>
 
         <p class="nhsuk-body">Dear [name],</p>
         <p class="nhsuk-body">You are being sent this email in relation to recent Apply for Care ID applications.</p>
-        <p class="nhsuk-body">The following Care ID applications have been approved and users created.</p>
+        <p class="nhsuk-body">The following Care ID applications have expired as they did not start the process in the time allowed.</p>
         <ul>
-          <li>James Smith, UUID: 63472947834</li>
-          <li>Beth Taylor, UUID: 73267544392</li>
+          <li>James Smith</li>
+          <li>Beth Taylor</li>
         </ul>
-        <p>Go to the 'approved' page on the <a href="/inviter/v4/start">Apply for a Care ID website</a> to view further information.</p>
+        <p>Go to the Manage Applications page on the <a href="/inviter/v5/start">Apply for a Care ID website</a> to resend the applications.</p>
         <p>Email <a href="">enquiries@nhsdigital.nhs.uk</a> if you need further information or help with the application.</p>
         <p>Please do not reply to this email</p>
 

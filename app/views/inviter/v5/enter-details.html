@@ -1,0 +1,114 @@
+{% extends 'layout-inviter-v5.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter applicant's personal details
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v5/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <form action="/inviter/v5/check-your-answers" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-5">
+              Enter applicant's personal details
+            </h1>
+          </legend>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-first-name-1">
+              Given name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-first-name-1" name="app-first-name-1" type="text" value="{{ data['app-first-name-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-last-name-1">
+              Family name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-last-name-1" name="app-last-name-1" type="text" value="{{ data['app-last-name-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-email-address-1">
+              Work email address
+            </label>
+            <div class="nhsuk-hint" id="app-email-address-1-hint">
+              This must be an email address on the CIS allowlist
+            </div>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-email-address-1" name="app-email-address-1" type="text" inputmode="email" aria-describedby="app-email-address-1-hint" value="{{ data['app-email-address-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-mobile-1">
+              Mobile number
+            </label>
+            <div class="nhsuk-hint" id="app-mobile-1-hint">
+              For international numbers include the country code
+            </div>
+            <input class="nhsuk-input nhsuk-input--width-10" id="app-mobile-1" name="app-mobile-1" type="text" inputmode="tel" aria-describedby="app-mobile-1-hint" value="{{ data['app-mobile-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="positions-1">
+                What does the applicant need (optional)?
+              </label>
+            <div class="nhsuk-hint" id="positions-1-hint">For example, an authenticator like a smartcard, roles and permissions required</div>
+            <textarea class="nhsuk-textarea" id="positions-1" name="positions-1" rows="4" aria-describedby="positions-1-hint" value="{{ data['positions-1'] }}"></textarea>
+          </div>
+
+        </fieldset>
+
+          <div class="nhsuk-checkboxes nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-5">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="dbs-1" name="dbs" type="checkbox" value="completed">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="dbs-1">
+                I confirm that this individual has been through relevant employment checks to work for their organisation.
+              </label>
+            </div>
+
+          </div>
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+      </form>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Check if an email address domain is on the CIS allowlist
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Check the <a href="https://digital.nhs.uk/services/registration-authorities-and-smartcards/smartcard-services/digital-smartcard/digital-smartcard-guidance/registration-authority-guidance-for-digital-smartcards#top">NHS Digital Registration Authority guidence</a> to see if an email address domain is on the CIS allowlist.</p>
+          <p>Placeholder for process to get email added to allowlist</p>
+          
+      
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}
