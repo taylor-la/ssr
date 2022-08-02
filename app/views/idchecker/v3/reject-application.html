@@ -25,19 +25,43 @@
         Reject application
       </h1>
 
-      <p>You are rejecting this application because:</p>
+      <p>This is application is being rejected for the following reasons</p>
 
-      <ul>
-        <li>Photo ID 2 has expired</li>
-        <li>Face scan is not live</li>
-      </ul>
+     
 
+      <dl class="nhsuk-summary-list">
 
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+          Photo ID 1
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+          Expired, missing information
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+          Smartcard photo
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+          does not meet passport guidelines
+          </dd>
+        </div>
+
+      </dl>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example">
+          Notes (optional)
+        </label>
+        <textarea class="nhsuk-textarea" id="example" name="example" rows="3" aria-describedby="example-hint"></textarea>
+      </div>
       
       
 
 
-      <a href="/idchecker/v3/dashboard" class="nhsuk-button nhsuk-button--secondary delete-button">
+      <a href="/idchecker/v3/dashboard" class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-4">
         Reject application
       </a>
 
