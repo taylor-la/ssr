@@ -1,7 +1,7 @@
 {% extends 'layout-email.html' %}
 
 {% block pageTitle %}
-  Application approved
+  Application update
 {% endblock %}
 
 {% block content %}
@@ -33,20 +33,15 @@
         <p class="nhsuk-body">Dear [name],</p>
         <p class="nhsuk-body">You are being sent this email in relation to your recent application for a Care ID.</p>
 
-        <p>Your application has been rejected because your <strong>smartcard photo does not meet passport guidelines</strong>.</p>
-        <p>Use the link below to submit a new smartcard photo.</p>
+        <p>Your application has been rejected because your <strong>ID card photo does not meet passport guidelines</strong>.</p>
+        <p>Use the link below to submit a new passport style photo.</p>
         <p>You can select whether to take or upload a photo.</p>
 
-        <p>Your smartcard photo must:</p>
-          <ul>
-            <li>be clear and in focus</li>
-            <li>be taken against a plain, light coloured background</li>
-            <li>show you facing forwards</li>
-            <li>not contain other people or objects in the background</li>
-            <li>not have hair or other objects obscuring the face</li>
-          </ul>
+        <p>Before you start, make sure you are prepared to have your photo.</p>
+
+      
         
-        <a href="/applicant/v5/smartcard/format" class="nhsuk-button nhsuk-u-margin-top-2">
+        <a href="/applicant/v5/smartcard/start" class="nhsuk-button nhsuk-u-margin-top-2">
           Start
         </a>
         

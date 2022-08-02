@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your full name
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v5/profile/preferred-name" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+            <h1 class="nhsuk-fieldset__heading">
+              Enter your full name
+            </h1>
+          </legend>
+
+          
+          <p>The name you enter must be the same as it appears on the documents you use for your photo ID.</p>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="title">
+              Title (optional)
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-5" id="title" name="title" type="text" value="{{ data['title'] }}">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              Given name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" type="text" value="{{ data['first-name'] }}">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="middle-name">
+              Middle name (if you have one)
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="middle-name" name="middle-name" type="text" value="{{ data['middle-name'] }}">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Family name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" type="text" value="{{ data['last-name'] }}">
+          </div>
+        
+        </fieldset>
+
+        
+        <p>This information will be used to check if your details are already in the NHS staff database.</p>
+        
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+      
+    </div>
+  </div>
+
+{% endblock %}

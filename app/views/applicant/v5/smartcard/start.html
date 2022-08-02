@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Send a passport style photo
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Send a passport style photo
+      </h1>
+
+      <p>A passport style photo is needed for your ID card.</p>
+
+      <p>Your photo must:</p>
+          <ul>
+            <li>be clear and in focus</li>
+            <li>be taken against a plain, light coloured background</li>
+            <li>show you facing forwards</li>
+            <li>not contain other people or objects in the background</li>
+            <li>not have hair or other objects obscuring the face</li>
+          </ul>
+
+      <a href="/applicant/v5/smartcard/format" class="nhsuk-button nhsuk-u-margin-top-2">
+        Start
+      </a>
+
+
+    </div>
+  </div>
+
+{% endblock %}
