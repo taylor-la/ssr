@@ -112,7 +112,7 @@ router.post('/applicant/v5/smartcard/upload', function (req, res) {
   // Check whether the variable matches a condition
   if (formatSmartcard == "camera"){
     // Send user to next page
-    res.redirect('/applicant/v5/smartcard/camera')
+    res.redirect('/applicant/v5/smartcard/camera-mobile')
   } else {
     // Send user to ineligible page
     res.redirect('/applicant/v5/smartcard/upload')
@@ -133,6 +133,38 @@ router.post('/applicant/v5/profile/upload', function (req, res) {
   } else {
     // Send user to ineligible page
     res.redirect('/applicant/v5/profile/upload')
+  }
+
+})
+
+router.post('/applicant/v5/smartcard/confirmation', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var reviewPhoto = req.session.data['passport-1']
+
+  // Check whether the variable matches a condition
+  if (reviewPhoto == "yes"){
+    // Send user to next page
+    res.redirect('/applicant/v5/smartcard/confirmation')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v5/smartcard/format')
+  }
+
+})
+
+router.post('/applicant/v5/smartcard/desktop/confirmation', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var reviewImage = req.session.data['passport-2']
+
+  // Check whether the variable matches a condition
+  if (reviewImage == "yes"){
+    // Send user to next page
+    res.redirect('/applicant/v5/smartcard/desktop/confirmation')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v5/smartcard/desktop/upload')
   }
 
 })

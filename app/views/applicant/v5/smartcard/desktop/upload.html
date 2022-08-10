@@ -6,7 +6,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v5/smartcard/format",
+    "href": "/applicant/v5/smartcard/desktop/start",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -52,7 +52,7 @@
         <div class="container nhsuk-u-width-one-half">
           <img id="pictureFromCamera" />
         </div>
-        <form action="/applicant/v5/smartcard/confirmation" method="post" class="form">
+        <form action="/applicant/v5/smartcard/desktop/confirmation" method="post" class="form">
 
           <div class="nhsuk-form-group nhsuk-u-margin-top-5">
   
@@ -66,15 +66,15 @@
               <div class="nhsuk-radios">
           
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="passport-yes-1" name="passport-1" type="radio" value="yes" {{ checked("passport-1", "yes") }}>
-                  <label class="nhsuk-label nhsuk-radios__label" for="passport-yes-1">
+                  <input class="nhsuk-radios__input" id="passport-yes-2" name="passport-2" type="radio" value="yes" {{ checked("passport-2", "yes") }}>
+                  <label class="nhsuk-label nhsuk-radios__label" for="passport-yes-2">
                     Yes, I want to submit this photo
                   </label>
                 </div>
           
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="passport-no-1" name="passport-1" type="radio" value="no" {{ checked("passport-1", "no") }}>
-                  <label class="nhsuk-label nhsuk-radios__label" for="passport-no-1">
+                  <input class="nhsuk-radios__input" id="passport-no-2" name="passport-2" type="radio" value="no" {{ checked("passport-2", "no") }}>
+                  <label class="nhsuk-label nhsuk-radios__label" for="passport-no-2">
                     No, I want to retake this photo
                   </label>
                 </div>

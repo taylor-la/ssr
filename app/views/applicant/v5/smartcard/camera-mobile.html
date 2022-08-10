@@ -4,15 +4,24 @@
   Take a smartcard photo
 {% endblock %}
 
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v5/smartcard/format",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>
-        Take a photo
-      </h1>
-
-      <p>Your passport style photo must:</p>
+     
+      <div id="instructions">
+        <h1>
+          Take a photo
+        </h1>
+        <p>Your passport style photo must:</p>
       <ul>
         <li>be clear and in focus</li>
         <li>be taken against a plain, light coloured background</li>
@@ -23,6 +32,9 @@
 
       <label for="cameraFileInput">
         <span class="nhsuk-button">Open camera</span>
+
+      </div>
+      
   
         <!-- The hidden file `input` for opening the native camera -->
         <input class="nhsuk-u-visually-hidden"
@@ -32,20 +44,67 @@
           capture="user"
         />
       </label>
+      
+      <div id="edit-image" style="display: none;">
+        <h2 class="nhsuk-heading-xl">Review photo</h2>
+        <div class="container nhsuk-u-width-one-half">
+          <img id="pictureFromCamera" />
+        </div>
+        <form action="/applicant/v5/smartcard/confirmation" method="post" class="form">
 
-      <img id="pictureFromCamera" />
-
+          <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+  
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                <h2 class="nhsuk-fieldset__heading">
+                  Does this photo meet passport guidelines?
+                </h2>
+              </legend>
+          
+              <div class="nhsuk-radios">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="passport-yes-1" name="passport-1" type="radio" value="yes" {{ checked("passport-1", "yes") }}>
+                  <label class="nhsuk-label nhsuk-radios__label" for="passport-yes-1">
+                    Yes, I want to submit this photo
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="passport-no-1" name="passport-1" type="radio" value="no" {{ checked("passport-1", "no") }}>
+                  <label class="nhsuk-label nhsuk-radios__label" for="passport-no-1">
+                    No, I want to retake this photo
+                  </label>
+                </div>
+          
+              </div>
+            </fieldset>
+          
+          </div>
+          
+  
+          {{ button({
+            "text": "Continue"
+          }) }}
+  
+        </form>
+      </div>
     </div>
 
   </div>
 
   <script>
+    var instructions = document.getElementById('instructions');
+    var editPhoto = document.getElementById('edit-image');
+
     document
-  .getElementById("cameraFileInput")
-  .addEventListener("change", function () {
-    document
-      .getElementById("pictureFromCamera")
-      .setAttribute("src", window.URL.createObjectURL(this.files[0]));
-  });
+      .getElementById("cameraFileInput")
+      .addEventListener("change", function () {
+        editPhoto.style.display = "block";
+        instructions.style.display = "none";
+        document
+          .getElementById("pictureFromCamera")
+          .setAttribute("src", window.URL.createObjectURL(this.files[0]));
+      });
   </script>
 {% endblock %}
