@@ -1,0 +1,151 @@
+//// Logged in user banner
+
+.logged-in-user-banner {
+  background-color: #005eb8;
+  color: #ffffff;
+}
+.logged-in-user-banner p {
+  font-size: 16px;
+  border-top: 1px solid #93B9DD;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  margin: 0;
+  text-align: left;
+}
+.logged-in-user-banner a {
+color: #ffffff !important;
+}
+
+.logged-in-user-banner a:focus {
+  color: 	#212b32;
+  }
+
+.logged-in-user-banner p {
+position: relative;
+}
+.logged-in-as {
+position: relative;
+width: 80%;
+display: inline-block;
+overflow: hidden;
+}
+// .logged-in-as-org {
+//   max-width: 80%;
+//   margin-bottom: -6px;
+//   display: inline-block;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
+.logout-link {
+position: absolute;
+top: 14px;
+right: 14px;
+width: 20%;
+display: block;
+text-align: right;
+}
+@media (max-width:768px) {
+.logged-in-user-banner a {
+  display: block;
+}
+.change-role-divider {
+  visibility: hidden;
+}
+a.change-role {
+  margin-top: 0.5em;
+}
+
+.logged-in-as {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+.logout-link {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: auto;
+  display: block;
+  text-align: left;
+}
+}
+
+
+
+
+//// Account navigation for logged in users
+
+.nhsuk-account-navigation-container {
+background-color: #FFF; }
+
+.nhsuk-account-navigation {
+border-top: 10px solid #AEB7BD;
+border-bottom: 1px solid #AEB7BD;
+display: flex;
+justify-content: flex-end; }
+@media (max-width: 768px) {
+  .nhsuk-account-navigation {
+    justify-content: flex-start; } }
+
+.nhsuk-account-navigation__main {
+list-style-type: none;
+margin-bottom: 0; }
+@media (max-width: 768px) {
+  .nhsuk-account-navigation__main {
+    padding-left: 0;
+    width: 100%; } }
+.nhsuk-account-navigation__main li {
+  display: inline-block;
+  margin-bottom: 0; }
+  @media (max-width: 768px) {
+    .nhsuk-account-navigation__main li {
+      display: block; } }
+
+.nhsuk-account-navigation__link {
+border-bottom: 4px solid transparent;
+box-sizing: border-box;
+color: #4a4a4a;
+display: inline-block;
+font-size: 16px;
+font-weight: 300;
+line-height: 1.25;
+padding: 12px 16px 8px;
+text-decoration: none;
+text-transform: none; }
+@media (max-width: 768px) {
+  .nhsuk-account-navigation__link {
+    width: 100%; } }
+.nhsuk-account-navigation__link:hover {
+  border-bottom: 4px solid #d8dde0; }
+
+.nhsuk-account-navigation__link:visited {
+  color:#4a4a4a; }
+
+.nhsuk-account-navigation__link__current {
+border-bottom: 4px solid #d8dde0; }
+
+
+
+.nhsuk-notification-badge {
+background: #d4351c;
+border-radius: 4px;
+color: #fff;
+display: inline-block;
+font-size: 14px;
+font-weight: 600;
+min-width: 25px;
+padding: 0px 2px;
+text-align: center;
+white-space: nowrap; }
+
+.nhsuk-contents-list__list--nested {
+margin-top: 10px;
+margin-bottom: 10px;
+list-style-type: disc; }
+
+.nobg {
+margin-left: 8px;
+background: none !important;
+padding-left: 2px !important; }
