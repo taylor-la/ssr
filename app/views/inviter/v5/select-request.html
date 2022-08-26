@@ -1,0 +1,84 @@
+{% extends 'layout-inviter-v5.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Select CIS request list for application
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v5/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <div class="nhsuk-alert nhsuk-alert--info nhsuk-alert--icon">
+        <svg class="nhsuk-icon nhsuk-icon__info nhsuk-alert__icon" fill="none" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+          <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+          C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+        </svg>
+        <h3 class="nhsuk-u-visually-hidden">Information:</h3>
+        <p class="nhsuk-u-font-weight-bold">You are logged in as Barsetshire Community Hospital NHS Foundation Trust (RWA). <a href="#">Change</a> </p>
+      </div>
+      
+      <h1>Select CIS request list</h1>
+
+      <p>Select which CIS request list this application will appear in once it has been approved.</p>
+
+      <p>The application will show as a completed create user request.</p>
+
+      <dl class="nhsuk-summary-list nhsuk-summary-list--no-border" style="display:none;">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Organisation
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Barsetshire Community Hospital NHS Foundation Trust (RWA)
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/inviter/v5/change-role">
+              Change<span class="nhsuk-u-visually-hidden"> organisation</span>
+            </a>
+          </dd>
+        </div>    
+      </dl>
+
+      <form action="/inviter/v5/enter-details" method="post" class="form">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-6">
+          <label class="nhsuk-label" for="select-1">
+            CIS Request list
+          </label>
+          <select class="nhsuk-select" id="select-1" name="select-1" value="{{ data['select-1'] }}">
+            <option value="Default"selected>Default</option>
+            <option value="Branch 1">Branch 1</option>
+            <option value="Branch 2">Branch 2</option>
+            <option value="Branch 3">Branch 3</option>
+          </select>
+        </div>
+        
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+      </form>
+
+      
+
+    </div>
+
+  </div>
+{% endblock %}
