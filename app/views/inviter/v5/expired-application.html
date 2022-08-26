@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Application details
+  Application: James Stenberg
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,9 +28,9 @@
 
     <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: Expired</p>
 
-    <a class="nhsuk-button" href="/inviter/v5/application-sent">Resend</a>
+    <a class="nhsuk-button nhsuk-u-margin-right-4" href="/inviter/v5/application-sent">Resend</a>
+    <a class="nhsuk-button nhsuk-button--secondary delete-button" href="/inviter/v5/delete-application">Delete</a>
 
-    <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-left-4" href="/inviter/v5/archive-application">Close</a>
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-5">
       <div class="nhsuk-card__content">
@@ -62,6 +62,15 @@
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
+            Organisation
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            	Barsetshire NHS Foundation Trust (RWA)
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
             Last updated
             </dt>
             <dd class="nhsuk-summary-list__value">
@@ -71,12 +80,14 @@
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-            Organisation
+            Number of resends
             </dt>
             <dd class="nhsuk-summary-list__value">
-            	Barsetshire NHS Foundation Trust (RWA)
+            2
             </dd>
           </div>
+
+          
 
         </dl>
 
@@ -131,17 +142,6 @@
               <a href="/inviter/v5/enter-details">
                 Change<span class="nhsuk-u-visually-hidden"> name</span>
               </a>
-            </dd>
-          </div>
-
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Delivery address
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              -
-            </dd>
-            <dd class="nhsuk-summary-list__actions">
             </dd>
           </div>
 
@@ -224,6 +224,29 @@
 
       </div>
     </div>
+
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          How long does an applicant have to complete their application?
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Applicants must:</p>
+        <ul>
+          <li>complete the duplicate check within <strong>72 hours</strong> of receiving the invite email</li>
+          <li>submit their ID documents within <strong>15 days</strong> of receiving a link to download the app</li>
+        </ul>
+        <p>Reminders to submit their ID documents are sent via text and email 2 days and 7 days after receiving the link to download the app.</p> 
+      </div>
+    </details>
+
   </div>
 </div>
 {% endblock %}

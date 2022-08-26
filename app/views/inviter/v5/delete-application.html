@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v5/approved-application",
+    "href": "/inviter/v5/expired-application",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -24,20 +24,20 @@
 
       <!-- Add your content here -->
       <h1>
-        Close application
+        Delete application
       </h1>
 
-      <p>When you close the application it will be removed from your applications list.</p>
+      <p>When you delete the application it will be removed from your applications list.</p>
 
       <p>The applicant will not be able to continue the application. The applicant's personal information will be deleted from the system.</p>
 
       <p>If you need to return to the application for this person you will need to start the process again.</p>
 
 
-      <form action="/inviter/v5/application-archived" method="post" class="form">
+      <form action="/inviter/v5/application-deleted" method="post" class="form">
 
         <button class="nhsuk-button nhsuk-button--secondary delete-button"  type="submit">
-          Close application
+          Delete application
         </button>
 
       </form>
