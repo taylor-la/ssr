@@ -5,7 +5,6 @@
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h1>Apply for Care ID</h1>
 
     <div class="nhsuk-alert nhsuk-alert--success nhsuk-alert--icon" style="display:none;">
       <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-alert__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -15,13 +14,16 @@
       <p class="nhsuk-u-font-weight-bold">Applications resent successfully</p>
     </div>
 
-    <div class="nhsuk-alert nhsuk-alert--success nhsuk-alert--icon" style="display:none;">
+    <div class="nhsuk-alert nhsuk-alert--success nhsuk-alert--icon" id="role-changed-alert" style="display:none;">
       <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-alert__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
       </svg>
       <h1 class="nhsuk-u-visually-hidden">Success:</h1>
       <p class="nhsuk-u-font-weight-bold">Role changed to Registration Authority Manager, Aspire Limted OOH (B36648)</p>
     </div>
+    <h1>Apply for Care ID</h1>
+
+   
 
     <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-u-margin-bottom-7">
       <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
@@ -623,7 +625,7 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action</span>
-                <a href="/inviter/v5/image-application">View application</a>
+                <a href="/inviter/v5/app-expired-application">View application</a>
             </td>
           </tr>
         </tbody>
