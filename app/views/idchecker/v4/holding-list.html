@@ -1,0 +1,305 @@
+{% extends 'layout-loggedin.html' %}
+
+{% block pageTitle %}
+  On hold applications
+{%endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v4/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h1>On hold applications</h1>
+      
+    <table role="table" class="nhsuk-table-responsive">
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">ID</th>
+          <th role="columnheader" class="" scope="col">Applicant name</th>
+          <th role="columnheader" class="" scope="col">Date added</th>
+          <th role="columnheader" class="" scope="col">Added by</th>
+          <th role="columnheader" class="" scope="col">Reasons</th>
+          <th role="columnheader" class="" scope="col">Assigned to</th>
+          <th role="columnheader" class="" scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>0826436c
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>James Stenberg
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>12 March 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Potential fraud
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Connie Shepard
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>08247c
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Tavish Sydney
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>18 March 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Kris Emerson
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Shortened name / nickname
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Unassigned
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>08346dn
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Shirin Peters
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>22 March 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Spelling mistake
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Unassigned
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>074hs4c
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Diana Ingram
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>1 April 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Connie Shepard
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Automation
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Unassigned
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>127cdn34
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Charita Dane
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>4 April 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Names switched
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Unassigned
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>237cn45
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Joyce Chung
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>10 April 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Connie Shepard
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Other
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Unassigned
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>12783n4
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Christoper Ruiz
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>13 April 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>	Kris Emerson
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>System issue
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Unassigned
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>7346cc4
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Henrietta Wilkerson
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>16 April 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Potenial fraud
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Unassigned
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>046c4n82
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Arnold Meyer
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>22 April 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Kris Emerson
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Potential safeguarding
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Unassigned
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>347cn33
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Laurel Stenberg
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added</span>27 April 2022
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Other
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">status</span>
+            Unassigned
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="/idchecker/v4/review-id-holding">Open</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+      <ul class="nhsuk-list nhsuk-pagination__list">
+        <li class="nhsuk-pagination-item--next">
+          <a
+            class="nhsuk-pagination__link nhsuk-pagination__link--next"
+            href="#"
+          >
+            <span class="nhsuk-pagination__title">Next</span>
+            <span class="nhsuk-u-visually-hidden">:</span>
+            <span class="nhsuk-pagination__page">2 of 6</span>
+            <svg
+              class="nhsuk-icon nhsuk-icon__arrow-right"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              width="34"
+              height="34"
+            >
+              <path
+                d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v4H5a1 1 0 0 0 0 2h11v4a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% endblock %}

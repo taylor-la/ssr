@@ -1,0 +1,76 @@
+{% extends 'layout-loggedin.html' %}
+
+
+{% block pageTitle %}
+  Review Care ID applications
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        Review Care ID applications
+      </h1>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <p>Check and approve, reject or place applications on a holding list for further review by another ID checker.</p>
+
+          <a href="/idchecker/v4/review-id-warning" class="nhsuk-button nhsuk-u-margin-bottom-9">
+            Review next application
+          </a>
+        </div>
+      </div>
+
+      
+
+      <h2>Application status</h2>
+
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">7 <span class="nhsuk-u-visually-hidden">Waiting for review</span></p><a href="/idchecker/v4/waiting-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Waiting for review</a>
+            </div>
+          </div>
+      
+        </li>
+
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+      
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">11 <span class="nhsuk-u-visually-hidden">On hold</span></p><a href="/idchecker/v4/holding-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">On hold</a>
+            </div>
+          </div>
+      
+        </li>
+
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+      
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">33 <span class="nhsuk-u-visually-hidden">Approved</span></p><a href="/idchecker/v4/approved-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Approved</a>
+            </div>
+          </div>
+      
+        </li>
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">4 <span class="nhsuk-u-visually-hidden">Rejected</span></p><a href="/idchecker/v4/rejected-list" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Rejected</a>
+            </div>
+          </div>
+      
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+{% endblock %}
