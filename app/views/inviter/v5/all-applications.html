@@ -17,112 +17,100 @@
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h1>All applications</h1>
+    <h1>Search all applications</h1>
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Filter applications
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <form action="#" method="post" class="form">
+    <form action="#" method="post" class="form">
     
-          <div class="nhsuk-form-group nhsuk-u-margin-top-3">
-            <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
-              Name, email address or application number
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search-1" type="text">
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+        <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
+          Name, email address or application number
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search-1" type="text">
+      </div>
+
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+        <label class="nhsuk-label  nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-2">
+          ODS code
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-5" id="search-2" name="search-2" type="text">
+      </div>
+
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+      
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+            <h4 class="nhsuk-fieldset__heading">
+              Raised by
+            </h4>
+          </legend>
+    
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="my-apps-1" name="search-filter-1" type="checkbox" value="my-apps">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="my-apps-1">
+                Applications I have raised
+              </label>
+            </div>   
+    
           </div>
-    
-          <div class="nhsuk-form-group nhsuk-u-margin-top-3">
-            <label class="nhsuk-label  nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-2">
-              ODS code
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-5" id="search-2" name="search-2" type="text">
-          </div>
-    
-          <div class="nhsuk-form-group nhsuk-u-margin-top-3">
-          
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-                <h4 class="nhsuk-fieldset__heading">
-                  Raised by
-                </h4>
-              </legend>
-        
-              <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
-        
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="my-apps-1" name="search-filter-1" type="checkbox" value="my-apps">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="my-apps-1">
-                    Applications I have raised
-                  </label>
-                </div>   
-        
-              </div>
-            </fieldset>
-        
-          </div>
-    
-          <div class="nhsuk-form-group nhsuk-u-margin-top-3">
-          
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-                <h4 class="nhsuk-fieldset__heading">
-                  Status
-                </h4>
-              </legend>
-        
-              <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
-        
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                    In progress
-                  </label>
-                </div>
-        
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="example-4" name="example" type="checkbox" value="text message">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-4">
-                    Expired
-                  </label>
-                </div>
-    
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="example-9" name="example" type="checkbox" value="text message">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-9">
-                    Approved
-                  </label>
-                </div>
-    
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="example-10" name="example" type="checkbox" value="text message">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-10">
-                    Rejected
-                  </label>
-                </div>
-        
-              </div>
-            </fieldset>
-        
-          </div>
-    
-    
-        {{ button({ "text": "Apply filters", 
-        "classes": "nhsuk-button
-        nhsuk-u-margin-bottom-4" }) }}
-       
-        </form>
+        </fieldset>
     
       </div>
-    </details>
 
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+      
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+            <h4 class="nhsuk-fieldset__heading">
+              Status
+            </h4>
+          </legend>
     
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                In progress
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-4" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-4">
+                Expired
+              </label>
+            </div>
 
-  <table role="table" class="nhsuk-table-responsive">
-    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-9" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-9">
+                Approved
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-10" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-10">
+                Rejected
+              </label>
+            </div>
+    
+          </div>
+        </fieldset>
+    
+      </div>
+
+
+    {{ button({ "text": "Search", 
+    "classes": "nhsuk-button
+    nhsuk-u-margin-bottom-4" }) }}
+   
+    </form>
+
+  <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-4">
+    <caption class="nhsuk-table__caption">
       All applications
     </caption>
     <thead role="rowgroup" class="nhsuk-table__head">
