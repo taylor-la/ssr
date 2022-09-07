@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v5/profile/address-postcode",
+    "href": "/applicant/test/profile/address-postcode",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,7 +21,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/v5/profile/check-your-answers" method="post" class="form">
+      <form action="/applicant/test/profile/check-your-answers" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
@@ -32,7 +32,7 @@
       
             <p class="nhsuk-u-margin-bottom-1">Postcode</p>
       
-            <p><strong>{{ data['address-postcode-1'] }} </strong><a class="nhsuk-u-padding-left-3" href="/applicant/v5/profile/address-postcode">
+            <p><strong>{{ data['address-postcode-1'] }} </strong><a class="nhsuk-u-padding-left-3" href="/applicant/test/profile/address-postcode">
               Change<span class="nhsuk-u-visually-hidden"> postcode</span>
             </a></p>
       
