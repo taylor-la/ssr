@@ -66,6 +66,11 @@
     <!-- Tab expired -->
     <div id="Resend" class="tabcontent">
       <h3>Expired applications</h3>
+      <div class="nhsuk-error-summary nhsuk-u-margin-bottom-5 nhsuk-u-visually-hidden" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <div class="nhsuk-error-summary__body">
+          <p class="nhsuk-u-margin-bottom-0">Select an application or applications to resend</p>
+        </div>
+      </div>
       <a class="nhsuk-button nhsuk-button--secondary" href="#">Resend</a>
       <p><a href="#">Select all</a></p>
       <table role="table" class="nhsuk-table-responsive">
@@ -333,21 +338,6 @@
         </tbody>
       </table>
 
-      <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
-        <ul class="nhsuk-list nhsuk-pagination__list">
-          <li class="nhsuk-pagination-item--next">
-            <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
-              <span class="nhsuk-pagination__title">Next</span>
-              <span class="nhsuk-u-visually-hidden">:</span>
-              <span class="nhsuk-pagination__page">2 of 10</span>
-              <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
     </div>
 
     <!-- Approved -->
@@ -603,6 +593,7 @@
     
 
     <p class="nhsuk-u-margin-top-6"><a href="/inviter/v5/all-applications">Search all applications</a></p> 
+    <p>Set your email alert preferences by going to <a href="/inviter/v5/manage-alerts">manage alerts</a>.</p> 
   </div>
 </div>
 
