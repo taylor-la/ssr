@@ -27,11 +27,9 @@
         Close application for James Stenberg
       </h1>
 
-      <p>When you close the application it will be added to the Rejected applications list.</p>
+      <p>When you close the application it will be added to the closed applications list.</p>
 
       <p>The applicant will not be able to continue the application.</p>
-
-      <p>If you need to return to the application for this person you will need to start the process again.</p>
 
       <form action="/inviter/v5/application-deleted" method="post" class="form">
 
@@ -45,11 +43,25 @@
             </legend>
             
             <div class="nhsuk-radios">
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-3" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-3">
+                  Wrong documents
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-4" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-4">
+                  No longer needed
+                </label>
+              </div>
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                  Switched to face to face process
+                  Took too long
                 </label>
               </div>
         
@@ -57,6 +69,13 @@
                 <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-2">
                   Technical issue
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-4" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-4">
+                  Other
                 </label>
               </div>
         
