@@ -55,33 +55,36 @@
 
     <!-- Tab links -->
     <div class="tab">
-      <button class="tablinks" onclick="openList(event, 'Resend')" id="defaultOpen">Expired</button>
+      <button class="tablinks" onclick="openList(event, 'Resend')" id="defaultOpen">Resend required</button>
       <button class="tablinks" onclick="openList(event, 'Pending')">In progress</button>
       <button class="tablinks" onclick="openList(event, 'Approved')">Approved</button>
       <button class="tablinks" onclick="openList(event, 'Rejected')">Rejected</button>
-      <button class="tablinks" onclick="openList(event, 'Closed')">Closed</button>
+      <button class="tablinks" onclick="openList(event, 'Closed')">Cancelled</button>
      
     </div>
 
     <!-- Tab expired -->
     <div id="Resend" class="tabcontent">
-      <h3>Expired applications</h3>
+      <h3>Resend required applications</h3>
       <div class="nhsuk-error-summary nhsuk-u-margin-bottom-5 nhsuk-u-visually-hidden" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
         <div class="nhsuk-error-summary__body">
           <p class="nhsuk-u-margin-bottom-0">Select an application or applications to resend</p>
         </div>
       </div>
-      <a class="nhsuk-button nhsuk-button--secondary" href="#">Resend</a>
-      <p><a href="#">Select all</a></p>
+      <a class="nhsuk-button nhsuk-button--secondary" href="#">Resend invite email</a>
       <table role="table" class="nhsuk-table-responsive">
         <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
           Expired list
         </caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
-            <th role="columnheader" class="" scope="col">Select</th>
+            <th role="columnheader" class="" scope="col"> <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div></th>
             <th role="columnheader" class="" scope="col">Applicant name</th>
-            <th role="columnheader" class="" scope="col">Last updated on</th>
+            <th role="columnheader" class="" scope="col">Last updated</th>
             <th role="columnheader" class="" scope="col">Raised by</th>
           </tr>
         </thead>
@@ -193,7 +196,7 @@
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
             <th role="columnheader" class="" scope="col">Applicant name</th>
-            <th role="columnheader" class="" scope="col">Last updated on</th>
+            <th role="columnheader" class="" scope="col">Last updated</th>
             <th role="columnheader" class="" scope="col">Raised by</th>
           </tr>
         </thead>
@@ -472,7 +475,7 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Reason</span>
-                Photo ID expired
+              Proof of address not accepted
             </td>
           </tr>
           <tr role="row" class="nhsuk-table__row">
@@ -490,7 +493,7 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Reason</span>
-                Exact duplicate
+              Duplicate match found 
             </td>
           </tr>
           <tr role="row" class="nhsuk-table__row">
@@ -508,7 +511,7 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Reason</span>
-                Image quality
+              Tried to complete application too many times 
             </td>
           </tr>
           <tr role="row" class="nhsuk-table__row">
@@ -526,7 +529,7 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Reason</span>
-              Link to app expired
+              Application expired
             </td>
           </tr>
         </tbody>
@@ -536,15 +539,15 @@
     <!-- Closed -->
 
     <div id="Closed" class="tabcontent">
-      <h3>Closed applications</h3>
+      <h3>Cancelled applications</h3>
       <table role="table" class="nhsuk-table-responsive">
         <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
-          Closed list
+          Cancelled list
         </caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
             <th role="columnheader" class="" scope="col">Applicant name</th>
-            <th role="columnheader" class="" scope="col">Closed on</th>
+            <th role="columnheader" class="" scope="col">Cancelled on</th>
             <th role="columnheader" class="" scope="col">Raised by</th>
             <th role="columnheader" class="" scope="col">Reason</th>
           </tr>
@@ -583,7 +586,7 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Reason</span>
-                Switched to face to face
+              Documents not accepted 
             </td>
           </tr>
         </tbody>
