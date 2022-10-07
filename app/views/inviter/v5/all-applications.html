@@ -6,13 +6,6 @@
 {% block beforeContent %}
 {% endblock %}
 
-{% block outerContent %}
-  {{ backLink({
-    "href": "/inviter/v5/dashboard",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
-  }) }}
-{% endblock %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
@@ -23,7 +16,7 @@
     
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
         <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
-          Name, email address or application number
+          Last name, email address or application number
         </label>
         <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search-1" type="text">
       </div>
@@ -100,7 +93,7 @@
             <div class="nhsuk-checkboxes__item">
               <input class="nhsuk-checkboxes__input" id="example-11" name="example" type="checkbox" value="text message">
               <label class="nhsuk-label nhsuk-checkboxes__label" for="example-11">
-                Closed
+                Cancelled
               </label>
             </div>
     
