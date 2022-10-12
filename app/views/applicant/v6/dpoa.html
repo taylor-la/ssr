@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Do you have a mobile phone with a camera?
+  Do you agree to address verification?
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/test/suitability/poa",
+    "href": "/applicant/v6/accessibility",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,30 +21,36 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/test/suitability/suitable" method="post" class="form">
+      <form action="/applicant/v6/1-photo-id" method="post" class="form">
 
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
               <h1 class="nhsuk-fieldset__heading">
-                Is your proof of address digital?
+                Do you agree to address verification?
               </h1>
             </legend>
+
+            <p>Your UK address will be checked against TU system. </p>
+
+            <p>This will leave a footprint. It will not affect your credit score. </p>
+
+            <p>Link to privacy policy/terms and conditions.</p>
         
             <div class="nhsuk-radios">
         
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="format-yes" name="suit-format" type="radio" value="yes" {{ checked("suit-format", "yes") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="format-yes">
-                  Yes
+                <input class="nhsuk-radios__input" id="dpoa-yes" name="dpoa" type="radio" value="Enter UK address" {{ checked("dpoa", "Enter UK address") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="accessibility-yes">
+                  Yes, I agree
                 </label>
               </div>
         
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="format-no" name="suit-format" type="radio" value="no" {{ checked("suit-format", "no") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="format-no">
-                  No
+                <input class="nhsuk-radios__input" id="dpoa-no" name="dpoa" type="radio" value="no" {{ checked("dpoa", "no") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="dpoa-no">
+                  No, I want to verify my address a different way
                 </label>
               </div>
         

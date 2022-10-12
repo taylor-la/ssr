@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Do you have 2 of the following photo IDs?
+  Select which proof of address document you want to use
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/test/suitability/id-2",
+    "href": "/applicant/v6/dpoa",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,14 +21,14 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/test/suitability/poa-format" method="post" class="form">
+      <form action="/applicant/v6/2-photo-id" method="post" class="form">
 
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
               <h1 class="nhsuk-fieldset__heading">
-                Select 1 proof of address you have
+                Select which proof of address document you want to use
               </h1>
             </legend>
 
@@ -36,32 +36,37 @@
             <div class="nhsuk-radios">
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="bank-1" name="poa" type="radio" value="bank" {{ checked("poa", "bank") }}>
+                <input class="nhsuk-radios__input" id="bank-1" name="poa" type="radio" value="bank statement" {{ checked("poa", "bank statement") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="bank-1">
                   Bank account or credit card statement, from last 6 months
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="utility-1" name="poa" type="radio" value="utility"{{ checked("poa", "utility") }}>
+                <input class="nhsuk-radios__input" id="utility-1" name="poa" type="radio" value="utility bill"{{ checked("poa", "utility bill") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="utility-1">
                   Utility bill, from last 6 months
                 </label>
               </div>
       
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mortgage-1" name="poa" type="radio" value="mortgage" {{ checked("poa", "mortgage") }}>
+                <input class="nhsuk-radios__input" id="mortgage-1" name="poa" type="radio" value="mortgage statement" {{ checked("poa", "mortgage statement") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="mortgage-1">
                   Mortgage statement, from last 12 months
                 </label>
               </div>
-      
-              
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="council-1" name="poa" type="radio" value="council"{{ checked("poa", "council") }}>
+                <input class="nhsuk-radios__input" id="council-1" name="poa" type="radio" value="council tax statement"{{ checked("poa", "council tax statement") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="council-1">
                   Council tax statement, from last 12 months
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="council-1" name="poa" type="radio" value="tenancy agreement"{{ checked("poa", "tenacy agreement") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="council-1">
+                  Tenancy agreement from the last 12 months, from last 12 months
                 </label>
               </div>
 

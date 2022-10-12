@@ -3,41 +3,50 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Do you have a mobile phone with a camera?
+  Accessibility question
 {% endblock %}
 
 {% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v6/step-2",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
 {% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/test/suitability/id-1" method="post" class="form">
+      <form action="/applicant/v6/dpoa" method="post" class="form">
 
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
               <h1 class="nhsuk-fieldset__heading">
-                Do you have a mobile phone with a camera?
+                Accessibility question
               </h1>
             </legend>
 
-            <p>Your phone must also connect to the internet.</p>
+            <p>This service requires you to take photos of ID documents and scan your face using your mobile phone camera. 
+              question?</p>
         
             <div class="nhsuk-radios">
         
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mobile-yes" name="suit-mobile" type="radio" value="yes" {{ checked("suit-mobile", "yes") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="mobile-yes">
+                <input class="nhsuk-radios__input" id="accessibility-yes" name="accessibility" type="radio" value="yes" {{ checked("accessibility", "yes") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="accessibility-yes">
                   Yes
                 </label>
               </div>
         
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mobile-no" name="suit-mobile" type="radio" value="no" {{ checked("suit-mobile", "no") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="mobile-no">
+                <input class="nhsuk-radios__input" id="accessibility-no" name="accessibility" type="radio" value="no" {{ checked("accessibility", "no") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="accessibility-no">
                   No
                 </label>
               </div>

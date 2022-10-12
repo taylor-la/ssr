@@ -7,102 +7,6 @@ const router = express.Router();
 
 // Run this code when a form is submitted to 'juggling-balls-answer'
 
-router.post('/applicant/test/suitability/id-1', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var suitMobile = req.session.data['suit-mobile']
-
-  // Check whether the variable matches a condition
-  if (suitMobile == "no"){
-    // Send user to next page
-    res.redirect('/applicant/test/suitability/not-suitable')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/test/suitability/id-1')
-  }
-
-})
-
-router.post('/applicant/test/suitability/id-2', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var id1 = req.session.data['photo-id-1']
-
-  // Check whether the variable matches a condition
-  if (id1 == "none"){
-    // Send user to next page
-    res.redirect('/applicant/test/suitability/not-suitable')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/test/suitability/id-2')
-  }
-
-})
-
-router.post('/applicant/test/suitability/poa', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var id2 = req.session.data['photo-id-2']
-
-  // Check whether the variable matches a condition
-  if (id2 == "none"){
-    // Send user to next page
-    res.redirect('/applicant/test/suitability/not-suitable')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/test/suitability/poa')
-  }
-
-})
-
-router.post('/applicant/test/suitability/poa-format', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var poa = req.session.data['poa']
-
-  // Check whether the variable matches a condition
-  if (poa == "none"){
-    // Send user to next page
-    res.redirect('/applicant/test/suitability/not-suitable')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/test/suitability/poa-format')
-  }
-
-})
-
-router.post('/applicant/test/suitability/suitable', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var poaFormat = req.session.data['suit-format']
-
-  // Check whether the variable matches a condition
-  if (poaFormat == "yes"){
-    // Send user to next page
-    res.redirect('/applicant/test/suitability/not-suitable')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/test/suitability/suitable')
-  }
-
-})
-
-
-router.post('/applicant/test/one-time-passcode', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var mobileCorrect = req.session.data['mobile-3']
-
-  // Check whether the variable matches a condition
-  if (mobileCorrect == "yes"){
-    // Send user to next page
-    res.redirect('/applicant/test/one-time-passcode')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/test/update-mobile')
-  }
-
-})
 
 router.post('/applicant/v5/smartcard/upload', function (req, res) {
 
@@ -168,6 +72,88 @@ router.post('/applicant/v5/smartcard/desktop/confirmation', function (req, res) 
   }
 
 })
+
+router.post('/applicant/v6/dpoa/', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var accessibility = req.session.data['accessibility']
+
+  // Check whether the variable matches a condition
+  if (accessibility == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v6/offline')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v6/dpoa')
+  }
+
+})
+
+router.post('/applicant/v6/1-photo-id', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var dpoa = req.session.data['dpoa']
+
+  // Check whether the variable matches a condition
+  if (dpoa == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v6/poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v6/1-photo-id')
+  }
+
+})
+
+router.post('/applicant/v6/smartcard', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var photo1 = req.session.data['1-photo-id']
+
+  // Check whether the variable matches a condition
+  if (photo1 == "none"){
+    // Send user to next page
+    res.redirect('/applicant/v6/no-photo-id')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v6/smartcard')
+  }
+
+})
+
+router.post('/applicant/v6/2-photo-id', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var poa = req.session.data['poa']
+
+  // Check whether the variable matches a condition
+  if (poa == "none"){
+    // Send user to next page
+    res.redirect('/applicant/v6/no-poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v6/2-photo-id')
+  }
+
+})
+
+router.post('/applicant/v6/smartcard-2', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var photo2 = req.session.data['2-photo-id']
+
+  // Check whether the variable matches a condition
+  if (photo2 == "none"){
+    // Send user to next page
+    res.redirect('/applicant/v6/no-photo-id')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v6/smartcard-2')
+  }
+
+})
+
+
 
 
 module.exports = router;

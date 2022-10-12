@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  A photo is needed for your Care ID profile
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v6/1-photo-id",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        A photo is needed for your Care ID profile
+      </h1>
+
+      <p>The mobile app will take a photo of your face to appear on your Care ID profile.</p>
+
+      <p><strong>This photo will appear on a smartcard if you are issued one.</strong></p>
+
+      <p>Your photo must:</p>
+
+      <ul>
+        <li>be clear and in focus</li>
+        <li>be taken against a plain, light coloured background</li>
+        <li>show you facing forwards</li>
+        <li>not contain other people or objects in the background</li>
+        <li>not have hair or other objects obscuring the face</li>
+      </ul>
+
+
+
+      <a href="/applicant/v6/save-selection" class="nhsuk-button">
+        Continue
+      </a>
+
+    </div>
+
+  </div>
+{% endblock %}
