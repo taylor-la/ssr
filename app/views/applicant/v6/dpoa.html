@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Do you agree to address verification?
+  We are going to verify your UK address with a third-party organisation
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,22 +28,24 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
               <h1 class="nhsuk-fieldset__heading">
-                Do you agree to address verification?
+                We are going to verify your UK address with a third-party organisation
               </h1>
             </legend>
 
-            <p>Your UK address will be checked against TU system. </p>
+            <p>We'll check your address with TransUnion. They are a credit reference agency. </p>
 
-            <p>This will leave a footprint. It will not affect your credit score. </p>
+            <p>This check will be used to verify that there has been activity over time at your address. This helps us to verify your identity.</p>
 
-            <p>Link to privacy policy/terms and conditions.</p>
+            <p>This will leave a digital footprint but will not affect your credit score and is not a credit check.</p>
+
+            <p><a href="#">Get more information about TransUnion and this check</a></p>
         
             <div class="nhsuk-radios">
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="dpoa-yes" name="dpoa" type="radio" value="Enter UK address" {{ checked("dpoa", "Enter UK address") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="accessibility-yes">
-                  Yes, I agree
+                  Yes, I agree that you can verify my address online
                 </label>
               </div>
         
