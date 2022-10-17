@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Select which photo ID you want to use
+  Which photo ID do you want to use to verify your identity?
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v6/dpoa",
+    "href": "/applicant/v6/address-select",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,16 +21,18 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/v6/smartcard" method="post" class="form">
+      <form action="/applicant/v6/save-selection" method="post" class="form">
 
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7" aria-describedby="photo-ids-hint">
               <h1 class="nhsuk-fieldset__heading">
-                Select which photo ID you want to use
+                Which photo ID do you want to use to verify your identity?
               </h1>
             </legend>
+
+            <p>You'll need to capture an image of this document when using the mobile app. </p>
 
             <div class="nhsuk-hint" id="photo-ids-hint">
               Photo IDs must not be expired
@@ -71,7 +73,7 @@
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="none-1" name="1-photo-id" type="radio" value="none"{{ checked("1-photo-id", "none") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="none-1">
-                  None of the above
+                  I do not have any of these photo ID documents
                 </label>
               </div>
       

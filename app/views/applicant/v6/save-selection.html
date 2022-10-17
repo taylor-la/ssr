@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v6/smartcard",
+    "href": "/applicant/v6/1-photo-id",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -22,63 +22,51 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        Check your selections
+        Check your details
       </h1>
 
       <dl class="nhsuk-summary-list">
 
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Address verification
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      {{ data['dpoa'] }}
-    </dd>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Your address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['address-line-1'] }} {{ data['address-line-2'] }} {{ data['address-town'] }} {{ data['address-postcode-1'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v6/address-postcode">
+              Change<span class="nhsuk-u-visually-hidden"> your address</span>
+            </a>
+          </dd>
+        </div>
 
-    <dd class="nhsuk-summary-list__actions">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Photo ID document
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['1-photo-id'] }} 
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v6/1-photo-id">
+              Change<span class="nhsuk-u-visually-hidden"> Photo ID document</span>
+            </a>
+          </dd>
+        </div>
 
-      <a href="/applicant/v6/dpoa">
-        Change<span class="nhsuk-u-visually-hidden"> address verification</span>
-      </a>
+        
 
-    </dd>
+      </dl>
 
-  </div>
-
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Photo ID document
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      {{ data['1-photo-id'] }} 
-    </dd>
-
-    <dd class="nhsuk-summary-list__actions">
-
-      <a href="/applicant/v6/1-photo-id">
-        Change<span class="nhsuk-u-visually-hidden"> Photo ID document</span>
-      </a>
-
-    </dd>
-
-  </div>
-
-</dl>
-
-<form action="/applicant/v6/spinner-selection" method="post" class="form">
+      <form action="/applicant/v6/spinner-selection" method="post" class="form">
 
 
-    {{ button({
-      "text": "Submit now"
-    }) }}
+        {{ button({
+          "text": "Submit now"
+        }) }}
 
-    </form>
-
-
-
-
-
-
+      </form>
 
     </div>
   </div>

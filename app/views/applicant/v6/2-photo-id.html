@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Select 2 photo IDs you want to use
+  Which 2 photo IDs do you want to use to verify your identity?
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,16 +21,18 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/v6/smartcard-2" method="post" class="form">
+      <form action="/applicant/v6/save-selection-2" method="post" class="form">
 
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7" aria-describedby="photo-ids-hint">
               <h1 class="nhsuk-fieldset__heading">
-                Select 2 photo IDs you want to use
+                Which 2 photo IDs do you want to use to verify your identity?
               </h1>
             </legend>
+
+            <p>You'll need to capture an image of this document when using the mobile app. </p>
 
             <p>Photo IDs must not be expired</p>
 
@@ -73,7 +75,7 @@
               <div class="nhsuk-checkboxes__item">
                 <input class="nhsuk-checkboxes__input" id="none-2" name="2-photo-id" type="checkbox" value="none"{{ checked("2-photo-id", "none") }}>
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="none-2">
-                  None of the above
+                  I do not have 2 of these photo ID documents
                 </label>
               </div>
       

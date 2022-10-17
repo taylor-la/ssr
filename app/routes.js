@@ -89,7 +89,7 @@ router.post('/applicant/v6/dpoa/', function (req, res) {
 
 })
 
-router.post('/applicant/v6/1-photo-id', function (req, res) {
+router.post('/applicant/v6/address-postcode', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
@@ -100,12 +100,12 @@ router.post('/applicant/v6/1-photo-id', function (req, res) {
     res.redirect('/applicant/v6/poa')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v6/1-photo-id')
+    res.redirect('/applicant/v6/address-postcode')
   }
 
 })
 
-router.post('/applicant/v6/smartcard', function (req, res) {
+router.post('/applicant/v6/save-selection', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo1 = req.session.data['1-photo-id']
@@ -116,7 +116,7 @@ router.post('/applicant/v6/smartcard', function (req, res) {
     res.redirect('/applicant/v6/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v6/smartcard')
+    res.redirect('/applicant/v6/save-selection')
   }
 
 })
@@ -137,7 +137,7 @@ router.post('/applicant/v6/2-photo-id', function (req, res) {
 
 })
 
-router.post('/applicant/v6/smartcard-2', function (req, res) {
+router.post('/applicant/v6/save-selection-2', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo2 = req.session.data['2-photo-id']
@@ -148,7 +148,7 @@ router.post('/applicant/v6/smartcard-2', function (req, res) {
     res.redirect('/applicant/v6/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v6/smartcard-2')
+    res.redirect('/applicant/v6/save-selection-2')
   }
 
 })
