@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  You cannot use this service without a proof of address document from this list
+  You cannot continue without one of our listed proof of address documents 
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,22 +12,46 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1 class="nhsuk-heading-xl">
-        You cannot use this service without a proof of address document from this list
-      </h1>
+      <h1>You cannot continue without one of our listed proof of address documents</h1>
 
-      <p>Contact <a href="">midlandscsu@RAservices.nhs.uk</a> to verify your identity in a different way.</p>
+      <form action="/applicant/v6/no-poa-face" method="post" class="form">
 
-      <p>You will be able to provide other evidence to verify who you are.</p>
+        <div class="nhsuk-form-group">
 
-      <p>You can verify your identity:</p>
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l nhsuk-u-margin-bottom-7">
+              <h2 class="nhsuk-fieldset__heading">
+                How do you want to verify your address?
+              </h2>
+            </legend>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-poa-yes" name="no-poa" type="radio" value="online" {{ checked("no-poa", "online") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="no-poa-yes">
+                  I will verify my address online
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-poa-no" name="no-poa" type="radio" value="face" {{ checked("no-poa", "face") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="no-poa-no">
+                  I will arrange a face-to-face check
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
 
-      <ul>
-        <li>in person</li>
-        <li>over a video meeting</li>
-      </ul>
+        {{ button({
+          "text": "Continue"
+        }) }}
 
-      <p>We have sent you an email confirmation.</p>
+      </form>
     </div>
 
   </div>
