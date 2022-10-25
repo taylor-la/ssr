@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  You cannot continue without one of our listed proof of address documents 
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>You cannot continue without one of our listed proof of address documents</h1>
+
+      <form action="/applicant/v7/no-poa-face" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l nhsuk-u-margin-bottom-7">
+              <h2 class="nhsuk-fieldset__heading">
+                How do you want to verify your address?
+              </h2>
+            </legend>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-poa-yes" name="no-poa" type="radio" value="online" {{ checked("no-poa", "online") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="no-poa-yes">
+                  I will verify my address online
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-poa-no" name="no-poa" type="radio" value="face" {{ checked("no-poa", "face") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="no-poa-no">
+                  I will arrange a face-to-face check
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+    </div>
+
+  </div>
+{% endblock %}

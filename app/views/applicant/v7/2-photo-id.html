@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Which 2 photo IDs do you want to use to verify your identity?
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v7/poa",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v7/smartcard-format" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7" aria-describedby="photo-ids-hint">
+              <h1 class="nhsuk-fieldset__heading">
+                Which 2 photo IDs do you want to use to verify your identity?
+              </h1>
+            </legend>
+
+            <p>You'll need to capture an image of this document when using the mobile app. </p>
+
+            <p>Photo IDs must not be expired</p>
+
+            <div class="nhsuk-hint" id="photo-ids-hint">
+              Select 2 options
+            </div>
+        
+            <div class="nhsuk-checkboxes">
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="passport-2" name="2-photo-id" type="checkbox" value="passport" {{ checked("2-photo-id", "passport") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="passport-2">
+                  Passport
+                </label>
+              </div>
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="driving-licence-2" name="2-photo-id" type="checkbox" value="driving licence" {{ checked("2-photo-id", "driving licence") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="driving-licence-2">
+                  Driving licence (full or provisional)
+                </label>
+              </div>
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="residence-permit-2" name="2-photo-id" type="checkbox" value="UK biometric residence permit"{{ checked("2-photo-id", "UK biometric residence permit") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="residence-permit-2">
+                  UK Biometric residence permit card
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="armed-forces-2" name="2-photo-id" type="checkbox" value="HM armed forces card"{{ checked("2-photo-id", "HM armed forces card") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="armed-forces-2">
+                  HM Armed Forces identity card
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__divider">or</div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="none-2" name="2-photo-id" type="checkbox" value="none"{{ checked("2-photo-id", "none") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="none-2">
+                  I do not have 2 of these photo ID documents
+                </label>
+              </div>
+      
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

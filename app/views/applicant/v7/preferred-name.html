@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Enter your preferred name
+  Enter your smartcard name
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/test/profile/your-name",
+    "href": "/applicant/v7/smartcard-camera",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,15 +21,15 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/test/profile/date-of-birth" method="post" class="form">
+      <form action="/applicant/v7/delivery" method="post" class="form">
 
         <div class="nhsuk-form-group">
           <h1 class="nhsuk-label-wrapper">
             <label class="nhsuk-label nhsuk-label--xl" for="preferred-name">
-              Enter your preferred name (optional)
+              Enter your smartcard name (optional)
             </label>
           </h1>
-          <p>You can choose a preferred name to appear on your Care ID.</p>
+          <p>You can choose a preferred name to appear on your smartcard and NHS Care ID profile.</p>
           <div class="nhsuk-hint" id="preferred-name-hint">
             For example, if your name is Mathew Smith you can choose Matt Smith.
             </div>

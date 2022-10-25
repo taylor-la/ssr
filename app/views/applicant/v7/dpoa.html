@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Select how to verify your address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v7/start-application",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v7/1-photo-id" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+              <h1 class="nhsuk-fieldset__heading">
+                Select how to verify your address
+              </h1>
+            </legend>
+
+            <p>We need your UK address to verify your identity.</p>
+
+            <p>We share this information with a 3rd party organisation, TransUnion. They will carry out a check on your address to </p>
+
+            <p>This check will be used to verify that there has been activity over time at your address. This helps us to verify your identity.</p>
+
+            <p><strong>This is not a credit check and will not affect your credit score.</strong></p>
+
+            
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="dpoa-yes" name="dpoa" type="radio" value="Enter UK address" {{ checked("dpoa", "Enter UK address") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="dpoa-yes">
+                  Yes, I agree that you can verify my address online
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="dpoa-no" name="dpoa" type="radio" value="no" {{ checked("dpoa", "no") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="dpoa-no">
+                  No, I want to verify my address a different way
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+      <p><a href="#">Get more information about TransUnion and this check</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

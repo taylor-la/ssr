@@ -11,7 +11,7 @@ Choose how to send your photo
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/test/profile/start",
+    "href": "/applicant/v7/address-select",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -25,16 +25,30 @@ Choose how to send your photo
       
       
 
-      <form action="/applicant/test/profile/upload" method="post" class="form">
+      <form action="/applicant/v7/smartcard-upload" method="post" class="form">
 
         <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
 
           <fieldset class="nhsuk-fieldset ">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
               <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-5">
-                Select how to send your passport style photo
+                Select how to send your profile photo
               </h1>
             </legend>
+
+            <p>A passport style photo is needed for your NHS Care ID profile.</p>
+
+            <p>This photo may also appear on a smartcard.</p>
+
+            <p>Your photo must:</p>
+
+            <ul>
+              <li>be clear and in focus</li>
+              <li>be taken against a plain, light coloured background</li>
+              <li>show you facing forwards</li>
+              <li>not contain other people or objects in the background</li>
+              <li>not have hair or other objects obscuring the face</li>
+            </ul>
         
             <div class="nhsuk-radios">
         

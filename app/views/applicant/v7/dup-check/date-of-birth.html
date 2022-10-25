@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/test/profile/preferred-name",
+    "href": "/applicant/v7/dup-check/your-name",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,7 +21,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/test/profile/ni-number" method="post" class="form">
+      <form action="/applicant/v7/dup-check/ni-number" method="post" class="form">
 
         <div class="nhsuk-form-group">
           <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
@@ -30,7 +30,7 @@
                 Enter your date of birth
               </h1>
             </legend>
-            <p>This information will be used to check if your details are already in the NHS staff database.</p>
+
             <div class="nhsuk-hint" id="dob-hint">
               For example, 15 03 1984
             </div>

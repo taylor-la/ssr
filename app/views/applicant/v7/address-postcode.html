@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Enter a delivery address
+  Enter a UK address
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/test/profile/ni-number",
+    "href": "/applicant/v7/1-photo-id",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,16 +21,16 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/test/profile/address-select" method="post" class="form">
+      <form action="/applicant/v7/address-select" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
             <h1 class="nhsuk-fieldset__heading nhsuk-u-padding-bottom-3">
-              Enter a delivery address
+              Enter a UK postcode
             </h1>
           </legend>
 
-          <p>This address may be used to send a physical ID card, fob or other ID devices. This could be your home or work address.</p>
+          <p>Your address will be shared with TransUnion to verify your address</p>
 
           <div class="nhsuk-form-group">
             <h1 class="nhsuk-label-wrapper">

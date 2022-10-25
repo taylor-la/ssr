@@ -9,6 +9,14 @@
 {% block beforeContent %}
 {% endblock %}
 
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v7/delivery",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
@@ -21,57 +29,70 @@
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Name
+            Address verification
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['title'] }} {{ data['first-name'] }} {{ data['middle-name'] }} {{ data['last-name'] }}
+            {{ data['dpoa'] }} {{ data['poa'] }} 
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/applicant/test/profile/your-name">
-              Change<span class="nhsuk-u-visually-hidden"> first name</span>
+            <a href="/applicant/v7/dpoa">
+              Change<span class="nhsuk-u-visually-hidden"> address verification</span>
             </a>
           </dd>
         </div>
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Preferred name
+            Photo ID document
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['1-photo-id'] }} {{ data['2-photo-id'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v7/1-photo-id">
+              Change<span class="nhsuk-u-visually-hidden"> Photo ID document</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Your UK address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            address option 1
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v7/address-postcode">
+              Change<span class="nhsuk-u-visually-hidden"> your address</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Profile photo
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v7/provide-photo">
+              Change<span class="nhsuk-u-visually-hidden"> your profile photo</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Smartcard name
           </dt>
           <dd class="nhsuk-summary-list__value">
             {{ data['preferred-name'] }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/applicant/test/profile/your-name">
-              Change<span class="nhsuk-u-visually-hidden"> preferred name</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Date of birth
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['day-1'] }}   {{ data['month-1'] }}   {{ data['year-1'] }}
-          </dd>
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/applicant/test/profile/date-of-birth">
-              Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
-            </a>
-          </dd>
-
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            National Insurance number
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['ni-number'] }}
-          </dd>
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/applicant/test/profile/ni-number">
-              Change<span class="nhsuk-u-visually-hidden"> national insurance number</span>
+            <a href="/applicant/v7/preferred-name">
+              Change<span class="nhsuk-u-visually-hidden"> your profile photo</span>
             </a>
           </dd>
         </div>
@@ -81,48 +102,28 @@
             Delivery address
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['address-line-1'] }} {{ data['address-line-2'] }} {{ data['address-town'] }} {{ data['address-postcode-1'] }}
+            Address option 1
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/applicant/test/profile/address-postcode">
-              Change<span class="nhsuk-u-visually-hidden"> delivery address</span>
+            <a href="/applicant/v7/delivery">
+              Change<span class="nhsuk-u-visually-hidden"> your profile photo</span>
             </a>
           </dd>
         </div>
 
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Passport style photo
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            
-          </dd>
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/applicant/test/profile/format">
-              Change<span class="nhsuk-u-visually-hidden"> passport style photo</span>
-            </a>
-          </dd>
-        </div>
+        
 
       </dl>
 
 
-<form action="/applicant/test/profile/spinner-details" method="post" class="form">
+      <form action="/applicant/v7/spinner-selection" method="post" class="form">
 
 
-    <p>Check and confirm the information you have provided is correct before you submit it.</p>
+        {{ button({
+          "text": "Submit now"
+        }) }}
 
-    {{ button({
-      "text": "Submit now"
-    }) }}
-
-    </form>
-
-
-
-
-
-
+      </form>
 
     </div>
   </div>
