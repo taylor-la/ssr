@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Select how to verify your address
+  How do you want to verify your address? 
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v7/start-application",
+    "href": "/applicant/v7/step-1",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,26 +21,28 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
+      <p class="nhsuk-page-heading__small nhsuk-u-margin-bottom-1 grey-text">Identity verification</p>
+
       <form action="/applicant/v7/1-photo-id" method="post" class="form">
+
+        
 
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
               <h1 class="nhsuk-fieldset__heading">
-                Select how to verify your address
+                How do you want to verify your address?
               </h1>
             </legend>
 
-            <p>We need your UK address to verify your identity.</p>
+            <p>You need to provide your UK address to verify your identity.</p>
 
-            <p>We share this information with a 3rd party organisation, TransUnion. They will carry out a check on your address to </p>
+            <p>We will share this information with a 3rd party organisation, TransUnion.</p>
 
-            <p>This check will be used to verify that there has been activity over time at your address. This helps us to verify your identity.</p>
+            <p>They will check account activity at your address.</p>
 
             <p><strong>This is not a credit check and will not affect your credit score.</strong></p>
-
-            
         
             <div class="nhsuk-radios">
         

@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-Choose how to send your photo
+  How do you want to provide your profile photo?
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@ Choose how to send your photo
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v7/address-select",
+    "href": "/applicant/v7/step-2",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -22,7 +22,7 @@ Choose how to send your photo
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      
+      <p class="nhsuk-page-heading__small nhsuk-u-margin-bottom-1 grey-text">NHS Care ID profile</p>
       
 
       <form action="/applicant/v7/smartcard-upload" method="post" class="form">
@@ -32,7 +32,7 @@ Choose how to send your photo
           <fieldset class="nhsuk-fieldset ">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
               <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-5">
-                Select how to send your profile photo
+                How do you want to provide your profile photo?
               </h1>
             </legend>
 

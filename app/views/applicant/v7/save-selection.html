@@ -19,11 +19,13 @@
 
 {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-grid-column-three-quarters">
 
       <h1>
         Check your answers
       </h1>
+
+      <h2 class="nhsuk-heading-m">Identity verification details</h2>
 
       <dl class="nhsuk-summary-list">
 
@@ -60,7 +62,7 @@
             Your UK address
           </dt>
           <dd class="nhsuk-summary-list__value">
-            address option 1
+            Buckingham Palace, London SW1A 1AA
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="/applicant/v7/address-postcode">
@@ -69,12 +71,20 @@
           </dd>
         </div>
 
+      </dl>
+
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-top-8">NHS Care ID profile details</h2>
+
+      <dl class="nhsuk-summary-list">
+
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
             Profile photo
           </dt>
           <dd class="nhsuk-summary-list__value">
-            
+            <div class="container">
+              <img src="/images/biometric.png" alt="profile photo">
+            </div>
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="/applicant/v7/provide-photo">
@@ -85,7 +95,7 @@
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Smartcard name
+            Preferred name (optional)
           </dt>
           <dd class="nhsuk-summary-list__value">
             {{ data['preferred-name'] }}
@@ -102,7 +112,7 @@
             Delivery address
           </dt>
           <dd class="nhsuk-summary-list__value">
-            Address option 1
+            Buckingham Palace, London SW1A 1AA
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="/applicant/v7/delivery">

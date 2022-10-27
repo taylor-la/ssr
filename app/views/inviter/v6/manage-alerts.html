@@ -1,0 +1,91 @@
+{% extends 'layout-inviter-v5.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Manage alerts
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v6/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      
+
+      
+
+      <form action="" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+              <h1 class="nhsuk-fieldset__heading">
+                Manage email alert preferences
+              </h1>
+            </legend>
+
+            <p class="nhsuk-u-margin-top-6 nhsuk-u-reading-width">Select whether you want to receive daily email alerts when applications you raise expire, are approved or are rejected.</p>
+
+
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                  Yes, I want to receive email alerts
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">
+                    Email address
+                  </label>
+                  <div class="nhsuk-hint" id="email-hint">
+                    Enter a personal email address or a shared inbox
+                  </div>
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text" aria-describedby="email-hint">
+                </div>
+        
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                  No, I don't want to receive email alerts
+                </label>
+              </div>
+  
+
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Save"
+        }) }}
+
+      </form>
+
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,627 @@
+{% extends 'layout-inviter-v5.html' %}
+{% block pageTitle %}
+  Manage Applications
+{%endblock %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+   
+
+    <div class="nhsuk-alert nhsuk-alert--success nhsuk-alert--icon" id="role-changed-alert" style="display:none;">
+      <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-alert__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+      </svg>
+      <h1 class="nhsuk-u-visually-hidden">Success:</h1>
+      <p class="nhsuk-u-font-weight-bold">Role changed to Registration Authority Manager, Aspire Limted OOH (B36648)</p>
+    </div>
+    <h1>Apply for Care ID</h1>
+
+   
+
+    <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-u-margin-bottom-7">
+      <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="/inviter/v6/enter-details">New application</a>
+            </h2>
+            <p class="nhsuk-card__description">Enter applicant details to send an application.</p>
+          </div>
+        </div>
+      </li> 
+      <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="/inviter/v6/upload-file">Upload multiple applications</a>
+            </h2>
+            <p class="nhsuk-card__description">Upload a file to send multiple applications at once. </p>
+          </div>
+        </div>
+      </li>
+     
+       
+      
+    </ul>
+
+    <div class="nhsuk-alert nhsuk-alert--success nhsuk-alert--icon" style="display:none;">
+      <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-alert__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+      </svg>
+      <h1 class="nhsuk-u-visually-hidden">Success:</h1>
+      <p class="nhsuk-u-font-weight-bold">Applications resent successfully</p>
+    </div>
+
+
+    <!-- Tab links -->
+    <div class="tab">
+      <button class="tablinks" onclick="openList(event, 'Resend')" id="defaultOpen">Resend required</button>
+      <button class="tablinks" onclick="openList(event, 'Pending')">In progress</button>
+      <button class="tablinks" onclick="openList(event, 'Approved')">Approved</button>
+      <button class="tablinks" onclick="openList(event, 'Rejected')">Rejected</button>
+      <button class="tablinks" onclick="openList(event, 'Closed')">Cancelled</button>
+     
+    </div>
+
+    <!-- Tab expired -->
+    <div id="Resend" class="tabcontent">
+      <h3>Resend required applications</h3>
+      <div class="nhsuk-error-summary nhsuk-u-margin-bottom-5 nhsuk-u-visually-hidden" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <div class="nhsuk-error-summary__body">
+          <p class="nhsuk-u-margin-bottom-0">Select an application or applications to resend</p>
+        </div>
+      </div>
+      <a class="nhsuk-button nhsuk-button--secondary" href="#">Resend invite email</a>
+      <table role="table" class="nhsuk-table-responsive">
+        <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
+          Expired list
+        </caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col"> <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div></th>
+            <th role="columnheader" class="" scope="col">Applicant name</th>
+            <th role="columnheader" class="" scope="col">Last updated</th>
+            <th role="columnheader" class="" scope="col">Raised by</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/expired-application">James Stenberg</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              11 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Tim Bond
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/expired-application">Diana Ingram</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated on</span>
+              9 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Louise Price
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/expired-application">Laurel Stenberg</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              1 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/expired-application">Tavish Sydney</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              28 June 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+    <!-- Tab pending -->
+    <div id="Pending" class="tabcontent">
+      <h3>In progress applications</h3>
+      <table role="table" class="nhsuk-table-responsive">
+        <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
+          In progress list
+        </caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">Applicant name</th>
+            <th role="columnheader" class="" scope="col">Last updated</th>
+            <th role="columnheader" class="" scope="col">Raised by</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/in-progress-application">James Stenberg</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              11 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Tim Bond
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/in-progress-application">Diana Ingram</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              9 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Louise Price
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/in-progress-application">Laurel Stenberg</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              1 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/in-progress-application">Tavish Sydney</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              28 June 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/in-progress-application">Shirin Peters</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              22 June 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Kris Kemp
+            </td>
+          </tr>
+
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/in-progress-application">Charita Dane</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              15 June 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/in-progress-application">Joyce Chung</a> 
+            </td>
+            
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              5 June 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Kris Kemp
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/in-progress-application">Christoper Ruiz</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              4 June 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Tim Bond
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/in-progress-application">Henrietta Wilkerson</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Last updated</span>
+              3 June 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Louise Price
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+    <!-- Approved -->
+
+    <div id="Approved" class="tabcontent">
+      <h3>Approved applications</h3>
+      <table role="table" class="nhsuk-table-responsive">
+        <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
+          Approved list
+        </caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">Applicant name</th>
+            <th role="columnheader" class="" scope="col">Approved on</th>
+            <th role="columnheader" class="" scope="col">Raised by</th>
+            <th role="columnheader" class="" scope="col">UUID</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/approved-application">James Stenberg</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Approved on</span>
+              11 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Tim Bond
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">UUID</span>
+              <a href="#">7458 7958 6574</a> 
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/approved-application">Diana Ingram</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Approved on</span>
+              9 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Louise Price
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">UUID</span>
+              <a href="#">9684 5874 2232</a> 
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/approved-application">Laurel Stenberg</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Approved ob</span>
+              1 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">UUID</span>
+              <a href="#">5688 3455 8453</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Action</span>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/approved-application">Tavish Sydney</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Approved on</span>
+              28 June 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">UUID</span>
+              <a href="#">6745 7823 2398</a> 
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Rejected -->
+
+    <div id="Rejected" class="tabcontent">
+      <h3>Rejected applications</h3>
+      <table role="table" class="nhsuk-table-responsive">
+        <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
+          Rejected list
+        </caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">Applicant name</th>
+            <th role="columnheader" class="" scope="col">Rejected on</th>
+            <th role="columnheader" class="" scope="col">Raised by</th>
+            <th role="columnheader" class="" scope="col">Reason</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/rejected-application">James Stenberg</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Rejected on</span>
+              11 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Tim Bond
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Reason</span>
+              Proof of address not accepted
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/duplicate-application">Laurel Taylor</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Rejected on</span>
+              11 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Reason</span>
+              Duplicate match found 
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/image-application">Greta Brown</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Rejected on</span>
+              10 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Stuart Little
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Reason</span>
+              Tried to complete application too many times 
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/app-expired-application">Fiona Carson </a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Rejected on</span>
+              9 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Stuart Little
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Reason</span>
+              Application expired
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Closed -->
+
+    <div id="Closed" class="tabcontent">
+      <h3>Cancelled applications</h3>
+      <table role="table" class="nhsuk-table-responsive">
+        <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
+          Cancelled list
+        </caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">Applicant name</th>
+            <th role="columnheader" class="" scope="col">Cancelled on</th>
+            <th role="columnheader" class="" scope="col">Raised by</th>
+            <th role="columnheader" class="" scope="col">Reason</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/closed-application">James Stenberg</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Closed on</span>
+              11 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Tim Bond
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Reason</span>
+                No longer needed
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v6/closed-application">Laurel Taylor</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Closed on</span>
+              11 July 2022
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Reason</span>
+              Documents not accepted 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="nhsuk-u-margin-top-6" style="display:none;">Set your email alert preferences by going to <a href="/inviter/v6/manage-alerts">manage alerts</a>.</p> 
+  </div>
+</div>
+
+<script>
+  function openList(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+{% endblock %}

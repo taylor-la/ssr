@@ -214,7 +214,7 @@ router.post('/applicant/v7/2-photo-id', function (req, res) {
 
 })
 
-router.post('/applicant/v7/smartcard-format', function (req, res) {
+router.post('/applicant/v7/step-2', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo2 = req.session.data['2-photo-id']
@@ -225,7 +225,7 @@ router.post('/applicant/v7/smartcard-format', function (req, res) {
     res.redirect('/applicant/v7/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v7/smartcard-format')
+    res.redirect('/applicant/v7/step-2')
   }
 
 })

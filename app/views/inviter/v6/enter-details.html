@@ -1,0 +1,122 @@
+{% extends 'layout-inviter-v5.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter applicant's personal details
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v6/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <div class="nhsuk-alert nhsuk-alert--info nhsuk-alert--icon" style="display:none;">
+        <svg class="nhsuk-icon nhsuk-icon__info nhsuk-alert__icon" fill="none" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+          <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+          C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+        </svg>
+        <h3 class="nhsuk-u-visually-hidden">Information:</h3>
+        <p class="nhsuk-u-font-weight-bold">You are logged in as Barsetshire Community Hospital NHS Foundation Trust (RWA). <a href="#">Change</a> </p>
+      </div>
+
+      <form action="/inviter/v6/check-your-answers" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-5">
+              Enter applicant's personal details
+            </h1>
+          </legend>
+
+          
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-first-name-1">
+              Given name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-first-name-1" name="app-first-name-1" type="text" value="{{ data['app-first-name-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-last-name-1">
+              Family name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-last-name-1" name="app-last-name-1" type="text" value="{{ data['app-last-name-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-email-address-1">
+              Work email address
+            </label>
+            <div class="nhsuk-hint" id="app-email-address-1-hint">
+              This must be an email address on the CIS allowlist
+            </div>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-email-address-1" name="app-email-address-1" type="text" inputmode="email" aria-describedby="app-email-address-1-hint" value="{{ data['app-email-address-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="app-mobile-1">
+              Mobile number
+            </label>
+            <div class="nhsuk-hint" id="app-mobile-1-hint">
+              For international numbers include the country code
+            </div>
+            <input class="nhsuk-input nhsuk-input--width-10" id="app-mobile-1" name="app-mobile-1" type="text" inputmode="tel" aria-describedby="app-mobile-1-hint" value="{{ data['app-mobile-1'] }}">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="positions-1">
+              Notes (optional)
+            </label>
+          <div class="nhsuk-hint" id="positions-1-hint">For example, what authenticator, roles and permissions are required</div>
+          <textarea class="nhsuk-textarea" id="positions-1" name="positions-1" rows="4" aria-describedby="positions-1-hint" value="{{ data['positions-1'] }}"></textarea>
+        </div>
+
+        </fieldset>
+
+          <div class="nhsuk-checkboxes nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-5">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="dbs-1" name="dbs" type="checkbox" value="completed">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="dbs-1">
+                I confirm that this individual has been through relevant employment checks to work for their organisation.
+              </label>
+            </div>
+
+          </div>
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+      </form>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Check if an email address domain is on the CIS allowlist
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Check the <a href="https://digital.nhs.uk/services/registration-authorities-and-smartcards/smartcard-services/digital-smartcard/digital-smartcard-guidance/registration-authority-guidance-for-digital-smartcards#top">NHS Digital Registration Authority guidance</a> to see if an email address domain is on the CIS allowlist.</p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}
