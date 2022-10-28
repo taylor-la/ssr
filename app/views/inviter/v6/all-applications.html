@@ -1,4 +1,4 @@
-{% extends 'layout-inviter-v5.html' %}
+{% extends 'layout-inviter-v6.html' %}
 {% block pageTitle %}
   All applications
 {%endblock %}
@@ -16,14 +16,14 @@
     
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
         <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
-          Last name, email address or application number
+          Name, email address or application number
         </label>
         <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search-1" type="text">
       </div>
 
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
         <label class="nhsuk-label  nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-2">
-          ODS code
+          Org code
         </label>
         <input class="nhsuk-input nhsuk-input--width-5" id="search-2" name="search-2" type="text">
       </div>
@@ -43,6 +43,12 @@
               <input class="nhsuk-checkboxes__input" id="my-apps-1" name="search-filter-1" type="checkbox" value="my-apps">
               <label class="nhsuk-label nhsuk-checkboxes__label" for="my-apps-1">
                 Applications I have raised
+              </label>
+            </div>   
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="my-apps-1" name="search-filter-1" type="checkbox" value="my-apps">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="my-apps-1">
+                Organisations I have access to
               </label>
             </div>   
     
@@ -127,7 +133,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/in-progress-application">James Stenberg</a> 
+          <a href="/inviter/v6/in-progress-application">James Stenberg</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>
@@ -156,7 +162,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/in-progress-application">Tavish Sydney</a> 
+          <a href="/inviter/v6/in-progress-application">Tavish Sydney</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>
@@ -185,7 +191,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/expired-application">Shirin Peters</a> 
+          <a href="/inviter/v6/expired-application">Shirin Peters</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>
@@ -214,7 +220,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/approved-application">Russell Trent</a> 
+          <a href="/inviter/v6/approved-application">Russell Trent</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>
@@ -243,7 +249,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/approved-application">Sharon Woods</a> 
+          <a href="/inviter/v6/approved-application">Sharon Woods</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>
@@ -272,7 +278,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/rejected-application">Stacey Atwal</a> 
+          <a href="/inviter/v6/rejected-application">Stacey Atwal</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>
@@ -301,7 +307,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/expired-application">Nick Gibson</a> 
+          <a href="/inviter/v6/expired-application">Nick Gibson</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>
@@ -330,7 +336,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/closed-application">Joyce Chueng</a> 
+          <a href="/inviter/v6/closed-application">Joyce Chueng</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>
@@ -359,7 +365,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/in-progress-application">Dennis Berry</a> 
+          <a href="/inviter/v6/in-progress-application">Dennis Berry</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>
@@ -388,7 +394,7 @@
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v5/in-progress-application">Liz Thompson</a> 
+          <a href="/inviter/v6/in-progress-application">Liz Thompson</a> 
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading">Date sent</span>

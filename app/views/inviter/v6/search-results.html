@@ -1,4 +1,4 @@
-{% extends 'layout-inviter-v5.html' %}
+{% extends 'layout-inviter-v6.html' %}
 {% block pageTitle %}
   All applications
 {%endblock %}
@@ -16,7 +16,7 @@
     
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
         <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
-          Last name, email address or application number
+          Name, email address or application number
         </label>
         <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search-1" type="text" value="stenberg">
       </div>
@@ -45,6 +45,12 @@
                 Applications I have raised
               </label>
             </div>   
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="my-apps-1" name="search-filter-1" type="checkbox" value="my-apps">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="my-apps-1">
+                Organisations I have access to
+              </label>
+            </div>  
     
           </div>
         </fieldset>
