@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  How do you want to verify your address? 
+  We are going to verify your UK address
 {% endblock %}
 
 {% block beforeContent %}
@@ -32,31 +32,29 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
               <h1 class="nhsuk-fieldset__heading">
-                How do you want to verify your address?
+                We are going to verify your UK address
               </h1>
             </legend>
 
-            <p>You need to provide your UK address to verify your identity.</p>
+            <p>We'll share your information with a 3rd party organisation, TransUnion.</p>
 
-            <p>We will share this information with a 3rd party organisation, TransUnion.</p>
+            <p>They will check there has been activity at your address from organisations like banks and utility providers. </p>
 
-            <p>They will check account activity at your address.</p>
-
-            <p><strong>This is not a credit check and will not affect your credit score.</strong></p>
+            <p>Other organisations, such as credit providers, will be able to see that this check has been done, but it will not impact your credit score. </p>
         
             <div class="nhsuk-radios">
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="dpoa-yes" name="dpoa" type="radio" value="Enter UK address" {{ checked("dpoa", "Enter UK address") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="dpoa-yes">
-                  Yes, I agree that you can verify my address online
+                  I'll enter my address, for it to be shared with TransUnion 
                 </label>
               </div>
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="dpoa-no" name="dpoa" type="radio" value="no" {{ checked("dpoa", "no") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="dpoa-no">
-                  No, I want to verify my address a different way
+                  I want to verify my address in a different way ​
                 </label>
               </div>
         
