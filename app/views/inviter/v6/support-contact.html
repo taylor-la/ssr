@@ -1,0 +1,55 @@
+{% extends 'layout-inviter-v6.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter applicant's personal details
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v6/enter-details",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <h1>How can the applicant get in contact with you?</h1>
+
+      <p>This email address will be included in the invite email sent to applicants.</p>
+
+      <p>Applicants can use this to contact you for help and support with their application.</p>
+
+      <form action="/inviter/v6/check-your-answers" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="support-email">
+              Email address
+            </label>
+          <div class="nhsuk-hint" id="support-email-hint">
+            This could be a personal email address or shared inbox
+            </div>
+          <input class="nhsuk-input nhsuk-input--width-20" id="support-email" name="support-email" type="text" aria-describedby="support-email-hint" value="{{ data['support-email'] }}">
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}

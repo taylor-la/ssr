@@ -54,11 +54,11 @@
 
     <!-- Tab links -->
     <div class="tab">
-      <button class="tablinks" onclick="openList(event, 'Resend')" id="defaultOpen">Resend required</button>
-      <button class="tablinks" onclick="openList(event, 'Pending')">In progress</button>
-      <button class="tablinks" onclick="openList(event, 'Approved')">Approved</button>
-      <button class="tablinks" onclick="openList(event, 'Rejected')">Rejected</button>
-      <button class="tablinks" onclick="openList(event, 'Closed')">Cancelled</button>
+      <button class="tablinks" onclick="openList(event, 'Resend')" id="defaultOpen">Resend required (4)</button>
+      <button class="tablinks" onclick="openList(event, 'Pending')">In progress (9)</button>
+      <button class="tablinks" onclick="openList(event, 'Approved')">Approved (4)</button>
+      <button class="tablinks" onclick="openList(event, 'Rejected')">Rejected (4)</button>
+      <button class="tablinks" onclick="openList(event, 'Closed')">Cancelled (2)</button>
      
     </div>
 
@@ -508,7 +508,7 @@
             <th role="columnheader" class="" scope="col">Applicant name</th>
             <th role="columnheader" class="" scope="col">Rejected on</th>
             <th role="columnheader" class="" scope="col">Raised by</th>
-            <th role="columnheader" class="" scope="col">Reason</th>
+            <th role="columnheader" class="" scope="col">Reason(s)</th>
           </tr>
         </thead>
         <tbody class="nhsuk-table__body">
@@ -527,7 +527,7 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Reason</span>
-              Proof of address not accepted
+              Photo ID 1 has expired. Photo ID 1 not accepted . Proof of address is not legible. Smartcard photo does not meet guidelines.
             </td>
           </tr>
           <tr role="row" class="nhsuk-table__row">
@@ -645,7 +645,7 @@
       </table>
     </div>
 
-    <p class="nhsuk-u-margin-top-6" style="display:none;">Set your email alert preferences by going to <a href="/inviter/v6/manage-alerts">manage alerts</a>.</p> 
+    <p class="nhsuk-u-margin-top-6"><a href="/inviter/v6/manage-alerts">Change your email alert preferences</a></p> 
   </div>
 </div>
 

@@ -1,4 +1,4 @@
-{% extends 'layout-inviter-v6.html' %}
+{% extends 'layout.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -7,14 +7,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% endblock %}
-
-{% block outerContent %}
-  {{ backLink({
-    "href": "/inviter/v6/dashboard",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
-  }) }}
 {% endblock %}
 
 {% block content %}
@@ -28,7 +20,7 @@
 
       
 
-      <form action="" method="post" class="form">
+      <form action="/inviter/v6/dashboard" method="post" class="form">
 
         <div class="nhsuk-form-group">
 
