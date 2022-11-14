@@ -279,4 +279,91 @@ router.post('/applicant/v7/preferred-name', function (req, res) {
 })
 
 
+
+
+// Smartcard and doc selector v8
+
+
+router.post('/applicant/v8/1-photo-id', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var dpoa = req.session.data['dpoa']
+
+  // Check whether the variable matches a condition
+  if (dpoa == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v8/poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v8/1-photo-id')
+  }
+
+})
+
+router.post('/applicant/v8/address-postcode', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var photo1 = req.session.data['1-photo-id']
+
+  // Check whether the variable matches a condition
+  if (photo1 == "none"){
+    // Send user to next page
+    res.redirect('/applicant/v8/no-photo-id')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v8/address-postcode')
+  }
+
+})
+
+router.post('/applicant/v8/2-photo-id', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var poa = req.session.data['poa']
+
+  // Check whether the variable matches a condition
+  if (poa == "none"){
+    // Send user to next page
+    res.redirect('/applicant/v8/no-poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v8/2-photo-id')
+  }
+
+})
+
+router.post('/applicant/v8/step-2', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var photo2 = req.session.data['2-photo-id']
+
+  // Check whether the variable matches a condition
+  if (photo2 == "none"){
+    // Send user to next page
+    res.redirect('/applicant/v8/no-photo-id')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v8/step-2')
+  }
+
+})
+
+router.post('/applicant/v8/no-poa-face', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var noPOA = req.session.data['no-poa']
+
+  // Check whether the variable matches a condition
+  if (noPOA == "online"){
+    // Send user to next page
+    res.redirect('/applicant/v8/dpoa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v8/no-poa-face')
+  }
+
+})
+
+
+
 module.exports = router;

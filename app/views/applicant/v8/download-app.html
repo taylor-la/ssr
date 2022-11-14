@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Download the NHS Verify Care ID app
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <div class="nhsuk-alert nhsuk-alert--success nhsuk-alert--icon" id="role-changed-alert">
+        <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-alert__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+        </svg>
+        <h1 class="nhsuk-u-visually-hidden">Success:</h1>
+        <p class="nhsuk-u-font-weight-bold">Your address has been submitted</p>
+      </div>
+
+      <h1>
+        Download the NHS Verify Care ID app
+      </h1>
+
+
+      <p>A link for the Verify Care ID app will be sent to you by text message to *********<strong>5314</strong> and to the email address <strong>l********@n**.net</strong>. </p>
+
+      <p>You should receive this link within 5 minutes.</p>
+
+      <p>Use the link to download the secure NHS Verify Care ID app on a mobile phone.</p>
+
+      <p>The app will photograph your ID document, take a passport style profile photo and scan your face.</p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            What to do if you have not received the link
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>The link should be sent to you within 20 minutes. If you have not received an email or text message with the link, email: <a href="">enquiries@nhsdigital.nhs.uk</a> with the subject line “Verify Care ID app link not received.</p>
+      
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}

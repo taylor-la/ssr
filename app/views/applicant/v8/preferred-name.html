@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your smartcard name
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v8/step-2",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <form action="/applicant/v8/delivery" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+              <h1 class="nhsuk-fieldset__heading">
+                Is your preferred name  {{ data['first-name'] }} {{ data['last-name'] }}?
+              </h1>
+            </legend>
+
+            <p class="nhsuk-u-margin-top-6 nhsuk-u-reading-width">You can choose a preferred name to appear on your smartcard (if applicable) and your NHS Care ID profile. </p>
+
+            <div class="nhsuk-hint" id="preferred-name-hint">
+              For example, if your name is Mathew Smith you can choose Matt Smith.
+            </div>
+
+
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+
+             
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="preferred-name-yes" name="preferred-name" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="preferred-name-yes">
+                  Yes
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="preferred-name-no" name="preferred-name" type="radio" value="no" aria-controls="conditional-preferred-name" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="preferred-name-no">
+                  No
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-preferred-name">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="prefer-name">
+                    Preferred name
+                  </label>
+                  
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="prefer-name" name="prefer-name" type="text" aria-describedby="character-count-hint" value="{{ data['prefer-name'] }}">
+                  <div class="nhsuk-hint nhsuk-u-padding-top-2" id="character-count-hint">
+                    You have 20 characters remaining
+                    </div>
+                </div>
+        
+              </div>
+  
+
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}
