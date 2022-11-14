@@ -28,9 +28,33 @@
         
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="title">
-              Title (optional)
+              Title
             </label>
-            <input class="nhsuk-input nhsuk-input--width-5" id="title" name="title" type="text" value="{{ data['title'] }}">
+            <select class="nhsuk-select" id="title" name="title">
+              <option value="1"selected>Select a title</option>
+              <option value="Mr" >Mr</option>
+              <option value="Mrs" >Mrs</option>
+              <option value="Ms" >Ms</option>
+              <option value="Miss" >Miss</option>
+              <option value="Mx" >Mx</option>
+              <option value="Dr" >Dr</option>
+              <option value="Sister" >Sister</option>
+              <option value="Brother" >Brother</option>
+              <option value="Sir" >Sir</option>
+              <option value="Cannon" >Cannon</option>
+              <option value="Dame" >Dame</option>
+              <option value="Father" >Father</option>
+              <option value="Imam" >Imam</option>
+              <option value="Lady" >Lady</option>
+              <option value="Lord" >Lord</option>
+              <option value="Major" >Major</option>
+              <option value="Rabbi" >Rabbi</option>
+              <option value="Right Reverend Monsigneur" >Right Reverend Monsigneur</option>
+              <option value="Reverend" >Reverend</option>
+              <option value="Professor" >Professor</option>
+              <option value="Baron" >Baron</option>
+              <option value="Baroness" >Baroness</option>
+            </select>
           </div>
         
           <div class="nhsuk-form-group">
