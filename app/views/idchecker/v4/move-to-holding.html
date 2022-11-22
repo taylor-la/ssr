@@ -1,0 +1,126 @@
+{% extends 'layout-idchecker-v4.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Move to on hold
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v4/review-id-warning",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/idchecker/v4/dashboard" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-2" aria-describedby="holding-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Why are you moving this application to on hold?
+            </h1>
+          </legend>
+
+          <div class="nhsuk-hint" id="holding-hint">
+            Select all options that apply
+          </div>
+
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason1" name="holding" type="checkbox" value="reason1">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason1">
+                Potential fraud
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason2" name="holding" type="checkbox" value="reason2">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason2">
+                Potential safeguarding
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason3" name="holding" type="checkbox" value="reason3">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason3">
+                Spelling mistake / 1 letter difference
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason4" name="holding" type="checkbox" value="reason4">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason4">
+                Shortened name / nickname
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason5" name="holding" type="checkbox" value="reason5">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason5">
+                Names switched
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason6" name="holding" type="checkbox" value="reason6">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason6">
+                System issue
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="reason7" name="holding" type="checkbox" value="reason7">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="reason7">
+                Automation issue
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="other" name="holding" type="checkbox" value="other" aria-controls="conditional-other" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="other">
+                Other
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-other">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="specify">
+                  Please specify
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="specify" name="specify" type="text">
+              </div>
+      
+            </div>
+
+          </div>
+
+          <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+            <label class="nhsuk-label" for="info">
+              Additional information (optional)
+            </label>
+            <textarea class="nhsuk-textarea" id="info" name="info" rows="3"></textarea>
+          </div>
+
+        </fieldset>
+
+        <button class="nhsuk-button nhsuk-button--secondary"  type="submit">
+          Move
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
