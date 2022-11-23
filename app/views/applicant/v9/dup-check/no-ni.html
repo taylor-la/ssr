@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  You cannot use this service without a National Insurance number
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v9/dup-check/ni-number",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        You cannot use this service without a National Insurance number
+      </h1>
+
+      <p>Contact <a href="">midlandsscu@RAservices.nhs.uk</a> to verify your identity a different way.</p>
+
+      <p>You will be able to provide other information to check if you already have a profile in Care Identity Service. </p>
+
+    </div>
+
+  </div>
+{% endblock %}

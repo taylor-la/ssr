@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter a UK address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v9/1-photo-id",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v9/address-select" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-padding-bottom-3">
+              Enter your current UK postcode
+            </h1>
+          </legend>
+
+          <p>Your address will be shared with TransUnion to verify your address</p>
+
+          <div class="nhsuk-form-group">
+            <h1 class="nhsuk-label-wrapper">
+              <label class="nhsuk-label" for="address-postcode-1">
+                Postcode
+              </label>
+            </h1>
+            <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode-1" name="address-postcode-1" type="text" value="{{ data['address-postcode-1'] }}">
+          </div>
+        
+        </fieldset>
+        {{ button({
+          "text": "Find address"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

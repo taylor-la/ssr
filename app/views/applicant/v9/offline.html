@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  You have selected to verify your identity a different way
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v9/start-application",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        You have selected to verify your identity a different way
+      </h1>
+
+      <p>Contact <a href="">midlandscsu@RAservices.nhs.uk</a> to verify your identity in a different way.</p>
+
+      <p>You can verify your identity:</p>
+
+      <ul>
+        <li>in person</li>
+        <li>over a video meeting</li>
+      </ul>
+
+     <p>We have sent you an email confirmation. </p>
+     
+    </div>
+
+  </div>
+{% endblock %}
