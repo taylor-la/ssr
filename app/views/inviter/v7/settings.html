@@ -1,0 +1,84 @@
+{% extends 'layout-inviter-v7.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Settings
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Settings
+      </h1>
+
+      <h2>Your contact details</h2>
+
+      <p>This email address will be included in the invite email sent to applicants.</p>
+
+      <dl class="nhsuk-summary-list">
+
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['support-email'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/inviter/v7/update-support">
+              Change<span class="nhsuk-u-visually-hidden"> positions</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2>Email alert preferences</h2>
+
+      <dl class="nhsuk-summary-list">
+
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Email alert preferences
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['support-email'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/inviter/v7/update-support">
+              Change<span class="nhsuk-u-visually-hidden"> positions</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['app-first-name-1'] }} {{ data['app-last-name-1'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/inviter/v7/enter-details">
+              Change<span class="nhsuk-u-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <a href="/inviter/v7/application-sent" class="nhsuk-button">
+        Submit
+      </a>
+
+    </div>
+  </div>
+{% endblock %}
