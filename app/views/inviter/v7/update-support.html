@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v7/dashboard",
+    "href": "/inviter/v7/settings",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -26,13 +26,12 @@
 
       <h1>Enter your contact details</h1>
 
-      <p>Before you create your first application, you need to enter an email address where applicants can contact you.</p>
+      <p>You need to enter an email address where applicants can contact you.</p>
 
       <p>This email address will be included in emails sent to applicants. They can use it to contact you for help with their application.</p>
 
-      <p>You can change it later by going to Settings.</p>
 
-      <form action="/inviter/v7/enter-details" method="post" class="form">
+      <form action="/inviter/v7/settings" method="post" class="form">
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="support-email">

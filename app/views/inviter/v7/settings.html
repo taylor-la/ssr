@@ -19,7 +19,7 @@
 
       <h2>Your contact details</h2>
 
-      <p>This email address will be included in the invite email sent to applicants.</p>
+      <p class="nhsuk-u-reading-width">Enter an email address where applicants can contact you for help and support.</p>
 
       <dl class="nhsuk-summary-list">
 
@@ -40,7 +40,9 @@
 
       </dl>
 
-      <h2>Email alert preferences</h2>
+      <h2 class="nhsuk-u-margin-top-8">Email alert preferences</h2>
+
+      <p class="nhsuk-u-reading-width">Select whether you want to receive daily email alerts for applications you have raised.</p>
 
       <dl class="nhsuk-summary-list">
 
@@ -50,7 +52,7 @@
             Email alert preferences
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['support-email'] }}
+            {{ data['support-emai'] }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="/inviter/v7/update-support">
@@ -64,20 +66,16 @@
             Email address
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['app-first-name-1'] }} {{ data['app-last-name-1'] }}
+            {{ data['contact-email'] }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/inviter/v7/enter-details">
+            <a href="/inviter/v7/manage-alerts">
               Change<span class="nhsuk-u-visually-hidden"> name</span>
             </a>
           </dd>
         </div>
 
       </dl>
-
-      <a href="/inviter/v7/application-sent" class="nhsuk-button">
-        Submit
-      </a>
 
     </div>
   </div>
