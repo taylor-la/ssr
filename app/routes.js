@@ -463,4 +463,20 @@ router.post('/applicant/v9/no-poa-face', function (req, res) {
 
 })
 
+router.post('/applicant/v9/save-selection', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var delivery = req.session.data['delivery']
+
+  // Check whether the variable matches a condition
+  if (delivery == "different"){
+    // Send user to next page
+    res.redirect('/applicant/v9/delivery-postcode')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v9/save-selection')
+  }
+
+})
+
 module.exports = router;

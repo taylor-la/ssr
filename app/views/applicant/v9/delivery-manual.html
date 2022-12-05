@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v5/address-postcode",
+    "href": "/applicant/v9/delivery-postcode",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,7 +21,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/applicant/v5/check-your-answers" method="post" class="form">
+      <form action="/applicant/v9/save-selection" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
@@ -32,30 +32,31 @@
       
             <p class="nhsuk-u-margin-bottom-1">Postcode</p>
       
-            <p><strong>{{ data['address-postcode-1'] }} </strong><a class="nhsuk-u-padding-left-3" href="/applicant/v5/profile//address-postcode">
+            <p><strong>{{ data['delivery-postcode-1'] }} </strong><a class="nhsuk-u-padding-left-3" href="/applicant/v9/delivery-postcode">
               Change<span class="nhsuk-u-visually-hidden"> postcode</span>
             </a></p>
       
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="address-line-1">
-                Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+              <label class="nhsuk-label" for="delivery-line-1">
+                Building <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
               </label>
-              <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" value="{{ data['address-line-1'] }}">
+              <input class="nhsuk-input" id="delivery-line-1" name="delivery-line-1" type="text" value="{{ data['delivery-line-1'] }}">
             </div>
           
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="address-line-2">
-                <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
+              <label class="nhsuk-label" for="delivery-line-2">
+                Street
               </label>
-              <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" value="{{ data['address-line-2'] }}">
+              <input class="nhsuk-input" id="delivery-line-2" name="delivery-line-2" type="text" value="{{ data['delivery-line-2'] }}">
             </div>
           
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="address-town">
+              <label class="nhsuk-label" for="delivery-town">
                 Town or city
               </label>
-              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text" value="{{ data['address-town'] }}">
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="delivery-town" name="delivery-town" type="text" value="{{ data['delivery-town'] }}">
             </div>
+          
           
       
         </fieldset>

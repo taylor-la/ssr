@@ -9,14 +9,6 @@
 {% block beforeContent %}
 {% endblock %}
 
-{% block outerContent %}
-  {{ backLink({
-    "href": "/applicant/v9/dup-check/ni-number",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
-  }) }}
-{% endblock %}
-
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
@@ -29,7 +21,7 @@
 
   <div class="nhsuk-summary-list__row">
     <dt class="nhsuk-summary-list__key">
-      Name
+      Full name
     </dt>
     <dd class="nhsuk-summary-list__value">
       {{ data['title'] }} {{ data['first-name'] }} {{ data['middle-name'] }} {{ data['last-name'] }}

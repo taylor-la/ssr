@@ -21,13 +21,26 @@
 
       <dl class="nhsuk-summary-list">
 
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Proof of address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['poa'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v9/poa">
+              Change<span class="nhsuk-u-visually-hidden"> your proof of address</span>
+            </a>
+          </dd>
+        </div>
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Photo ID document
+            Photo ID documents
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['passport'] }}{{ data['1-photo-id'] }}
+            {{ data['2-photo-id'] }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="/applicant/v9/1-photo-id">
@@ -35,22 +48,6 @@
             </a>
           </dd>
         </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Your UK address
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            Buckingham Palace, London SW1A 1AA
-          </dd>
-          <dd class="nhsuk-summary-list__actions">
-            <a href="/applicant/v9/address-postcode">
-              Change<span class="nhsuk-u-visually-hidden"> your address</span>
-            </a>
-          </dd>
-        </div>
-
-        
 
       </dl>
 
@@ -81,7 +78,7 @@
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="/applicant/v9/delivery">
-              Change<span class="nhsuk-u-visually-hidden"> your profile photo</span>
+              Change<span class="nhsuk-u-visually-hidden"> your delivery address</span>
             </a>
           </dd>
         </div>
@@ -90,9 +87,7 @@
 
       </dl>
 
-      <p>Your address will be verified with TransUnion when you submit your details.</p>
-
-      <p>You will then need to download our secure mobile app to verify your identity.</p>
+      <p>After you submit your details, you will need to download our secure mobile app to verify your identity.</p>
 
 
       <form action="/applicant/v9/spinner-selection" method="post" class="form">
