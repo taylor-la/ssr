@@ -1,10 +1,18 @@
 {% extends 'layout-email.html' %}
 
 {% block pageTitle %}
-  Application expired
+  Application approved
 {% endblock %}
 
 {% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full"> 
+      <p class="nhsuk-u-padding-top-5"><strong>Subject:</strong> Apply for your Care ID - application update</p>
+      <p><strong>From:</strong> Apply for Care ID (invitation@apply-for-care-identity.care-identity-service2.nhs.uk) </p>
+      <p><strong>To:</strong> name@nhs.net</p>
+    </div>
+  </div>
+
   <div class="nhsuk-grid-row" >
 
     <div class="nhsuk-grid-column-two-thirds email-layout">
@@ -20,13 +28,15 @@
 
       <div class="nhsuk-u-padding-5">
 
-        <h2 class="nhsuk-heading-l">Apply for a Care ID - application update</h2>
+        <h1 class="nhsuk-u-visually-hidden">Apply for a Care ID - application update</h1>
 
         <p class="nhsuk-body">Dear [name],</p>
-        <p class="nhsuk-body">You are being sent this email in relation to a recent application for a Care ID.</p>
-        <p class="nhsuk-body">The Care ID application for [applicant name] has expired as they did not start the process in the time allowed.</p>
-        <p>Go to <a href="/inviter/v3/start">Apply for a Care ID website</a> to resend the application.</p>
-        <p>Email <a href="">enquiries@nhsdigital.nhs.uk</a> if you need further information or help with the application.</p>
+        <p class="nhsuk-body">You are being sent this email in relation to your recent application for a Care ID.</p>
+        <p>Your application has been approved. </p>
+        <p>Your UUID is: 3546 6859 8734</p>
+        <p>Your Care ID will enable you to access the systems relevant to your role.</p>
+        <p>Your Registration Authority manager or agent will be in contact with you shortly.</p>
+        
         <p>Please do not reply to this email</p>
 
       </div>
