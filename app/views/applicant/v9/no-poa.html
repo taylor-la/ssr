@@ -12,47 +12,16 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>What to do if you don't have a proof of address document</h1>
+      <h1 class="nhsuk-heading-xl">
+        You need a proof of address to use this online service
+      </h1>
+
+      <p>Contact <a href="">[inviter-support-email]</a> to verify your identity in a different way. Include your application ID in all emails.</p>
+
+      <p>You will be able to provide other evidence at a face to face meeting.</p>
 
 
-      <form action="/applicant/v9/no-poa-face" method="post" class="form">
-
-        <div class="nhsuk-form-group">
-
-          <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-              <h2 class="nhsuk-fieldset__heading">
-                How do you want to verify your address?
-              </h2>
-            </legend>
-        
-            <div class="nhsuk-radios">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="no-poa-yes" name="no-poa" type="radio" value="online" {{ checked("no-poa", "online") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="no-poa-yes">
-                  I will verify my address online
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="no-poa-no" name="no-poa" type="radio" value="face" {{ checked("no-poa", "face") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="no-poa-no">
-                  I will arrange a face-to-face check
-                </label>
-              </div>
-        
-            </div>
-          </fieldset>
-        
-        </div>
-        
-
-        {{ button({
-          "text": "Continue"
-        }) }}
-
-      </form>
+      
     </div>
 
   </div>

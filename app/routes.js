@@ -447,21 +447,6 @@ router.post('/applicant/v9/step-2', function (req, res) {
 
 })
 
-router.post('/applicant/v9/no-poa-face', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var noPOA = req.session.data['no-poa']
-
-  // Check whether the variable matches a condition
-  if (noPOA == "online"){
-    // Send user to next page
-    res.redirect('/applicant/v9/dpoa')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/v9/no-poa-face')
-  }
-
-})
 
 router.post('/applicant/v9/save-selection', function (req, res) {
 
