@@ -1,0 +1,321 @@
+{% extends 'layout-idchecker-v4.html' %}
+{% block pageTitle %}
+  All applications
+{%endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <h1>Search ID Checker</h1>
+
+    <form action="#" method="post" class="form">
+    
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+        <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
+          Name, application ID or UUID
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search-1" type="text">
+      </div>
+
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+        <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
+          Reviewed by
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search-1" type="text">
+      </div>
+
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+        <label class="nhsuk-label  nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-2">
+          Org code
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-5" id="search-2" name="search-2" type="text">
+      </div>
+
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+      
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+            <h4 class="nhsuk-fieldset__heading">
+              Status
+            </h4>
+          </legend>
+    
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                Waiting for review
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-4" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-4">
+                On hold
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-9" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-9">
+                Approved
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-10" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-10">
+                Rejected
+              </label>
+            </div>
+    
+          </div>
+        </fieldset>
+    
+      </div>
+
+
+    {{ button({ "text": "Search", 
+    "classes": "nhsuk-button
+    nhsuk-u-margin-bottom-4" }) }}
+   
+    </form>
+
+    <h2 class="nhsuk-heading-m nhsuk-u-margin-top-5">Showing 4 results for Reviewed by 'Lloyd Wilkinson'</h2>
+
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+      <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="#">Karen Francis</a>
+            </h2>
+            <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Status
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <strong class="nhsuk-tag nhsuk-tag--white">
+                    Waiting for review
+                    </strong>
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Application ID
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  9348fn34u354873ncw834n349
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Date submitted
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  12 June 2022
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Assigned to
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Lloyd Wilkinson
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        
+    
+      </li>
+      <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="#">James Stenberg</a>
+            </h2>
+            <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Status
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <strong class="nhsuk-tag nhsuk-tag--blue">
+                    On hold
+                    </strong>
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Application ID
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  9348fn34u354873ncw834n349
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Date added
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  14 June 2022
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Added by
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Lloyd Wilkinson
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Reasons
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Names switched
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Assigned to
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Jack Taylor
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+       
+    
+      </li>
+      <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="#">Bob Brown</a>
+            </h2>
+            <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Status
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <strong class="nhsuk-tag nhsuk-tag--green">
+                    Approved
+                    </strong>
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Application ID
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  9348fn34u354873ncw834n349
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  UUID
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  1238 8457 3479
+                </dd>
+              </div>
+
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Date approved
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  10 June 2022
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Approved by
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Lloyd Wilkinson
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        
+    
+      </li>
+      <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="#">Holly James</a>
+            </h2>
+            <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Status
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <strong class="nhsuk-tag nhsuk-tag--red">
+                    Rejected
+                    </strong>
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Application ID
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  9348fn34u354873ncw834n349
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Date rejected
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  9 June 2022
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Rejected by
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Lloyd Wilkinson
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Reasons
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Photo ID 1 has expired, is not legible, other. Proof of address is not legible. Face scan unable to match face likeness or confirm liveness. Smartcard photo does not meet guidelines.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        
+    
+      </li>
+    </ul>
+
+    
+
+  </div>
+</div>
+
+
+{% endblock %}
