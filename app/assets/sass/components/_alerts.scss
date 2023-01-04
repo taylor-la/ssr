@@ -36,6 +36,10 @@
  .nhsuk-alert--success {
    border-color: $color_nhsuk-green;
  }
+
+ .red-warning {
+  border-color:   $nhsuk-error-color;
+}
  
  /* Alert icon
     ========================================================================== */
