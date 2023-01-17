@@ -1,0 +1,86 @@
+{% extends 'layout-inviter-v8.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Upload multiple applications
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v8/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>Upload multiple applications</h1>
+
+      <p><a href="">Download a template</a> and add applicants’ details to create multiple applications.</p>
+
+      <p>The template includes an example of how to format your file. </p>
+
+      <p>You must include applicants':</p>
+
+      <ul>
+        <li>given and family names</li>
+        <li>work email addresses</li>
+        <li>mobile numbers</li>
+      </ul>
+
+
+      <form action="/inviter/v8/spinner-bulk" method="post">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-6">
+            <label class="nhsuk-label nhsuk-label--m" for="bulk-upload-1">
+              Upload a file
+            </label>
+          <div class="nhsuk-hint" id="bulk-upload-hint">
+            File must be .csv format and smaller than 5MB
+          </div>
+          <input type="file" id="bulk-upload-1" name="bulk-upload" value="{{ data['bulk-upload'] }}" aria-describedby="bulk-upload-hint">
+        </div>
+
+        <dl class="nhsuk-summary-list nhsuk-u-visually-hidden">
+      
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              File
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              file-name-01.csv
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#">
+                Remove<span class="nhsuk-u-visually-hidden">file</span>
+              </a>
+            </dd>
+          </div>
+    
+        </dl>
+       
+          
+        {{ button({
+          "text": "Submit file",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+      
+
+    </div>
+  </div>
+
+        
+
+      
+
+{% endblock %}

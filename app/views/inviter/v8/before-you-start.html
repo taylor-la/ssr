@@ -1,0 +1,45 @@
+{% extends 'layout-inviter-v8.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Before you start
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}  
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v8/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+
+      <h1>Before you start</h1>
+
+      <p>Before you create an application, you must:</p>
+
+      <ul>
+        <li>enter an email address we can display to your applicants if they need support</li>
+        <li>set your email alert preferences</li>
+      </ul>
+
+      <p>You can change these later by going to Settings.</p>
+
+      <a class="nhsuk-button" href="/inviter/v8/support-set">Continue</a>
+
+
+    </div>
+
+  </div>
+{% endblock %}

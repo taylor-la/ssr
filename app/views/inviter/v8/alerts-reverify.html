@@ -1,0 +1,78 @@
+{% extends 'layout-inviter-v8.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Verify support details
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}  
+
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v8/alerts-update",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <div class="nhsuk-alert nhsuk-alert--info" style="display:none;">
+        <h3 class="nhsuk-u-visually-hidden">Information:</h3>
+        <p class="nhsuk-u-font-weight-bold">Link has been resent</p>
+      </div>
+
+      <form action="/inviter/v8/settings" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+          <h1 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--xl" for="verify-support">
+              Verify email alert preferences
+            </label>
+          </h1>
+
+          <p>Use the 4 digit security code that has been sent to <strong>inviter-alerts@nhs.net</strong> to verify your email address.</p>
+
+          <p>The security code will expire in 1 hour from when it was sent.</p>
+
+          <div class="nhsuk-hint" id="verify-alerts-hint">
+            The code contains 4 numbers
+            </div>
+          <input class="nhsuk-input nhsuk-input--width-4" id="verify-alerts" name="verify-alerts" type="text" inputmode="numeric" aria-describedby="verify-alerts-hint" value="{{ data['verify-alerts'] }}">
+        </div>
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+
+
+      </form>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Not received a security code?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Check your spam or junk folder.</p>
+          <p><a href="#">Send the link again</a> if you have not received it or if it has expired.</p>
+          <p><a href="/inviter/v8/alerts-update">Update your support details</a> to correct a typo or use a different email address.</p>
+      
+        </div>
+      </details>
+
+
+    </div>
+
+  </div>
+{% endblock %}
