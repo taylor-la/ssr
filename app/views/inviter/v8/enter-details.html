@@ -42,7 +42,7 @@
         <p class="nhsuk-u-font-weight-bold">This application will be raised under Barsetshire Community Hospital NHS Foundation Trust (RWA).</p>
       </div>
 
-      <form action="/inviter/v8/check-your-answers" method="post" class="form">
+      <form action="/inviter/v8/personal-email" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-5">
@@ -67,11 +67,8 @@
 
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="app-email-address-1">
-              Work email address
+              Email address
             </label>
-            <div class="nhsuk-hint" id="app-email-address-1-hint">
-              This must be an email address on the CIS allowlist
-            </div>
             <input class="nhsuk-input nhsuk-u-width-three-quarters" id="app-email-address-1" name="app-email-address-1" type="text" inputmode="email" aria-describedby="app-email-address-1-hint" value="{{ data['app-email-address-1'] }}">
           </div>
 
@@ -87,18 +84,7 @@
 
         </fieldset>
 
-        <div class="nhsuk-checkboxes nhsuk-u-margin-top-2">
-
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="dbs-1" name="dbs" type="checkbox" value="completed">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="dbs-1">
-              I confirm that this individual has been through relevant checks to work or study for their organisation. 
-            </label>
-          </div>
-
-        </div>
-
-        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+        <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-label nhsuk-u-margin-bottom-3">
@@ -134,17 +120,6 @@
           "id": "btn_submit"
         }) }}
       </form>
-
-      <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            Check if an email address domain is on the CIS allowlist
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-          <p>Check the <a href="https://digital.nhs.uk/services/registration-authorities-and-smartcards/smartcard-services/digital-smartcard/digital-smartcard-guidance/registration-authority-guidance-for-digital-smartcards#top">NHS Digital Registration Authority guidance</a> to see if an email address domain is on the CIS allowlist.</p>
-        </div>
-      </details>
 
     </div>
 

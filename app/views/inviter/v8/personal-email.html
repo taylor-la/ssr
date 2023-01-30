@@ -1,0 +1,66 @@
+{% extends 'layout-inviter-v8.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Confirm this email address is genuine
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v8/enter-details",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+
+      <form action="/inviter/v8/check-your-answers" method="post" class="form">
+
+          <div class="nhsuk-form-group">
+        
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+                <h1 class="nhsuk-fieldset__heading">
+                  Confirm this personal email address
+                </h1>
+              </legend>
+
+              <p><strong>{{ data['app-email-address-1'] }}</strong> is not on the CIS allowlist and will be treated as a personal email address.</p>
+      
+        
+              <div class="nhsuk-checkboxes">
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    I can confirm that this applicant works for a trusted organisation and has been through the necessary onboarding and HR processes for their organisation.
+                  </label>
+                </div>
+        
+              </div>
+            </fieldset>
+        
+          </div>
+    
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}

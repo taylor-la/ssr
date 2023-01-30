@@ -24,38 +24,27 @@
 
       <!-- Add your content here -->
 
-      <h1>Set email alert preferences</h1>
-
-      <p class="nhsuk-u-margin-top-6 nhsuk-u-reading-width">Alerts are sent when applications you raise require resending, are approved and are rejected.</p>
-
 
       <form action="/inviter/v8/alerts-reverify" method="post" class="form">
 
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-              <h2 class="nhsuk-fieldset__heading">
-                Select an email address
-              </h2>
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+              <h1 class="nhsuk-fieldset__heading">
+                Set email alert preferences
+              </h1>
             </legend>
 
-            
+            <p class="nhsuk-u-margin-top-6 nhsuk-u-reading-width">Alerts are sent when applications you raise require resending, are approved and are rejected.</p>
 
 
             <div class="nhsuk-radios nhsuk-radios--conditional">
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="do not receive email alerts" {{ checked("contact", "do not receive email alerts") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-                  inviter-support@nhs.net
-                </label>
-              </div>
-
-              <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="receive email alerts" {{ checked("contact", "receive email alerts") }} aria-controls="conditional-contact-1" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                  Use a different email address
+                  Yes, I want to receive email alerts
                 </label>
               </div>
         
@@ -66,14 +55,19 @@
                     Email address
                   </label>
                   <div class="nhsuk-hint" id="email-hint">
-                    Enter a work email address or a shared inbox
+                    Enter a personal email address or a shared inbox
                   </div>
                   <input class="nhsuk-input nhsuk-u-width-two-thirds" id="contact-email" name="contact-email" type="text" aria-describedby="email-hint" value="{{ data['contact-email'] }}">
                 </div>
         
               </div>
         
-              
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="do not receive email alerts" {{ checked("contact", "do not receive email alerts") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                  No, I don't want to receive email alerts
+                </label>
+              </div>
   
 
           </fieldset>
@@ -82,7 +76,7 @@
         
 
         {{ button({
-          "text": "Continue"
+          "text": "Save"
         }) }}
 
       </form>
