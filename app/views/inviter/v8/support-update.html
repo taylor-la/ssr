@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Enter support details
+  Help for your applicants
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,11 +24,9 @@
 
       <!-- Add your content here -->
 
-      <h1>Enter support details</h1>
+      <h1>Help for your applicants</h1>
 
-      <p>Enter an email address we can display to your applicants if they need support.</p>
-
-      <p>This email address will be included in emails sent to your applicants.</p>
+      <p>Enter an email address that will be displayed to your applicants, so they can contact you or your team if they need support.</p>
 
 
       <form action="/inviter/v8/support-reverify" method="post" class="form">
@@ -38,7 +36,7 @@
               Email address
             </label>
           <div class="nhsuk-hint" id="support-email-hint">
-            This could be a work email address or shared inbox
+            This can be a shared mailbox
             </div>
           <input class="nhsuk-input nhsuk-input--width-20" id="support-email" name="support-email" type="text" aria-describedby="support-email-hint" value="{{ data['support-email'] }}">
         </div>
