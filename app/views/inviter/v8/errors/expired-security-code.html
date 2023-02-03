@@ -1,0 +1,25 @@
+{% extends 'layout-inviter-v8.html' %}
+
+{% block pageTitle %}
+  Incorrect security code
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Security code has expired
+      </h1>
+
+      <p>A security code was not used within 1 hour and has expired.</p>
+
+      <p><a href="/inviter/v8/alerts-verify">Send a new security code</a></p>
+      <p><a href="/inviter/v8/alerts-update">Update your contact email address</a> to correct a typo or use a different email address.</p>
+
+      <p>If you are experiencing technical issues, <a href="https://www.support.digitalservices.nhs.uk/csm">go to the NHS Digital Customer Service Portal</a>. Include full details of the issue. Alternatively, email <a href="">ssd.nationalservicedesk@nhs.net</a>.</p>
+
+
+    </div>
+  </div>
+{% endblock %}
