@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Cancel application
+  Cancel applications
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v8/applications/expired",
+    "href": "/inviter/v8/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -24,10 +24,10 @@
 
       <!-- Add your content here -->
       <h1>
-        Cancel application
+        Cancel applications
       </h1>
 
-      <p>Applicant will no longer be able to continue their application.</p>
+      <p>Applicants will no longer be able to continue their applications.</p>
 
       <form action="/inviter/v8/application-cancelled" method="post" class="form">
 
@@ -47,7 +47,7 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
               <h2 class="nhsuk-fieldset__heading">
-                Select reason for cancelling application
+                Select reason for cancelling applications
               </h2>
             </legend>
             
@@ -87,7 +87,7 @@
         </div>
 
         <button class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3"  type="submit">
-          Cancel application
+          Cancel applications
         </button>
 
       </form>
