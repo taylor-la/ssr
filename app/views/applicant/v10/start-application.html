@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  You need to apply for an NHS Care ID
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        You need to apply for an NHS Care ID
+      </h1>
+      <p>Our checks showed that you do not already have a Care Identity profile. You will need to apply for one. </p>
+
+      <p>You can use the link in your invite email to return to start your application at another time.</p>
+
+      <h2>How to apply</h2>
+
+      <H3>Complete the online form</h3>
+
+        <ol>
+          <li>verify your current UK address</li>
+          <li>choose your ID document for verification</li>
+          <li>enter a name to appear on your smartcard and NHS Care ID profile</li>
+        </ol>
+  
+      <h3>Download the Verify Care ID mobile app</h3>
+      <ol>
+        <li>photograph your ID document</li>
+        <li>take a passport style photo</li>
+        <li>scan your face</li>
+      </ol>
+
+      <p><a href="/applicant/v10/offline">I cannot use a mobile phone to take photos and scan my face</a></p>
+
+      
+
+      <a href="/applicant/v10/dpoa" class="nhsuk-button nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-7">
+        Start application
+      </a>
+      
+      <h2>What is an NHS Care ID?</h2>
+
+      <p>An NHS Care ID will give you access to national systems, clinical data and patient information.</p>
+
+      <p>You need an NHS Care ID to get an authenticator, such as a smartcard.</p>
+    </div>
+
+  </div>
+{% endblock %}

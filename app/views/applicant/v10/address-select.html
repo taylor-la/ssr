@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Select a delivery address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v10/address-postcode",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v10/preferred-name" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-padding-bottom-3">
+              Select an address
+            </h1>
+          </legend>
+      
+            <p class="nhsuk-u-margin-bottom-1">Postcode</p>
+      
+            <p><strong>{{ data['address-postcode-1'] }} </strong><a class="nhsuk-u-padding-left-3" href="/applicant/v10/address-postcode">
+              Change<span class="nhsuk-u-visually-hidden"> postcode</span>
+            </a></p>
+      
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-heading-m" for="select-address-1">
+                Select an address
+              </label>
+              <select class="nhsuk-select" id="select-address-1">
+                <option value="1"selected>Select from 3 addresses</option>
+                <option value="2">Buckingham Palace, London SW1A 1AA</option>
+                <option value="3">address option 2</option>
+                <option value="4">address option 3</option>
+              </select>
+            </div>
+      
+        </fieldset>
+      
+        {{ button({
+          "text": "Continue"
+        }) }}
+      
+      </form>
+
+      <p><a href="/applicant/v10/address-manual">I can't find my address on the list</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

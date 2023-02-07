@@ -1,0 +1,104 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Check your details
+      </h1>
+
+      <h2 class="nhsuk-heading-m">Identity verification details</h2>
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Proof of address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['poa'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v10/poa">
+              Change<span class="nhsuk-u-visually-hidden"> your proof of address</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Photo ID documents
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['2-photo-id'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v10/1-photo-id">
+              Change<span class="nhsuk-u-visually-hidden"> Photo ID document</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-top-8">NHS Care ID profile details</h2>
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Name on smartcard
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['preferred-name'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v10/preferred-name">
+              Change<span class="nhsuk-u-visually-hidden"> your preferred name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Delivery address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Buckingham Palace, London SW1A 1AA
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v10/delivery">
+              Change<span class="nhsuk-u-visually-hidden"> your delivery address</span>
+            </a>
+          </dd>
+        </div>
+
+        
+
+      </dl>
+
+      <p>After you submit your details, you will need to download our secure mobile app to verify your identity.</p>
+
+
+      <form action="/applicant/v10/spinner-selection" method="post" class="form">
+
+
+        {{ button({
+          "text": "Submit now"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
