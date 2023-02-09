@@ -1,0 +1,125 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Select an identity document number
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v10/dup-check/ni-number",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v10/dup-check/no-number" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+              <h1 class="nhsuk-fieldset__heading">
+                Select an identity document
+              </h1>
+            </legend>
+
+            <p>We will use the document number to check if you already have an NHS Care ID profile.</p>
+
+
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="uk-passport" name="doc-number" type="radio" value="uk passport" aria-controls="conditional-uk-passport" aria-expanded="false" {{ checked("doc-number", "uk passport") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="uk-passport">
+                  Passport
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-uk-passport">
+        
+                <div class="nhsuk-form-group">
+
+                  <label class="nhsuk-label" for="uk-passport-number">
+                    Passport number
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="uk-passport-number" name="uk-passport-number" type="text" aria-describedby="uk-passport-number-hint" value="{{ data['uk-passport-number'] }}">
+                </div>
+
+                <div class="nhsuk-checkboxes">
+
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                      The passport number is a non-UK format
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+    
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="uk-driving" name="doc-number" type="radio" value="uk driving licence" aria-controls="conditional-uk-driving" aria-expanded="false" {{ checked("doc-number", "uk driving licence") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="uk-driving">
+                  Driving licence
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-uk-driving">
+        
+                <div class="nhsuk-form-group">
+
+                  <label class="nhsuk-label" for="uk-driving-number">
+                    Driving licence number
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="uk-driving-number" name="uk-driving-number" type="text" aria-describedby="uk-driving-number-hint" value="{{ data['uk-driving-number'] }}">
+                </div>
+
+                <div class="nhsuk-checkboxes">
+
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                      The driving licence number is a non-UK format
+                    </label>
+                  </div>
+  
+                </div>
+        
+              </div>
+
+              
+
+              <div class="nhsuk-radios__divider">or</div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no-number" name="doc-number" type="radio" value="none" {{ checked("doc-number", "none") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="no-number">
+                  None of the above
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}

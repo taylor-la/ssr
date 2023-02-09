@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  You need a National Insurance number to use this online service
+  You need a National Insurance Number, passport number or driving licence number to use this online service  
 {% endblock %}
 
 {% block beforeContent %}
@@ -9,7 +9,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v10/dup-check/ni-number",
+    "href": "/applicant/v10/dup-check/doc-number",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,7 +21,7 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1 class="nhsuk-heading-xl">
-        You need a National Insurance number to use this online service
+        You need an identity document number to use this online service
       </h1>
 
       <p>Contact <a href="">[inviter-support-email]</a> to complete your check in a different way. Include your application ID in all emails.</p>
