@@ -332,9 +332,9 @@
                     
                           <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item">
-                              <input class="nhsuk-checkboxes__input" id="unacceptable-3" name="reject-poa" type="checkbox" value="unacceptable">
-                              <label class="nhsuk-label nhsuk-checkboxes__label" for="unacceptable-3">
-                                Not accepted
+                              <input class="nhsuk-checkboxes__input" id="requirements-3" name="reject-poa" type="checkbox" value="requirements">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="requirements-3">
+                                Does not meet requirements
                               </label>
                             </div>
                             <div class="nhsuk-checkboxes__item">
@@ -497,6 +497,14 @@
                       </div>
                 
                       <div class="nhsuk-checkboxes">
+
+                        <div class="nhsuk-checkboxes">
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="not-match" name="reject-name" type="checkbox" value="not match">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="not-match">
+                              Name and / or date of birth do not match
+                            </label>
+                          </div>
 
                         <div class="nhsuk-checkboxes__item">
                           <input class="nhsuk-checkboxes__input" id="fraud-4" name="reject-name" type="checkbox" value="fraud">
@@ -665,13 +673,21 @@
                       </div>
                 
                       <div class="nhsuk-checkboxes">
+                        
                         <div class="nhsuk-checkboxes__item">
                           <input class="nhsuk-checkboxes__input" id="likeness-5" name="reject-face" type="checkbox" value="likeness">
                           <label class="nhsuk-label nhsuk-checkboxes__label" for="likeness-5">
-                            Faces do not match
+                            Unable to match face likeness
                           </label>
                         </div>
                         
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="liveness-5" name="reject-face" type="checkbox" value="liveness">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="liveness-5">
+                            Does not meet face liveness requirements
+                          </label>
+                        </div>
+
                         <div class="nhsuk-checkboxes__item">
                           <input class="nhsuk-checkboxes__input" id="fraud-5" name="reject-face" type="checkbox" value="fraud">
                           <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-5">
@@ -752,10 +768,29 @@
               <div class="nhsuk-radios nhsuk-radios--conditional">
           
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="approve-6" name="smartcard" type="radio" value="approve" aria-expanded="false">
+                  <input class="nhsuk-radios__input" id="approve-6" name="smartcard" type="radio" value="approve" aria-controls="conditional-approve-6" aria-expanded="false">
                   <label class="nhsuk-label nhsuk-radios__label" for="approve-6">
                     Yes, approve smartcard photo
                   </label>
+                </div>
+
+                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-approve-6">
+          
+                  <div class="nhsuk-form-group  nhsuk-u-margin-top-4">
+                
+                      <div class="nhsuk-checkboxes">
+                        
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="update-later" name="approve-smartcard" type="checkbox" value="update-later">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="update-later">
+                            Smartcard photo will need to be updated
+                          </label>
+                        </div>
+
+                      </div>
+                
+                  </div>
+          
                 </div>
           
                 <div class="nhsuk-radios__item">
@@ -779,6 +814,12 @@
                           <input class="nhsuk-checkboxes__input" id="non-conformant-6" name="reject-smartcard" type="checkbox" value="non-conformant">
                           <label class="nhsuk-label nhsuk-checkboxes__label" for="non-conformant-6">
                             Photo(s) do not meet passport guidelines
+                          </label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="image-quality-6" name="reject-smartcard" type="checkbox" value="image-quality">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="image-quality-6">
+                            Photo(s) are too blurry
                           </label>
                         </div>
                         <div class="nhsuk-checkboxes__item">
