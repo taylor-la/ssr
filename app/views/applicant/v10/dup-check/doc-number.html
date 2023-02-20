@@ -39,7 +39,7 @@
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="uk-passport" name="doc-number" type="radio" value="uk passport" aria-controls="conditional-uk-passport" aria-expanded="false" {{ checked("doc-number", "uk passport") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="uk-passport">
-                  Passport
+                  UK passport
                 </label>
               </div>
         
@@ -48,28 +48,37 @@
                 <div class="nhsuk-form-group">
 
                   <label class="nhsuk-label" for="uk-passport-number">
-                    Passport number
+                    UK passport number
                   </label>
                   <input class="nhsuk-input nhsuk-input--width-10" id="uk-passport-number" name="uk-passport-number" type="text" aria-describedby="uk-passport-number-hint" value="{{ data['uk-passport-number'] }}">
                 </div>
 
-                <div class="nhsuk-checkboxes">
+              </div>
 
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                      The passport number is a non-UK format
-                    </label>
-                  </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="int-passport" name="doc-number" type="radio" value="int passport" aria-controls="conditional-int-passport" aria-expanded="false" {{ checked("doc-number", "int passport") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="int-passport">
+                  International passport
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-int-passport">
+        
+                <div class="nhsuk-form-group">
 
+                  <label class="nhsuk-label" for="int-passport-number">
+                    International passport number
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="int-passport-number" name="int-passport-number" type="text" aria-describedby="int-passport-number-hint" value="{{ data['int-passport-number'] }}">
                 </div>
+
               </div>
     
 
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="uk-driving" name="doc-number" type="radio" value="uk driving licence" aria-controls="conditional-uk-driving" aria-expanded="false" {{ checked("doc-number", "uk driving licence") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="uk-driving">
-                  Driving licence
+                  UK driving licence
                 </label>
               </div>
         
@@ -78,20 +87,28 @@
                 <div class="nhsuk-form-group">
 
                   <label class="nhsuk-label" for="uk-driving-number">
-                    Driving licence number
+                    UK driving licence number
                   </label>
                   <input class="nhsuk-input nhsuk-input--width-10" id="uk-driving-number" name="uk-driving-number" type="text" aria-describedby="uk-driving-number-hint" value="{{ data['uk-driving-number'] }}">
                 </div>
+        
+              </div>
 
-                <div class="nhsuk-checkboxes">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="int-driving" name="doc-number" type="radio" value="int driving licence" aria-controls="conditional-int-driving" aria-expanded="false" {{ checked("doc-number", "int driving licence") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="int-driving">
+                  International driving licence
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-int-driving">
+        
+                <div class="nhsuk-form-group">
 
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                      The driving licence number is a non-UK format
-                    </label>
-                  </div>
-  
+                  <label class="nhsuk-label" for="int-driving-number">
+                    International driving licence number
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="int-driving-number" name="int-driving-number" type="text" aria-describedby="int-driving-number-hint" value="{{ data['int-driving-number'] }}">
                 </div>
         
               </div>
