@@ -35,11 +35,10 @@
         <li>mobile numbers</li>
       </ul>
 
-
       <form action="/inviter/v8/spinner-bulk" method="post">
 
         <div class="nhsuk-form-group nhsuk-u-margin-bottom-6">
-            <label class="nhsuk-label nhsuk-label--m" for="bulk-upload-1">
+            <label class="nhsuk-label nhsuk-label--l" for="bulk-upload-1">
               Upload a file
             </label>
           <div class="nhsuk-hint" id="bulk-upload-hint">
@@ -65,6 +64,22 @@
           </div>
     
         </dl>
+
+
+        <h2 class="nhsuk-heading-m">Use of personal emails</h2>
+
+        <p>Emails not on the CIS allowlist will be treated as personal emails.</p>
+
+        <div class="nhsuk-checkboxes nhsuk-u-margin-bottom-5">
+        
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              I can confirm that applicants have been through the necessary onboarding and HR processes for their trusted organisation if they do not have an allow-listed email address
+            </label>
+          </div>
+  
+        </div>
        
           
         {{ button({
