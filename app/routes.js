@@ -532,7 +532,7 @@ router.post('/applicant/v10/2-photo-id', function (req, res) {
 
 })
 
-router.post('/applicant/v10/preferred-name', function (req, res) {
+router.post('/applicant/v10/poa-preferred-name', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo2 = req.session.data['2-photo-id']
@@ -543,7 +543,7 @@ router.post('/applicant/v10/preferred-name', function (req, res) {
     res.redirect('/applicant/v10/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v10/preferred-name')
+    res.redirect('/applicant/v10/poa-preferred-name')
   }
 
 })
