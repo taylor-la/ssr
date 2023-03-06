@@ -464,6 +464,24 @@ router.post('/applicant/v9/save-selection', function (req, res) {
 
 })
 
+// inviter v8 - verify emails
+
+router.post('/inviter/v8/support-verify', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var supportEmail = req.session.data['support']
+
+  // Check whether the variable matches a condition
+  if (supportEmail == "different"){
+    // Send user to next page
+    res.redirect('/inviter/v8/support-verify')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/inviter/v8/enter-details')
+  }
+
+})
+
 
 // dpoa v10 - no ni number
 
