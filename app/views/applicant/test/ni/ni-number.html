@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your National Insurance Number
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/test/ni/date-of-birth",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/test/ni/check-your-answers" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+              <h1 class="nhsuk-fieldset__heading">
+                Do you have a National Insurance number?
+              </h1>
+            </legend>
+
+            <p>You can find your National Insurance number on:</p>
+
+            <ul>
+              <li>your payslip</li>
+              <li>your P60</li>
+              <li>letters about your tax, pension or benefits</li>
+            </ul>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="ni-number-yes" name="ni-number" type="radio" value="yes" aria-controls="conditional-ni-number" aria-expanded="false" {{ checked("ni-number", "yes") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="ni-number-yes">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-ni-number">
+        
+                <div class="nhsuk-form-group">
+
+                  <label class="nhsuk-label" for="ni">
+                    National Insurance number
+                  </label>
+                  <div class="nhsuk-hint" id="ni-hint">
+                    Your National Insurance number contains 3 letters and 6 numbers, for example: “QQ 12 34 56 C”.
+                    </div>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="ni" name="ni" type="text" aria-describedby="ni-hint" value="{{ data['ni'] }}">
+                </div>
+        
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="ni-number-no" name="ni-number" type="radio" value="no" {{ checked("ni-number", "no") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="ni-number-no">
+                  No
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

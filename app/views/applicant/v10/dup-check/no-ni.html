@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  You need a National Insurance number to use this online service
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v10/dup-check/ni-number",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        You need a National Insurance number to use this online service
+      </h1>
+
+      <p>Contact <a href="">[inviter-support-email]</a> to complete your check in a different way. Include your application ID in all emails.</p>
+
+      <p>You will be able to provide other information to find out if you already have an NHS Care ID profile. </p>
+
+      <p>This is a new service, your <a href="">feedback</a> will help us improve it.</p>
+
+    </div>
+
+  </div>
+{% endblock %}

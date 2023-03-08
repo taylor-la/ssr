@@ -24,56 +24,24 @@
       <form action="/applicant/v10/dup-check/check-your-answers" method="post" class="form">
 
         <div class="nhsuk-form-group">
+          <h1 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--xl" for="ni-number">
+              Enter your National Insurance number
+            </label>
+          </h1>
 
-          <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
-              <h1 class="nhsuk-fieldset__heading">
-                Do you have a National Insurance number?
-              </h1>
-            </legend>
+          <p>You can find your National Insurance number on:</p>
 
-            <p>You can find your National Insurance number on:</p>
+          <ul>
+            <li>your payslip</li>
+            <li>your P60</li>
+            <li>letters about your tax, pension or benefits</li>
+          </ul>
 
-            <ul>
-              <li>your payslip</li>
-              <li>your P60</li>
-              <li>letters about your tax, pension or benefits</li>
-            </ul>
-        
-            <div class="nhsuk-radios nhsuk-radios--conditional">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="ni-number-yes" name="ni-number" type="radio" value="yes" aria-controls="conditional-ni-number" aria-expanded="false" {{ checked("ni-number", "yes") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="ni-number-yes">
-                  Yes
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-ni-number">
-        
-                <div class="nhsuk-form-group">
-
-                  <label class="nhsuk-label" for="ni">
-                    National Insurance number
-                  </label>
-                  <div class="nhsuk-hint" id="ni-hint">
-                    Your National Insurance number contains 3 letters and 6 numbers, for example: “QQ 12 34 56 C”.
-                    </div>
-                  <input class="nhsuk-input nhsuk-input--width-10" id="ni" name="ni" type="text" aria-describedby="ni-hint" value="{{ data['ni'] }}">
-                </div>
-        
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="ni-number-no" name="ni-number" type="radio" value="no" {{ checked("ni-number", "no") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="ni-number-no">
-                  No
-                </label>
-              </div>
-        
+          <div class="nhsuk-hint" id="ni-number-hint">
+            Your National Insurance number contains 3 letters and 6 numbers, for example: “QQ 12 34 56 C”.
             </div>
-          </fieldset>
-        
+          <input class="nhsuk-input nhsuk-input--width-10" id="ni-number" name="ni-number" type="text" aria-describedby="ni-number-hint" value="{{ data['ni-number'] }}">
         </div>
         
 
@@ -82,6 +50,8 @@
         }) }}
 
       </form>
+
+      <p><a href="/applicant/v10/dup-check/no-ni">I don't have a National Insurance Number</a></p>
 
     </div>
   </div>
