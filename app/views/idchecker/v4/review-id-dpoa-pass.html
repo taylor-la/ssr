@@ -18,15 +18,6 @@
 
   <div class="nhsuk-grid-column-full">
 
-    <div class="nhsuk-alert nhsuk-alert--info nhsuk-alert--icon">
-      <svg class="nhsuk-icon nhsuk-icon__info nhsuk-alert__icon" fill="none" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
-        <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
-        C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
-      </svg>
-      <h3 class="nhsuk-u-visually-hidden">Information:</h3>
-      <p class="nhsuk-u-font-weight-bold">This application has no warnings</p>
-    </div>
-
     <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">
       Application: James Stenberg
     </h1>
@@ -207,125 +198,125 @@
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading">UK address check</h2>
         <p class="nhsuk-u-reading-width">Applicants must score 90 or more points to pass the address check.</p>
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-one-half">
-            <dl class="nhsuk-summary-list nhsuk-summary-list">
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key nhsuk-u-width-one-half">
-                  Result
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  Pass
-                </dd>
-              </div>
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key nhsuk-u-width-one-half">
-                  Points
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  110
-                </dd>
-              </div>
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key nhsuk-u-width-one-half">
-                  Primary checks matched
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  2
-                </dd>
-              </div>
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key nhsuk-u-width-one-half">
-                  Date of birth confirmed
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  1
-                </dd>
-              </div>
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key nhsuk-u-width-one-half">
-                  Warnings
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  0
-                </dd>
-              </div>
-            </dl>
-            
+        <dl class="nhsuk-summary-list nhsuk-summary-list nhsuk-u-width-three-quarters">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Result
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Pass
+            </dd>
           </div>
-          <div class="nhsuk-grid-column-one-half">
-            <form action="">
-              <div class="nhsuk-form-group">
-    
-                <fieldset class="nhsuk-fieldset">
-                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                    <h3 class="nhsuk-fieldset__heading">
-                      Does this address check meet NHS ID checking standards?
-                    </h3>
-                  </legend>
-              
-                  <div class="nhsuk-radios nhsuk-radios--conditional">
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="approve-3" name="poa" type="radio" value="approve" aria-expanded="false">
-                      <label class="nhsuk-label nhsuk-radios__label" for="approve-3">
-                        Yes, approve this address check
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="reject-3" name="poa" type="radio" value="reject" aria-controls="conditional-reject-3" aria-expanded="false">
-                      <label class="nhsuk-label nhsuk-radios__label" for="reject-3">
-                        No, reject this address check
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-reject-3">
-              
-                      <div class="nhsuk-form-group">
-                    
-                          <div class="nhsuk-hint nhsuk-u-margin-top-4" id="reject-3-hint">
-                            Select all options that apply
-                          </div>
-                    
-                          <div class="nhsuk-checkboxes">
-                            <div class="nhsuk-checkboxes__item">
-                              <input class="nhsuk-checkboxes__input" id="requirements-3" name="reject-poa" type="checkbox" value="requirements">
-                              <label class="nhsuk-label nhsuk-checkboxes__label" for="requirements-3">
-                                Does not meet requirements
-                              </label>
-                            </div>
-                            <div class="nhsuk-checkboxes__item">
-                              <input class="nhsuk-checkboxes__input" id="fraud-3" name="reject-poa" type="checkbox" value="fraud">
-                              <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-3">
-                                Suspected fraud
-                              </label>
-                            </div>
-                            <div class="nhsuk-checkboxes__item">
-                              <input class="nhsuk-checkboxes__input" id="smoke-3" name="reject-poa" type="checkbox" value="smoke">
-                              <label class="nhsuk-label nhsuk-checkboxes__label" for="smoke-3">
-                                Smoke test - internal use only
-                              </label>
-                            </div>
-                            <div class="nhsuk-checkboxes__item">
-                              <input class="nhsuk-checkboxes__input" id="other-3" name="reject-poa" type="checkbox" value="other">
-                              <label class="nhsuk-label nhsuk-checkboxes__label" for="other-3">
-                                Other
-                              </label>
-                            </div>
-                          </div>
-                    
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Points
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              110
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Primary checks matched
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              2
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Date of birth confirmed
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              1
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Warnings
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              0
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Flat 5 Grange Court, 12 Smith Avenue, Manchester, M30 6GF
+            </dd>
+          </div>
+        </dl>
+        <form action="">
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                <h3 class="nhsuk-fieldset__heading">
+                  Does this address check meet NHS ID checking standards?
+                </h3>
+              </legend>
+          
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="approve-3" name="poa" type="radio" value="approve" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="approve-3">
+                    Yes, approve this address check
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="reject-3" name="poa" type="radio" value="reject" aria-controls="conditional-reject-3" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="reject-3">
+                    No, reject this address check
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-reject-3">
+          
+                  <div class="nhsuk-form-group">
+                
+                      <div class="nhsuk-hint nhsuk-u-margin-top-4" id="reject-3-hint">
+                        Select all options that apply
                       </div>
-              
-                    </div>
-              
+                
+                      <div class="nhsuk-checkboxes">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="requirements-3" name="reject-poa" type="checkbox" value="requirements">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="requirements-3">
+                            Does not meet requirements
+                          </label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="fraud-3" name="reject-poa" type="checkbox" value="fraud">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-3">
+                            Suspected fraud
+                          </label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="smoke-3" name="reject-poa" type="checkbox" value="smoke">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="smoke-3">
+                            Smoke test - internal use only
+                          </label>
+                        </div>
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="other-3" name="reject-poa" type="checkbox" value="other">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="other-3">
+                            Other
+                          </label>
+                        </div>
+                      </div>
+                
                   </div>
-                </fieldset>
+          
+                </div>
+          
               </div>
-            </form>
-            
+            </fieldset>
           </div>
-        </div>
+        </form>
         
       </div>
     </div>
