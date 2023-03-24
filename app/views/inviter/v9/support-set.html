@@ -1,0 +1,79 @@
+{% extends 'layout-inviter-v9.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Help for your applicants
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}  
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+   
+
+      <form action="/inviter/v9/support-verify" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+              <h1 class="nhsuk-fieldset__heading">
+                Help for your applicants
+              </h1>
+            </legend>
+  
+            <p class="nhsuk-u-margin-top-5">Select an email address that will be displayed to your applicants, so they can contact you or your team if they need support.</p>
+        
+            <div class="nhsuk-hint" id="support-hint">
+              This can be a shared mailbox
+            </div>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="same-1" name="support" type="radio" value="same" {{ checked("support", "same") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="same-1">
+                  {{ data['contact-email'] }}
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="different-2" name="support" type="radio" value="different" {{ checked("support", "different") }} aria-controls="conditional-support-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="different-2">
+                  Use a different email address
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-support-2">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="support-email">
+                    Email address
+                  </label>
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="support-email" name="support-email" type="text">
+                </div>
+        
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+      
+    </div>
+
+  </div>
+{% endblock %}

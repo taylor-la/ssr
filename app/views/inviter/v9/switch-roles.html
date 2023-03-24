@@ -1,0 +1,51 @@
+{% extends 'layout-inviter-v9.html' %}
+
+{% block pageTitle %}
+  Apply for Care ID
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        Apply for Care ID
+      </h1>
+
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/inviter/v9/all-applications">Search applications</a>
+              </h2>
+              <p class="nhsuk-card__description">Find applications by name, email address, application ID.</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/idchecker/v3/dashboard">Review applications</a>
+              </h2>
+              <p class="nhsuk-card__description">Check and approve, reject or place applications on a holding list for further review by another ID checker</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/inviter/v9/dashboard">Manage my organisation's applications</a>
+              </h2>
+              <p class="nhsuk-card__description">Start a new application or manage current applications</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+{% endblock %}

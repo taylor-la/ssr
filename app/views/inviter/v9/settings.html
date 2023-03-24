@@ -1,0 +1,77 @@
+{% extends 'layout-inviter-v9.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Settings
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v9/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Settings
+      </h1>
+
+      <h2 class="nhsuk-u-margin-top-8">Contact email address</h2>
+
+      <p class="nhsuk-u-reading-width">The ID checking team might use this to contact you about applications you've raised.</p>
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['contact-email'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/inviter/v9/alerts-update">
+              Change<span class="nhsuk-u-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2 class="nhsuk-u-margin-top-8">Help for your applicants</h2>
+
+      <p class="nhsuk-u-reading-width">This email address will be displayed to your applicants, so they can contact you or your team if they need support.</p>
+
+      <dl class="nhsuk-summary-list">
+
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['support-email'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/inviter/v9/support-update">
+              Change<span class="nhsuk-u-visually-hidden"> positions</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      
+
+    </div>
+  </div>
+{% endblock %}

@@ -91,6 +91,7 @@ justify-content: flex-end; }
 
 .nhsuk-account-navigation__main {
 list-style-type: none;
+padding-left: 0;
 margin-bottom: 0; }
 @media (max-width: 768px) {
   .nhsuk-account-navigation__main {
@@ -127,25 +128,80 @@ text-transform: none; }
 border-bottom: 4px solid #d8dde0; }
 
 
-
 .nhsuk-notification-badge {
-background: #d4351c;
-border-radius: 4px;
-color: #fff;
-display: inline-block;
-font-size: 14px;
-font-weight: 600;
-min-width: 25px;
-padding: 0px 2px;
-text-align: center;
-white-space: nowrap; }
+  background: #d4351c;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 25px;
+  padding: 0px 2px;
+  text-align: center;
+  white-space: nowrap; }
+  
+  .nhsuk-contents-list__list--nested {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  list-style-type: disc; }
+  
+  .nobg {
+  margin-left: 8px;
+  background: none !important;
+  padding-left: 2px !important; }
 
-.nhsuk-contents-list__list--nested {
-margin-top: 10px;
-margin-bottom: 10px;
-list-style-type: disc; }
 
-.nobg {
-margin-left: 8px;
-background: none !important;
-padding-left: 2px !important; }
+//// Account navigation for logged in users v9
+
+.nhsuk-account-navigation-container {
+  background-color: #FFF; }
+  
+  .nhsuk-account-navigation-v9 {
+  display: flex;
+  justify-content: flex-start; 
+  border-bottom: 1px solid  $nhsuk-border-color;}
+  @media (max-width: 768px) {
+    .nhsuk-account-navigation {
+      justify-content: flex-start; } }
+  
+  .nhsuk-account-navigation__main-v9 {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0; }
+  @media (max-width: 768px) {
+    .nhsuk-account-navigation__main-v9 {
+      padding-left: 0;
+      width: 100%; } }
+  .nhsuk-account-navigation__main-v9 li {
+    display: inline-block;
+    margin-bottom: 0; }
+    @media (max-width: 768px) {
+      .nhsuk-account-navigation__main-v9 li {
+        display: block; } }
+  
+  .nhsuk-account-navigation__link-v9 {
+  border-bottom: 4px solid transparent;
+  box-sizing: border-box;
+  color: $nhsuk-link-color;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+  padding: 14px 20px 10px;
+  text-decoration: none;
+  text-transform: none; }
+  @media (max-width: 768px) {
+    .nhsuk-account-navigation__link-v9 {
+      width: 100%; } }
+  .nhsuk-account-navigation__link-v9:hover {
+    text-decoration: underline ; }
+  
+  .nhsuk-account-navigation__link-v9:visited {
+    color:$nhsuk-link-color; }
+  
+  .nhsuk-account-navigation__link__current-v9 {
+  border-bottom: 4px solid $nhsuk-link-color; }
+  
+
+
+

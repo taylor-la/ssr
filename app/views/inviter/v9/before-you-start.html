@@ -1,0 +1,47 @@
+{% extends 'layout-inviter-v9.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Before you start
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}  
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v9/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+
+      <h1>Before you start</h1>
+
+      <p>Before you raise an application, you must provide the following contact information:</p>
+
+      <ul>
+        <li>contact email address. This may be used to contact you about applications you have raised.</li>
+        <li>help for your applicants email address. This will be displayed to your applicants, so they can contact you or your team if they need support.</li>
+      </ul>
+
+      <p>You will need to verify your contact information by entering a security code.</p>
+
+      <p>You can change your contact information later by going to Settings.</p>
+
+      <a class="nhsuk-button" href="/inviter/v9/alerts-set">Continue</a>
+
+
+    </div>
+
+  </div>
+{% endblock %}
