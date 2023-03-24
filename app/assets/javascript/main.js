@@ -1,5 +1,7 @@
 // ES6 or Vanilla JavaScript
 
+// v8 current link
+
 if (window.location.href.indexOf('dashboard') > 0) {
     $('a.nhsuk-account-navigation__link').removeClass("nhsuk-account-navigation__link__current");
     $('a.nhsuk-account-navigation__link[href$="/v8/dashboard"]').addClass("nhsuk-account-navigation__link__current");
