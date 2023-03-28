@@ -526,6 +526,7 @@
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
           <h3>Approved applications</h3>
+          <a class="nhsuk-button nhsuk-button--secondary" style="padding: 6px 16px; font-weight: normal;" href="">Archive selected</a>
         </div>
         <div class="nhsuk-grid-column-one-third">
    
@@ -537,6 +538,11 @@
         </caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
+            <th role="columnheader" class="" scope="col"><div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div></th>
             <th role="columnheader" class="" scope="col">Applicant name</th>
             <th role="columnheader" class="" scope="col">Approved on</th>
             <th role="columnheader" class="" scope="col">Raised by</th>
@@ -546,6 +552,14 @@
         </thead>
         <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Full name </span>
               <a href="/inviter/v9/applications/approved">James Stenberg</a> 
@@ -570,6 +584,14 @@
 
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Full name </span>
               <a href="/inviter/v9/applications/approved">Diana Ingram</a>
             </td>
@@ -591,57 +613,129 @@
             </td>
           </tr>
 
-          <tr role="row" class="nhsuk-table__row">
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Full name </span>
-              <a href="/inviter/v9/applications/approved">Laurel Stenberg</a> 
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Approved ob</span>
-              1 July 2022
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Raised by</span>
-              Vincent Douglas
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">UUID</span>
-              <a href="#">5688 3455 8453</a> 
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Action</span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Notes</span>
-              
-            </td>
-          </tr>
-
-          <tr role="row" class="nhsuk-table__row">
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Full name </span>
-              <a href="/inviter/v9/applications/approved">Tavish Sydney</a> 
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Approved on</span>
-              28 June 2022
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Raised by</span>
-              Vincent Douglas
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">UUID</span>
-              <a href="#">6745 7823 2398</a> 
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Notes</span>
-              
-            </td>
-          </tr>
-
+      
         </tbody>
       </table>
+      <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-top-6">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Archived applications
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
+              Marked as done list
+            </caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">Applicant name</th>
+                <th role="columnheader" class="" scope="col">Approved on</th>
+                <th role="columnheader" class="" scope="col">Raised by</th>
+                <th role="columnheader" class="" scope="col">UUID</th>
+                <th role="columnheader" class="" scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Full name </span>
+                  <a href="/inviter/v9/applications/approved">James Stenberg</a> 
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Approved on</span>
+                  11 July 2022
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Raised by</span>
+                  Tim Bond
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">UUID</span>
+                  <a href="#">7458 7958 6574</a> 
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Notes</span>
+                  
+                </td>
+              </tr>
+    
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Full name </span>
+                  <a href="/inviter/v9/applications/approved">Diana Ingram</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Approved on</span>
+                  9 July 2022
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Raised by</span>
+                  Louise Price
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">UUID</span>
+                  <a href="#">9684 5874 2232</a> 
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Notes</span>
+                  Photo needs updating
+                </td>
+              </tr>
+    
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Full name </span>
+                  <a href="/inviter/v9/applications/approved">Laurel Stenberg</a> 
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Approved ob</span>
+                  1 July 2022
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Raised by</span>
+                  Vincent Douglas
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">UUID</span>
+                  <a href="#">5688 3455 8453</a> 
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Action</span>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Notes</span>
+                  
+                </td>
+              </tr>
+    
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Full name </span>
+                  <a href="/inviter/v9/applications/approved">Tavish Sydney</a> 
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Approved on</span>
+                  28 June 2022
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Raised by</span>
+                  Vincent Douglas
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">UUID</span>
+                  <a href="#">6745 7823 2398</a> 
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Notes</span>
+                  
+                </td>
+              </tr>
+    
+            </tbody>
+          </table>
+        </div>
+      </details>
     </div>
 
      <!-- Duplicates -->
