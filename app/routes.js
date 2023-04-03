@@ -502,7 +502,7 @@ router.post('/inviter/v9/support-verify', function (req, res) {
 })
 
 
-// dpoa v10 - no ni number
+// dpoa v10
 
 
 router.post('/applicant/v10/address-postcode', function (req, res) {
@@ -586,7 +586,7 @@ router.post('/applicant/v10/poa-preferred-name', function (req, res) {
 })
 
 
-router.post('/applicant/v10/save-selection', function (req, res) {
+router.post('/applicant/v10/delivery-postcode', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var delivery = req.session.data['delivery']
@@ -602,36 +602,6 @@ router.post('/applicant/v10/save-selection', function (req, res) {
 
 })
 
-router.post('/applicant/v10/ni/check-your-answers', function (req, res) {
 
-  // Make a variable and give it the value from 'how-many-balls'
-  var niNumber = req.session.data['ni-number']
-
-  // Check whether the variable matches a condition
-  if (niNumber == "no"){
-    // Send user to next page
-    res.redirect('/applicant/v10/ni/doc-number')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/v10/ni/check-your-answers')
-  }
-
-})
-
-router.post('/applicant/v10/ni/no-number', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var docNumber = req.session.data['doc-number']
-
-  // Check whether the variable matches a condition
-  if (docNumber == "none"){
-    // Send user to next page
-    res.redirect('/applicant/v10/ni/no-number')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/v10/ni/check-your-answers')
-  }
-
-})
 
 module.exports = router;
