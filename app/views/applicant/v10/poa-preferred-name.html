@@ -34,7 +34,7 @@
           <div class="nhsuk-hint" id="preferred-name-hint">
             For example, if your name is Matthew Smith you can choose Matt Smith.
             </div>
-          <input class="nhsuk-input nhsuk-input--width-20" id="preferred-name" name="preferred-name" type="text" aria-describedby="preferred-name-hint" value="{{ data['preferred-name'] }}">
+          <input class="nhsuk-input nhsuk-input--width-20" id="preferred-name" name="preferred-name" type="text" aria-describedby="preferred-name-hint" value="{{ data['preferred-name'] }} {{ data['first-name'] }} {{ data['last-name'] }}">
           <div class="nhsuk-hint nhsuk-u-padding-top-2" id="character-count-hint">
             You have 20 characters remaining
             </div>
