@@ -632,12 +632,12 @@ router.post('/applicant/v11/1-photo-id', function (req, res) {
     res.redirect('/applicant/v11/1-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v11/preferred-name')
+    res.redirect('/applicant/v11/profile')
   }
 
 })
 
-router.post('/applicant/v11/preferred-name', function (req, res) {
+router.post('/applicant/v11/profile', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo1 = req.session.data['1-photo-id']
@@ -648,7 +648,7 @@ router.post('/applicant/v11/preferred-name', function (req, res) {
     res.redirect('/applicant/v11/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v11/preferred-name')
+    res.redirect('/applicant/v11/profile')
   }
 
 })
@@ -669,7 +669,7 @@ router.post('/applicant/v11/2-photo-id', function (req, res) {
 
 })
 
-router.post('/applicant/v11/poa-preferred-name', function (req, res) {
+router.post('/applicant/v11/poa-profile', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo2 = req.session.data['2-photo-id']
@@ -680,7 +680,7 @@ router.post('/applicant/v11/poa-preferred-name', function (req, res) {
     res.redirect('/applicant/v11/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v11/poa-preferred-name')
+    res.redirect('/applicant/v11/poa-profile')
   }
 
 })
@@ -702,7 +702,7 @@ router.post('/applicant/v11/delivery-postcode', function (req, res) {
 
 })
 
-router.post('/applicant/v11/qr', function (req, res) {
+router.post('/applicant/v11/switch-qr', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var mobile = req.session.data['move-mobile']
@@ -710,10 +710,42 @@ router.post('/applicant/v11/qr', function (req, res) {
   // Check whether the variable matches a condition
   if (mobile == "qr"){
     // Send user to next page
-    res.redirect('/applicant/v11/qr')
+    res.redirect('/applicant/v11/switch-qr')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v11/text')
+    res.redirect('/applicant/v11/switch-text')
+  }
+
+})
+
+router.post('/applicant/v11/preferred-name', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var reviewPhoto = req.session.data['profile']
+
+  // Check whether the variable matches a condition
+  if (reviewPhoto == "yes"){
+    // Send user to next page
+    res.redirect('/applicant/v11/preferred-name')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v11/smartcard-camera')
+  }
+
+})
+
+router.post('/applicant/v11/poa-preferred-name', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var reviewPhoto = req.session.data['poa-profile']
+
+  // Check whether the variable matches a condition
+  if (reviewPhoto == "yes"){
+    // Send user to next page
+    res.redirect('/applicant/v11/poa-preferred-name')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v11/poa-smartcard-camera')
   }
 
 })

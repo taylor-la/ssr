@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Scan the QR code
+  Use the link to continue your application
 {% endblock %}
 
 {% block beforeContent %}
@@ -9,7 +9,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/v11/mobile",
+    "href": "/applicant/v11/switch-mobile",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,11 +21,16 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
+      <div class="nhsuk-alert nhsuk-alert--info">
+        <h3 class="nhsuk-u-visually-hidden">Information:</h3>
+        <p class="nhsuk-u-font-weight-bold">Link has been sent</p>
+      </div>
+
       <h1 class="nhsuk-heading-xl">
-        Text
+        Use the link to continue your application
       </h1>
 
-
+      <p>Content goes here.</p>
      
     </div>
 
