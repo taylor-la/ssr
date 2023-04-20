@@ -1,9 +1,7 @@
 {% extends 'layout.html' %}
 
-{% set mainClasses = "nhsuk-main-wrapper--s" %}
-
 {% block pageTitle %}
-  mobile
+  Scan the QR code
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,29 +9,25 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/applicant/test/mobile",
+    "href": "/applicant/v11/mobile",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
 {% endblock %}
 
+
+
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <p class="nhsuk-page-heading__small nhsuk-u-margin-bottom-1 grey-text" style="display:none;">Identity verification</p>
-
-      <h1>Scan qr code</h1>
-
-      <p>text goes here</p>
+      <h1 class="nhsuk-heading-xl">
+        Text
+      </h1>
 
 
-    
-
-
-
+     
     </div>
+
   </div>
-
-
 {% endblock %}

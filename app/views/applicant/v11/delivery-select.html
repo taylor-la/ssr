@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Select a delivery address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v11/delivery-postcode",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v11/save-selection" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-padding-bottom-3">
+              Select a delivery address
+            </h1>
+          </legend>
+      
+            <p class="nhsuk-u-margin-bottom-1">Postcode</p>
+      
+            <p><strong>{{ data['delivery-postcode-1'] }} </strong><a class="nhsuk-u-padding-left-3" href="/applicant/v11/delivery-postcode">
+              Change<span class="nhsuk-u-visually-hidden"> postcode</span>
+            </a></p>
+      
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-heading-m" for="select-delivery-1">
+                Select an delivery
+              </label>
+              <select class="nhsuk-select" id="select-delivery-1">
+                <option value="1"selected>Select from 3 addresses</option>
+                <option value="2">delivery option 1</option>
+                <option value="3">delivery option 2</option>
+                <option value="4">delivery option 3</option>
+              </select>
+            </div>
+      
+        </fieldset>
+      
+        {{ button({
+          "text": "Continue"
+        }) }}
+      
+      </form>
+
+      <p><a href="/applicant/v11/delivery-manual">I can't find my address on the list</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
