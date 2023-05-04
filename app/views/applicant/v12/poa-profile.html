@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Set up your NHS Care ID profile
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v12/2-photo-id",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <p class="nhsuk-page-heading__small nhsuk-u-margin-bottom-1 grey-text">Step 2 of 3</p>
+
+      <h1 class="nhsuk-heading-xl">
+        Set up your NHS Care ID profile
+      </h1>
+      <p>Once your application has been approved, a Care ID profile will be created.</p>
+
+      <p>To complete your profile you must:</p>
+
+      <ul>
+        <li>take a passport style photo of your face</li>
+        <li>enter name on smartcard</li>
+        <li>select a delivery address (if applicable)</li>
+      </ul>
+   
+
+      <a href="/applicant/v12/poa-smartcard-camera" class="nhsuk-button nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-7">
+        Continue
+      </a>
+      
+    </div>
+
+  </div>
+{% endblock %}

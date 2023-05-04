@@ -750,4 +750,153 @@ router.post('/applicant/v11/poa-preferred-name', function (req, res) {
 
 })
 
+
+// dpoa v12
+
+
+router.post('/applicant/v12/address-postcode', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var dpoa = req.session.data['dpoa']
+
+  // Check whether the variable matches a condition
+  if (dpoa == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v12/poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v12/address-postcode')
+  }
+
+})
+
+router.post('/applicant/v12/1-photo-id', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var passport = req.session.data['passport']
+
+  // Check whether the variable matches a condition
+  if (passport == "other"){
+    // Send user to next page
+    res.redirect('/applicant/v12/1-photo-id')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v12/profile')
+  }
+
+})
+
+router.post('/applicant/v12/profile', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var photo1 = req.session.data['1-photo-id']
+
+  // Check whether the variable matches a condition
+  if (photo1 == "none"){
+    // Send user to next page
+    res.redirect('/applicant/v12/no-photo-id')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v12/profile')
+  }
+
+})
+
+router.post('/applicant/v12/2-photo-id', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var poa = req.session.data['poa']
+
+  // Check whether the variable matches a condition
+  if (poa == "none"){
+    // Send user to next page
+    res.redirect('/applicant/v12/no-poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v12/2-photo-id')
+  }
+
+})
+
+router.post('/applicant/v12/poa-profile', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var photo2 = req.session.data['2-photo-id']
+
+  // Check whether the variable matches a condition
+  if (photo2 == "none"){
+    // Send user to next page
+    res.redirect('/applicant/v12/no-photo-id')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v12/poa-profile')
+  }
+
+})
+
+
+router.post('/applicant/v12/delivery-postcode', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var delivery = req.session.data['delivery']
+
+  // Check whether the variable matches a condition
+  if (delivery == "different"){
+    // Send user to next page
+    res.redirect('/applicant/v12/delivery-postcode')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v12/save-selection')
+  }
+
+})
+
+router.post('/applicant/v12/switch-qr', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var mobile = req.session.data['move-mobile']
+
+  // Check whether the variable matches a condition
+  if (mobile == "qr"){
+    // Send user to next page
+    res.redirect('/applicant/v12/switch-qr')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v12/switch-text')
+  }
+
+})
+
+router.post('/applicant/v12/preferred-name', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var reviewPhoto = req.session.data['profile']
+
+  // Check whether the variable matches a condition
+  if (reviewPhoto == "yes"){
+    // Send user to next page
+    res.redirect('/applicant/v12/preferred-name')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v12/smartcard-camera')
+  }
+
+})
+
+router.post('/applicant/v12/poa-preferred-name', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var reviewPhoto = req.session.data['poa-profile']
+
+  // Check whether the variable matches a condition
+  if (reviewPhoto == "yes"){
+    // Send user to next page
+    res.redirect('/applicant/v12/poa-preferred-name')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v12/poa-smartcard-camera')
+  }
+
+})
+
 module.exports = router;

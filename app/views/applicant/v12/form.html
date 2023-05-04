@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Complete the online form
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v12/start-application",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <p class="nhsuk-page-heading__small nhsuk-u-margin-bottom-1 grey-text">Step 1 of 3</p>
+
+      <h1 class="nhsuk-heading-xl">
+        Verify your address and select ID document(s)
+      </h1>
+      
+      <p>Complete the online form to start your NHS Care ID application:</p>
+
+      <ol>
+        <li>verify your current UK address</li>
+        <li>select your ID document(s) for verification</li>
+      </ol>
+   
+
+      <a href="/applicant/v12/dpoa" class="nhsuk-button">
+        Continue
+      </a>
+      
+    </div>
+
+  </div>
+{% endblock %}

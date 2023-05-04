@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Security code could not be sent
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Security code could not be sent
+      </h1>
+
+      <p>The security code could not be sent to ******<strong>7435</strong>.</p>
+
+      <p><a href="/applicant/v12/send-otp">Send a new security code</a></p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Mobile number is incorrect
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Contact <a href="#">[invite-support-email]</a> to get your mobile number updated. Include your application ID in all emails.</p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}

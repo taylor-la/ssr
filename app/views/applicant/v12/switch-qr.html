@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Scan the QR code
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v12/switch-mobile",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        Scan the QR code
+      </h1>
+
+      <ol>
+        <li>Open your mobile phone camera</li>
+        <li>Hold your device in front of the code and move it closer until the code is recognised</li>
+        <li>Open the link that appears</li>
+      </ol>
+
+  
+        <div class="container nhsuk-u-width-one-half nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+          <img src="/images/qr-code.svg" alt="photo id 1">
+        </div>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Cannot scan QR code
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Content goes here.</p>      
+        </div>
+      </details>
+
+     
+    </div>
+
+  </div>
+{% endblock %}
