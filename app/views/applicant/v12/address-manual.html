@@ -30,23 +30,23 @@
             </h1>
           </legend>
       
-            <p class="nhsuk-u-margin-bottom-1">Postcode</p>
-      
-            <p><strong>{{ data['address-postcode-1'] }} </strong><a class="nhsuk-u-padding-left-3" href="/applicant/v12/address-postcode">
-              Change<span class="nhsuk-u-visually-hidden"> postcode</span>
-            </a></p>
-      
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="address-line-1">
-                Building <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+                Building name or number <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
               </label>
+              <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                Include your flat number, for example Flat 6b Peterson House
+              </div>
               <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" value="{{ data['address-line-1'] }}">
             </div>
           
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="address-line-2">
-                Street
+                Street <span class="nhsuk-u-visually-hidden">line 2 of 2</span>
               </label>
+              <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                For example Berwick Avenue
+              </div>
               <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" value="{{ data['address-line-2'] }}">
             </div>
           
@@ -55,6 +55,13 @@
                 Town or city
               </label>
               <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text" value="{{ data['address-town'] }}">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-one-quarter" id="address-postcode" name="address-postcode" type="text" value="{{ data['address-postcode'] }}">
             </div>
           
       
