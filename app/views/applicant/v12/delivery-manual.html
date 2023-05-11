@@ -30,22 +30,16 @@
             </h1>
           </legend>
       
-            <p class="nhsuk-u-margin-bottom-1">Postcode</p>
-      
-            <p><strong>{{ data['delivery-postcode-1'] }} </strong><a class="nhsuk-u-padding-left-3" href="/applicant/v12/delivery-postcode">
-              Change<span class="nhsuk-u-visually-hidden"> postcode</span>
-            </a></p>
-      
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="delivery-line-1">
-                Building <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+                Address line 1 <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
               </label>
               <input class="nhsuk-input" id="delivery-line-1" name="delivery-line-1" type="text" value="{{ data['delivery-line-1'] }}">
             </div>
           
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="delivery-line-2">
-                Street
+                Address line 2 (optional) <span class="nhsuk-u-visually-hidden">line 2 of 2</span>
               </label>
               <input class="nhsuk-input" id="delivery-line-2" name="delivery-line-2" type="text" value="{{ data['delivery-line-2'] }}">
             </div>
@@ -55,6 +49,13 @@
                 Town or city
               </label>
               <input class="nhsuk-input nhsuk-u-width-two-thirds" id="delivery-town" name="delivery-town" type="text" value="{{ data['delivery-town'] }}">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="delivery-postcode">
+                Postcode
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-one-quarter" id="delivery-postcode" name="delivery-postcode" type="text" value="{{ data['delivery-postcode'] }}">
             </div>
           
           
