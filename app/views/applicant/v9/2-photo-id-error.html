@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Which 2 photo IDs do you want to use to verify your identity?
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v9/poa",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <p></p>
+          <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+            <li>
+              <a href="#example-error-1">You cannot use a driving licence as both a proof of address and photo ID. Select a different photo ID</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <form action="/applicant/v9/poa-preferred-name" method="post" class="form">
+
+        <div class="nhsuk-form-group nhsuk-form-group--error">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7" aria-describedby="photo-ids-hint">
+              <h1 class="nhsuk-fieldset__heading">
+                Which 2 photo IDs do you want to use to verify your identity?
+              </h1>
+            </legend>
+
+            <p>You'll need to capture an image of this document when using the mobile app. </p>
+
+            <p>Photo IDs must not be expired</p>
+
+            <div class="nhsuk-hint" id="photo-ids-hint">
+              Select 2 options
+            </div>
+
+            <span class="nhsuk-error-message" id="contact-error">
+              <span class="nhsuk-u-visually-hidden">Error:</span>You cannot use a driving licence as both a proof of address and photo ID. Select a different photo ID.
+            </span>
+        
+            <div class="nhsuk-checkboxes">
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="passport-2" name="2-photo-id" type="checkbox" value="passport" {{ checked("2-photo-id", "passport") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="passport-2">
+                  UK or international passport
+                </label>
+              </div>
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="driving-licence-2" name="2-photo-id" type="checkbox" aria-describedby="driving-licence-2-hint" value="driving licence" {{ checked("2-photo-id", "driving licence") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="driving-licence-2">
+                  UK or international driving licence (full or provisional)
+                </label>
+                <div class="nhsuk-hint nhsuk-radios__hint" id="driving-licence-2-hint">
+                  If you are using your driving licence as a proof of address you cannot use it as a photo ID
+                </div>
+              </div>
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="residence-permit-2" name="2-photo-id" type="checkbox" value="UK biometric residence permit"{{ checked("2-photo-id", "UK biometric residence permit") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="residence-permit-2">
+                  UK Biometric residence permit card
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="armed-forces-2" name="2-photo-id" type="checkbox" value="HM armed forces card"{{ checked("2-photo-id", "HM armed forces card") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="armed-forces-2">
+                  HM Armed Forces Card
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__divider">or</div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="none-2" name="2-photo-id" type="checkbox" value="none"{{ checked("2-photo-id", "none") }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="none-2">
+                  I do not have 2 of these photo ID documents
+                </label>
+              </div>
+      
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
