@@ -1,0 +1,42 @@
+{% extends 'layout-email.html' %}
+
+{% block pageTitle %}
+There is a problem with your NHS Care ID application
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full"> 
+      <p class="nhsuk-u-margin-top-5"><strong>From:</strong> NHS-Care-ID</p>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row" >
+
+    <div class="nhsuk-grid-column-one-third email-layout">
+
+      <!-- Add your content here -->
+
+      <div class="nhsuk-u-padding-5">
+
+        <p>Dear [firstName lastName],</p>
+        <p>There is a problem with your NHS Care ID application.</p>
+        <p>Your photo ID could not be read.</p>
+        <p>For your application to be approved, you'll need to:</p>
+        <ul>
+          <li>make sure images are not blurry and that all details can be read</li>
+          <li>provide a photo ID we accept</li>
+        </ul>
+        <p>Use the link to resubmit your application: <a href="">[app link]</a></p>
+        <p>If you cannot use this service to verify your identity, contact <a href="">[inviter-support-email]</a>.</p>
+        <p>Include your application ID and a detailed description of the problem. This will help us to support you. </p>
+        
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,13 +1,13 @@
 {% extends 'layout-email.html' %}
 
 {% block pageTitle %}
-  Application approved
+  Your application has been approved
 {% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full"> 
-      <p class="nhsuk-u-padding-top-5"><strong>Subject:</strong> Apply for your Care ID - application update</p>
+      <p class="nhsuk-u-padding-top-5"><strong>Subject:</strong> Your NHS Care ID application has been approved</p>
       <p><strong>From:</strong> Apply for Care ID (invitation@apply-for-care-identity.care-identity-service2.nhs.uk) </p>
       <p><strong>To:</strong> name@nhs.net</p>
     </div>
@@ -28,7 +28,7 @@
 
       <div class="nhsuk-u-padding-5">
 
-        <h1 class="nhsuk-u-visually-hidden">Apply for a Care ID - application update</h1>
+        <h1 class="nhsuk-u-visually-hidden">Your NHS Care ID application has been approved</h1>
 
         <p class="nhsuk-body">Dear [name],</p>
         <p class="nhsuk-body">You are being sent this email in relation to your recent application for a Care ID.</p>
@@ -36,9 +36,7 @@
         <p>Your UUID is: 3546 6859 8734</p>
         <p>Your Care ID will enable you to access the systems relevant to your role.</p>
         <p>Your Registration Authority manager or agent will be in contact with you shortly.</p>
-
-        <p>If you need further support, contact <a href="">[inviter-support-email]</a>. Include your UUID and a detailed description of the problem. This will help us to support you.</p>
-        
+        <p>Email <a href="mailto:test@example.com?subject=Testing">enquiries@nhsdigital.nhs.uk</a> if you need further information or help with your application. Include the reason you cannot continue with your application in the email message.</p>
         <p>Please do not reply to this email</p>
 
       </div>

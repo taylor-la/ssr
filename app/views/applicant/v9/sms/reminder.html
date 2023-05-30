@@ -1,0 +1,37 @@
+{% extends 'layout-email.html' %}
+
+{% block pageTitle %}
+  This is a reminder to submit your ID documents  
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full"> 
+      <p class="nhsuk-u-margin-top-5"><strong>From:</strong> NHS-Care-ID</p>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row" >
+
+    <div class="nhsuk-grid-column-one-third email-layout">
+
+      <!-- Add your content here -->
+
+      <div class="nhsuk-u-padding-5">
+
+        <p>Dear [firstName lastName],</p>
+        <p>This is a reminder to submit your ID documents using the NHS Verify Care ID app.</p>
+        <p>If you do not complete the application within xx days you may have to request another link to restart the application.  </p>
+        <p>Download the NHS Verify Care ID app: <a href="">[app link]</a></p>
+        <p>If you experience technical issues with the app contact <a href="">ssd.nationalservicedesk@nhs.net</a>.</p>
+        <p>You may want to contact your inviter to let them know you are experiencing issues which may delay your application.</p>
+        
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+{% endblock %}
