@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  You need to apply for an NHS Care ID
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        You need to apply for an NHS Care ID
+      </h1>
+      <p>Our checks showed that you do not already have a Care Identity profile. You will need to apply for one. </p>
+
+      <p><strong>You can use the link in your invite email to return to start your application at another time.</strong></p>  
+
+      <h2>How to apply</h2>
+
+      <h3>1. Complete the online form</h3>
+      <ol class="nhsuk-u-margin-left-1" style="list-style-type: lower-alpha;">
+        <li>verify your current UK address</li>
+        <li>select your ID document(s) for verification</li>
+      </ol>
+
+      <h3>2. Set up your NHS Care ID profile</h3>
+      <ol class="nhsuk-u-margin-left-1" style="list-style-type: lower-alpha;">
+        <li>take a passport style photo of your face</li>
+        <li>enter name on smartcard</li>
+        <li>select a delivery address (if applicable)</li>
+      </ol>
+
+      <p>These details will appear on your smartcard (if applicable).</p>
+  
+      <h3>3. Download the secure mobile app</h3>
+      <ol class="nhsuk-u-margin-left-1" style="list-style-type: lower-alpha;">
+        <li>photograph your ID document(s)</li>
+        <li>scan your face to verify your identity</li>
+      </ol>
+
+      <p><a href="/applicant/v13/offline">I cannot use a mobile phone to take photos and scan my face</a></p>
+
+
+      <a href="/applicant/v13/switch-mobile" class="nhsuk-button nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-7">
+        Start application
+      </a>
+      
+      <h2>What is an NHS Care ID?</h2>
+
+      <p>An NHS Care ID will give you access to national systems, clinical data and patient information.</p>
+
+      <p>You need an NHS Care ID to get an authenticator, such as a smartcard.</p>
+    </div>
+
+  </div>
+{% endblock %}

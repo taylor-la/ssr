@@ -1,0 +1,127 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  We are going to verify your UK address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v13/form",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <form action="/applicant/v13/address-postcode" method="post" class="form">
+
+        
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+              <h1 class="nhsuk-fieldset__heading">
+                We are going to verify your UK address
+              </h1>
+            </legend>
+
+            <p>We'll share your information with a 3rd party organisation, <a href="https://www.transunion.co.uk/about-us">TransUnion</a>.</p>
+
+            <p>They will check there has been activity at your address from organisations like banks and utility providers. </p>
+
+            <p>Only you will be able to see that this check has been done, and it will not impact your credit score. </p>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="dpoa-yes" name="dpoa" type="radio" aria-describedby="dpoa-yes-hint" value="Enter UK address" {{ checked("dpoa", "Enter UK address") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="dpoa-yes">
+                  Yes, I agree to verify my address with TransUnion
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="dpoa-no" name="dpoa" type="radio" aria-describedby="dpoa-no-hint" value="no" {{ checked("dpoa", "provide proof of address document") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="dpoa-no">
+                  No, I want to verify my address in a different way
+                </label>
+                <div class="nhsuk-hint nhsuk-radios__hint" id="dpoa-no-hint">
+                  You will need to provide a proof of address document
+                </div>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I don't live in the UK
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>If you have:</p>
+          <ul>
+            <li>an international proof of address document</li>
+            <li>a proof of address document for a UK address you are moving to, like a tenancy agreement</li>
+          </ul>
+          <p>Select 'No, I want to verify my address in a different way'.</p>
+          <p>If you don't have any proof of address, contact [inviter-support-email] to verify your identity in a different way. Include your application ID in all emails. You will be able to provide other evidence at a face to face meeting.</p>
+         
+          
+
+          <div style="display:none;">
+            <h2>V1</h2>
+            <p>If you have a proof of address document for an international address, or a UK address which you are moving to, select 'No, I want to verify my address in a different way'.</p>
+            <p>If you don't have any proof of address, contact [inviter-support-email] to verify your identity in a different way. Include your application ID in all emails. You will be able to provide other evidence at a face to face meeting.</p>
+          
+            <h2>V2</h2>
+            <p>If you have:</p>
+            <ul>
+              <li>an international proof of address document</li>
+              <li>a proof of address document for a UK address you are moving to, like a tenancy agreement</li>
+            </ul>
+            <p>Select 'No, I want to verify my address in a different way'.</p>
+            <p>If you don't have any proof of address, contact [inviter-support-email] to verify your identity in a different way. Include your application ID in all emails. You will be able to provide other evidence at a face to face meeting.</p>
+           
+            <h2>V3</h2>
+            <h4>I have a proof of address document</h4>
+            <p>Select 'No, I want to verify my address in a different way'. We will accept:</p>
+            <ul>
+              <li>an international proof of address document</li>
+              <li>a proof of address document for a UK address you are moving to, like a tenancy agreement</li>
+            </ul>
+            <h4>I don't have any proof of address</h4>
+            <p>Contact [inviter-support-email] to verify your identity in a different way. Include your application ID in all emails. You will be able to provide other evidence at a face to face meeting</p>
+          
+            </div>
+          
+  
+        </div>
+      </details>
+
+      <p><a href="/applicant/v13/transunion">Get more information about TransUnion and how your data is used</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

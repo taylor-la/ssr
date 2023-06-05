@@ -1,0 +1,195 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Take a passport style photo of your face
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v13/poa-profile",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+     
+      <div id="instructions">
+        <h1>
+          Take a passport style photo of your face
+        </h1>
+
+        <p>If you are issued with a <strong>smartcard</strong>, this photo will appear on it.</p>
+
+        <div class="nhsuk-do-dont-list nhsuk-u-margin-bottom-4">
+          <h3 class="nhsuk-do-dont-list__label">Your photo must:</h3>
+          <ul class="nhsuk-list nhsuk-list--tick" role="list">
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              be clear and in focus
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              be taken against a plain, light coloured background
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              show you facing forwards
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              contain no other people or objects in the background
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              not have hair or other objects obscuring your face
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              not have any shadows on your face or behind you
+            </li>
+          </ul>
+        </div>
+
+        <p>You may wear a head covering for religious or medical reasons. </p>
+
+        <label for="cameraFileInput">
+        <span class="nhsuk-button">Open camera</span>
+
+
+
+      </div>
+      
+  
+        <!-- The hidden file `input` for opening the native camera -->
+        <input class="nhsuk-u-visually-hidden"
+          id="cameraFileInput"
+          type="file"
+          accept="image/*"
+          capture="user"
+        />
+      </label>
+      
+      <div id="edit-image" style="display: none;">
+        
+        <form action="/applicant/v13/poa-preferred-name" method="post" class="form">
+
+          <div class="nhsuk-form-group">
+  
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+                <h1 class="nhsuk-fieldset__heading">
+                  Do you want to use this photo?
+                </h1>
+              </legend>
+
+              <div class="container nhsuk-u-width-one-half nhsuk-u-margin-top-4">
+                <img id="pictureFromCamera" />
+              </div>
+
+              <div class="nhsuk-do-dont-list nhsuk-u-margin-bottom-4">
+                <h3 class="nhsuk-do-dont-list__label">Your photo must:</h3>
+                <ul class="nhsuk-list nhsuk-list--tick" role="list">
+                  <li>
+                    <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+                    </svg>
+                    be clear and in focus
+                  </li>
+                  <li>
+                    <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+                    </svg>
+                    be taken against a plain, light coloured background
+                  </li>
+                  <li>
+                    <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+                    </svg>
+                    show you facing forwards
+                  </li>
+                  <li>
+                    <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+                    </svg>
+                    contain no other people or objects in the background
+                  </li>
+                  <li>
+                    <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+                    </svg>
+                    not have hair or other objects obscuring your face
+                  </li>
+                  <li>
+                    <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+                    </svg>
+                    not have any shadows on your face or behind you
+                  </li>
+                </ul>
+              </div>
+
+              <p><strong>By continuing you confirm that your photo meets the guidelines</strong> </p>
+          
+              <div class="nhsuk-radios">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="poa-profile-yes-1" name="poa-profile" type="radio" value="yes" {{ checked("poa-profile", "yes") }}>
+                  <label class="nhsuk-label nhsuk-radios__label" for="poa-profile-yes-1">
+                    Yes, this photo meets guidelines
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="poa-profile-no-1" name="poa-profile" type="radio" value="no" {{ checked("poa-profile", "no") }}>
+                  <label class="nhsuk-label nhsuk-radios__label" for="poa-profile-no-1">
+                    No, retake this photo
+                  </label>
+                </div>
+          
+              </div>
+            </fieldset>
+          
+          </div>
+          
+  
+          {{ button({
+            "text": "Continue"
+          }) }}
+  
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var instructions = document.getElementById('instructions');
+    var editPhoto = document.getElementById('edit-image');
+
+    document
+      .getElementById("cameraFileInput")
+      .addEventListener("change", function () {
+        editPhoto.style.display = "block";
+        instructions.style.display = "none";
+        document
+          .getElementById("pictureFromCamera")
+          .setAttribute("src", window.URL.createObjectURL(this.files[0]));
+      });
+  </script>
+{% endblock %}

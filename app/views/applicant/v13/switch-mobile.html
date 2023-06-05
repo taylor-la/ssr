@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+You must use a mobile phone to complete your application
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v13/start-application",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <script>
+    // check for common mobile user agents
+    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+    // the user is using a mobile device, so redirect to the mobile version of the website
+    window.location = "/applicant/v13/form";
+    }
+  </script>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>You must use a mobile phone to complete your application</h1>
+
+      <p>You need to use a mobile phone to:</p>
+
+      <ul>
+        <li>take a passport style photo to appear on your NHS Care ID profile</li>
+        <li>download the NHS Verify Care ID app to photograph your ID documents and scan your face</li>
+      </ul>
+
+      <form action="/applicant/v13/switch-qr" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h2 class="nhsuk-fieldset__heading">
+                Select how to continue
+              </h2>
+            </legend>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="qr" name="move-mobile" type="radio" value="qr" {{ checked("move-mobile", "Scan QR code") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="qr">
+                  Scan a QR code
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="text" name="move-mobile" type="radio" value="text" {{ checked("move-mobile", "text") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="text">
+                  Send a link to the mobile number *********<strong>5314</strong>
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+      <p><a href="/applicant/v13/offline">I cannot use a mobile phone to take photos and scan my face</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
