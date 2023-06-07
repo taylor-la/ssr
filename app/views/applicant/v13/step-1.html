@@ -1,10 +1,18 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Complete the online form
+  Verify your address and select ID document(s)
 {% endblock %}
 
 {% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v13/start-application",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
 {% endblock %}
 
 

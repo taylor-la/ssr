@@ -929,12 +929,12 @@ router.post('/applicant/v13/1-photo-id', function (req, res) {
     res.redirect('/applicant/v13/1-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v13/profile')
+    res.redirect('/applicant/v13/step-2')
   }
 
 })
 
-router.post('/applicant/v13/profile', function (req, res) {
+router.post('/applicant/v13/step-2', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo1 = req.session.data['1-photo-id']
@@ -945,7 +945,7 @@ router.post('/applicant/v13/profile', function (req, res) {
     res.redirect('/applicant/v13/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v13/profile')
+    res.redirect('/applicant/v13/step-2')
   }
 
 })
@@ -999,21 +999,6 @@ router.post('/applicant/v13/delivery-postcode', function (req, res) {
 
 })
 
-router.post('/applicant/v13/switch-qr', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var mobile = req.session.data['move-mobile']
-
-  // Check whether the variable matches a condition
-  if (mobile == "qr"){
-    // Send user to next page
-    res.redirect('/applicant/v13/switch-qr')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/v13/switch-text')
-  }
-
-})
 
 router.post('/applicant/v13/preferred-name', function (req, res) {
 
@@ -1026,7 +1011,7 @@ router.post('/applicant/v13/preferred-name', function (req, res) {
     res.redirect('/applicant/v13/preferred-name')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v13/smartcard-camera')
+    res.redirect('/applicant/v13/profile-photo-upload')
   }
 
 })
