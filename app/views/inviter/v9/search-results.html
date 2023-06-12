@@ -1,6 +1,6 @@
 {% extends 'layout-inviter-v9.html' %}
 {% block pageTitle %}
-  All applications
+ Showing 2 results for 'Stenberg'
 {%endblock %}
 
 {% block beforeContent %}
@@ -25,7 +25,7 @@
         <label class="nhsuk-label  nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-2">
           ODS code(s)
         </label>
-        <input class="nhsuk-input nhsuk-input--width-5" id="search-2" name="search-2" type="text">
+        <input class="nhsuk-input nhsuk-input--width-20" id="search-2" name="search-2" type="text">
       </div>
 
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
@@ -121,6 +121,24 @@
     nhsuk-u-margin-bottom-4" }) }}
    
     </form>
+
+    <div style="float:right;">
+      <div class="nhsuk-form-group" >
+        <label class="nhsuk-label" for="select-1">
+          Sort by
+        </label>
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1" >Applicant name</option>
+          <option value="2" >Email address</option>
+          <option value="3" selected>Newest</option>
+          <option value="4" >Oldest</option>
+          <option value="5" >Raised by</option>
+          <option value="6" >ODS Code</option>
+          <option value="7" >Application ID</option>
+          <option value="8" >Status</option>
+        </select>
+      </div>
+    </div> 
 
   <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-4" id="search-results">
     <caption class="nhsuk-table__caption">
