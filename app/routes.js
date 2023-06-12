@@ -994,7 +994,7 @@ router.post('/applicant/v13/delivery-postcode', function (req, res) {
     res.redirect('/applicant/v13/delivery-postcode')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v13/save-selection')
+    res.redirect('/applicant/v13/check-your-details')
   }
 
 })
@@ -1027,7 +1027,7 @@ router.post('/applicant/v13/poa-preferred-name', function (req, res) {
     res.redirect('/applicant/v13/poa-preferred-name')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v13/poa-smartcard-camera')
+    res.redirect('/applicant/v13/poa-profile-photo-upload')
   }
 
 })
