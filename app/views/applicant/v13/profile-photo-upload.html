@@ -54,13 +54,12 @@
           id="cameraFileInput"
           type="file"
           accept="image/*"
-          value="{{ data['cameraFileInput'] }}"
         />
       </label>
       
       <div id="edit-image" style="display: none;">
         
-        <form action="/applicant/v13/preferred-name" method="post" class="form">
+        <form  id="save-image" action="/applicant/v13/preferred-name" method="post" class="form">
 
           <div class="nhsuk-form-group">
   
@@ -206,5 +205,6 @@
           .getElementById("pictureFromCamera")
           .setAttribute("src", window.URL.createObjectURL(this.files[0]));
       });
+
   </script>
 {% endblock %}
