@@ -1035,7 +1035,7 @@ router.post('/applicant/v13/poa-preferred-name', function (req, res) {
 // applicant v14
 
 
-router.post('/applicant/v14/address-postcode', function (req, res) {
+router.post('/applicant/v14/step-1/address-postcode', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
@@ -1043,15 +1043,15 @@ router.post('/applicant/v14/address-postcode', function (req, res) {
   // Check whether the variable matches a condition
   if (dpoa == "no"){
     // Send user to next page
-    res.redirect('/applicant/v14/poa')
+    res.redirect('/applicant/v14/step-1/poa')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v14/address-postcode')
+    res.redirect('/applicant/v14/step-1/address-postcode')
   }
 
 })
 
-router.post('/applicant/v14/1-photo-id', function (req, res) {
+router.post('/applicant/v14/step-1/1-photo-id', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var passport = req.session.data['passport']
@@ -1059,15 +1059,15 @@ router.post('/applicant/v14/1-photo-id', function (req, res) {
   // Check whether the variable matches a condition
   if (passport == "other"){
     // Send user to next page
-    res.redirect('/applicant/v14/1-photo-id')
+    res.redirect('/applicant/v14/step-1/1-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v14/step-2')
+    res.redirect('/applicant/v14/step-2/start')
   }
 
 })
 
-router.post('/applicant/v14/step-2', function (req, res) {
+router.post('/applicant/v14/step-2/start', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo1 = req.session.data['1-photo-id']
@@ -1075,15 +1075,15 @@ router.post('/applicant/v14/step-2', function (req, res) {
   // Check whether the variable matches a condition
   if (photo1 == "none"){
     // Send user to next page
-    res.redirect('/applicant/v14/no-photo-id')
+    res.redirect('/applicant/v14/offline/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v14/step-2')
+    res.redirect('/applicant/v14/step-2/start')
   }
 
 })
 
-router.post('/applicant/v14/2-photo-id', function (req, res) {
+router.post('/applicant/v14/step-1/2-photo-id', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var poa = req.session.data['poa']
@@ -1091,15 +1091,15 @@ router.post('/applicant/v14/2-photo-id', function (req, res) {
   // Check whether the variable matches a condition
   if (poa == "none"){
     // Send user to next page
-    res.redirect('/applicant/v14/no-poa')
+    res.redirect('/applicant/v14/offline/no-poa')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v14/2-photo-id')
+    res.redirect('/applicant/v14/step-1/2-photo-id')
   }
 
 })
 
-router.post('/applicant/v14/poa-step-2', function (req, res) {
+router.post('/applicant/v14/offline/no-photo-id', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo2 = req.session.data['2-photo-id']
@@ -1107,16 +1107,16 @@ router.post('/applicant/v14/poa-step-2', function (req, res) {
   // Check whether the variable matches a condition
   if (photo2 == "none"){
     // Send user to next page
-    res.redirect('/applicant/v14/no-photo-id')
+    res.redirect('/applicant/v14/offline/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v14/poa-step-2')
+    res.redirect('/applicant/v14/step-2/start')
   }
 
 })
 
 
-router.post('/applicant/v14/delivery-postcode', function (req, res) {
+router.post('/applicant/v14/step-2/delivery-postcode', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var delivery = req.session.data['delivery']
@@ -1124,16 +1124,16 @@ router.post('/applicant/v14/delivery-postcode', function (req, res) {
   // Check whether the variable matches a condition
   if (delivery == "different"){
     // Send user to next page
-    res.redirect('/applicant/v14/delivery-postcode')
+    res.redirect('/applicant/v14/step-2/delivery-postcode')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v14/check-your-details')
+    res.redirect('/applicant/v14/step-2/check-your-details-dpoa')
   }
 
 })
 
 
-router.post('/applicant/v14/preferred-name', function (req, res) {
+router.post('/applicant/v14/step-2/preferred-name', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var reviewPhoto = req.session.data['profile']
@@ -1141,26 +1141,58 @@ router.post('/applicant/v14/preferred-name', function (req, res) {
   // Check whether the variable matches a condition
   if (reviewPhoto == "yes"){
     // Send user to next page
-    res.redirect('/applicant/v14/preferred-name')
+    res.redirect('/applicant/v14/step-2/preferred-name')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v14/profile-photo-upload')
+    res.redirect('/applicant/v14/step-2/profile-photo-upload')
   }
 
 })
 
-router.post('/applicant/v14/poa-preferred-name', function (req, res) {
+router.post('/applicant/v14/step-2/delivery', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var reviewPhoto = req.session.data['poa-profile']
+  var dpoa = req.session.data['dpoa']
 
   // Check whether the variable matches a condition
-  if (reviewPhoto == "yes"){
+  if (dpoa == "no"){
     // Send user to next page
-    res.redirect('/applicant/v14/poa-preferred-name')
+    res.redirect('/applicant/v14/step-2/delivery-postcode')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v14/poa-profile-photo-upload')
+    res.redirect('/applicant/v14/step-2/delivery')
+  }
+
+})
+
+router.post('/applicant/v14/step-2/check-your-details-poa', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var dpoa = req.session.data['dpoa']
+
+  // Check whether the variable matches a condition
+  if (dpoa == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v14/step-2/check-your-details-poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v14/step-2/check-your-details-dpoa')
+  }
+
+})
+
+router.post('/applicant/v14/step-2/check-your-details-dpoa', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var dpoa = req.session.data['dpoa']
+
+  // Check whether the variable matches a condition
+  if (dpoa == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v14/step-2/check-your-details-poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v14/step-2/check-your-details-dpoa')
   }
 
 })

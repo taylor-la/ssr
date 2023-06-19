@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Set up your NHS Care ID profile
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v14/step-2/start",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+    
+
+      <h1 class="nhsuk-heading-xl">
+        We need a passport style photo of your face
+      </h1>
+      <p>If you are issued with a smartcard, <strong>this photo will appear on it</strong>.</p>
+
+        <figure class="nhsuk-image">
+          <img class="nhsuk-image__img" src="/images/smartcard.png" alt="NHS Care ID smartcard">
+          <figcaption class="nhsuk-image__caption">
+            NHS Care ID Smartcard
+          </figcaption>
+        </figure>
+   
+
+      <a href="/applicant/v14/step-2/profile-photo-guidelines" class="nhsuk-button">
+        Continue
+      </a>
+      
+    </div>
+
+  </div>
+{% endblock %}
