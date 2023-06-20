@@ -1035,7 +1035,7 @@ router.post('/applicant/v13/poa-preferred-name', function (req, res) {
 // applicant v14
 
 
-router.post('/applicant/v14/step-1/address-postcode', function (req, res) {
+router.post('/applicant/v14/step-1/dpoa-info', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
@@ -1046,7 +1046,23 @@ router.post('/applicant/v14/step-1/address-postcode', function (req, res) {
     res.redirect('/applicant/v14/step-1/poa')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v14/step-1/address-postcode')
+    res.redirect('/applicant/v14/step-1/dpoa-info')
+  }
+
+})
+
+router.post('/applicant/v14/step-1/dpoa', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var uk = req.session.data['uk']
+
+  // Check whether the variable matches a condition
+  if (uk == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v14/step-1/int-poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v14/step-1/dpoa')
   }
 
 })

@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Verify your UK address
+      </h1>
+
+      <dl class="nhsuk-summary-list">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      UK address
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      53, Albert Road, London SW12 5TR
+    </dd>
+
+    <dd class="nhsuk-summary-list__actions">
+
+      <a href="/applicant/v14/step-1/address-postcode">
+        Change<span class="nhsuk-u-visually-hidden"> first name</span>
+      </a>
+
+    </dd>
+
+  </div>
+
+</dl>
+
+
+  <p>Your address will be verified with TransUnion when you submit your details.</p>
+
+  <a class="nhsuk-button" href="#" onClick="goSomewhere(); return false;">Submit now</a>
+
+
+
+
+    </div>
+  </div>
+
+
+
+<script type="text/javascript">
+    var urls = [
+        '/applicant/v14/step-1/passport',
+        '/applicant/v14/step-1/dpoa-fail'
+    ];
+
+    function goSomewhere() {
+        var url = urls[Math.floor(Math.random()*urls.length)];
+        window.location = url; // redirect
+    }
+</script>
+{% endblock %}
