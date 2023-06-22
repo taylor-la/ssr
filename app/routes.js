@@ -7,6 +7,15 @@ const router = express.Router();
 
 // Run this code when a form is submitted to 'juggling-balls-answer'
 
+// Clear all session data and refresh the current page
+router.get('/clear-data-development', (req, res) => {
+  req.session.data = {};
+  const refererUrl = req.headers.referer || '/';
+  const urlParts = refererUrl.split('?');
+  const baseUrl = urlParts[0];
+  res.redirect(baseUrl);
+})
+
 
 
 // Smartcard v5 routes
