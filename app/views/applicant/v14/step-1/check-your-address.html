@@ -22,7 +22,7 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        Verify your UK address
+        Check your address
       </h1>
 
       <dl class="nhsuk-summary-list">
@@ -48,9 +48,9 @@
 </dl>
 
 
-  <p>Your address will be verified with TransUnion when you submit your details.</p>
+  <p>Your address will be checked by TransUnion when you submit your details.</p>
 
-  <a class="nhsuk-button" href="#" onClick="goSomewhere(); return false;">Submit now</a>
+  <a class="nhsuk-button" href="/applicant/v14/step-1/spinner-address">Submit</a>
 
 
 
@@ -58,17 +58,4 @@
     </div>
   </div>
 
-
-
-<script type="text/javascript">
-    var urls = [
-        '/applicant/v14/step-1/passport',
-        '/applicant/v14/step-1/dpoa-fail'
-    ];
-
-    function goSomewhere() {
-        var url = urls[Math.floor(Math.random()*urls.length)];
-        window.location = url; // redirect
-    }
-</script>
 {% endblock %}

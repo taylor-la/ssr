@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  How to get a passport style photo of your face
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v14/step-2/profile-photo",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+    
+
+      <h1 class="nhsuk-heading-xl">
+        How to get a passport style photo of your face
+      </h1>
+
+     <h2>Use a photo you already have</h2>
+
+     <p>If you already have a suitable photo, you'll need to:</p>
+
+     <ul>
+      <li>make sure you can access the photo on this device</li>
+      <li>upload it using the web form</li>
+     </ul>
+
+     <h2>Take a photo</h2>
+
+     <p>If you do not have a photo already, you will need to:</p>
+
+     <ul>
+      <li>take a new photo using a smartphone or tablet. You may need someone to help you take it</li>
+      <li>make sure you can access it on this device</li>
+      <li>upload it using the web form</li>
+     </ul>
+
+     <p>If you cannot take a photo now, you can return to your application later by using the link in your invite email. </p>
+
+
+      <a href="/applicant/v14/step-2/profile-photo-upload" class="nhsuk-button">
+        Continue
+      </a>
+      
+    </div>
+
+  </div>
+{% endblock %}

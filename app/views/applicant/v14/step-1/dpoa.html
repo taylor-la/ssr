@@ -22,7 +22,7 @@
     <div class="nhsuk-grid-column-two-thirds">
 
 
-      <form action="/applicant/v14/step-1/dpoa-info" method="post" class="form">
+      <form action="/applicant/v14/step-1/address-postcode" method="post" class="form">
 
         
 
@@ -31,29 +31,37 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
               <h1 class="nhsuk-fieldset__heading">
-                Select how to verify your address
+                You need to verify your address
               </h1>
             </legend>
+
+            <p>We'll share your address, name and date of birth with a trusted organisation, TransUnion.</p>
+
+            <p>TransUnion will:</p>
+
+            <ul>
+              <li>verify that there has been activity at your address, in your name, from organisations like banks and utility providers</li>
+              <li>perform a check that will not impact your credit score. Only you can see that it's been done</li>
+            </ul>
+
+
         
             <div class="nhsuk-radios">
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="dpoa-yes" name="dpoa" type="radio" aria-describedby="dpoa-yes-hint" value="Enter UK address" {{ checked("dpoa", "Enter UK address") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="dpoa-yes">
-                  Enter your UK address
+                  Yes, I agree to verify my address with TransUnion
                 </label>
-                <div class="nhsuk-hint nhsuk-radios__hint" id="dpoa-yes-hint">
-                  Your address will be checked for connections to organisations like banks and utility providers
-                </div>
               </div>
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="dpoa-no" name="dpoa" type="radio" aria-describedby="dpoa-no-hint" value="no" {{ checked("dpoa", "provide proof of address document") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="dpoa-no">
-                  Provide a proof of address document
+                  No, I want to verify my address in a different way
                 </label>
                 <div class="nhsuk-hint nhsuk-radios__hint" id="dpoa-no-hint">
-                  You'll need to capture an image of this document
+                  You will need to provide a paper proof of address document
                 </div>
               </div>
         
@@ -69,6 +77,8 @@
 
       </form>
 
+
+      <p><a href="/applicant/v14/step-1/transunion">Get more information about TransUnion and how your data is used</a></p>
 
     </div>
   </div>
