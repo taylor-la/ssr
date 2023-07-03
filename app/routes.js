@@ -1222,4 +1222,20 @@ router.post('/applicant/v14/step-2/check-your-details-dpoa', function (req, res)
 
 })
 
+router.post('/applicant/v14/step-2/profile-photo-upload', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var upload = req.session.data['upload-photo']
+
+  // Check whether the variable matches a condition
+  if (upload == "take-photo"){
+    // Send user to next page
+    res.redirect('/applicant/v14/step-2/profile-photo-take')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/v14/step-2/profile-photo-upload')
+  }
+
+})
+
 module.exports = router;
