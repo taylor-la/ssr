@@ -1,0 +1,51 @@
+{% extends 'layout-service-v1.html' %}
+
+{% block pageTitle %}
+  Service management
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        Service management
+      </h1>
+
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/service/v1/payload">View application payload</a>
+              </h2>
+              <p class="nhsuk-card__description">Description.</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/service/v1/ems2-retry">Retry ems??</a>
+              </h2>
+              <p class="nhsuk-card__description">Description</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/service/v1/cancel">Cancel an application</a>
+              </h2>
+              <p class="nhsuk-card__description">Cancel an application words</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+{% endblock %}
