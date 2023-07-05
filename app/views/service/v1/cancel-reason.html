@@ -1,0 +1,109 @@
+{% extends 'layout-service-v1.html' %}
+
+{% block pageTitle %}
+  Cancel an application
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/service/v1/cancel",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Cancel application
+      </h1>
+
+      <p>You have selected the following application to cancel:</p>
+
+      <dl class="nhsuk-summary-list nhsuk-u-margin-top-5">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+          Application ID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            TQXo-0Ep06p-V2crk-FPJGb
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+          Applicant name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+          Stuart Bell
+          </dd>
+        </div>
+
+      </dl>
+
+      <form action="/service/v1/cancelled" method="post" class="form">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h2 class="nhsuk-fieldset__heading">
+                Select reason for cancelling application
+              </h2>
+            </legend>
+            
+            <div class="nhsuk-radios">
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-3" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-3">
+                  System issue
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-4" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-4">
+                  Duplicate
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-4" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-4">
+                  Other
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+          <label class="nhsuk-label" for="example">
+            Notes (optional)
+          </label>
+          <textarea class="nhsuk-textarea" id="example" name="example" rows="3" aria-describedby="example-hint"></textarea>
+        </div>
+
+        
+
+        <button class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3"  type="submit">
+          Cancel application
+        </button>
+
+      </form>
+        
+       
+  
+      
+
+
+    </div>
+
+  </div>
+{% endblock %}
