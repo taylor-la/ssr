@@ -14,6 +14,18 @@
 
 {% block content %}
 
+<style>
+  @media all and (min-width: 768px) {
+    #no-photo {display:block;}
+    #mobile-photo {display:none;}
+}
+
+  @media all and (max-width: 767px) {
+    #no-photo {display:none;}
+    #mobile-photo {display:block;}
+}
+</style>
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
@@ -127,6 +139,8 @@
           </div>
         </details>
 
+        <p id="mobile-photo"><a href="">Or take a photo using your camera's device</a></p>
+
       </div>
       
   
@@ -135,6 +149,7 @@
           id="cameraFileInput"
           type="file"
           accept="image/*"
+          capture="user"
         />
       </label>
       
