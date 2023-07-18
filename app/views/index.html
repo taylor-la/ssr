@@ -39,156 +39,15 @@
       <p>Research prototypes are split out by service area.</p>
 
       <div class="tab">
-        <button class="tablinks" onclick="openList(event, 'inviter')" id="defaultOpen">Inviter</button>
-        <button class="tablinks" onclick="openList(event, 'applicant')">Applicant</button>
+       
+        <button class="tablinks" onclick="openList(event, 'applicant')"  id="defaultOpen">Applicant</button>
         <button class="tablinks" onclick="openList(event, 'app')">Mobile app</button>
+        <button class="tablinks" onclick="openList(event, 'inviter')">Inviter</button>
         <button class="tablinks" onclick="openList(event, 'idchecker')">ID Checker</button>
         <button class="tablinks" onclick="openList(event, 'service')">Service Manager</button>   
       </div>
 
-      <div id="inviter" class="tabcontent">
-        <h2 class="nhsuk-u-margin-bottom-5">Inviter</h2>
-        <h4 class="nhsuk-u-margin-bottom-2"><a class="nhsuk-link--no-visited-state" href="/inviter/v9/dashboard">v9 (updated navigation menu) </a></h4>
-        <p class="nhsuk-u-margin-bottom-2 nhsuk-u-reading-width">Updated navigation link style and added a 'mark as done' feature to the approved tab.</p>
-        <p class="nhsuk-body-s grey-text">Last updated: June 2023</p>
-        
-
-        <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-7">
-          <caption class="nhsuk-table__caption">Previous versions</caption>
-          <thead role="rowgroup" class="nhsuk-table__head">
-            <tr role="row">
-              <th role="columnheader" class="" scope="col">
-                Version
-              </th>
-              <th role="columnheader" class="" scope="col">
-                Description
-              </th>           
-              <th role="columnheader" class="" scope="col">
-                Last updated
-              </th>
-              <th role="columnheader" class="" scope="col">
-                Status
-              </th>
-            </tr>
-          </thead>
-          <tbody class="nhsuk-table__body">
-
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v8/dashboard">v8</a> 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Description</span>Added a 'verify email' loop for support and notification email addresses, cancel multiple applications, duplicate tab, download report button
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Last updated</span>Mar 2023
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Status</span><strong class="nhsuk-tag nhsuk-tag--green">Live</strong>
-              </td> 
-            </tr> 
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v7/dashboard">v7</a> 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Description</span>Bounced email handling and various updates to the dashboard display.
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Last updated</span>Nov 2022
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Status</span>
-              </td>
-            </tr> 
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v6/dashboard">v6</a> 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Description</span>Set alert preferences and collect inviter support email address.
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Last updated</span>Nov 2022
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Status</span>
-              </td>
-            </tr> 
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v5/dashboard">v5</a> 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Description</span>Added tabs, multi action and change roles. Updated application details display.
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Last updated</span>Oct 2022
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Status</span>
-              </td>           
-            </tr> 
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v4/dashboard">v4</a> 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Description</span>Dashboard, search and list view updates based on RA hypotheses and pain points.
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Last updated</span>Jul 2022
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Status</span>
-              </td>
-            </tr> 
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v3/dashboard">v2</a> 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Description</span>Added a batch invite feature using a file upload.
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Last updated</span>Jul 2022
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Status</span>
-              </td>
-            </tr> 
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v2/dashboard">v2</a> 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Description</span>'What applicant needs' field added to create invite.
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Last updated</span>Feb 2022
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Status</span>
-              </td>
-            </tr> 
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v1/dashboard">v1</a> 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Description</span>Basic inviter journey including create, edit and delete invites.
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Last updated</span>Jan 2022
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Status</span>
-              </td>
-            </tr> 
-        
-          </tbody>
-        </table>
-      </div>
+      
 
       <div id="applicant" class="tabcontent">
         <h2 class="nhsuk-u-margin-bottom-5">Applicant</h2>
@@ -532,6 +391,150 @@
               </td>
             </tr>
   
+          </tbody>
+        </table>
+      </div>
+
+      <div id="inviter" class="tabcontent">
+        <h2 class="nhsuk-u-margin-bottom-5">Inviter</h2>
+        <h4 class="nhsuk-u-margin-bottom-2"><a class="nhsuk-link--no-visited-state" href="/inviter/v9/dashboard">v9 (updated navigation menu) </a></h4>
+        <p class="nhsuk-u-margin-bottom-2 nhsuk-u-reading-width">Updated navigation link style and added a 'mark as done' feature to the approved tab.</p>
+        <p class="nhsuk-body-s grey-text">Last updated: June 2023</p>
+        
+
+        <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-7">
+          <caption class="nhsuk-table__caption">Previous versions</caption>
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                Version
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Description
+              </th>           
+              <th role="columnheader" class="" scope="col">
+                Last updated
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v8/dashboard">v8</a> 
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Description</span>Added a 'verify email' loop for support and notification email addresses, cancel multiple applications, duplicate tab, download report button
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Last updated</span>Mar 2023
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status</span><strong class="nhsuk-tag nhsuk-tag--green">Live</strong>
+              </td> 
+            </tr> 
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v7/dashboard">v7</a> 
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Description</span>Bounced email handling and various updates to the dashboard display.
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Last updated</span>Nov 2022
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status</span>
+              </td>
+            </tr> 
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v6/dashboard">v6</a> 
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Description</span>Set alert preferences and collect inviter support email address.
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Last updated</span>Nov 2022
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status</span>
+              </td>
+            </tr> 
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v5/dashboard">v5</a> 
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Description</span>Added tabs, multi action and change roles. Updated application details display.
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Last updated</span>Oct 2022
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status</span>
+              </td>           
+            </tr> 
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v4/dashboard">v4</a> 
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Description</span>Dashboard, search and list view updates based on RA hypotheses and pain points.
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Last updated</span>Jul 2022
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status</span>
+              </td>
+            </tr> 
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v3/dashboard">v2</a> 
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Description</span>Added a batch invite feature using a file upload.
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Last updated</span>Jul 2022
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status</span>
+              </td>
+            </tr> 
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v2/dashboard">v2</a> 
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Description</span>'What applicant needs' field added to create invite.
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Last updated</span>Feb 2022
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status</span>
+              </td>
+            </tr> 
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Version</span><a href="/inviter/v1/dashboard">v1</a> 
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Description</span>Basic inviter journey including create, edit and delete invites.
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Last updated</span>Jan 2022
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status</span>
+              </td>
+            </tr> 
+        
           </tbody>
         </table>
       </div>
