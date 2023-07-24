@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your current UK postcode
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/dev-ready/applicant/step-1/dpoa",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/dev-ready/applicant/step-1/address-select" method="post" class="form">
+
+          <div class="nhsuk-form-group">
+            <h1 class="nhsuk-label-wrapper">
+              <label class="nhsuk-label nhsuk-label--xl" for="address-postcode-1">
+                Enter your current UK postcode
+              </label>
+            </h1>
+
+            <p>Your address will be shared with TransUnion to verify your address.</p>
+         
+           
+              
+
+            <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode-1" name="address-postcode-1" type="text" value="{{ data['address-postcode-1'] }}">
+          </div>
+        
+  
+        {{ button({
+          "text": "Find address"
+        }) }}
+
+      </form>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I am not sure which address to use
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <h2 class="nhsuk-heading-m">I have more than 1 UK address</h2>
+          <p>If you are, for example, a student and have a term time address which differs from a non-term time address, ensure the address you use has some connections to your name.</p>
+          <p>The system will be checking for connections between the address and name you provide with banks, utility providers, local council and electoral register, for example.</p>
+          <h2 class="nhsuk-heading-m">I have just moved address - should I use my old or new address?</h2>
+          <p>If you have only very recently changed your address, then you may use your previous address if you think that your new address in unlikely to show up any matches to your name.</p>
+          <p>The system will be checking for connections between the address and name you provide with banks, utility providers, local council and electoral register, for example.</p>
+        </div>
+      </details>
+      
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -21,20 +21,33 @@
 
       <dl class="nhsuk-summary-list">
 
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Proof of address selected
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['poa'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/dev-ready/applicant/step-1/poa">
+              Change<span class="nhsuk-u-visually-hidden"> your proof of address</span>
+            </a>
+          </dd>
+        </div>
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Photo ID selected
+            Photo IDs selected
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['passport'] }}{{ data['1-photo-id'] }}
+            {{ data['2-photo-id'] }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/dev-ready/applicant/step-1/1-photo-id">
+            <a href="/dev-ready/applicant/step-1/2-photo-id">
               Change<span class="nhsuk-u-visually-hidden"> Photo ID document</span>
             </a>
           </dd>
-        </div>        
+        </div>
 
       </dl>
 
@@ -52,7 +65,7 @@
             </div>
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/dev-ready/applicant/step-2/profile-photo-guidelines">
+            <a href="/dev-ready/applicant/step-2/profile-photo-upload">
               Change<span class="nhsuk-u-visually-hidden"> your profile photo</span>
             </a>
           </dd>
@@ -80,8 +93,8 @@
             53, Albert Road, London SW12 5TR
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/dev-ready/applicant/step-2/delivery">
-              Change<span class="nhsuk-u-visually-hidden"> your profile photo</span>
+            <a href="/dev-ready/applicant/step-2/delivery-postcode">
+              Change<span class="nhsuk-u-visually-hidden"> your delivery address</span>
             </a>
           </dd>
         </div>
@@ -90,7 +103,7 @@
 
       </dl>
 
-      <p>You will then need to download our secure mobile app to verify your identity.</p>
+      <p>After you submit your details, you will need to download our secure mobile app to verify your identity.</p>
 
 
       <form action="/dev-ready/applicant/step-3/download-app" method="post" class="form">
@@ -104,10 +117,4 @@
 
     </div>
   </div>
-
-  <script>
-
-
-
-  </script>
 {% endblock %}

@@ -9,7 +9,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "#",
+    "href": "javascript:history.go(-1)",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -23,9 +23,8 @@
       <p class="nhsuk-page-heading__small nhsuk-u-margin-bottom-1 grey-text">Step 2 of 3</p>
 
       <h1 class="nhsuk-heading-xl">
-        Set up your NHS Care ID profile
+        Upload a passport style photo of your face
       </h1>
-      <p>CONTENT TBC</p>
       <p>Once your application has been approved, a Care ID profile will be created.</p>
 
       <p>To complete your profile you must:</p>
@@ -39,7 +38,7 @@
       <p>If you are issued with a smartcard, <strong>your passport style photo will appear on it</strong>.</p>
 
         <figure class="nhsuk-image">
-          <img class="nhsuk-image__img" src="/images/smartcard.png" alt="NHS Care ID smartcard">
+          <img class="nhsuk-image__img" src="/images/smartcard-2.png" alt="NHS Care ID smartcard">
           <figcaption class="nhsuk-image__caption">
             NHS Care ID Smartcard
           </figcaption>
@@ -48,7 +47,7 @@
         
    
 
-      <a href="#" class="nhsuk-button">
+      <a href="/dev-ready/applicant/step-2/profile-photo-upload" class="nhsuk-button">
         Continue
       </a>
       
