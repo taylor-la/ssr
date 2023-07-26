@@ -21,29 +21,21 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/dev-ready/applicant/step-2/delivery-select" method="post" class="form">
+      <h1>Enter a delivery address</h1>
 
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
-            <h1 class="nhsuk-fieldset__heading nhsuk-u-padding-bottom-3">
-              Enter a delivery address
-            </h1>
-          </legend>
+      <form action="/dev-ready/applicant/step-2/delivery-select" method="post" class="form">
 
           <p>This address will be used to send a smartcard, fob or other ID device.</p>
 
           <p>This could be your home or work address.</p>
 
           <div class="nhsuk-form-group">
-            <h1 class="nhsuk-label-wrapper">
               <label class="nhsuk-label" for="delivery-postcode-1">
                 Postcode
               </label>
-            </h1>
             <input class="nhsuk-input nhsuk-input--width-10" id="delivery-postcode-1" name="delivery-postcode-1" type="text" value="{{ data['delivery-postcode-1'] }}">
           </div>
         
-        </fieldset>
         {{ button({
           "text": "Find address"
         }) }}

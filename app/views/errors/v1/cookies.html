@@ -35,52 +35,63 @@
 
       <p>We use cookies to keep our website secure and fast.</p>
 
-      <details class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            List of cookies that make our website work
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-          <table role="table" class="nhsuk-table-responsive">
-            <caption class="nhsuk-table__caption"></caption>
-            <thead role="rowgroup" class="nhsuk-table__head">
-              <tr role="row">
-                <th role="columnheader" class="" scope="col">
-                  Name
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Purpose
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Expires
-                </th>
-              </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Name </span>Cookie 1
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Purpose </span>TBC
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Expires</span>Time
-                </td>
-              </tr>
-            </tbody>
-          </table>
-      
+    </div>
+
+  </div>
+
+  <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                List of cookies that make our website work
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption"></caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Name
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Purpose
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Expires
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Name </span>nhsuk-cookie-consent
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Purpose </span>Remembers if you used our cookies banner
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Expires</span>When you close the browser (if you do not use the banner) or 1 year (if you use the banner)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          
+            </div>
+          </details>
         </div>
-      </details>
+  </div>
 
-      
-
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
       <h2 class="nhsuk-u-padding-top-6">Cookies that measure website use</h2>
-
       <p>We also like to use analytics cookies. These cookies store anonymous information about how you use our website, such as which pages you visit or what you click on.</p>
+    </div>
+  </div>
 
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
       <details class="nhsuk-details">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
@@ -106,13 +117,24 @@
             <tbody class="nhsuk-table__body">
               <tr role="row" class="nhsuk-table__row">
                 <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Name </span>Cookie 2
+                  <span class="nhsuk-table-responsive__heading">Name </span>_ga
                 </td>
                 <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Purpose </span>TBC
+                  <span class="nhsuk-table-responsive__heading">Purpose </span>Used to distinguish users.
                 </td>
                 <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Expires</span>Time
+                  <span class="nhsuk-table-responsive__heading">Expires</span>2 years
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Name </span>_ga_(container-id)
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Purpose </span>Used to persist session state.
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Expires</span>2 years
                 </td>
               </tr>
             </tbody>
@@ -120,9 +142,12 @@
       
         </div>
       </details>
-   
+    </div>
+  </div>
       
-
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      
       <p>We'll only use these cookies if you say it's OK. We'll use a cookie to save your settings.</p>
 
 
@@ -166,6 +191,16 @@
     </form>
 
     </div>
-
   </div>
+      
+
+      
+
+      
+   
+      
+
+      
+
+    
 {% endblock %}
