@@ -1,0 +1,56 @@
+{% extends 'layout-inviter-v9.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Help for your applicants
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}  
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v10/settings",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <h1>Help for your applicants</h1>
+
+      <p>Enter an email address that will be displayed to your applicants, so they can contact you or your team if they need support.</p>
+
+
+      <form action="/inviter/v10/support-reverify" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="support-email-2">
+              Email address
+            </label>
+          <div class="nhsuk-hint" id="support-email-hint">
+            This can be a shared mailbox
+            </div>
+          <input class="nhsuk-input nhsuk-input--width-20" id="support-email-2" name="support-email" type="text" aria-describedby="support-email-hint" value="{{ data['support-email'] }}">
+        </div>
+
+        
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}
