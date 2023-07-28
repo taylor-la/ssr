@@ -1,0 +1,121 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Which proof of address document do you want to use?
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <form action="/applicant/v16/step-1/2-photo-id" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+              <h1 class="nhsuk-fieldset__heading">
+                Select a proof of address document to verify your identity
+              </h1>
+            </legend>
+
+            <p>You'll need to capture an image of this document when using the mobile app.</p>
+
+            <details class="nhsuk-details nhsuk-u-margin-bottom-6">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  More information about what we will accept
+                </span>
+              </summary>
+              <div class="nhsuk-details__text">
+                <p>We accept:</p>
+            
+                <ul>
+                  <li>both paper and online statements</li>
+                  <li>statements from joint accounts if you are one of the named account holders</li>
+                </ul>
+              </div>
+            </details>
+
+            
+
+        
+            <div class="nhsuk-radios">
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="bank-1" name="poa" type="radio" value="bank statement" {{ checked("poa", "bank statement") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="bank-1">
+                  Bank account or credit card statement, from last 6 months
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="utility-1" name="poa" type="radio" value="utility bill"{{ checked("poa", "utility bill") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="utility-1">
+                  Utility bill, from last 6 months
+                </label>
+              </div>
+      
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="mortgage-1" name="poa" type="radio" value="mortgage statement" {{ checked("poa", "mortgage statement") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="mortgage-1">
+                  Mortgage statement, from last 12 months
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="council-1" name="poa" type="radio" value="council tax statement"{{ checked("poa", "council tax statement") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="council-1">
+                  Council tax statement, from last 12 months
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="tenancy-1" name="poa" type="radio" value="tenancy agreement"{{ checked("poa", "tenacy agreement") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="tenancy-1">
+                  Tenancy agreement from the last 12 months
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="driving-poa-1" name="poa" type="radio" aria-describedby="poa-driving-hint" value="driving licence"{{ checked("poa", "driving licence") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="driving-poa-1">
+                  UK or international driving licence (full or provisional)
+                </label>
+                <div class="nhsuk-hint nhsuk-radios__hint" id="poa-driving-hint">
+                  If you use your driving licence as a proof of address you cannot use it as a photo ID
+                </div>
+              </div>
+
+              <div class="nhsuk-radios__divider">or</div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="none-3" name="poa" type="radio" value="none"{{ checked("poa", "none") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="none-3">
+                  None of the above
+                </label>
+              </div>
+      
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  We are going to verify your UK address with a third-party organisation
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v16/step-2/preferred-name",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v16/step-2/delivery-postcode" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+              <h1 class="nhsuk-fieldset__heading">
+                Select a delivery address
+              </h1>
+            </legend>
+
+            <p>This address will be used to send a smartcard, fob or other ID device.</p>
+
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="delivery-same" name="delivery" type="radio" value="same" {{ checked("delivery", "same") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="delivery-same">
+                  53, Albert Road, London SW12 5TR
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="delivery-different" name="delivery" type="radio" value="different" {{ checked("delivery", "different") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="delivery-different">
+                  Use a different address
+                </label>
+                <div class="nhsuk-hint nhsuk-radios__hint" id="delivery-hint">
+                  This could be your home or work address
+                </div>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
