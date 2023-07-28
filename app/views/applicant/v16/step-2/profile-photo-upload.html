@@ -14,6 +14,18 @@
 
 {% block content %}
 
+<style>
+  @media all and (min-width: 768px) {
+    .desktop-only {display:block;}
+    .mobile-only {display:none;}
+}
+
+  @media all and (max-width: 767px) {
+    .desktop-only {display:none;}
+    .mobile-only {display:block;}
+}
+</style>
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
@@ -114,6 +126,27 @@
         <label for="cameraFileInput">
         <span class="nhsuk-button">Choose your photo</span>
 
+         <!-- The hidden file `input` for opening the native camera -->
+        <input class="nhsuk-u-visually-hidden"
+          id="cameraFileInput"
+          type="file"
+          accept="image/*"
+        />
+      </label>
+
+      <label for="cameraFileInput">
+        <span class="camera-link mobile-only">Or take a photo using your camera's device</span>
+
+         <!-- The hidden file `input` for opening the native camera -->
+        <input class="nhsuk-u-visually-hidden"
+          id="cameraFileInput"
+          type="file"
+          accept="image/*"
+          capture="user"
+        />
+      </label>
+
+      <div class="desktop-only">
         <details class="nhsuk-details" id="no-photo">
           <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text">
@@ -126,17 +159,11 @@
         
           </div>
         </details>
-
       </div>
       
-  
-        <!-- The hidden file `input` for opening the native camera -->
-        <input class="nhsuk-u-visually-hidden"
-          id="cameraFileInput"
-          type="file"
-          accept="image/*"
-        />
-      </label>
+      
+
+    </div>
       
       <div id="edit-image" style="display: none;">
         
@@ -154,6 +181,8 @@
               <div class="container nhsuk-u-width-one-half nhsuk-u-margin-top-4">
                 <img id="pictureFromCamera" alt="Your passport style photo" />
               </div>
+
+              
 
               <div class="nhsuk-do-dont-list nhsuk-u-margin-bottom-4">
                 <h2 class="nhsuk-do-dont-list__label">Your photo must:</h2>

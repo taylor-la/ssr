@@ -225,3 +225,21 @@
 }
 
 
+.camera-link {
+  color: #005eb8;
+  text-decoration: underline;
+}
+
+.camera-link:focus {
+  background-color: #ffeb3b;
+  box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+  color: #212b32;
+  outline: 4px solid rgba(0,0,0,0);
+  text-decoration: none;
+
+}
+
+.camera-link:hover {
+  color: #7c2855;
+  text-decoration: none;
+}
