@@ -134,12 +134,12 @@
         />
       </label>
 
-      <label for="cameraFileInput">
+      <label for="cameraFileInput2">
         <span class="camera-link mobile-only">Or take a photo using your camera's device</span>
 
          <!-- The hidden file `input` for opening the native camera -->
         <input class="nhsuk-u-visually-hidden"
-          id="cameraFileInput"
+          id="cameraFileInput2"
           type="file"
           accept="image/*"
           capture="user"
@@ -180,6 +180,10 @@
 
               <div class="container nhsuk-u-width-one-half nhsuk-u-margin-top-4">
                 <img id="pictureFromCamera" alt="Your passport style photo" />
+              </div>
+
+              <div class="container nhsuk-u-width-one-half nhsuk-u-margin-top-4">
+                <img id="pictureFromCamera2" alt="Your passport style photo" />
               </div>
 
               
@@ -313,6 +317,16 @@
         instructions.style.display = "none";
         document
           .getElementById("pictureFromCamera")
+          .setAttribute("src", window.URL.createObjectURL(this.files[0]));
+      });
+
+      document
+      .getElementById("cameraFileInput2")
+      .addEventListener("change", function () {
+        editPhoto.style.display = "block";
+        instructions.style.display = "none";
+        document
+          .getElementById("pictureFromCamera2")
           .setAttribute("src", window.URL.createObjectURL(this.files[0]));
       });
 
