@@ -1,4 +1,4 @@
-{% extends 'layout-inviter-v9.html' %}
+{% extends 'layout-inviter-v10.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -37,6 +37,19 @@
           </dt>
           <dd class="nhsuk-summary-list__value">
             {{ data['contact-email'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/inviter/v10/alerts-update">
+              Change<span class="nhsuk-u-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Email alert preferences
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            CC'ed into emails sent to applicants
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="/inviter/v10/alerts-update">
