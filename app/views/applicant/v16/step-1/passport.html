@@ -21,34 +21,29 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7" aria-describedby="passport-hint">
               <h1 class="nhsuk-fieldset__heading">
-                Do you have a UK or international passport?
+                Select a photo ID to verify your identity
               </h1>
             </legend>
 
-            <div class="nhsuk-hint" id="passport-hint">
-              Passports must not be expired
-            </div>
+            <p>You'll need to capture an image of this document when using the mobile app.</p>
         
             <div class="nhsuk-radios">
 
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="passport-2" name="passport" type="radio" value="passport"  aria-describedby="passport-yes-hint"  {{ checked("passport", "passport") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="passport-2">
-                  Yes, I have a passport
+                  Passport
                 </label>
                 <div class="nhsuk-hint nhsuk-radios__hint" id="passport-yes-hint">
-                  You'll need to photograph your passport using the mobile app
+                  Passports may be expired by up to 6 months
                 </div>
               </div>
       
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="other-1" name="passport" type="radio" value="other"  aria-describedby="passport-no-hint" checked("passport", "other") }}>
+                <input class="nhsuk-radios__input" id="other-1" name="passport" type="radio" value="other" checked("passport", "other") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="other-1">
-                  No, I do not have a passport
+                  Other photo ID
                 </label>
-                <div class="nhsuk-hint nhsuk-radios__hint" id="passport-no-hint">
-                  You can select a different photo ID
-                </div>
               </div>
       
             </div>
