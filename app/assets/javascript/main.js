@@ -70,22 +70,22 @@ if (window.location.href.indexOf('help') > 0) {
 
     if (window.location.href.indexOf('dashboard') > 0) {
       $('a.nhsuk-account-navigation__link').removeClass("nhsuk-account-navigation__link__current");
-      $('a.nhsuk-account-navigation__link[href$="/dev-ready/inviter/dashboard"]').addClass("nhsuk-account-navigation__link__current");
+      $('a.nhsuk-account-navigation__link[href$="/inviter/dev-ready/dashboard"]').addClass("nhsuk-account-navigation__link__current");
     }
 
     if (window.location.href.indexOf('all-applications') > 0) {
       $('a.nhsuk-account-navigation__link').removeClass("nhsuk-account-navigation__link__current");
-      $('a.nhsuk-account-navigation__link[href$="/dev-ready/inviter/all-applications"]').addClass("nhsuk-account-navigation__link__current");
+      $('a.nhsuk-account-navigation__link[href$="/inviter/dev-ready/all-applications"]').addClass("nhsuk-account-navigation__link__current");
     }
 
     if (window.location.href.indexOf('settings') > 0) {
       $('a.nhsuk-account-navigation__link').removeClass("nhsuk-account-navigation__link__current");
-      $('a.nhsuk-account-navigation__link[href$="/dev-ready/inviter/settings"]').addClass("nhsuk-account-navigation__link__current");
+      $('a.nhsuk-account-navigation__link[href$="/inviter/dev-ready/settings"]').addClass("nhsuk-account-navigation__link__current");
     }
 
     if (window.location.href.indexOf('help') > 0) {
       $('a.nhsuk-account-navigation__link').removeClass("nhsuk-account-navigation__link__current");
-      $('a.nhsuk-account-navigation__link[href$="/dev-ready/inviter/help"]').addClass("nhsuk-account-navigation__link__current");
+      $('a.nhsuk-account-navigation__link[href$="/inviter/dev-ready/help"]').addClass("nhsuk-account-navigation__link__current");
     }
 
    // index current link

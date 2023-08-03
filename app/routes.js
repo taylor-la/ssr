@@ -530,7 +530,7 @@ router.post('/inviter/v10/support-verify', function (req, res) {
 
 // inviter dev ready 
 
-router.post('/dev-ready/inviter/support-verify', function (req, res) {
+router.post('/inviter/dev-ready/support-verify', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var supportEmail = req.session.data['support']
@@ -538,10 +538,10 @@ router.post('/dev-ready/inviter/support-verify', function (req, res) {
   // Check whether the variable matches a condition
   if (supportEmail == "different"){
     // Send user to next page
-    res.redirect('/dev-ready/inviter/support-verify')
+    res.redirect('/inviter/dev-ready/support-verify')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/inviter/enter-details')
+    res.redirect('/inviter/dev-ready/enter-details')
   }
 
 })
@@ -1592,7 +1592,13 @@ router.post('/applicant/v16/step-2/delivery', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
+  var uk = req.session.data['uk']
 
+  // Check whether the variable matches a condition
+  if (uk == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v16/step-2/delivery-postcode')
+  }
   // Check whether the variable matches a condition
   if (dpoa == "no"){
     // Send user to next page
@@ -1608,8 +1614,13 @@ router.post('/applicant/v16/step-2/check-your-details-poa', function (req, res) 
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
+  var uk = req.session.data['uk']
 
   // Check whether the variable matches a condition
+  if (uk == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v16/step-2/check-your-details-poa')
+  }
   if (dpoa == "no"){
     // Send user to next page
     res.redirect('/applicant/v16/step-2/check-your-details-poa')
@@ -1624,8 +1635,13 @@ router.post('/applicant/v16/step-2/check-your-details-dpoa', function (req, res)
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
+  var uk = req.session.data['uk']
 
   // Check whether the variable matches a condition
+  if (uk == "no"){
+    // Send user to next page
+    res.redirect('/applicant/v16/step-2/check-your-details-poa')
+  }
   if (dpoa == "no"){
     // Send user to next page
     res.redirect('/applicant/v16/step-2/check-your-details-poa')
@@ -1642,7 +1658,7 @@ router.post('/applicant/v16/step-2/check-your-details-dpoa', function (req, res)
 // applicant dev-ready
 
 
-router.post('/dev-ready/applicant/step-1/address-postcode', function (req, res) {
+router.post('/applicant/dev-ready/step-1/address-postcode', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
@@ -1650,17 +1666,17 @@ router.post('/dev-ready/applicant/step-1/address-postcode', function (req, res) 
   // Check whether the variable matches a condition
   if (dpoa == "no"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/step-1/poa')
+    res.redirect('/applicant/dev-ready/step-1/poa')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-1/address-postcode')
+    res.redirect('/applicant/dev-ready/step-1/address-postcode')
   }
 
 })
 
 
 
-router.post('/dev-ready/applicant/step-1/1-photo-id', function (req, res) {
+router.post('/applicant/dev-ready/step-1/1-photo-id', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var passport = req.session.data['passport']
@@ -1668,15 +1684,15 @@ router.post('/dev-ready/applicant/step-1/1-photo-id', function (req, res) {
   // Check whether the variable matches a condition
   if (passport == "other"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/step-1/1-photo-id')
+    res.redirect('/applicant/dev-ready/step-1/1-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-2/start')
+    res.redirect('/applicant/dev-ready/step-2/start')
   }
 
 })
 
-router.post('/dev-ready/applicant/step-2/start', function (req, res) {
+router.post('/applicant/dev-ready/step-2/start', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo1 = req.session.data['1-photo-id']
@@ -1684,15 +1700,15 @@ router.post('/dev-ready/applicant/step-2/start', function (req, res) {
   // Check whether the variable matches a condition
   if (photo1 == "none"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/offline/no-photo-id')
+    res.redirect('/applicant/dev-ready/offline/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-2/start')
+    res.redirect('/applicant/dev-ready/step-2/start')
   }
 
 })
 
-router.post('/dev-ready/applicant/step-1/2-photo-id', function (req, res) {
+router.post('/applicant/dev-ready/step-1/2-photo-id', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var poa = req.session.data['poa']
@@ -1700,15 +1716,15 @@ router.post('/dev-ready/applicant/step-1/2-photo-id', function (req, res) {
   // Check whether the variable matches a condition
   if (poa == "none"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/offline/no-poa')
+    res.redirect('/applicant/dev-ready/offline/no-poa')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-1/2-photo-id')
+    res.redirect('/applicant/dev-ready/step-1/2-photo-id')
   }
 
 })
 
-router.post('/dev-ready/applicant/offline/no-photo-id', function (req, res) {
+router.post('/applicant/dev-ready/offline/no-photo-id', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo2 = req.session.data['2-photo-id']
@@ -1716,16 +1732,16 @@ router.post('/dev-ready/applicant/offline/no-photo-id', function (req, res) {
   // Check whether the variable matches a condition
   if (photo2 == "none"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/offline/no-photo-id')
+    res.redirect('/applicant/dev-ready/offline/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-2/start')
+    res.redirect('/applicant/dev-ready/step-2/start')
   }
 
 })
 
 
-router.post('/dev-ready/applicant/step-2/delivery-postcode', function (req, res) {
+router.post('/applicant/dev-ready/step-2/delivery-postcode', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var delivery = req.session.data['delivery']
@@ -1733,16 +1749,16 @@ router.post('/dev-ready/applicant/step-2/delivery-postcode', function (req, res)
   // Check whether the variable matches a condition
   if (delivery == "different"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/step-2/delivery-postcode')
+    res.redirect('/applicant/dev-ready/step-2/delivery-postcode')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-2/check-your-details-dpoa')
+    res.redirect('/applicant/dev-ready/step-2/check-your-details-dpoa')
   }
 
 })
 
 
-router.post('/dev-ready/applicant/step-2/preferred-name', function (req, res) {
+router.post('/applicant/dev-ready/step-2/preferred-name', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var reviewPhoto = req.session.data['profile']
@@ -1750,15 +1766,15 @@ router.post('/dev-ready/applicant/step-2/preferred-name', function (req, res) {
   // Check whether the variable matches a condition
   if (reviewPhoto == "yes"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/step-2/preferred-name')
+    res.redirect('/applicant/dev-ready/step-2/preferred-name')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-2/profile-photo-upload')
+    res.redirect('/applicant/dev-ready/step-2/profile-photo-upload')
   }
 
 })
 
-router.post('/dev-ready/applicant/step-2/delivery', function (req, res) {
+router.post('/applicant/dev-ready/step-2/delivery', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
@@ -1766,15 +1782,15 @@ router.post('/dev-ready/applicant/step-2/delivery', function (req, res) {
   // Check whether the variable matches a condition
   if (dpoa == "no"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/step-2/delivery-postcode')
+    res.redirect('/applicant/dev-ready/step-2/delivery-postcode')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-2/delivery')
+    res.redirect('/applicant/dev-ready/step-2/delivery')
   }
 
 })
 
-router.post('/dev-ready/applicant/step-2/check-your-details-poa', function (req, res) {
+router.post('/applicant/dev-ready/step-2/check-your-details-poa', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
@@ -1782,15 +1798,15 @@ router.post('/dev-ready/applicant/step-2/check-your-details-poa', function (req,
   // Check whether the variable matches a condition
   if (dpoa == "no"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/step-2/check-your-details-poa')
+    res.redirect('/applicant/dev-ready/step-2/check-your-details-poa')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-2/check-your-details-dpoa')
+    res.redirect('/applicant/dev-ready/step-2/check-your-details-dpoa')
   }
 
 })
 
-router.post('/dev-ready/applicant/step-2/check-your-details-dpoa', function (req, res) {
+router.post('/applicant/dev-ready/step-2/check-your-details-dpoa', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
@@ -1798,10 +1814,10 @@ router.post('/dev-ready/applicant/step-2/check-your-details-dpoa', function (req
   // Check whether the variable matches a condition
   if (dpoa == "no"){
     // Send user to next page
-    res.redirect('/dev-ready/applicant/step-2/check-your-details-poa')
+    res.redirect('/applicant/dev-ready/step-2/check-your-details-poa')
   } else {
     // Send user to ineligible page
-    res.redirect('/dev-ready/applicant/step-2/check-your-details-dpoa')
+    res.redirect('/applicant/dev-ready/step-2/check-your-details-dpoa')
   }
 
 })

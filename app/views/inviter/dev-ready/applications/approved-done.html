@@ -1,4 +1,4 @@
-{% extends 'layout-inviter-v10.html' %}
+{% extends 'layout-inviter-dev-ready.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v10/dashboard",
+    "href": "/inviter/dev-ready/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -22,14 +22,6 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-    <div class="nhsuk-alert nhsuk-alert--info nhsuk-alert--icon">
-      <svg class="nhsuk-icon nhsuk-icon__info nhsuk-alert__icon" fill="none" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
-        <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
-        C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
-      </svg>
-      <h3 class="nhsuk-u-visually-hidden">Information:</h3>
-      <p class="nhsuk-u-font-weight-bold">Profile photo needs updating</p>
-    </div>
 
     <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">
       Application: James Stenberg
@@ -37,7 +29,7 @@
 
     <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: Approved</p>
 
-    <a class="nhsuk-button nhsuk-button--secondary" href="/inviter/v10/applications/approved-done">Mark as done</a>
+    <p>This application has been <strong>marked as done</strong></p>
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-5">
       <div class="nhsuk-card__content">
@@ -99,18 +91,10 @@
             UUID
             </dt>
             <dd class="nhsuk-summary-list__value">
-              <a href="">6734 7636 0922 (opens in a new tab)</a> 
+              6734 7636 0922
             </dd>
           </div>
 
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-            ID Checker notes
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              Profile photo needs updating
-            </dd>
-          </div>
          
 
         </dl>
@@ -193,17 +177,6 @@
               Enter personal details
             </dt>
             
-            <dd class="nhsuk-summary-list__actions">
-              <strong class="nhsuk-tag nhsuk-tag--blue">
-                Completed
-                </strong>
-            </dd>
-          </div>
-
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Verify address
-            </dt>
             <dd class="nhsuk-summary-list__actions">
               <strong class="nhsuk-tag nhsuk-tag--blue">
                 Completed

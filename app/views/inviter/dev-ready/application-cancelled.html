@@ -1,0 +1,24 @@
+{% extends 'layout-inviter-dev-ready.html' %} 
+{% block pageTitle %} 
+  Application cancelled
+{%endblock %} 
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <div class="nhsuk-alert nhsuk-alert--success nhsuk-alert--icon">
+      <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-alert__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+      </svg>
+      <h1 class="nhsuk-u-visually-hidden">Success:</h1>
+      <p class="nhsuk-u-font-weight-bold">Applications cancelled successfully</p>
+    </div>
+
+    <p>
+      The applicant will not be able to continue the application with the link they received by email.
+    </p>
+
+    <p><a href="/inviter/dev-ready/dashboard" class="nhsuk-link">Go back to manage applications</a></p>
+  </div>
+</div>
+{% endblock %}
