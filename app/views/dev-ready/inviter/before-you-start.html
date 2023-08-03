@@ -1,4 +1,4 @@
-{% extends 'layout-inviter-v10.html' %}
+{% extends 'layout-inviter-dev-ready.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v10/dashboard",
+    "href": "/dev-ready/inviter/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -32,9 +32,7 @@
       <p>Contact email address:</p>
 
       <ul>
-        <li>Receive email alerts about applications you raise.</li>
         <li>The ID checking team might use this to contact you about applications you've raised.</li>
-        
       </ul>
 
       <p>Help for your applicants email address:</p>
@@ -47,7 +45,7 @@
 
       <p>You can change your contact information later by going to Settings.</p>
 
-      <a class="nhsuk-button" href="/inviter/v10/alerts-set">Continue</a>
+      <a class="nhsuk-button" href="/dev-ready/inviter/alerts-set">Continue</a>
 
 
     </div>

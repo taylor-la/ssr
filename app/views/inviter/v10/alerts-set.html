@@ -37,16 +37,41 @@
           <input class="nhsuk-input nhsuk-input--width-20" id="contact-email" name="contact-email" type="text" value="{{ data['contact-email'] }}">
         </div>
 
-        <div class="nhsuk-checkboxes">
+        <div class="nhsuk-form-group nhsuk-u-margin-top-7" style="display:none;">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m nhsuk-u-margin-bottom-3">
+              <h2 class="nhsuk-fieldset__heading">
+                Set email alert preferences
+              </h2>
+            </legend>
+
+            <div class="nhsuk-hint">
+              Email alerts are sent daily when there is new activity for applications you have raised
+            </div>
         
-          <div class="nhsuk-checkboxes__item nhsuk-u-margin-bottom-5">
-            <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-              I want to be cc'ed into emails sent to applicants
-            </label>
-          </div>
-  
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="alerts-yes" name="alerts" type="radio" value="yes" {{ checked("alerts", "yes") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="alerts-yes">
+                  Yes, I want to receive email alerts
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="alerts-no" name="alerts" type="radio" value="no" {{ checked("alerts", "no") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="alerts-no">
+                  No, I do not want to receive email alerts
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
         </div>
+
+
 
         {{ button({
           "text": "Continue"

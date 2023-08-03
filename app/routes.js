@@ -528,6 +528,24 @@ router.post('/inviter/v10/support-verify', function (req, res) {
 
 })
 
+// inviter dev ready 
+
+router.post('/dev-ready/inviter/support-verify', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var supportEmail = req.session.data['support']
+
+  // Check whether the variable matches a condition
+  if (supportEmail == "different"){
+    // Send user to next page
+    res.redirect('/dev-ready/inviter/support-verify')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/dev-ready/inviter/enter-details')
+  }
+
+})
+
 
 // dpoa v10
 

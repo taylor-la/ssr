@@ -1,0 +1,49 @@
+{% extends 'layout-inviter-dev-ready.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter a contact email address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/dev-ready/inviter/before-you-start",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+
+      <form action="/dev-ready/inviter/alerts-verify" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+          <h1 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--xl" for="contact-email">
+              Enter a contact email address
+            </label>
+          </h1>
+          <p>The ID checking team might use this to contact you about applications you've raised.</p>
+          <input class="nhsuk-input nhsuk-input--width-20" id="contact-email" name="contact-email" type="text" value="{{ data['contact-email'] }}" aria-describedby="contact-email-hint">
+        </div>
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}
