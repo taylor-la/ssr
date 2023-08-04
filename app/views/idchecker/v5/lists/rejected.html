@@ -1,0 +1,133 @@
+{% extends 'layout-idchecker-v4.html' %}
+
+
+{% block pageTitle %}
+  Rejected applications
+{%endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v5/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h1>Rejected applications</h1>
+
+    <div style="float:right;">
+      <div class="nhsuk-form-group" >
+        <label class="nhsuk-label" for="select-1">
+          Sort by
+        </label>
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1" >Applicant name</option>
+          <option value="2" selected>Newest</option>
+          <option value="3">Oldest</option>
+          <option value="4">Rejected by</option>
+        </select>
+      </div>
+    </div>  
+      
+    <table role="table" class="nhsuk-table-responsive">
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">Applicant name</th>
+          <th role="columnheader" class="" scope="col">Application ID</th>
+          <th role="columnheader" class="" scope="col">Date rejected</th>
+          <th role="columnheader" class="" scope="col">Rejected by</th>
+          <th role="columnheader" class="" scope="col">Reasons</th>
+          <th role="columnheader" class="" scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>James Stenberg
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>0826436c
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>10 September 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Connie Shepard
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>	Photo ID 1 (passport) has expired, could not be read (this may be because the image is blurry or handwritten), is not accepted. Face scan does not match photo ID(s). Smartcard photo does not meet passport guidelines.
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Actions</span><a href="/idchecker/v5/applications/rejected">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Tavish Sydney
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>08247c
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>24 August 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Photo ID 2 (driving licence) is a duplicate (applicant has submitted the same document more than once), has expired.
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Actions</span><a href="/idchecker/v5/applications/rejected">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Shirin Peters
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>08346dn
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>9 August 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Kris Emerson
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Name and / or date of birth do not match.
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Actions</span><a href="/idchecker/v5/applications/rejected">Open</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span>Diana Ingram
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>074hs4c
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>22 July 2021
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Connie Shepard
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Reason</span>Smartcard photo does not meet passport guidelines.
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Actions</span><a href="/idchecker/v5/applications/rejected">Open</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+{% endblock %}
