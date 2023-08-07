@@ -1,4 +1,4 @@
-{% extends 'layout-idchecker-v4.html' %}
+{% extends 'layout-idchecker-v5.html' %}
 
 {% block pageTitle %}
   Review application
@@ -513,48 +513,38 @@
         <h2 class="nhsuk-card__heading">Face likeness and liveness</h2>
         <p class="nhsuk-u-reading-width">Compare the face scan with photo IDs to verify a true likenesss.</p>
 
-        <details class="nhsuk-details">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              Face likeness values
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            <p>Likeness values should be higher than 0.85</p>
+        <p>Likeness values should be higher than 0.85</p>
             
-            <dl class="nhsuk-summary-list nhsuk-summary-list nhsuk-summary-list--no-border nhsuk-u-width-two-thirds">
+        <dl class="nhsuk-summary-list nhsuk-summary-list nhsuk-u-width-one-half">
 
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key key-width">
-                  eChip vs face scan
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  0.67574
-                </dd>
-              </div>
-
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key key-width">
-                  eChip vs photo ID
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  0.8734
-                </dd>
-              </div>
-
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key key-width">
-                  Photo ID vs face scan
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  0.7465
-                </dd>
-              </div>
-
-            </dl>
-            
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key key-width">
+              eChip vs face scan
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              0.67574
+            </dd>
           </div>
-        </details>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key key-width">
+              eChip vs photo ID
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              0.8734
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key key-width">
+              Photo ID vs face scan
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              0.7465
+            </dd>
+          </div>
+
+        </dl>
 
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half">

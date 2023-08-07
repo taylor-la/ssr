@@ -1,4 +1,4 @@
-{% extends 'layout-idchecker-v5.html' %}
+{% extends 'layout-idchecker-v4.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -8,7 +8,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/idchecker/v5/dpoa-fail",
+    "href": "/idchecker/dev-ready/dpoa-fail",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -21,7 +21,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/idchecker/v5/dashboard" method="post" class="form">
+      <form action="/idchecker/dev-ready/dashboard" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-2" aria-describedby="holding-hint">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">

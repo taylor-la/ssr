@@ -1,14 +1,14 @@
-{% extends 'layout-idchecker-v5.html' %}
+{% extends 'layout-idchecker-v4.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Add note
+  Edit note
 {% endblock %}
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/idchecker/v5/applications/holding",
+    "href": "/idchecker/dev-ready/applications/holding",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -25,16 +25,16 @@
       <div class="nhsuk-form-group">
         <h1 class="nhsuk-label-wrapper">
         <label class="nhsuk-label nhsuk-label--xl" for="example">
-          Add note
+          Edit note
         </label>
         </h1>
-        <textarea class="nhsuk-textarea" id="example" name="example" rows="4" aria-describedby="example-hint"></textarea>
+        <textarea class="nhsuk-textarea" id="example" name="example" rows="4" aria-describedby="example-hint" value="Name does not match on photo ID"></textarea>
       </div>
       
       
 
 
-      <a href="/idchecker/v5/applications/holding" class="nhsuk-button nhsuk-u-margin-top-4">
+      <a href="/idchecker/dev-ready/applications/holding" class="nhsuk-button nhsuk-u-margin-top-4">
         Save
       </a>
 

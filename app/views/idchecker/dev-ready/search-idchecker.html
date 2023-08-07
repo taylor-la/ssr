@@ -1,4 +1,4 @@
-{% extends 'layout-idchecker-v5.html' %}
+{% extends 'layout-idchecker-v4.html' %}
 {% block pageTitle %}
   All applications
 {%endblock %}
@@ -8,7 +8,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/idchecker/v5/dashboard",
+    "href": "/idchecker/dev-ready/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -20,7 +20,7 @@
   <div class="nhsuk-grid-column-full">
     <h1>Search ID Checker</h1>
 
-    <form action="/idchecker/v5/search-results#results" method="post" class="form">
+    <form action="/idchecker/dev-ready/search-results#results" method="post" class="form">
     
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
         <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">

@@ -1,12 +1,12 @@
-{% extends 'layout-idchecker-v5.html' %}
+{% extends 'layout-idchecker-v4.html' %}
 
 {% block pageTitle %}
-  Rejected application
+  Approved application
 {% endblock %}
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/idchecker/v5/lists/rejected",
+    "href": "/idchecker/dev-ready/lists/approved",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -22,7 +22,7 @@
       Application: James Stenberg
     </h1>
 
-    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: Rejected</p>
+    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: Approved</p>
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-5">
       <div class="nhsuk-card__content">
@@ -35,7 +35,7 @@
             Application ID
             </dt>
             <dd class="nhsuk-summary-list__value">
-            0826704cs-3467ce-3487r98
+            0826737-fdnc9348-34877e0-23763
             </dd>
           </div>
 
@@ -44,7 +44,7 @@
             Raised by
             </dt>
             <dd class="nhsuk-summary-list__value">
-            Vincent Douglas on 8 July 2022
+            Vincent Douglas on 8 July 2022 
             </dd>
           </div>
 
@@ -65,38 +65,32 @@
             	Barsetshire NHS Foundation Trust (RWA)
             </dd>
           </div>
-        
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-            Rejected by
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-            	Joanna Blogs on 12th March 2022 5.13pm
-            </dd>
-          </div>
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-            Rejection reasons
+            Approved by
             </dt>
             <dd class="nhsuk-summary-list__value">
-            	<p>Photo ID 1 (passport) has expired, could not be read (this may be because the image is blurry or handwritten), is not accepted.</p>
-              <p>Proof of address could not be read (this may be because the image is blurry or handwritten).</p>
-              <p>Face scan does not match photo ID(s), does not show a live person.</p>
-              <p>Smartcard photo does not meet passport guidelines.</p>
+            	Joanna Blogs on 12th March 2022 12.45pm
             </dd>
           </div>
-
+          
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-            Rejection notes
+            UUID
             </dt>
             <dd class="nhsuk-summary-list__value">
-              Photo ID 1 is worn. Unable to read date of birth
+            08267757834920
             </dd>
           </div>
-
-        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Notes
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            Smartcard photo accepted, but may need updating
+            </dd>
+          </div>
         </dl>
 
       </div>
@@ -253,17 +247,7 @@
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading">Face liveness and likeness</h2>
         <p class="nhsuk-u-reading-width">Compare the face scan with photo IDs to verify a true likenesss.</p>
-        <details class="nhsuk-details">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              Face likeness values
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            <p>Likeness values should be higher than 0.85</p>
-
-            <p>Likeness values should be higher than 0.85</p>
-            
+        <p>Likeness values should be higher than 0.85</p>
         <dl class="nhsuk-summary-list nhsuk-summary-list nhsuk-u-width-one-half">
 
           <div class="nhsuk-summary-list__row">
@@ -271,7 +255,7 @@
               eChip vs face scan
             </dt>
             <dd class="nhsuk-summary-list__value">
-              0.67574
+              0.9865
             </dd>
           </div>
 
@@ -289,14 +273,11 @@
               Photo ID vs face scan
             </dt>
             <dd class="nhsuk-summary-list__value">
-              0.7465
+              0.8794
             </dd>
           </div>
 
         </dl>
-            
-          </div>
-        </details>
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half">
             <div class="container">

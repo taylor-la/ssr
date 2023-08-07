@@ -88,17 +88,7 @@ if (window.location.href.indexOf('help') > 0) {
       $('a.nhsuk-account-navigation__link[href$="/inviter/dev-ready/help"]').addClass("nhsuk-account-navigation__link__current");
     }
 
-   // index current link
-
-   if (window.location.href.indexOf('/') > 0) {
-    $('a.nhsuk-account-navigation__link-v9').removeClass("nhsuk-account-navigation__link__current-v9");
-    $('a.nhsuk-account-navigation__link-v9[href$="/"]').addClass("nhsuk-account-navigation__link__current-v9");
-  }
-  
-  if (window.location.href.indexOf('dev-ready') > 0) {
-    $('a.nhsuk-account-navigation__link-v9').removeClass("nhsuk-account-navigation__link__current-v9");
-    $('a.nhsuk-account-navigation__link-v9[href$="/dev-ready"]').addClass("nhsuk-account-navigation__link__current-v9");
-  }
+ 
   
 
   

@@ -1,4 +1,4 @@
-{% extends 'layout-idchecker-v5.html' %}
+{% extends 'layout-idchecker-v4.html' %}
 
 {% block pageTitle %}
   Review application
@@ -6,7 +6,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/idchecker/v5/lists/waiting",
+    "href": "/idchecker/dev-ready/lists/holding",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -18,30 +18,11 @@
 
   <div class="nhsuk-grid-column-full">
 
-    <div class="nhsuk-alert nhsuk-alert--warning nhsuk-alert--icon nhsuk-u-margin-top-4">
-      <svg class="nhsuk-icon nhsuk-icon__warning nhsuk-alert__icon" fill="none" aria-hidden="true" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;">
-        <g>
-          <g>
-            <path d="M501.609,384.603L320.543,51.265c-13.666-23.006-37.802-36.746-64.562-36.746c-26.76,0-50.896,13.74-64.562,36.746
-              c-0.103,0.176-0.19,0.352-0.293,0.528L10.662,384.076c-13.959,23.491-14.223,51.702-0.719,75.457
-              c13.535,23.769,37.919,37.948,65.266,37.948h360.544c27.347,0,52.733-14.179,66.267-37.948
-              C515.524,435.779,515.261,407.566,501.609,384.603z M225.951,167.148c0-16.586,13.445-30.03,30.03-30.03
-              c16.586,0,30.03,13.445,30.03,30.03v120.121c0,16.584-13.445,30.03-30.03,30.03s-30.03-13.447-30.03-30.03V167.148z
-              M255.981,437.421c-24.839,0-45.046-20.206-45.046-45.046c0-24.839,20.206-45.045,45.046-45.045
-              c24.839,0,45.045,20.206,45.045,45.045C301.027,417.214,280.821,437.421,255.981,437.421z"/>
-          </g>
-        </g>
-      </svg>
-      <h3 class="nhsuk-u-visually-hidden">Warning:</h3>
-      <p class="nhsuk-u-font-weight-bold">This application has the following warnings and errors</p>
-      <p>Address check returned as deceased</p>
-    </div>
-
     <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">
       Application: James Stenberg
     </h1>
 
-    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: In review</p>
+    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: On hold</p>
 
     
 
@@ -89,10 +70,32 @@
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-            Submitted on 
+            Submitted on
             </dt>
             <dd class="nhsuk-summary-list__value">
-            	12th March 2022 7.45pm
+            11th March 2022 5.42am
+            </dd>
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Added by 
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            	Joanna Blogs on 12th March 2022 12.12pm
+            </dd>
+            <dd class="nhsuk-summary-list__actions">   
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            On hold reasons
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Shortened name / nickname
+            </dd>
+            <dd class="nhsuk-summary-list__actions">   
             </dd>
           </div>
         
@@ -101,9 +104,56 @@
       </div>
     </div>
 
-     <!-- Photo ID 1 -->
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Notes</h2>
+        
+
+        <table role="table" class="nhsuk-table-responsive">
+          <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Notes</caption>
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                Note
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Added by
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Date
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Actions
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Note</span>Name does not match on photo ID
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Added by</span>Lloyd Wilkinson
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Date</span>14 June 2022
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Actions</span><a href="/idchecker/dev-ready/update-hold-note">Edit</a>  |  <a href="">Delete</a>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-4" href="/idchecker/dev-ready/new-note">Add note</a>
+
+      </div>
+    </div>
     
-     <div class="nhsuk-card nhsuk-u-margin-bottom-5" id="photo-id-1">
+    <!-- Photo ID 1 -->
+    
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5" id="photo-id-1">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading">Photo ID 1: passport</h2>
         <p class="nhsuk-body-s nhsuk-u-reading-width">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="">Reset</a> </p>
@@ -192,7 +242,6 @@
                               </label>
                             </div>
                             
-                            
                           </div>
                     
                       </div>
@@ -210,135 +259,233 @@
       </div>
     </div>
 
+    <!-- Photo ID 2 -->
+    
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5" id="photo-id-2">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Photo ID 2: driving licence</h2>
+        <p class="nhsuk-body-s nhsuk-u-reading-width">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="">Reset</a> </p>
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-half">
+              <div class="container">
+                <img src="/images/dl-front.png" alt="photo id 1">
+              </div>
+              <div class="container">
+                <img src="/images/dl-back.png" alt="photo id 1">
+              </div>
+            </div>
+            <div class="nhsuk-grid-column-one-half">
+              <form action="">
+                <div class="nhsuk-form-group nhsuk-u-margin-top-4">
+  
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                      <h3 class="nhsuk-fieldset__heading">
+                        Does this ID meet NHS ID checking standards?
+                      </h3>
+                    </legend>
+                
+                    <div class="nhsuk-radios nhsuk-radios--conditional">
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="approve-2" name="id-2" type="radio" value="approve" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-radios__label" for="approve-2">
+                          Yes, approve this photo ID
+                        </label>
+                      </div>
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="reject-2" name="id-2" type="radio" value="reject" aria-controls="conditional-reject-2" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-radios__label" for="reject-2">
+                          No, reject this photo ID
+                        </label>
+                      </div>
+                
+                      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-reject-2">
+                
+                        <div class="nhsuk-form-group">
+                      
+                            <div class="nhsuk-hint nhsuk-u-margin-top-4" id="reject-2-hint">
+                              Select all options that apply
+                            </div>
+                      
+                            <div class="nhsuk-checkboxes">
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="duplicate-2" name="reject-id-two" type="checkbox" value="duplicate">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="duplicate-2">
+                                  Duplicate
+                                </label>
+                              </div>
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="expired-2" name="reject-id-two" type="checkbox" value="expired">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="expired-2">
+                                  Expired
+                                </label>
+                              </div>
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="incomplete-2" name="reject-id-two" type="checkbox" value="incomplete">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="incomplete-2">
+                                  Missing information
+                                </label>
+                              </div>
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="unacceptable-2" name="reject-id-two" type="checkbox" value="unacceptable">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="unacceptable-2">
+                                Not accepted
+                                </label>
+                              </div>
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="legible-2" name="reject-id-two" type="checkbox" value="legible">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="legible-2">
+                                  Not legible
+                                </label>
+                              </div>
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="fraud-2" name="reject-id-two" type="checkbox" value="fraud">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-2">
+                                  Suspected fraud
+                                </label>
+                              </div>
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="smoke-2" name="reject-id-two" type="checkbox" value="smoke">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="smoke-2">
+                                  Smoke test - internal use only
+                                </label>
+                              </div>
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="other-2" name="reject-id-two" type="checkbox" value="other">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="other-2">
+                                  Other
+                                </label>
+                              </div>
+                              
+                            </div>
+                      
+                        </div>
+                
+                      </div>
+                
+                    </div>
+                  </fieldset>
+                </div>
+              </form>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
     <!-- Proof of address -->
     
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-5" id="poa">
       <div class="nhsuk-card__content">
-        <h2 class="nhsuk-card__heading">UK address check</h2>
-        <p class="nhsuk-u-reading-width">Applicants must score 90 or more points to pass the address check.</p>
-        <dl class="nhsuk-summary-list nhsuk-summary-list nhsuk-u-width-three-quarters"> 
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Result
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              Fail
-            </dd>
+        <h2 class="nhsuk-card__heading">Proof of address</h2>
+        <p class="nhsuk-body-s nhsuk-u-reading-width">To zoom in either double click on the picture, or position your cursor on the image, then hold 'Alt' + scroll with your mouse wheel. <a href="">Reset</a> </p>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <div class="container">
+              <img src="/images/poa-2.png" alt="proof of address">
+            </div>
           </div>
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Score
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              -10
-            </dd>
-          </div> 
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Primary checks matched
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              0
-            </dd>
-          </div>
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Date of birth confirmed
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              0
-            </dd>
-          </div>
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Warnings
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              Address check returned as deceased
-            </dd>
-          </div>
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Address
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              Flat 5 Grange Court, 12 Smith Avenue, Manchester, M30 6GF
-            </dd>
-          </div>
-        </dl>
+          <div class="nhsuk-grid-column-one-half">
+            <form action="">
+              <div class="nhsuk-form-group nhsuk-u-margin-top-4">
 
-        <form action="">
-          <div class="nhsuk-form-group">
-
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                <h3 class="nhsuk-fieldset__heading">
-                  Does this address check meet NHS ID checking standards?
-                </h3>
-              </legend>
-          
-              <div class="nhsuk-radios nhsuk-radios--conditional">
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="approve-3" name="poa" type="radio" value="approve" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="approve-3">
-                    Yes, approve this address check
-                  </label>
-                </div>
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="reject-3" name="poa" type="radio" value="reject" aria-controls="conditional-reject-3" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="reject-3">
-                    No, reject this address check
-                  </label>
-                </div>
-          
-                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-reject-3">
-          
-                  <div class="nhsuk-form-group">
-                
-                      <div class="nhsuk-hint nhsuk-u-margin-top-4" id="reject-3-hint">
-                        Select all options that apply
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                    <h3 class="nhsuk-fieldset__heading">
+                      Does this proof of address meet NHS ID checking standards?
+                    </h3>
+                  </legend>
+              
+                  <div class="nhsuk-radios nhsuk-radios--conditional">
+              
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="approve-3" name="poa" type="radio" value="approve" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="approve-3">
+                        Yes, approve this proof of address
+                      </label>
+                    </div>
+              
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="reject-3" name="poa" type="radio" value="reject" aria-controls="conditional-reject-3" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="reject-3">
+                        No, reject this proof of address
+                      </label>
+                    </div>
+              
+                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-reject-3">
+              
+                      <div class="nhsuk-form-group">
+                    
+                          <div class="nhsuk-hint nhsuk-u-margin-top-4" id="reject-3-hint">
+                            Select all options that apply
+                          </div>
+                    
+                          <div class="nhsuk-checkboxes">
+    
+                            <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="duplicate-3" name="reject-poa" type="checkbox" value="duplicate">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="duplicate-3">
+                                Duplicate
+                              </label>
+                            </div>
+                            <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="expired-3" name="reject-poa" type="checkbox" value="expired">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="expired-3">
+                                Expired
+                              </label>
+                            </div>
+                            <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="incomplete-3" name="reject-poa" type="checkbox" value="incomplete">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="incomplete-3">
+                                Missing information
+                              </label>
+                            </div>
+                            <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="unacceptable-3" name="reject-poa" type="checkbox" value="unacceptable">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="unacceptable-3">
+                                Not accepted
+                              </label>
+                            </div>
+                            <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="legible-3" name="reject-poa" type="checkbox" value="legible">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="legible-3">
+                                Not legible
+                              </label>
+                            </div>
+                            <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="fraud-3" name="reject-poa" type="checkbox" value="fraud">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-3">
+                                Suspected fraud
+                              </label>
+                            </div>
+                            <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="smoke-3" name="reject-poa" type="checkbox" value="smoke">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="smoke-3">
+                                Smoke test - internal use only
+                              </label>
+                            </div>
+                            <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="other-3" name="reject-poa" type="checkbox" value="other">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="other-3">
+                                Other
+                              </label>
+                            </div>
+                          </div>
+                    
                       </div>
-                
-                      <div class="nhsuk-checkboxes">
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input" id="requirements-3" name="reject-poa" type="checkbox" value="requirements">
-                          <label class="nhsuk-label nhsuk-checkboxes__label" for="requirements-3">
-                            Does not meet address check requirements
-                          </label>
-                        </div>
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input" id="fraud-3" name="reject-poa" type="checkbox" value="fraud">
-                          <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-3">
-                            Suspected fraud
-                          </label>
-                        </div>
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input" id="smoke-3" name="reject-poa" type="checkbox" value="smoke">
-                          <label class="nhsuk-label nhsuk-checkboxes__label" for="smoke-3">
-                            Smoke test - internal use only
-                          </label>
-                        </div>
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input" id="other-3" name="reject-poa" type="checkbox" value="other">
-                          <label class="nhsuk-label nhsuk-checkboxes__label" for="other-3">
-                            Other
-                          </label>
-                        </div>
-                        
-                      </div>
-                
+              
+                    </div>
+              
                   </div>
-          
-                </div>
-          
+                </fieldset>
               </div>
-            </fieldset>
+            </form>
           </div>
-        </form>
-        
+        </div>
+
       </div>
     </div>
 
@@ -347,7 +494,7 @@
     <div class="nhsuk-card nhsuk-u-margin-bottom-5" id="name">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading">Name and date of birth</h2>
-        <p class="nhsuk-u-reading-width">Compare the name and date of birth with the photo id.</p>
+        <p class="nhsuk-u-reading-width">Compare name and date of birth with photo ids and proof of address.</p>
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half">
             <dl class="nhsuk-summary-list nhsuk-summary-list">
@@ -407,6 +554,32 @@
                   </div>
                 </div>
               </details>
+            
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Compare to photo ID 2
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/dl-front.png" alt="photo id 2">
+                  </div>
+                </div>
+              </details>
+
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Compare to proof of address
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/poa-2.png" alt="proof of address">
+                  </div>
+                </div>
+              </details>
 
             </div>
           </div>
@@ -417,8 +590,8 @@
 
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                <h3 class="nhsuk-fieldset__heading nhsuk-u-reading-width">
-                  Does the name and date of birth match the photo ID? 
+                <h3 class="nhsuk-fieldset__heading">
+                  Do the name and date of birth match the photo IDs and proof of address?
                 </h3>
               </legend>
           
@@ -447,12 +620,14 @@
                       </div>
                 
                       <div class="nhsuk-checkboxes">
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input" id="not-match" name="reject-name" type="checkbox" value="not match">
-                          <label class="nhsuk-label nhsuk-checkboxes__label" for="not-match">
-                            Name and / or date of birth do not match
-                          </label>
-                        </div>
+
+                        <div class="nhsuk-checkboxes">
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="not-match" name="reject-name" type="checkbox" value="not match">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="not-match">
+                              Name and / or date of birth do not match
+                            </label>
+                          </div>
 
                         <div class="nhsuk-checkboxes__item">
                           <input class="nhsuk-checkboxes__input" id="fraud-4" name="reject-name" type="checkbox" value="fraud">
@@ -493,6 +668,7 @@
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading">Face likeness and liveness</h2>
         <p class="nhsuk-u-reading-width">Compare the face scan with photo IDs to verify a true likenesss.</p>
+
         <p>Likeness values should be higher than 0.85</p>
             
         <dl class="nhsuk-summary-list nhsuk-summary-list nhsuk-u-width-one-half">
@@ -525,7 +701,7 @@
           </div>
 
         </dl>
-
+       
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half">
             <div class="container">
@@ -562,6 +738,18 @@
                 </div>
               </details>
             
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Compare to photo ID 2
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <div class="container">
+                    <img src="/images/dl-front.png" alt="photo id 2">
+                  </div>
+                </div>
+              </details>
             </div>
 
            
@@ -610,14 +798,13 @@
                             Does not match photo ID(s)
                           </label>
                         </div>
-
+                        
                         <div class="nhsuk-checkboxes__item">
                           <input class="nhsuk-checkboxes__input" id="liveness-5" name="reject-face" type="checkbox" value="liveness">
                           <label class="nhsuk-label nhsuk-checkboxes__label" for="liveness-5">
                             Does not show a live person
                           </label>
                         </div>
-                        
                         <div class="nhsuk-checkboxes__item">
                           <input class="nhsuk-checkboxes__input" id="fraud-5" name="reject-face" type="checkbox" value="fraud">
                           <label class="nhsuk-label nhsuk-checkboxes__label" for="fraud-5">
@@ -674,7 +861,7 @@
         
           </div>
           <div class="nhsuk-grid-column-one-half">
-            <form action="/idchecker/v5/review-id-d#smartcard" method="post" class="form">
+            <form action="/idchecker/dev-ready/review-id-d#smartcard" method="post" class="form">
               <div class="nhsuk-form-group nhsuk-u-margin-bottom-3">
                 <label class="nhsuk-label--m nhsuk-u-margin-bottom-2" for="photo-source">
                   Select a different photo
@@ -793,12 +980,12 @@
 
     <!-- Actions -->
 
-    <a class="nhsuk-button nhsuk-u-margin-right-5" href="/idchecker/v5/confirm-details">Approve</a>
 
-    <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-right-5" href="/idchecker/v5/reject-application">Reject</a>
 
-    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-5" href="/idchecker/v5/move-to-holding">Refer</a>
+    <a class="nhsuk-button nhsuk-u-margin-right-5" href="/idchecker/dev-ready/confirm-details">Approve</a>
+    <a class="nhsuk-button nhsuk-button--secondary delete-button" href="/idchecker/dev-ready/reject-application">Reject</a>
 
+    
 
     <!-- end content -->
 
