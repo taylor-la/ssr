@@ -1653,9 +1653,7 @@ router.post('/applicant/v16/step-2/check-your-details-dpoa', function (req, res)
 })
 
 
-
-
-// applicant dev-ready
+// applicant dev ready
 
 
 router.post('/applicant/dev-ready/step-1/address-postcode', function (req, res) {
@@ -1674,7 +1672,21 @@ router.post('/applicant/dev-ready/step-1/address-postcode', function (req, res) 
 
 })
 
+router.post('/applicant/dev-ready/step-1/poa', function (req, res) {
 
+  // Make a variable and give it the value from 'how-many-balls'
+  var uk = req.session.data['uk']
+
+  // Check whether the variable matches a condition
+  if (uk == "no"){
+    // Send user to next page
+    res.redirect('/applicant/dev-ready/step-1/poa')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicant/dev-ready/step-1/dpoa')
+  }
+
+})
 
 router.post('/applicant/dev-ready/step-1/1-photo-id', function (req, res) {
 
@@ -1703,7 +1715,7 @@ router.post('/applicant/dev-ready/step-2/start', function (req, res) {
     res.redirect('/applicant/dev-ready/offline/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/dev-ready/step-2/start')
+    res.redirect('/applicant/dev-readystep-2/start')
   }
 
 })
@@ -1778,7 +1790,13 @@ router.post('/applicant/dev-ready/step-2/delivery', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
+  var uk = req.session.data['uk']
 
+  // Check whether the variable matches a condition
+  if (uk == "no"){
+    // Send user to next page
+    res.redirect('/applicant/dev-ready/step-2/delivery-postcode')
+  }
   // Check whether the variable matches a condition
   if (dpoa == "no"){
     // Send user to next page
@@ -1794,8 +1812,13 @@ router.post('/applicant/dev-ready/step-2/check-your-details-poa', function (req,
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
+  var uk = req.session.data['uk']
 
   // Check whether the variable matches a condition
+  if (uk == "no"){
+    // Send user to next page
+    res.redirect('/applicant/dev-ready/step-2/check-your-details-poa')
+  }
   if (dpoa == "no"){
     // Send user to next page
     res.redirect('/applicant/dev-ready/step-2/check-your-details-poa')
@@ -1810,8 +1833,13 @@ router.post('/applicant/dev-ready/step-2/check-your-details-dpoa', function (req
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
+  var uk = req.session.data['uk']
 
   // Check whether the variable matches a condition
+  if (uk == "no"){
+    // Send user to next page
+    res.redirect('/applicant/dev-ready/step-2/check-your-details-poa')
+  }
   if (dpoa == "no"){
     // Send user to next page
     res.redirect('/applicant/dev-ready/step-2/check-your-details-poa')
@@ -1821,6 +1849,9 @@ router.post('/applicant/dev-ready/step-2/check-your-details-dpoa', function (req
   }
 
 })
+
+
+
 
 
 module.exports = router;

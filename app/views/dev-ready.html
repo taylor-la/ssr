@@ -28,6 +28,8 @@
   
       </div>
 
+       <!-- applicant -->
+
       <div id="applicant-2" class="tabcontent">
 
         <h2>Applicant</h2>
@@ -37,6 +39,7 @@
         
         <p>The following areas are still in development:</p>
         <ul>
+          <li>Route users based on address check result (CIDV-2671)</li>
           <li>Pre-populate preferred name field (CIDV-2479)</li>
           <li>Select driving licence as a proof of address (CIDV-2511)</li>
           <li>Updates to rejection email content (CIDV-2431)</li>
@@ -91,10 +94,12 @@
         <h4>Address check</h4>
   
         <ul>
+          <li><a href="/applicant/dev-ready/step-1/uk">Do you have a UK address</a></li>
           <li><a href="/applicant/dev-ready/step-1/dpoa">We are going to verify your address</a></li>
           <li><a href="/applicant/dev-ready/step-1/address-postcode">Enter your postcode</a></li>
           <li><a href="/applicant/dev-ready/step-1/address-select">Select an address</a></li>
           <li><a href="/applicant/dev-ready/step-1/address-manual">Enter your address (manually)</a></li>
+          <li><a href="/applicant/dev-ready/step-1/check-your-address">Check your address</a></li>
         </ul>
   
         <h4>Select ID documents</h4>
@@ -103,6 +108,7 @@
           <li><a href="/applicant/dev-ready/step-1/passport">Select if you have a passport</a></li>
           <li><a href="/applicant/dev-ready/step-1/1-photo-id">Select a photo ID</a></li>
           <li><a href="/applicant/dev-ready/step-1/poa">Select a proof of address document</a></li>
+          <li><a href="/applicant/dev-ready/step-1/dpoa-0">Select a proof of address document (after address check fail)</a></li>
           <li><a href="/applicant/dev-ready/step-1/2-photo-id">Select 2 photo IDs</a></li>
           <li><a href="/applicant/dev-ready/offline/no-photo-id">I do not have a photo id</a></li>
           <li><a href="/applicant/dev-ready/offline/no-poa">I do not have a proof of address document</a></li>
@@ -170,7 +176,7 @@
             <li><a href="/applicant/dev-ready/email/rejected-duplicate">Document is a duplicate</a></li>
             <li><a href="/applicant/dev-ready/email/rejected-expired">Document has expired</a></li>  
             <li><a href="/applicant/dev-ready/email/rejected-missing-info">Document is missing info</a></li>
-            <li><a href="/applicant/dev-ready/email/rejected-not-accepted">Documnent is not accepted</a></li>
+            <li><a href="/applicant/dev-ready/email/rejected-not-accepted">Document is not accepted</a></li>
             <li><a href="/applicant/dev-ready/email/rejected-not-legible">Document is not legible</a></li>
             <li><a href="/applicant/dev-ready/email/rejected-face-scan">Face scan does not match photo IDs</a></li>
             <li><a href="/applicant/dev-ready/email/rejected-smartcard-guidelines">Smartcard photo does not meet guidelines</a></li>
@@ -197,6 +203,8 @@
         </ul>
 
       </div>
+
+       <!-- inviter -->
 
       <div id="inviter-2" class="tabcontent">
         <h2>Inviter</h2>
@@ -345,6 +353,8 @@
         <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 
       </div>
+
+      <!-- id checker -->
 
       <div id="idchecker-2" class="tabcontent">
         <h2>ID Checker</h2>
