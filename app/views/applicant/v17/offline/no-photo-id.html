@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  You need a photo ID to use this online service
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        You need a photo ID to use this online service
+      </h1>
+
+      <p>Contact <a href="">[inviter-support-email]</a> to verify your identity in a different way. Include your application ID in all emails.</p>
+
+      <p>You will be able to provide other evidence at a face to face meeting.</p>
+
+      <p>Your Application ID is: 56b253f3-260a-46d4-85f5-a491f7832c41</p>
+
+      <p>This is a new service, your <a href="">feedback</a> will help us improve it.</p>
+
+
+    </div>
+
+  </div>
+{% endblock %}

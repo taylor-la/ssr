@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter a delivery address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v17/step-1/check-your-address" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-padding-bottom-3">
+              Enter your current UK address
+            </h1>
+          </legend>
+      
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-1">
+                Building number or name <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+              </label>
+              <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                For example, '56' or 'Flat 9 Millgate House'
+              </div>
+              <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" value="{{ data['address-line-1'] }}">
+            </div>
+          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-2">
+                Street <span class="nhsuk-u-visually-hidden">line 2 of 2</span>
+              </label>
+              <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                For example, Berwick Avenue
+              </div>
+              <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" value="{{ data['address-line-2'] }}">
+            </div>
+          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text" value="{{ data['address-town'] }}">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-one-quarter" id="address-postcode" name="address-postcode" type="text" value="{{ data['address-postcode'] }}">
+            </div>
+          
+      
+        </fieldset>
+      
+        {{ button({
+          "text": "Continue"
+        }) }}
+      
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

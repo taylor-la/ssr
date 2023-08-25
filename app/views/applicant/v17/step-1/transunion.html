@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  How TransUnion verifies your UK address
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v17/step-1/dpoa",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        How TransUnion verifies your UK address
+      </h1>
+
+      <p>We share your name, date of birth and UK address with a trusted organisation, <a href="https://www.transunion.co.uk/about-us">TransUnion</a>.</p>
+
+      <p>TransUnion are an information and insights company.</p>
+
+      <p>They will check for connections between your address, name and organisations like:</p>
+
+      <ul>
+        <li>banks</li>
+        <li>utility providers</li>
+        <li>local councils</li>
+        <li>electoral register</li>
+      </ul>
+
+      <p>This check does not impact your credit score. Only you can see that this check has been done.</p>
+
+      <h2>How your data is used</h2>
+
+      <p>For more information about how your data is used, <a href="https://digital.nhs.uk/services/care-identity-service/registration-authority-users/registration-authority-help/privacy-notice">view our terms of use and privacy policy</a>.</p>
+
+
+    </div>
+
+  </div>
+{% endblock %}

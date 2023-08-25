@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Download the NHS Verify Care ID app
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <p class="nhsuk-page-heading__small nhsuk-u-margin-bottom-1 grey-text">Step 3 of 3</p>
+
+      <h1>
+        Download the NHS Verify Care ID app
+      </h1>
+
+      <p>A link for the secure NHS Verify Care ID app has been sent to *********<strong>5314</strong>. </p>
+
+      <p>Use the mobile app to complete your application.</p>
+
+      <p>The app will photograph your ID documents and scan your face to verify your identity.</p>
+
+      
+
+      <p>You will need:</p>
+      <ul>
+        <li>your {{ data['passport'] }} {{ data['1-photo-id'] }} {{ data['2-photo-id'] }} {{ data['poa'] }}</li>
+      </ul>   
+     
+      <p><a href="/applicant/v17/offline/no-mobile">I cannot use a mobile phone to take photos and scan my face</a></p>
+      
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I have not received the link
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p><a href="#">Send the link again</a></p>
+          <p>If your mobile number is incorrect, contact <a href="#">[invite-support-email]</a> to get your mobile number updated. Include your application ID in all emails.</p>
+        </div>
+      </details>
+  
+
+    </div>
+
+  </div>
+{% endblock %}
