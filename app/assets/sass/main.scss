@@ -243,3 +243,149 @@
   color: #7c2855;
   text-decoration: none;
 }
+
+
+@media all and (min-width: 769px) {
+  .no-photo {display:block;}
+  .camera-link {display:none;}
+  .guideline-photo {width:100%;}
+  #smartcard-container {
+    position: relative; 
+    width: 540px; 
+    height: 345px;
+  }
+  #card-layout {
+    width: 540px; 
+    position: absolute;
+  }
+  #pictureFromCamera {
+    width: 138px; 
+    height: 175px; 
+    position: absolute; 
+    right: 42px; 
+    top: 88px; 
+    object-fit: cover;
+  }
+  #pictureFromCamera2 {
+    width: 138px; 
+    height: 175px; 
+    position: absolute; 
+    right: 42px; 
+    top: 88px; 
+    object-fit: cover;
+  }
+  #user-uuid {
+    position: absolute; 
+    right: 42px; 
+    bottom: 44px; 
+    padding: 0; 
+    margin: 0; 
+    font-weight: bold;
+  }
+  #user-name {
+    position: absolute; 
+    right: 42px; 
+    bottom: 18px; 
+    padding: 0; 
+    margin: 0; 
+    font-weight: bold;
+  }
+
+}
+
+@media all and (min-width:641px) and (max-width: 768px) {
+  .no-photo {display:none;}
+  .camera-link {display:block;}
+  .guideline-photo {width:50%;}
+  #smartcard-container {
+    position: relative; 
+    width: 450px; 
+    height: 288px;
+  }
+  #card-layout {
+    width: 450px; 
+    position: absolute;
+  }
+  #pictureFromCamera {
+    width: 115px; 
+    height: 145px; 
+    position: absolute; 
+    right: 35px; 
+    top: 70px; 
+    object-fit: cover;
+  }
+  #pictureFromCamera2 {
+    width: 115px; 
+    height: 145px; 
+    position: absolute; 
+    right: 35px; 
+    top: 70px; 
+    object-fit: cover;
+  }
+  #user-uuid {
+    position: absolute; 
+    right: 35px; 
+    bottom: 35px; 
+    padding: 0; 
+    margin: 0; 
+    font-weight: bold;
+  }
+  #user-name {
+    position: absolute; 
+    right: 35px; 
+    bottom: 10px; 
+    padding: 0; 
+    margin: 0; 
+    font-weight: bold;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .no-photo {display:none;}
+  .camera-link {display:block;}
+  .guideline-photo {width:75%;}
+  #smartcard-container {
+    position: relative; 
+    width: 340px; 
+    height: 217px;
+  }
+  #card-layout {
+    width: 340px; 
+    position: absolute;
+  }
+  #pictureFromCamera {
+    width: 88px; 
+    height: 111px; 
+    position: absolute; 
+    right: 27px; 
+    top: 55px; 
+    object-fit: cover;
+  }
+  #pictureFromCamera2 {
+    width: 88px; 
+    height: 111px; 
+    position: absolute; 
+    right: 27px; 
+    top: 55px; 
+    object-fit: cover;
+  }
+  #user-uuid {
+    position: absolute; 
+    right: 27px; 
+    bottom: 24px; 
+    padding: 0; 
+    margin: 0; 
+    font-weight: bold;
+    font-size:14px;
+  }
+  #user-name {
+    position: absolute; 
+    right: 27px; 
+    bottom: 6px; 
+    padding: 0; 
+    margin: 0; 
+    font-weight: bold;
+    font-size:14px;
+  }
+
+}

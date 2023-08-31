@@ -14,19 +14,6 @@
 
 {% block content %}
 
-<style>
-  @media all and (min-width: 768px) {
-    .desktop-only {display:block;}
-    .mobile-only {display:none;}
-    .guideline-photo {width:100%;}
-}
-
-  @media all and (max-width: 767px) {
-    .desktop-only {display:none;}
-    .mobile-only {display:block;}
-    .guideline-photo {width:40%;}
-}
-</style>
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
@@ -36,8 +23,6 @@
         <h1>
           Upload a photo of your face for your smartcard
         </h1>
-
-        
 
         <div class="nhsuk-do-dont-list nhsuk-u-margin-bottom-4">
           <h2 class="nhsuk-do-dont-list__label">Your photo must:</h2>
@@ -203,7 +188,7 @@
       </label>
 
       <label for="cameraFileInput2">
-        <span class="camera-link mobile-only">Or take a photo using your camera's device</span>
+        <span class="camera-link">Or take a photo using your camera's device</span>
 
          <!-- The hidden file `input` for opening the native camera -->
         <input class="nhsuk-u-visually-hidden"
@@ -214,7 +199,7 @@
         />
       </label>
 
-      <div class="desktop-only">
+      <div class="no-photo">
         <details class="nhsuk-details" id="no-photo">
           <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text">
@@ -242,23 +227,21 @@
             <fieldset class="nhsuk-fieldset">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
                 <h1 class="nhsuk-fieldset__heading">
-                  Do you want to use this photo?
+                  Review your smartcard photo
                 </h1>
               </legend>
 
              
 
 
-              <div class="nhsuk-u-margin-top-5" style="position: relative; width: 450px; height: 282px;">
-                <img id="card-layout" style="width: 450px; position: absolute;" class="nhsuk-image__img" src="/images/careid-example.png" alt="CareID Card Preview">
-                <img id="pictureFromCamera" style="width: 115px; height: 145px; position: absolute; right: 35px; top: 70px; object-fit: cover;" class="nhsuk-image__img" alt="CareID Card Preview">
-                <p id="user-uuid" style="position: absolute; right: 35px; bottom: 35px; padding: 0; margin: 0; font-weight: bold;">123456789012</p>
-                <p id="user-name" style="position: absolute; right: 35px; bottom: 10px; padding: 0; margin: 0; font-weight: bold;">Your name</p>
+              <div id="smartcard-container" class="nhsuk-u-margin-top-5">
+                <img id="card-layout" class="nhsuk-image__img" src="/images/careid-example.png" alt="smartcard preview">
+                <img id="pictureFromCamera" class="nhsuk-image__img" alt="CareID Card Preview">
+                <img id="pictureFromCamera2" class="nhsuk-image__img" alt="">
+                <p id="user-uuid">123456789012</p>
+                <p id="user-name">Your name</p>
               </div>
 
-              <div class="container nhsuk-u-width-one-half nhsuk-u-margin-top-4">
-                <img id="pictureFromCamera2" alt="Your passport style photo" />
-              </div>
               
 
               <div class="nhsuk-do-dont-list nhsuk-u-margin-bottom-4">
