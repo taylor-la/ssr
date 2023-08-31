@@ -244,11 +244,14 @@
   text-decoration: none;
 }
 
+.guideline-photo {
+  width:100%;
+}
+
 
 @media all and (min-width: 769px) {
   .no-photo {display:block;}
   .camera-link {display:none;}
-  .guideline-photo {width:100%;}
   #smartcard-container {
     position: relative; 
     width: 540px; 
@@ -296,7 +299,6 @@
 @media all and (min-width:641px) and (max-width: 768px) {
   .no-photo {display:none;}
   .camera-link {display:block;}
-  .guideline-photo {width:50%;}
   #smartcard-container {
     position: relative; 
     width: 450px; 
@@ -340,10 +342,11 @@
   }
 }
 
+
+
 @media all and (max-width: 640px) {
   .no-photo {display:none;}
   .camera-link {display:block;}
-  .guideline-photo {width:75%;}
   #smartcard-container {
     position: relative; 
     width: 340px; 
