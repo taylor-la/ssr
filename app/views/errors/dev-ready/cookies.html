@@ -1,0 +1,206 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Cookies 
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Cookie policy
+      </h1>
+
+      <h2>What are cookies?</h2>
+
+      <p>Cookies are small files on your phone, tablet or computer when you visit a website.</p>
+
+      <p>They store information about how you use the website, such as the pages you visit.</p>
+
+      <p>Cookies are not viruses or computer programs. They are very small so do not take up much space.</p>
+
+      <h2>How we use cookies</h2>
+
+      <p>We only use cookies to:</p>
+
+      <ul>
+        <li>make our website work</li>
+        <li>measure how you use our website, such as which links you click on (analytics cookies), if you give us permission</li>
+      </ul>
+
+      <p>We do not use any other cookies, for example, cookies that help with health campaigns.</p>
+
+      <h2>Cookies that make our website work</h2>
+
+      <p>We use cookies to keep our website secure and fast.</p>
+
+    </div>
+
+  </div>
+
+  <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                List of cookies that make our website work
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption"></caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Name
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Purpose
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Expires
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Name </span>nhsuk-cookie-consent
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Purpose </span>Remembers if you used our cookies banner
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Expires</span>When you close the browser (if you do not use the banner) or 1 year (if you use the banner)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          
+            </div>
+          </details>
+        </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 class="nhsuk-u-padding-top-6">Cookies that measure website use</h2>
+      <p>We also like to use analytics cookies. These cookies store anonymous information about how you use our website, such as which pages you visit or what you click on.</p>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            List of cookies that measure website use
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-table__caption"></caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Name
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Purpose
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Expires
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Name </span>_ga
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Purpose </span>Used to distinguish users.
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Expires</span>2 years
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Name </span>_ga_(container-id)
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Purpose </span>Used to persist session state.
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Expires</span>2 years
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      
+        </div>
+      </details>
+    </div>
+  </div>
+      
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      
+      <p>We'll only use these cookies if you say it's OK. We'll use a cookie to save your settings.</p>
+
+
+      <form action="/errors/dev-ready/cookies-saved" method="post" class="form">
+
+      
+      <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h3 class="nhsuk-fieldset__heading">
+              Tell us if we can use analytics cookies
+            </h3>
+          </legend>
+      
+          <div class="nhsuk-radios">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="cookies-yes" name="cookies" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="cookies-yes">
+                Use cookies to measure my website use
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="cookies-no" name="cookies" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="cookies-yes">
+                Do not use cookies to measure my website use
+              </label>
+            </div>
+      
+          </div>
+        </fieldset>
+      
+      </div>
+
+      {{ button({
+        "text": "Save my cookie settings"
+      }) }}
+
+    </form>
+
+    </div>
+  </div>
+      
+
+      
+
+      
+   
+      
+
+      
+
+    
+{% endblock %}

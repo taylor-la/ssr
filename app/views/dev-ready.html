@@ -25,6 +25,8 @@
         <button class="tablinks" onclick="openList(event, 'applicant-2')"  id="defaultOpen">Applicant</button>
         <button class="tablinks" onclick="openList(event, 'inviter-2')">Inviter</button>
         <button class="tablinks" onclick="openList(event, 'idchecker-2')">ID Checker</button>
+        <button class="tablinks" onclick="openList(event, 'service-2')">Service Manager</button>
+        <button class="tablinks" onclick="openList(event, 'errors-2')">Errors</button>
   
       </div>
 
@@ -431,6 +433,121 @@
         <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 
        
+      </div>
+
+       <!-- service manager -->
+
+      <div id="service-2" class="tabcontent">
+        <h2>Service Manager</h2>
+        <h3 class="nhsuk-u-margin-bottom-3 "><a class="nhsuk-link--no-visited-state" href="/service/dev-ready/dashboard">Service Manager ready for development prototype</a></h3>
+
+        
+        <p>The following areas are still in development:</p>
+        <ul>
+          <li>Cancel applications (CIDV-2417)</li>
+          <li>Overturn a rejection (CIDV-2081)</li>
+        </ul>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+ 
+        <h3>Service Manager dashboard</h3>
+  
+        <ul>
+          <li><a href="/service/dev-ready/dashboard">Service Manager dashboard</a></li>
+        </ul>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+        <h3>Service Manager actions</h3>
+
+        <h4>View application payload</h4>
+  
+        <ul>
+          <li><a href="/service/dev-ready/payload">Enter application ID to view payload</a></li>
+        </ul>
+
+        <h4>Cancel an application</h4>
+
+        <ul>
+          <li><a href="/service/dev-ready/cancel">Enter application ID to cancel application</a></li>
+          <li><a href="/service/dev-ready/cancel-error">Application cannot be cancelled error</a></li>
+          <li><a href="/service/dev-ready/cancel-reason">Select reason for cancelling</a></li>
+          <li><a href="/service/dev-ready/cancelled">Application cancelled</a></li>
+        </ul>
+
+        <h4>Retry Xydus approval</h4>
+
+        <ul>
+          <li><a href="/service/dev-ready/approval-retry">Enter application ID to retry Xydus approval</a></li>
+          <li><a href="/service/dev-ready/approval-retry-error">Application cannot be approved again error</a></li>
+          <li><a href="/service/dev-ready/approved">Application approved from Xydus</a></li>
+        </ul>
+
+        <h4>Rsend Xydus app link</h4>
+
+        <ul>
+          <li><a href="/service/dev-ready/resend-link">Enter application ID to resend Xydus app link SMS</a></li>
+          <li><a href="/service/dev-ready/resent">Xydus app link SMS resent</a></li>
+        </ul>
+
+        <h4>Approve a rejected application</h4>
+
+        <ul>
+          <li><a href="/service/dev-ready/overturn-rejection">Enter application ID to approve a rejection application</a></li>
+          <li><a href="/service/dev-ready/overturn-reason">Add reason for approving</a></li>
+          <li><a href="/service/dev-ready/overturn-approved">Application approved</a></li>
+        </ul>
+
+
+
+
+       
+      </div>
+
+       <!-- errors -->
+
+       <div id="errors-2" class="tabcontent">
+        <h2>Error and supprting page</h2>
+  
+        <p>The following areas are still in development:</p>
+        <ul>
+          <li>Set cookie preferences (CIDV-2572) </li>
+        </ul>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+        <h3>Service outages</h3>
+  
+        <ul>
+          <li><a href="/errors/dev-ready/404">Page not found</a></li>
+          <li><a href="/errors/dev-ready/500">There is a problem with our service</a></li>
+          <li><a href="/errors/dev-ready/503-maintenance">Service is unavailable (for maintenance) </a></li>
+          <li><a href="/errors/dev-ready/503-outage">Service is unavailable</a></li>
+        </ul>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+ 
+        <h3>Access and time outs</h3>
+  
+        <ul>
+          <li><a href="/errors/dev-ready/401">Access denied</a></li>
+          <li><a href="/errors/dev-ready/timeout-warning">Time out warning</a></li>
+          <li><a href="/errors/dev-ready/time-out">Timed out</a></li>
+        </ul>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+        <h3>Cookies</h3>
+  
+        <ul>
+          <li><a href="/errors/dev-ready/cookie-banner">Cookie banner</a></li>
+          <li><a href="/errors/dev-ready/cookies">Cookies</a></li>
+          <li><a href="/errors/dev-ready/cookies-saved">Cookie preferences saved</a></li>
+        </ul>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+             
       </div>
      
         

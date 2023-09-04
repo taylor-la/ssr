@@ -1,0 +1,72 @@
+{% extends 'layout-service-dev-ready.html' %}
+
+{% block pageTitle %}
+  Service management
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        Service management
+      </h1>
+
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/service/dev-ready/payload">View an application payload</a>
+              </h2>
+              <p class="nhsuk-card__description">View the JSON payload provided by Xydus.</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/service/dev-ready/cancel">Cancel an application</a>
+              </h2>
+              <p class="nhsuk-card__description">Cancel an application to prevent an applicant continuing.</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/service/dev-ready/approval-retry">Retry Xydus approval</a>
+              </h2>
+              <p class="nhsuk-card__description">Retry the Xydus approval from EMS2 to ID Checker when there is an issue processing the payload.</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/service/dev-ready/resend-link">Resend Download App link</a>
+              </h2>
+              <p class="nhsuk-card__description">Resend the Download App link SMS to an applicant when there is an issue using the app.</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/service/dev-ready/overturn-rejection">Approve a rejected application</a>
+              </h2>
+              <p class="nhsuk-card__description">Approve an application that has been rejected in error.</p>
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+
+    </div>
+
+  </div>
+{% endblock %}
