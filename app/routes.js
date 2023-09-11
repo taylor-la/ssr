@@ -1913,7 +1913,7 @@ router.post('/applicant/dev-ready/step-2/start', function (req, res) {
     res.redirect('/applicant/dev-ready/offline/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/dev-readystep-2/start')
+    res.redirect('/applicant/dev-ready/step-2/start')
   }
 
 })
