@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Enter a UK address
+  Enter your UK postcode
 {% endblock %}
 
 {% block beforeContent %}
@@ -35,24 +35,50 @@
             <details class="nhsuk-details">
               <summary class="nhsuk-details__summary">
                 <span class="nhsuk-details__summary-text">
-                  I have more than one UK address or have recently moved
+                  I have more than 1 UK address or have recently moved
                 </span>
               </summary>
               <div class="nhsuk-details__text">
-                <p>Enter the address with the most connections to organisations like:</p>
+                <p>TransUnion will check for accounts registered in your name at your address. Accounts include banks, utility providers, or the electoral register.</p>
+                <p>If you have more than 1 UK address:</p>
                 <ul>
-                  <li>banks</li>
-                  <li>utility providers </li>
-                  <li>electoral register</li>
+                  <li>enter the address with the most accounts registered</li>
                 </ul>
                 <p>If you have moved within the last couple of months:</p>
                 <ul>
-                  <li>provide your previous address if you are unlikely to have any activity connected to your name at your new address</li>
-                  <li>or go back to the previous screen and verify your identity by providing a proof of address document for your new address and 2 photo IDs</li>
+                  <li>enter your previous address if you are more likely to have accounts registered there</li>
+                </ul>
+                <p>If you do not have accounts registered at your address:</p>
+                <ul>
+                  <li><a href="/applicant/v17/step-1/poa">verify your identity by  providing a proof of address document instead</a> </li>
                 </ul>
               </div>
             </details>
-        
+
+
+            <details class="nhsuk-details" style="display:none;">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  I have more than 1 UK address or have recently moved
+                </span>
+              </summary>
+              <div class="nhsuk-details__text">
+                <p>TransUnion will check for connections between your address, name and organisations like banks, utility providers, or the electoral register.</p>
+                <p>If you have more than 1 UK address:</p>
+                <ul>
+                  <li>enter the address with the most connections</li>
+                </ul>
+                <p>If you have moved within the last couple of months:</p>
+                <ul>
+                  <li>enter your previous address if you are more likely to have connections there</li>
+                </ul>
+                <p>If you are unlikely to have any have connections to your UK address:</p>
+                <ul>
+                  <li><a href="/applicant/v17/step-1/poa">verify your identity by  providing a proof of address document instead</a> </li>
+                </ul>
+              </div>
+            </details>
+
             <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode-1" name="address-postcode-1" type="text" value="{{ data['address-postcode-1'] }}">
           </div>
         

@@ -215,23 +215,23 @@
 
         <h2 class="nhsuk-u-margin-top-5">Upload your photo</h2>
 
-        <label for="cameraFileInput">
+        <label for="cameraFileInputA">
         <span class="nhsuk-button">Choose your photo</span>
 
          <!-- The hidden file `input` for opening the native camera -->
         <input class="nhsuk-u-visually-hidden"
-          id="cameraFileInput"
+          id="cameraFileInputA"
           type="file"
           accept="image/*"
         />
       </label>
 
-      <label for="cameraFileInput2">
+      <label for="cameraFileInputB">
         <span class="camera-link">Or take a photo using your device's camera</span>
 
          <!-- The hidden file `input` for opening the native camera -->
         <input class="nhsuk-u-visually-hidden"
-          id="cameraFileInput2"
+          id="cameraFileInputB"
           type="file"
           accept="image/*"
           capture="user"
@@ -272,8 +272,8 @@
 
               <div id="smartcard-container" class="nhsuk-u-margin-top-5">
                 <img id="card-layout" class="nhsuk-image__img" src="/images/careid-example.png" alt="smartcard preview">
-                <img id="pictureFromCamera" class="nhsuk-image__img" alt="CareID Card Preview">
-                <img id="pictureFromCamera2" class="nhsuk-image__img" alt="">
+                <img id="pictureFromCameraA" class="nhsuk-image__img" alt="CareID Card Preview">
+                <img id="pictureFromCameraB" class="nhsuk-image__img" alt="">
                 <p id="user-uuid">123456789012</p>
                 <p id="user-name">Your name</p>
               </div>
@@ -418,22 +418,22 @@
     var editPhoto = document.getElementById('edit-image');
 
     document
-      .getElementById("cameraFileInput")
+      .getElementById("cameraFileInputA")
       .addEventListener("change", function () {
         editPhoto.style.display = "block";
         instructions.style.display = "none";
         document
-          .getElementById("pictureFromCamera")
+          .getElementById("pictureFromCameraA")
           .setAttribute("src", window.URL.createObjectURL(this.files[0]));
       });
 
       document
-      .getElementById("cameraFileInput2")
+      .getElementById("cameraFileInputB")
       .addEventListener("change", function () {
         editPhoto.style.display = "block";
         instructions.style.display = "none";
         document
-          .getElementById("pictureFromCamera2")
+          .getElementById("pictureFromCameraB")
           .setAttribute("src", window.URL.createObjectURL(this.files[0]));
       });
 
