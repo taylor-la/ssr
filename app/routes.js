@@ -1699,12 +1699,12 @@ router.post('/applicant/v17/step-1/1-photo-id', function (req, res) {
     res.redirect('/applicant/v17/step-1/1-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v17/step-2/profile-photo-upload')
+    res.redirect('/applicant/v17/step-2/start')
   }
 
 })
 
-router.post('/applicant/v17/step-2/profile-photo-upload', function (req, res) {
+router.post('/applicant/v17/step-2/start', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var photo1 = req.session.data['1-photo-id']
@@ -1715,7 +1715,7 @@ router.post('/applicant/v17/step-2/profile-photo-upload', function (req, res) {
     res.redirect('/applicant/v17/offline/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v17/step-2/profile-photo-upload')
+    res.redirect('/applicant/v17/step-2/start')
   }
 
 })
@@ -1747,7 +1747,7 @@ router.post('/applicant/v17/offline/no-photo-id', function (req, res) {
     res.redirect('/applicant/v17/offline/no-photo-id')
   } else {
     // Send user to ineligible page
-    res.redirect('/applicant/v17/step-2/profile-photo-upload')
+    res.redirect('/applicant/v17/step-2/start')
   }
 
 })
