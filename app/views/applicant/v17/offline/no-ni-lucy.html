@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  You need a National Insurance number to use this online service
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v17/dup-check/ni-number",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+       You need to email ra-services-barset@nhs.net to continue
+      </h1>
+
+      <p>If you do not have a National Insurance Number, email the person who invited you.</p>
+
+      <p>They will:</p>
+
+      <ul>
+        <li>check if you already have an NHS Care ID profile using other information</li>
+        <li>arrange a face to face meeting to verify your identity and set up your NHS Care ID profile (if required)</li>
+      </ul>
+
+      <h2>What to include in your email</h2>
+
+      <p>Send your email to: <a href="#">ra-services-barset@nhs.net</a></p>
+
+      <p>Use the subject line: Apply for Care ID - No National Insurance Number</p>
+
+      <p>Include this text:</p>
+
+        <p class="nhsuk-u-margin-left-4">My application ID is: 4650349sc-28449347-ck340347-cn34834</p>
+        <p class="nhsuk-u-margin-left-4">I cannot complete my online application as I do not have a National Insurance number.</p>
+        <p class="nhsuk-u-margin-left-4">I need to arrange a face to face meeting to verify my identity and set up my NHS Care ID profile. </p>
+
+ 
+      <p>This is a new service, your <a href="">feedback</a> will help us improve it.</p>
+
+    </div>
+
+  </div>
+{% endblock %}
