@@ -88,7 +88,7 @@ if (window.location.href.indexOf('help') > 0) {
       $('a.nhsuk-account-navigation__link[href$="/inviter/dev-ready/help"]').addClass("nhsuk-account-navigation__link__current");
     }
 
- 
+
   
 
   
