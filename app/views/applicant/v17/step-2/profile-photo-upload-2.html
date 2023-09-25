@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Upload a passport style photo of your face
+  Upload a professional photo for your smartcard
 {% endblock %}
 
 {% block outerContent %}
   {{ backLink({
-    "href": "javascript:history.go(-1)",
+    "href": "/applicant/v17/step-2/profile-photo-upload",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -50,21 +50,6 @@
             </figure>
           </div>
         </div>
-
-        <details class="nhsuk-details">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              Review image options
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            <ul>
-              <li><a href="/applicant/v17/step-2/profile-photo-upload">Original</a></li>
-              <li><a href="/applicant/v17/step-2/profile-photo-upload-3">Long</a></li>
-              <li><a href="/applicant/v17/step-2/profile-photo-upload-4">Smartcard</a></li>
-            </ul>
-          </div>
-        </details>
 
         <div class="nhsuk-do-dont-list nhsuk-u-margin-bottom-4">
           <h2 class="nhsuk-do-dont-list__label">Your photo must:</h2>
