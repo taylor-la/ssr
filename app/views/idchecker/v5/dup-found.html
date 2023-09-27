@@ -16,135 +16,117 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-          <h1>Possible duplicate profile found</h1>
+      <h1>Possible duplicate profile found</h1>
+  
+
+      <p>There is a possible duplicate profile for this applicant:</p>
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            UUID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <a href="#">4628 3347 0474</a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Full name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Part match
+          </dd>
+        </div>
       
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Exact match
+          </dd>
+        </div>
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Exact match
+          </dd>
+        </div>
+    
+      </dl>
 
-            <p>There is a possible duplicate profile for this applicant:</p>
 
-            <dl class="nhsuk-summary-list">
+      <form action="/idchecker/v5/dashboard" method="post" class="form">
 
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  UUID
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  <a href="#">4628 3347 0474</a>
-                </dd>
-              </div>
+        <div class="nhsuk-form-group">
+      
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h2 class="nhsuk-fieldset__heading">
+                Is this application a duplicate?
+              </h2>
+            </legend>
 
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  Full name
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  Part match
-                </dd>
-              </div>
-            
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  Date of birth
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  Exact match
-                </dd>
-              </div>
-            
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  National Insurance number
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  Exact Match
-                </dd>
-              </div>
-          
-            
-            </dl>
+            <div class="nhsuk-hint">Check CIS or CIM to confirm whether this application is a duplicate</div>
 
-            <form action="/idchecker/v5/dashboard" method="post" class="form">
-
-              <div class="nhsuk-form-group">
-            
-                <fieldset class="nhsuk-fieldset">
-                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                    <h2 class="nhsuk-fieldset__heading">
-                      form title
-                    </h2>
-                  </legend>
-
-            <div class="nhsuk-radios nhsuk-radios--conditional">
+            <div class="nhsuk-radios">
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+                <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email">
                 <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                  I have checked the profile and need to create a new Care ID profile
+                  Yes, this application is a duplicate
                 </label>
               </div>
         
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-        
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="email">
-                    I have checked the profile and need to create a new Care ID profile
-                  </label>
-                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-                </div>
-        
-              </div>
         
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
                 <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-                  Reject this application
+                 No, this application requires a new Care ID profile
                 </label>
               </div>
-        
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
-        
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="phone">
-                    Phone number
-                  </label>
-                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="phone" name="phone" type="text">
-                </div>
-        
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="contact-3" name="contact" type="radio" value="text" aria-controls="conditional-contact-3" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
-                  Refer this application
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-3">
-        
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="mobile">
-                    Mobile phone number
-                  </label>
-                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
-                </div>
-        
-              </div>
-        
+
             </div>
 
           </fieldset>
+
+        </div>
+
+        {{ button({
+          "text": "Submit"
+        }) }}
+
+      </form>
+
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I am not able to check CIS or CIM 
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+          <p>You can find your NHS number by logging in to a GP online service or on any document the NHS has sent you, such as your:</p>
+          <ul>
+            <li>prescriptions</li>
+            <li>test results</li>
+            <li>hospital referral letters</li>
+            <li>appointment letters</li>
+          </ul>
+          <p>Ask your GP surgery for help if you can't find your NHS number.</p>
       
         </div>
-  
-
-      {{ button({
-        "text": "Create Care ID profile",
-        "id": "btn_submit"
-      }) }}
-    </form>
+      </details>
 
       
 
     </div>
-
   </div>
 {% endblock %}
