@@ -6,7 +6,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/idchecker/v5/lists/waiting",
+    "href": "/idchecker/v5/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -23,10 +23,49 @@
     </h1>
 
     <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: In review</p>
+  
+  </div>
+</div>
 
-    
+<div class="nhsuk-grid-row">
 
-    <div class="nhsuk-card nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-one-quarter" style="position: sticky; top: 32px;">
+
+    <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+      <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+      <ol class="nhsuk-contents-list__list nhsuk-body-s">
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#summary">Summary</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#photo-id-1">Photo ID 1</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#photo-id-2">Photo ID 2</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#poa">Proof of address</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#name">Name and date of birth</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#face-scan">Face likeness and liveness</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#smartcard">Smartcard photo</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#actions">Actions</a>
+        </li>
+      </ol>
+    </nav>
+
+  </div>
+
+  <div class="nhsuk-grid-column-three-quarters">
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5" id="summary">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading">Application summary</h2>
         
@@ -82,9 +121,6 @@
       </div>
     </div>
 
-   
-
-    <!-- Digital proof of address -->
     
 
       <!-- Photo ID 1 -->
@@ -151,6 +187,12 @@
                                 <input class="nhsuk-checkboxes__input" id="unacceptable-1" name="reject-id-one" type="checkbox" value="unacceptable">
                                 <label class="nhsuk-label nhsuk-checkboxes__label" for="unacceptable-1">
                                   Not accepted
+                                </label>
+                              </div>
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="unoriginal-1" name="reject-id-one" type="checkbox" value="unoriginal">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="unoriginal-1">
+                                  Not an original document
                                 </label>
                               </div>
                               <div class="nhsuk-checkboxes__item">
@@ -272,6 +314,12 @@
                                 </label>
                               </div>
                               <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="unoriginal-2" name="reject-id-two" type="checkbox" value="unoriginal">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="unoriginal-2">
+                                  Not an original document
+                                </label>
+                              </div>
+                              <div class="nhsuk-checkboxes__item">
                                 <input class="nhsuk-checkboxes__input" id="legible-2" name="reject-id-two" type="checkbox" value="legible">
                                 <label class="nhsuk-label nhsuk-checkboxes__label" for="legible-2">
                                   Not legible
@@ -384,6 +432,12 @@
                               <input class="nhsuk-checkboxes__input" id="unacceptable-3" name="reject-poa" type="checkbox" value="unacceptable">
                               <label class="nhsuk-label nhsuk-checkboxes__label" for="unacceptable-3">
                                 Not accepted
+                              </label>
+                            </div>
+                            <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="unoriginal-3" name="reject-poa" type="checkbox" value="unoriginal">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="unoriginal-3">
+                                Not an original document
                               </label>
                             </div>
                             <div class="nhsuk-checkboxes__item">
@@ -606,7 +660,7 @@
 
         <p>Likeness values should be higher than 0.85</p>
             
-        <dl class="nhsuk-summary-list nhsuk-summary-list nhsuk-u-width-one-half">
+        <dl class="nhsuk-summary-list nhsuk-summary-list nhsuk-u-width-two-thirds">
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key key-width">
@@ -935,12 +989,13 @@
 
     <!-- Actions -->
 
-    <a class="nhsuk-button nhsuk-u-margin-right-5" href="/idchecker/v5/confirm-details">Approve</a>
+    <div id="actions">
+      <a class="nhsuk-button nhsuk-u-margin-right-5" href="/idchecker/v5/confirm-details">Approve</a>
 
-    <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-right-5" href="/idchecker/v5/reject-application">Reject</a>
+      <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-right-5" href="/idchecker/v5/reject-application">Reject</a>
 
-    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-5" href="/idchecker/v5/move-to-holding">Refer</a>
-
+     <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-5" href="/idchecker/v5/move-to-holding">Put on hold</a>
+    </div>
 
     <!-- end content -->
 

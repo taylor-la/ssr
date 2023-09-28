@@ -9,6 +9,7 @@
 @import 'components/alerts';
 @import 'components/tabs';
 @import 'components/account-nav';
+@import 'components/card-secondary';
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
@@ -217,6 +218,10 @@
 
 .max-width-1100 {
   max-width: 1100px;
+}
+
+.max-width-1300 {
+  max-width: 1300px;
 }
 
 .overflow-filter {

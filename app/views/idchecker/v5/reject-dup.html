@@ -1,0 +1,59 @@
+{% extends 'layout-idchecker-v5.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check rejection reasons
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v5/dup-found",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/idchecker/v5/dashboard" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+      
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+              <h1 class="nhsuk-fieldset__heading">
+                Reject as a duplicate
+              </h1>
+            </legend>
+    
+      
+            <div class="nhsuk-checkboxes">
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                  I have checked the profiles and confirm this application is a duplicate
+                </label>
+              </div>
+      
+            </div>
+          </fieldset>
+      
+        </div>
+  
+
+        {{ button({
+          "text": "Reject as duplicate",
+          "classes": "nhsuk-button--secondary delete-button"
+        }) }}
+    </form>
+     
+    </div>
+  </div>
+{% endblock %}

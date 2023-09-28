@@ -1,0 +1,16 @@
+/* Card secondary
+  ========================================================================== */
+
+  .nhsuk-card--secondary {
+    background: transparent;
+    border-bottom: $card-border-bottom-width solid $card-border-color;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+  }
+  
+  .nhsuk-card__content--secondary {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }

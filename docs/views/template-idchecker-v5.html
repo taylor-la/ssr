@@ -88,7 +88,7 @@
 
 
       <header class="nhsuk-header" role="banner">
-        <div class="nhsuk-width-container nhsuk-header__container max-width-1100">
+        <div class="nhsuk-width-container nhsuk-header__container max-width-1300">
           <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service " href="/" aria-label="NHS homepage">
       
               <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
@@ -108,7 +108,7 @@
       </header>
 
       <div class="logged-in-user-banner">
-        <div class="nhsuk-width-container max-width-1100">
+        <div class="nhsuk-width-container max-width-1300">
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
               <p><span class="logged-in-as"><b><span id="ra-name">Lloyd Wilkinson:</span></b> <span class="role-name-label">ID Checker</span>, <span class="org-name-label"><span class="logged-in-as-org">NHS Digital</span> (X26)</span><span class="change-role-divider"> – </span><a class="change-role" href="#">Change role</a><span class="nhsuk-u-visually-hidden"> | </span></span><span class="logout-link"><a class="log-out" href="#">Log out</a></p>
@@ -116,23 +116,11 @@
           </div>
         </div>
       </div>
-      
-      <div class="nhsuk-width-container-fluid" style="background-color: #ffffff; margin:0;">
-        <div class="nhsuk-width-container max-width-1100">
-          <nav class="nhsuk-account-navigation=v9">
-            <ul class="nhsuk-account-navigation__main-v9">
-              <li><a class="nhsuk-account-navigation__link-v9" href="#">Manage applications</a></li>
-              <li><a class="nhsuk-account-navigation__link-v9" href="#">Search applications</a></li>
-              <li><a class="nhsuk-account-navigation__link-v9" href="/idchecker/v4/dashboard">Review applications</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
 
       {% block beforeContent %}{% endblock %}
 
       {% block main %}
-        <div class="nhsuk-width-container {{ containerClasses }} max-width-1100">
+        <div class="nhsuk-width-container {{ containerClasses }} max-width-1300">
           {% block outerContent %}{% endblock %}
           <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
             {% block content %}{% endblock %}

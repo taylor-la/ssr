@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Move to on hold
+  Put application on hold
 {% endblock %}
 
 {% block outerContent %}
@@ -21,13 +21,15 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
+      <h1>Put application on hold</h1>
+
       <form action="/idchecker/v5/dashboard" method="post" class="form">
 
         <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-2" aria-describedby="holding-hint">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              Why are you moving this application to on hold?
-            </h1>
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h2 class="nhsuk-fieldset__heading">
+              Select reason(s) for putting on hold
+            </h2>
           </legend>
 
           <div class="nhsuk-hint" id="holding-hint">
@@ -115,7 +117,7 @@
         </fieldset>
 
         <button class="nhsuk-button nhsuk-button--secondary"  type="submit">
-          Move
+          Put on hold
         </button>
 
       </form>

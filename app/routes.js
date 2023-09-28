@@ -1850,6 +1850,28 @@ router.post('/applicant/v17/step-2/check-your-details-dpoa', function (req, res)
 
 })
 
+// id checker v5
+
+router.post('/idchecker/v5/reject-dup', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var dupFound = req.session.data['dup-found']
+
+  // Check whether the variable matches a condition
+  if (dupFound == "yes"){
+    // Send user to next page
+    res.redirect('/idchecker/v5/not-dup')
+  }
+  if (dupFound == "no"){
+    // Send user to next page
+    res.redirect('/idchecker/v5/reject-dup')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/idchecker/v5/hold-dup')
+  }
+
+})
+
 
 // applicant dev ready
 
