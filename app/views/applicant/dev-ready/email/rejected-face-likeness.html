@@ -1,7 +1,7 @@
 {% extends 'layout-email.html' %}
 
 {% block pageTitle %}
-There is a problem with your NHS Care ID application
+  There is a problem with your NHS Care ID application
 {% endblock %}
 
 {% block content %}
@@ -30,25 +30,15 @@ There is a problem with your NHS Care ID application
 
         <p class="nhsuk-body">Dear [firstName lastName],</p>
         <p>There is a problem with your NHS Care ID application.</p>
-        <p>Photo ID 1 [evidence-type]:</p>
-        <ul>
-          <li>is not on our accepted list</li>
-        </ul>
 
-        <p>Photo ID 2 [evidence-type]</p>
+        <p>Your face scan: </p>
         <ul>
-          <li>is not on our accepted list</li>
-        </ul>
-
-        <p>Your proof of address document: </p>
-        <ul>
-          <li>is not on our accepted list</li>
+          <li>could not be matched to your photo IDs</li>
         </ul>
 
         <p>For your next application to be approved, you'll need to:</p>
         <ul>
-          <li>provide ID(s) from the accepted list</li>
-          <li>provide 1 proof of address document from the accepted list</li>
+          <li>make sure you face forwards and look straight at the camera, there is adequate lighting, and your face is not in shadow </li>
         </ul>
 
         <h2 class="nhsuk-heading-m">How to resubmit your application</h2>
