@@ -27,7 +27,7 @@
         Cancel application
       </h1>
 
-      <p>Applicant will no longer be able to continue their application.</p>
+      <p>The applicant will no longer be able to continue their application.</p>
 
       <form action="/inviter/v10/application-cancelled" method="post" class="form">
 
@@ -36,42 +36,93 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
               <h2 class="nhsuk-fieldset__heading">
-                Select reason for cancelling application
+                Why are you cancelling this application?
               </h2>
             </legend>
+
+            <div class="nhsuk-hint">Select why the applicant is unable to continue</div>
             
-            <div class="nhsuk-radios">
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+
+             
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-4" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-4">
+                  Does not have a photo ID
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-5" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-5">
+                  Does not have a proof of address document
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                  Does not have access to their ID documents at the moment
+                </label>
+              </div>
 
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-3" name="example" type="radio" value="no">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-3">
-                  Documents not accepted
+                  Does not have an National Insurance number
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-4" name="example" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-4">
-                  No longer needed
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                  Technical issue or bug
+                <input class="nhsuk-radios__input" id="example-6" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-6">
+                  Does not have a mobile phone
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-4" name="example" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-4">
+                <input class="nhsuk-radios__input" id="example-7" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-7">
+                  Experienced a technical issue with online journey
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-8" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-8">
+                  Experienced a technical issue with mobile app
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                  Is overseas
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-9" name="example" type="radio" value="no" aria-controls="other-details" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-9">
                   Other
                 </label>
+              </div>
+
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="other-details">
+
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">
+                    Please specify (optional)
+                  </label>
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                </div>
+        
               </div>
         
             </div>
           </fieldset>
+
+          
         
         </div>
 
@@ -81,6 +132,7 @@
 
       </form>
 
+      <p>We use this information to improve the service.</p>
 
 
     </div>
