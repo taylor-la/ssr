@@ -1,0 +1,121 @@
+{% extends 'layout-inviter-dev-ready.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  0 of 80 applications sent
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+            <li>
+              <a href="#error-table">Your file contains errors</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h1>0 of 80 applications sent</h1>
+
+      <p class="nhsuk-body-l">80 applications could not be sent because:</p>
+
+      <ul>
+        <li>your file contains errors</li>
+      </ul>
+
+      <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-8" id="error-table">
+        <caption class="nhsuk-table__caption">Errors</caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              Column
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Row
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Error
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Column </span>-
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Row</span>- 
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Error </span>Your file needs to have a column called 'given name'
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Column </span>E
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Row</span>All
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Error </span>The column 'ODS code' is empty
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Column </span>A
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Row</span>27
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Error </span>Given name must be 35 characters or fewer
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Column </span>D
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Row</span>56
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Error </span>Enter an NHS or NHS approved email address
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+      <h2 class="nhsuk-u-margin-top-6">How to resubmit your applications</h2>
+    
+
+      <ol>
+        <li>Download the <a href="">applications with errors CSV (65MB)</a>. This file contains the 80 applications with errors. </li>
+        <li>Correct all errors. </li>
+        <li><a href="/inviter/v10/upload-file">Upload your file</a> and submit it again</li>
+      </ol>
+
+      
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>Do not include applications that have been successfully sent or which are already in progress when you upload your file.</p>
+      </div>
+      </div>
+    </div>
+
+
+      
+
+{% endblock %}
