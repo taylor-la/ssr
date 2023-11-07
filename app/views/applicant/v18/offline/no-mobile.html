@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+ I cannot use a mobile phone to take photos and scan my face
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        I cannot use a mobile phone to take photos and scan my face
+      </h1>
+
+      <p>To continue:</p>
+
+      <ul>
+        <li>fill out the template provided in this message</li>
+        <li>email the completed template to your inviter at <a href="">ra-services-barset@nhs.net</a></li>
+        <li>your inviter will respond with instructions on how to continue your application</li>
+      </ul>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+      <p>Subject line: Apply for Care ID - cannot use a mobile phone</p>
+
+      <p class="nhsuk-u-margin-left-4">Dear,</p>
+
+      <p class="nhsuk-u-margin-left-4">I cannot use a mobile phone to take photos and scan my face.</p>
+
+      <p class="nhsuk-u-margin-left-4">I am asking for support to continue my application.</p>
+
+      <p class="nhsuk-u-margin-left-4">My application ID is: u34834uf-83468347-3483743 </p>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+      
+
+      <p class="nhsuk-u-margin-top-8">This is a new service, your <a href="">feedback</a> will help us improve it.</p>
+     
+    </div>
+
+  </div>
+{% endblock %}

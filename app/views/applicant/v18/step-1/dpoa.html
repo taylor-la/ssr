@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  How do you want to verify your address?
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v18/start-application",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+      <form action="/applicant/v18/step-1/address-postcode" method="post" class="form">
+
+        
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+              <h1 class="nhsuk-fieldset__heading">
+                How do you want to verify your address?
+              </h1>
+            </legend>
+     
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="dpoa-yes" name="dpoa" type="radio" value="Enter UK address" {{ checked("dpoa", "Enter UK address") }} aria-describedby="dpoa-yes-hint">
+                <label class="nhsuk-label nhsuk-radios__label" for="dpoa-yes">
+                  Enter your UK address
+                </label>
+                <div class="nhsuk-hint nhsuk-radios__hint" id="dpoa-yes-hint">
+                  TransUnion will check for connections between your address and organisations like banks and utility providers
+                </div>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="dpoa-no" name="dpoa" type="radio" aria-describedby="dpoa-no-hint" value="no" {{ checked("dpoa", "provide proof of address document") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="dpoa-no">
+                  Provide a proof of address document
+                </label>
+                <div class="nhsuk-hint nhsuk-radios__hint" id="dpoa-no-hint">
+                  You will need to capture an image of this document
+                </div>
+              </div>
+        
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+
+      <p><a href="/applicant/v18/step-1/transunion">Get more information about TransUnion and how your data is used</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
