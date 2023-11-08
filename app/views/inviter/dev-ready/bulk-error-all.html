@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Applications could not be sent 
+  0 of 80 applications sent
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,14 +13,29 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>Applications could not be sent </h1>
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+            <li>
+              <a href="#error-table">Your file contains errors</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-      <p class="nhsuk-body-l">Your file contains the following errors.</p>
+      <h1>0 of 80 applications sent</h1>
 
-      <p>To resubmit your applications correct these errors and <a href="/inviter/dev-ready/upload-file">reupload your file</a>.</p>
+      <p class="nhsuk-body-l">80 applications could not be sent because:</p>
+
+      <ul>
+        <li>your file contains errors</li>
+      </ul>
 
       <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-8" id="error-table">
-        <caption class="nhsuk-table__caption">Errors found</caption>
+        <caption class="nhsuk-table__caption">Errors</caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
             <th role="columnheader" class="" scope="col">
@@ -83,9 +98,20 @@
         </tbody>
       </table>
 
-      
+      <h2 class="nhsuk-u-margin-top-6">How to resubmit your applications</h2>
+    
 
-  
+      <ol>
+        <li>Download the <a href="">applications with errors CSV (65MB)</a>. This file contains the 80 applications with errors. </li>
+        <li>Correct all errors. </li>
+        <li><a href="/inviter/dev-ready/upload-file">Upload your file</a> and submit it again</li>
+      </ol>
+
+      
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>Do not include applications that have been successfully sent or which are already in progress when you upload your file.</p>
+      </div>
       </div>
     </div>
 

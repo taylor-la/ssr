@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Some applications could not be sent
+ 56 of 62 applications sent
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,9 +13,25 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>Some applications could not be sent</h1>
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+            <li>
+              <a href="#error-table">Some applications contain data errors</a>
+            </li>
+            <li>
+              <a href="#dup-table">Some applications are already in progress</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-      <p class="nhsuk-body-l">6 of 107 applications could not be sent because:</p>
+      <h1>56 of 62 applications sent</h1>
+
+      <p class="nhsuk-body-l">6 applications could not be sent because:</p>
 
       <ul>
         <li>5 applications contain data errors</li>
@@ -23,18 +39,6 @@
       </ul>
 
       <p>All other applications have been sent successfully.</p>
-      
-      <h2>Re-send applications</h2>
-
-
-      <ul>
-        <li><a href="">Download a csv of the applications with errors</a> </li>
-        <li>Correct all errors</li>
-        <li><a href="/inviter/dev-ready/upload-file">Upload your file</a> and submit it again</li>
-      </ul>
-
-      <p>Do not include applications that have been successfully sent or which are already in progress.</p>
-
 
       <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-8" id="error-table">
         <caption class="nhsuk-table__caption">Errors</caption>
@@ -78,7 +82,7 @@
         </tbody>
       </table>
 
-      <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-8" id="error-table">
+      <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-8" id="dup-table">
         <caption class="nhsuk-table__caption">Applications already in progress</caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
@@ -102,6 +106,26 @@
           
         </tbody>
       </table>
+      
+      <h2 class="nhsuk-u-margin-top-6">How to resubmit your applications</h2>
+    
+
+      <ol>
+        <li>Download the <a href="">applications with errors CSV (65MB)</a>. This file contains the 5 applications with errors. </li>
+        <li>Correct all errors. </li>
+        <li><a href="/inviter/dev-ready/upload-file">Upload your file</a> and submit it again</li>
+      </ol>
+
+      
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>Do not include applications that have been successfully sent or which are already in progress when you upload your file.</p>
+      </div>
+      </div>
+    </div>
+
+
+     
 
       
 
