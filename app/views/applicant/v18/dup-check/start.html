@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Find out if you already have an NHS Care ID profile
+  Apply for an NHS Care ID
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,6 +19,44 @@
       <p>You have been invited by your organisation to apply for an NHS Care ID.</p>
 
       <p>You must complete your application by <strong>Friday 10 November 2023 5pm.</strong></p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Smartcard photo guidelines
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Your photo must:</p>
+          <ul>
+            <li>be clear and in focus</li>
+            <li>be taken against a plain, light coloured background</li>
+            <li>show you facing forwards and looking straight at the camera</li>
+            <li>show you with a plain expression and your mouth closed</li>
+            <li>have your head and shoulders visible</li>
+            <li>only include a head covering for religious or medical reasons</li>
+            <li>be suitable for a work setting</li>
+          </ul>
+  
+          
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half nhsuk-u-one-half ">
+                  <figure class="nhsuk-image guideline-photo nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-0">
+                    <img class="nhsuk-image__img" src="/images/correct.png" alt="NHS Care ID smartcard">
+                    <figcaption class="nhsuk-image__caption">
+                      photo that meets guidelines
+                    </figcaption>
+                  </figure> 
+                </div>
+              </div>
+        
+      
+        </div>
+      </details>
+
+      <p><a href="/applicant/v18/offline/no-mobile">I cannot use a mobile phone to take photos and scan my face</a></p>
+
+      <p><strong>You can use the link in your invite email to return to your application at another time.</strong></p>  
 
       <a href="/applicant/v18/dup-check/send-code" class="nhsuk-button">
         Start

@@ -9,17 +9,15 @@
 {% block beforeContent %}
 {% endblock %}
 
-{% block outerContent %}
-  {{ backLink({
-    "href": "/applicant/v18/start-application",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
-  }) }}
-{% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-alert nhsuk-alert--info">
+        <h3 class="nhsuk-u-visually-hidden">Information:</h3>
+        <p class="nhsuk-u-font-weight-bold">Details submitted</p>
+      </div>
 
 
 

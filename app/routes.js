@@ -1869,21 +1869,6 @@ router.post('/applicant/v18/step-1/address-postcode', function (req, res) {
 
 })
 
-router.post('/applicant/v18/step-1/poa', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var uk = req.session.data['uk']
-
-  // Check whether the variable matches a condition
-  if (uk == "no"){
-    // Send user to next page
-    res.redirect('/applicant/v18/step-1/poa')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/v18/step-1/dpoa')
-  }
-
-})
 
 router.post('/applicant/v18/step-1/1-photo-id', function (req, res) {
 
@@ -1987,13 +1972,7 @@ router.post('/applicant/v18/step-2/delivery', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
-  var uk = req.session.data['uk']
 
-  // Check whether the variable matches a condition
-  if (uk == "no"){
-    // Send user to next page
-    res.redirect('/applicant/v18/step-2/delivery-postcode')
-  }
   // Check whether the variable matches a condition
   if (dpoa == "no"){
     // Send user to next page
@@ -2009,13 +1988,8 @@ router.post('/applicant/v18/step-2/check-your-details-poa', function (req, res) 
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
-  var uk = req.session.data['uk']
 
   // Check whether the variable matches a condition
-  if (uk == "no"){
-    // Send user to next page
-    res.redirect('/applicant/v18/step-2/check-your-details-poa')
-  }
   if (dpoa == "no"){
     // Send user to next page
     res.redirect('/applicant/v18/step-2/check-your-details-poa')
@@ -2030,13 +2004,8 @@ router.post('/applicant/v18/step-2/check-your-details-dpoa', function (req, res)
 
   // Make a variable and give it the value from 'how-many-balls'
   var dpoa = req.session.data['dpoa']
-  var uk = req.session.data['uk']
 
   // Check whether the variable matches a condition
-  if (uk == "no"){
-    // Send user to next page
-    res.redirect('/applicant/v18/step-2/check-your-details-poa')
-  }
   if (dpoa == "no"){
     // Send user to next page
     res.redirect('/applicant/v18/step-2/check-your-details-poa')
