@@ -257,6 +257,7 @@
 
 @media all and (min-width: 769px) {
   .no-photo {display:block;}
+  #take-photo-option {display:block;}
   .camera-link {display:none;}
   #smartcard-container {
     position: relative; 
@@ -314,6 +315,7 @@
 
 @media all and (min-width:641px) and (max-width: 768px) {
   .no-photo {display:none;}
+  #take-photo-option {display:none;}
   .camera-link {display:block;}
   #smartcard-container {
     position: relative; 
@@ -375,6 +377,7 @@
 
 @media all and (max-width: 640px) {
   .no-photo {display:none;}
+  #take-photo-option {display:none;}
   .camera-link {display:block;}
   #smartcard-container {
     position: relative; 

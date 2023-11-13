@@ -203,7 +203,24 @@
           Choose your photo
         </a>
 
-        <p><a id="take-photo-option" href="#00">Or, take their photo using your device's camera</a></p>
+        <p><a id="take-photo-option" href="#00">Or take a photo using your device's camera</a></p>
+
+        <form action="/applicant/v18/step-2/review-photo" method="post" class="form">
+          <label for="mobile-camera">
+            <span class="camera-link">Or take a photo using your device's camera</span>
+  
+            <!-- The hidden file `input` for opening the native camera -->
+            <input class="nhsuk-u-visually-hidden"
+              id="mobile-camera"
+              type="file"
+              accept="image/*"
+              capture="user"
+            />
+          </label>
+
+        </form>
+
+        
 
         <div class="no-photo nhsuk-u-margin-top-7">
           <details class="nhsuk-details" id="no-photo">
