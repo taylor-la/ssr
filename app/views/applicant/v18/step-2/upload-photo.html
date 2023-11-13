@@ -18,7 +18,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
 
-      
+      <div id="instructions">
 
         <h1>
           Upload a professional photo for your smartcard
@@ -203,9 +203,9 @@
           Choose your photo
         </a>
 
-        <p><a href="/applicant/v18/step-2/review-photo">Or take a photo using your device's camera</a></p>
+        <p><a id="take-photo-option" href="#00">Or, take their photo using your device's camera</a></p>
 
-        <div class="no-photo">
+        <div class="no-photo nhsuk-u-margin-top-7">
           <details class="nhsuk-details" id="no-photo">
             <summary class="nhsuk-details__summary">
               <span class="nhsuk-details__summary-text">
@@ -221,10 +221,56 @@
         </div>
 
 
+      </div>
+
+        
+      <div id="photo-booth" style="display: none;">
+  
+        <div class="nhsuk-grid-row nhsuk-u-margin-bottom-4">
+          <div class="nhsuk-grid-column-one-half">
+            <h2 class="nhsuk-heading-xl">
+              Take photo
+            </h2>
+            <video id="target" width="400" height="300"></video>
+            <a id="capture" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-4" href="/applicant/v18/step-2/review-photo">Take photo</a>
+          </div>
+          <div class="nhsuk-grid-column-one-third">
+          </div>
+        </div>
+    
+    
+      </div>
     
 
     </div>
   </div>
 
+
+  <script>
+
+
+    /// Take photo functionality
+
+    // Trigger the photo capture when link is pressed
+
+    var video = document.getElementById('target');
+    var instructions = document.getElementById('instructions');
+    var takePhotoOption = document.getElementById('take-photo-option');
+    var takePhoto = document.getElementById('capture');
+    var photoBooth = document.getElementById('photo-booth');
+
+   takePhotoOption.addEventListener("click", function() {
+     photoBooth.style.display = "block";
+     instructions.style.display = "none";
+
+     navigator.mediaDevices.getUserMedia({
+       video: true,
+       audio:false
+     }).then( stream => {
+       video.srcObject = stream;
+       video.play();
+     }).catch( error => console.log(error) );
+    });  
+  </script>
  
 {% endblock %}
