@@ -205,7 +205,6 @@
 
         <p><a id="take-photo-option" href="#00">Or take a photo using your device's camera</a></p>
 
-        <form action="/applicant/v18/step-2/review-photo" method="post" class="form">
           <label for="mobile-camera">
             <span class="camera-link">Or take a photo using your device's camera</span>
   
@@ -218,9 +217,6 @@
             />
           </label>
 
-        </form>
-
-        
 
         <div class="no-photo nhsuk-u-margin-top-7">
           <details class="nhsuk-details" id="no-photo">
@@ -288,6 +284,15 @@
        video.play();
      }).catch( error => console.log(error) );
     });  
+
+    document
+      .getElementById("mobile-camera")
+      .addEventListener("change", function () {
+        window.location.assign("/applicant/v18/step-2/review-photo");
+      
+      });
+
+
   </script>
  
 {% endblock %}
