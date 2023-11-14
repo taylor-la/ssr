@@ -10,7 +10,7 @@
     <div class="nhsuk-grid-column-full">
 
       <!-- Add your content here -->
-      <h1>Submitting address</h1>
+      <h1>Checking your details</h1>
 
       <form action="auth" method="post">
       <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
@@ -21,7 +21,7 @@
               <img src="/images/loader-spinner.svg" width="200px" height="200px" id="spinner" class="" />
               <div class="ppc-loading">
                 <div class="pcc-percents-wrapper">
-                  <span id="spinner-status" class="nhsuk-body">Submitting address</span><span aria-hidden="true"></span>
+                  <span id="spinner-status" class="nhsuk-body">Checking details</span><span aria-hidden="true"></span>
                 </div>
               </div>
             </div>
@@ -37,7 +37,7 @@
 
   <script>
     setTimeout(function () {
-      window.location.href = '/applicant/v18/step-1/versions';
+      window.location.href = '/applicant/v18/step-1/dpoa';
     }, 2500);
   </script>
 {% endblock %}
