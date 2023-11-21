@@ -33,29 +33,9 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
               <h1 class="nhsuk-fieldset__heading">
-                We are going to verify your UK address
+                How do you want to verify your address?
               </h1>
             </legend>
-
-            <p>We'll share your address, name and date of birth with a trusted organisation, TransUnion.</p>
-
-            <p>TransUnion will:</p>
-
-            <ul>
-              <li>verify that there has been activity at your address, in your name, from organisations like banks and utility providers</li>
-              <li>perform a check that will not impact your credit score. Only you can see that it's been done</li>
-            </ul>
-
-            <details class="nhsuk-details">
-              <summary class="nhsuk-details__summary">
-                <span class="nhsuk-details__summary-text">
-                  I do not live in the UK
-                </span>
-              </summary>
-              <div class="nhsuk-details__text">
-                <p>If you do not have a current UK address, select  'No, I want to verify my address in a different way'.</p>
-              </div>
-            </details>
 
         
             <div class="nhsuk-radios">
@@ -63,17 +43,20 @@
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="dpoa-yes" name="dpoa" type="radio" value="Enter UK address" {{ checked("dpoa", "Enter UK address") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="dpoa-yes">
-                  Yes, I agree to verify my address with TransUnion
+                  Enter your UK address
                 </label>
+                <div class="nhsuk-hint nhsuk-radios__hint" id="dpoa-yes-hint">
+                  TransUnion will check for connections between your address and organisations like banks and utility providers
+                </div>
               </div>
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="dpoa-no" name="dpoa" type="radio" aria-describedby="dpoa-no-hint" value="no" {{ checked("dpoa", "provide proof of address document") }}>
                 <label class="nhsuk-label nhsuk-radios__label" for="dpoa-no">
-                  No, I want to verify my address in a different way
+                  Provide a proof of address document
                 </label>
                 <div class="nhsuk-hint nhsuk-radios__hint" id="dpoa-no-hint">
-                  You will need to provide a paper proof of address document
+                  You will need to capture an image of this document
                 </div>
               </div>
         
@@ -90,7 +73,7 @@
       </form>
 
 
-      <p><a href="#">Get more information about TransUnion and how your data is used</a></p>
+      <p><a href="/applicant/dev-ready/step-1/transunion">Get more information about TransUnion and how your data is used</a></p>
 
     </div>
   </div>
