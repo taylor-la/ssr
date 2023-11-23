@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Provide a professional photo for your smartcard
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        Provide a professional photo for your smartcard
+      </h1>
+
+      <p>If you are issued with a smartcard, the photo of your face will appear on it.</p>
+
+      <p> The photo will also appear on your NHS Care ID profile.</p>
+
+
+        <figure class="nhsuk-image">
+          <img class="nhsuk-image__img" src="/images/smartcard-3.png" alt="NHS Care ID smartcard">
+          <figcaption class="nhsuk-image__caption">
+            NHS Care ID Smartcard
+          </figcaption>
+        </figure> 
+
+      <a href="/applicant/v19/step-2/upload-photo" class="nhsuk-button">
+        Continue
+      </a>
+      
+    </div>
+  </div>
+
+
+{% endblock %}

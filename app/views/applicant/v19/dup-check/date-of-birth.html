@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your date of birth
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v19/dup-check/your-name",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v19/dup-check/ni-number" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+            <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
+              <h1 class="nhsuk-fieldset__heading">
+                Enter your date of birth
+              </h1>
+            </legend>
+
+            <div class="nhsuk-hint" id="dob-hint">
+              For example, 15 03 1984
+            </div>
+
+            <div class="nhsuk-date-input" id="dob">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="day-1">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day-1" name="day-1" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['day-1'] }}">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="month-1">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month-1" name="month-1" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['month-1'] }}">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="year-1">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year-1" name="year-1" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['year-1'] }}">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+        </div>
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

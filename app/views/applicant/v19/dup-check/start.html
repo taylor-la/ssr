@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Apply for an NHS Care ID
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Apply for an NHS Care ID
+      </h1>
+
+      <p>You must complete your application by <strong>Friday 1 December 2023 5pm.</strong></p>
+
+      <h2>How to apply</h2>
+
+      <ol class="nhsuk-heading-m">
+        <li>
+          <h3>Enter your personal details</h3>
+          <p class="nhsuk-body nhsuk-u-font-weight-normal">You will need your name, date of birth and National Insurance number.</p>
+        </li>
+        <li>
+          <h3>Find out what ID documents you need to provide</h3>
+          <p class="nhsuk-body nhsuk-u-font-weight-normal">We will tell you what photo IDs and proof of address document you need to provide.</p>
+        </li>
+        <li>
+          <h3>Upload a professional photo of your face</h3>
+          <p class="nhsuk-body nhsuk-u-font-weight-normal">The photo you upload will appear on your smartcard (if applicable) and your NHS Care ID profile.</p>
+          
+          <details class="nhsuk-details nhsuk-u-font-weight-normal">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Smartcard photo guidelines
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>Your photo must:</p>
+              <ul>
+                <li>be clear and in focus</li>
+                <li>be taken against a plain, light coloured background</li>
+                <li>show you facing forwards and looking straight at the camera</li>
+                <li>show you with a plain expression and your mouth closed</li>
+                <li>have your head and shoulders visible</li>
+                <li>only include a head covering for religious or medical reasons</li>
+                <li>be suitable for a work setting</li>
+              </ul>
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half nhsuk-u-one-half ">
+                  <figure class="nhsuk-image guideline-photo nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-0">
+                    <img class="nhsuk-image__img" src="/images/correct.png" alt="NHS Care ID smartcard">
+                    <figcaption class="nhsuk-image__caption">
+                      photo that meets guidelines
+                    </figcaption>
+                  </figure> 
+                </div>
+              </div>   
+            </div>
+          </details>
+
+        </li>
+        <li>
+          <h3>Take photos of your ID documents using our mobile app</h3>
+          <p class="nhsuk-body nhsuk-u-font-weight-normal">You will receive a link to your mobile number to download the app.</p>
+          <p class="nhsuk-body nhsuk-u-font-weight-normal">You will need a smartphone with a camera and the original ID documents we have told you to provide.</p>
+          <p class="nhsuk-body nhsuk-u-font-weight-normal"><a href="/applicant/v19/offline/no-mobile">I cannot use a mobile phone to take photos and scan my face</a>.</p>
+        </li>
+        <li>
+          <h3>Scan your face using our mobile app</h3>
+          <p class="nhsuk-body nhsuk-u-font-weight-normal">This will be used to match you to the ID documents you have provided.</p>
+        </li>
+      </ol>
+
+      <a href="/applicant/v19/dup-check/send-code" class="nhsuk-button">
+        Start application
+      </a>
+
+      <p>By using this service, you're agreeing to our <a href="https://digital.nhs.uk/services/registration-authorities-and-smartcards/privacy-notice-to-smartcard-authorised-device-users-on-the-use-of-your-personal-data">terms of use and privacy policy</a>.</p> 
+
+    </div>
+
+  </div>
+{% endblock %}

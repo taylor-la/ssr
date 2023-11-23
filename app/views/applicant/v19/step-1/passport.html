@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Which photo ID do you want to use?
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-alert nhsuk-alert--info" style="display:none;">
+        <h3 class="nhsuk-u-visually-hidden">Information:</h3>
+        <p class="nhsuk-u-font-weight-bold">Address submitted</p>
+      </div>
+
+
+      <form action="/applicant/v19/step-1/1-photo-id" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7" aria-describedby="passport-hint">
+              <h1 class="nhsuk-fieldset__heading">
+                Which photo ID do you want to use?
+              </h1>
+            </legend>
+
+            <p>You'll need to capture an image of this document when using the mobile app.</p>
+        
+            <div class="nhsuk-radios">
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="passport-2" name="passport" type="radio" value="passport"  aria-describedby="passport-yes-hint"  {{ checked("passport", "passport") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="passport-2">
+                  Passport
+                </label>
+                <div class="nhsuk-hint nhsuk-radios__hint" id="passport-yes-hint">
+                  Passports may be expired by up to 6 months
+                </div>
+              </div>
+      
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="other-1" name="passport" type="radio" value="other" checked("passport", "other") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="other-1">
+                  Other photo ID
+                </label>
+              </div>
+      
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

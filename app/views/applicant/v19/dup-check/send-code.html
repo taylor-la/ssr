@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Send a security code to your phone
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v19/dup-check/start",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        Send a security code to your phone
+      </h1>
+
+      <p>To continue with the application you will need to enter a 4 digit security code.</p>
+
+      <p>Send the security code to your mobile phone number ending *********<strong>5314</strong>.
+      </p>
+
+
+
+      <a href="/applicant/v19/dup-check/security-code" class="nhsuk-button">
+        Send code
+      </a>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Mobile number is incorrect
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Contact <a href="#">ra-services-birmingham@nhs.net</a> to get your mobile number updated. Include your application ID in all emails.</p>
+         
+          
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}
