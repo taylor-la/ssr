@@ -31,39 +31,71 @@
 
       <form action="/inviter/v10/application-cancelled" method="post" class="form">
 
-        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+        <div class="nhsuk-form-group nhsuk-u-margin-top-7">
+          <label class="nhsuk-label nhsuk-u-margin-bottom-3" for="select-1">
+            Select a reason for cancelling these applications
+          </label>
+          <div class="nhsuk-hint">
+            We use this information to improve the service
+          </div>
+          <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="1">Select a reason</option>
+            <option value="2">Did not respond to invite emails</option>
+            <option value="3">Technical issue with mobile app</option>
+            <option value="4">Technical issue with online journey</option>
+            <option value="5">Wants to change which documents to capture in the app</option>
+            <option value="6">Wants to change their mobile number</option>
+            <option value="7">Does not have a photo ID</option>
+            <option value="8">Does not have a proof of address document</option>
+            <option value="9">Does not have access to their ID documents at the moment</option>
+            <option value="10">Does not have an National Insurance number</option>
+            <option value="11">Does not have a mobile phone</option>
+            <option value="12">Is overseas</option>
+            <option value="13">Other</option>
+          </select>
+        </div>      
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="select-1">
-              Select a reason for cancelling these applications
-            </label>
-            <select class="nhsuk-select" id="select-1" name="select-1">
-              <option value="1">Select a reason</option>
-              <option value="2">Technical issue with mobile app</option>
-              <option value="3">Technical issue with online journey</option>
-              <option value="4">Wants to change which documents to capture in the app</option>
-              <option value="5">Wants to change their mobile number</option>
-              <option value="6">Does not have a photo ID</option>
-              <option value="7">Does not have a proof of address document</option>
-              <option value="8">Does not have access to their ID documents at the moment</option>
-              <option value="9">Does not have an National Insurance number</option>
-              <option value="10">Does not have a mobile phone</option>
-              <option value="11">Is overseas</option>
-              <option value="12">Other</option>
-            </select>
-          </div>  
 
-          
+        <div class="nhsuk-form-group nhsuk-u-margin-top-7">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-label nhsuk-u-margin-bottom-3">
+              <h2 class="nhsuk-fieldset__heading">
+                Do you want to send the applicants an email notification?
+              </h2>
+            </legend>
+
+            <div class="nhsuk-hint">
+              The applicants will be told that their applications have been cancelled
+            </div>
+        
+            <div class="nhsuk-radios nhsuk-radios--inline">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="email-yes" name="cancel-email" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="email-yes">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="email-no" name="cancel-email" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="email-no">
+                  No
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
         
         </div>
 
+
         <button class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-3"  type="submit">
-          Cancel application
+          Cancel applications
         </button>
 
       </form>
-
-      <p>We use this information to improve the service.</p>
 
     </div>
 
