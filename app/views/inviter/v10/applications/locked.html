@@ -3,7 +3,7 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-  Application: Isabel Lawrence
+  Application: James Stenberg
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,12 +23,15 @@
   <div class="nhsuk-grid-column-full">
 
     <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">
-      Application: Isabel Lawrence
+      Application: James Stenberg
     </h1>
 
-    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: Rejected</p>
+    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text nhsuk-u-margin-bottom-2">Status: Resend required</p>
+    <p class="grey-text nhsuk-u-margin-bottom-5">(Too many security codes have been requested)</p>
 
-    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-5" href="#">Mark as done</a> <a class="nhsuk-button nhsuk-button--secondary" href="/inviter/v10/enter-details-filled">Copy application</a>
+    <a class="nhsuk-button nhsuk-u-margin-right-4" href="/inviter/v10/application-sent">Resend invite email</a>
+    <a class="nhsuk-button nhsuk-button--secondary delete-button" href="/inviter/v10/cancel-application">Cancel application</a>
+
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-5">
       <div class="nhsuk-card__content">
@@ -45,7 +48,7 @@
             Application ID
             </dt>
             <dd class="nhsuk-summary-list__value">
-              gdO-dLoee-aeKKvm-RFU0yU
+              Lcv1O-tjkki-W7QA9-7RAi
             </dd>
           </div>
 
@@ -54,7 +57,7 @@
             Raised by
             </dt>
             <dd class="nhsuk-summary-list__value">
-            Tim Bond on 8 April 2023
+            Vincent Douglas on 8 April 2023
             </dd>
           </div>
 
@@ -63,7 +66,7 @@
             Requestor email address
             </dt>
             <dd class="nhsuk-summary-list__value">
-            tim.bond58@nhs.net
+            vincent.douglas58@nhs.net
             </dd>
           </div>
 
@@ -78,7 +81,7 @@
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-            Rejected on
+            Last updated
             </dt>
             <dd class="nhsuk-summary-list__value">
             11 April 2023
@@ -87,26 +90,14 @@
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-            Rejection reason(s)
+            Invite emails sent
             </dt>
             <dd class="nhsuk-summary-list__value">
-              <p>Photo ID 1 (passport) has expired, could not be read (this may be because the image is blurry or handwritten), is not accepted. </p>
-              <p>Proof of address could not be read (this may be because the image is blurry or handwritten).</p>
-              <p>Face scan does not match photo ID(s).</p>
-              <p>Smartcard photo does not meet passport guidelines.</p>   
+            2
             </dd>
           </div>
 
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-            Rejection Notes
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              Photo ID 1 is worn. Unable to read date of birth.
-            </dd>
-          </div>
-
-         
+          
 
         </dl>
 
@@ -122,14 +113,17 @@
 
         <dl class="nhsuk-summary-list">
 
-          
-
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
               Full name
             </dt>
             <dd class="nhsuk-summary-list__value">
-              Isabel Lawrence
+              James Stenberg
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v10/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
             </dd>
           </div>
 
@@ -138,7 +132,12 @@
               Work email address
             </dt>
             <dd class="nhsuk-summary-list__value">
-              Isabel.lawrence@nhs.net
+              James.stenberg@nhs.net
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v10/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
             </dd>
           </div>
 
@@ -149,6 +148,11 @@
             <dd class="nhsuk-summary-list__value">
               079946823098
             </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v10/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
+            </dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
@@ -156,7 +160,12 @@
               Delivery address
             </dt>
             <dd class="nhsuk-summary-list__value">
-              Not required
+              Required
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v10/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
             </dd>
           </div>
 
@@ -166,6 +175,11 @@
             </dt>
             <dd class="nhsuk-summary-list__value">
               smartcard with nurse practitioner role
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/inviter/v10/enter-details">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
             </dd>
           </div>
 
@@ -182,13 +196,16 @@
 
         <dl class="nhsuk-summary-list">
 
+          
+
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
               Enter personal details
             </dt>
+            
             <dd class="nhsuk-summary-list__actions">
-              <strong class="nhsuk-tag nhsuk-tag--blue">
-                Completed
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+                Not started
                 </strong>
             </dd>
           </div>
@@ -198,8 +215,8 @@
               Verify address
             </dt>
             <dd class="nhsuk-summary-list__actions">
-              <strong class="nhsuk-tag nhsuk-tag--blue">
-                Completed
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+                Not started
                 </strong>
             </dd>
           </div>
@@ -208,9 +225,10 @@
             <dt class="nhsuk-summary-list__key">
               Submit ID documents
             </dt>
+            
             <dd class="nhsuk-summary-list__actions">
-              <strong class="nhsuk-tag nhsuk-tag--blue">
-                Completed
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+                Not started
                 </strong>
             </dd>
           </div>
@@ -220,15 +238,38 @@
               Review by ID checker
             </dt>
             <dd class="nhsuk-summary-list__actions">
-              <strong class="nhsuk-tag nhsuk-tag--blue">
-                Completed
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+                Not started
                 </strong>
             </dd>
           </div>
 
         </dl>
+
       </div>
     </div>
+
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          How long does an applicant have to complete their application?
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Applicants must:</p>
+        <ul>
+          <li>complete the duplicate check within <strong>4 days</strong> of receiving the invite email</li>
+          <li>submit their ID documents within <strong>15 days</strong> of receiving a link to download the app</li>
+        </ul>
+        <p>Reminders to submit their ID documents are sent via text and email 2 days and 7 days after receiving the link to download the app.</p> 
+      </div>
+    </details>
 
   </div>
 </div>
