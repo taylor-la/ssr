@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Which photo ID do you want to use? 
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v20/step-1/passport",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v20/step-2/upload-photo" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7" aria-describedby="photo-ids-hint">
+              <h1 class="nhsuk-fieldset__heading">
+                Which photo ID do you want to use? 
+              </h1>
+            </legend>
+
+            <p>You'll need to capture an image of this document when using the mobile app. </p>
+
+            <div class="nhsuk-hint" id="photo-ids-hint">
+              Photo IDs must not be expired
+            </div>
+        
+            <div class="nhsuk-radios">
+      
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="driving-licence-1" name="1-photo-id" type="radio" value="driving licence" {{ checked("1-photo-id", "driving licence") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="driving-licence-1">
+                  Driving licence (full or provisional)
+                </label>
+              </div>
+      
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="residence-permit-1" name="1-photo-id" type="radio" value="UK biometric residence permit"{{ checked("1-photo-id", "UK biometric residence permit") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="residence-permit-1">
+                  UK Biometric residence permit card
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="armed-forces-1" name="1-photo-id" type="radio" value="HM armed forces card"{{ checked("1-photo-id", "HM armed forces card") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="armed-forces-1">
+                  HM Armed Forces card
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="pass-card-1" name="1-photo-id" type="radio" value="PASS card"{{ checked("1-photo-id", "PASS card") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="pass-card-1">
+                  PASS proof of age card
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__divider">or</div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="none-1" name="1-photo-id" type="radio" value="none"{{ checked("1-photo-id", "none") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="none-1">
+                  I do not have any of these photo IDs
+                </label>
+              </div>
+      
+            </div>
+          </fieldset>
+        
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
