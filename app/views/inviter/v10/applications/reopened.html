@@ -22,6 +22,14 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
+    <div class="nhsuk-alert nhsuk-alert--success nhsuk-alert--icon" id="role-changed-alert">
+      <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-alert__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+      </svg>
+      <h1 class="nhsuk-u-visually-hidden">Success:</h1>
+      <p class="nhsuk-u-font-weight-bold">Application successfully reopened</p>
+    </div>
+
     <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">
       Application: James Stenberg
     </h1>
@@ -85,12 +93,25 @@
             </dd>
           </div>
 
+        </dl>
+
+      </div>
+    </div>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          Application activity
+        </h3>
+
+        <dl class="nhsuk-summary-list">
+
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
             Invite emails sent
             </dt>
             <dd class="nhsuk-summary-list__value">
-            1
+            3
             </dd>
           </div>
 
@@ -99,16 +120,28 @@
             Mobile app reminders sent
             </dt>
             <dd class="nhsuk-summary-list__value">
-            1
+            0
             </dd>
           </div>
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-            Previous application IDs
+            Rejections
             </dt>
             <dd class="nhsuk-summary-list__value">
-            6754740-83464nfncsnwe23cwc34-2543
+            <p>1</p>  
+            <details class="nhsuk-details">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  Rejection reasons
+                </span>
+              </summary>
+              <div class="nhsuk-details__text">
+                <h4>Rejection 1</h4>
+                <p>Photo ID 1 (passport) has expired, could not be read (this may be because the image is blurry or handwritten), is not accepted. Face scan does not match photo ID(s). Smartcard photo does not meet passport guidelines.</p>
+            
+              </div>
+            </details>
             </dd>
           </div>
 
@@ -116,7 +149,6 @@
 
       </div>
     </div>
-
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-5">
       <div class="nhsuk-card__content">
@@ -193,8 +225,8 @@
               Enter personal details
             </dt>
             <dd class="nhsuk-summary-list__actions">
-              <strong class="nhsuk-tag nhsuk-tag--blue">
-                Completed
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+                Not started
                 </strong>
             </dd>
           </div>
@@ -205,8 +237,8 @@
               Verify address
             </dt>
             <dd class="nhsuk-summary-list__actions">
-              <strong class="nhsuk-tag nhsuk-tag--blue">
-                Completed
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+                Not started
                 </strong>
             </dd>
           </div>
@@ -217,8 +249,8 @@
               Submit ID documents
             </dt>
             <dd class="nhsuk-summary-list__actions">
-              <strong class="nhsuk-tag nhsuk-tag--white">
-                In progress
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+                Not started
                 </strong>
             </dd>
           </div>
