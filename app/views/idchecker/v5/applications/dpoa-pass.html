@@ -232,6 +232,12 @@
                     
                           <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item">
+                              <input class="nhsuk-checkboxes__input" id="back-1" name="reject-id-one" type="checkbox" value="both">
+                              <label class="nhsuk-label nhsuk-checkboxes__label" for="back-1">
+                                Does not show both sides
+                              </label>
+                            </div>
+                            <div class="nhsuk-checkboxes__item">
                               <input class="nhsuk-checkboxes__input" id="expired-1" name="reject-id-one" type="checkbox" value="expired">
                               <label class="nhsuk-label nhsuk-checkboxes__label" for="expired-1">
                                 Expired
@@ -307,8 +313,8 @@
         <p class="nhsuk-u-reading-width">Compare the name and date of birth with the photo ID.</p>
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half">
+            <h3>Entered by applicant</h3>
             <dl class="nhsuk-summary-list nhsuk-summary-list">
-
               <div class="nhsuk-summary-list__row">
                 <dt class="nhsuk-summary-list__key key-width">
                   First Name
@@ -317,7 +323,6 @@
                   Karen
                 </dd>
               </div>
-
               <div class="nhsuk-summary-list__row">
                 <dt class="nhsuk-summary-list__key key-width">
                   Middle Names
@@ -325,9 +330,7 @@
                 <dd class="nhsuk-summary-list__value">
                   Francis
                 </dd>
-
               </div>
-
               <div class="nhsuk-summary-list__row">
                 <dt class="nhsuk-summary-list__key key-width">
                   Last Name
@@ -335,9 +338,15 @@
                 <dd class="nhsuk-summary-list__value">
                   Turner
                 </dd>
-
               </div>
-
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key key-width">
+                  Name on smartcard
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Karen Turner
+                </dd>
+              </div>
               <div class="nhsuk-summary-list__row">
                 <dt class="nhsuk-summary-list__key key-width">
                   Date of birth
@@ -345,10 +354,30 @@
                 <dd class="nhsuk-summary-list__value">
                   15 March 1984
                 </dd>
-
               </div>
-
             </dl>
+
+            <h3>Entered by requestor</h3>
+            <dl class="nhsuk-summary-list nhsuk-summary-list">
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key key-width">
+                  First Name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Karen
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key key-width">
+                  Last Name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  Turner
+                </dd>
+              </div>
+ 
+            </dl>
+
           </div>
           <div class="nhsuk-grid-column-one-half">
             <div class="nhsuk-expander-group">
@@ -753,7 +782,7 @@
                         <div class="nhsuk-checkboxes__item">
                           <input class="nhsuk-checkboxes__input" id="work-6" name="reject-smartcard" type="checkbox" value="work">
                           <label class="nhsuk-label nhsuk-checkboxes__label" for="work-6">
-                            Not suitable for a work setting
+                            Not facing forwards
                           </label>
                         </div>
                         

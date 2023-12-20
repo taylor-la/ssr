@@ -1,0 +1,230 @@
+{% extends 'layout-idchecker-v5.html' %}
+
+{% block pageTitle %}
+  Review application
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v5/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="nhsuk-grid-row">
+
+  <div class="nhsuk-grid-column-full">
+
+    <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">
+      Application: James Stenberg
+    </h1>
+
+    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text">Status: On hold</p>
+
+  </div>
+</div>   
+
+<div class="nhsuk-grid-row">
+
+  <div class="nhsuk-grid-column-one-quarter" style="position: sticky; top: 32px;">
+
+    <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+      <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+      <ol class="nhsuk-contents-list__list nhsuk-body-s">
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#summary">Summary</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#notes">Notes</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#duplicate">Duplicate profile check</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#actions">Actions</a>
+        </li>
+      </ol>
+    </nav>
+
+  </div>
+
+  <div class="nhsuk-grid-column-three-quarters">
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5" id="summary">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Application summary</h2>
+        
+        <dl class="nhsuk-summary-list">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Application ID
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            0826737-fdnc9348-34877e0-23763
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Raised by
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            Vincent Douglas on 8 July 2022
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Requestor email address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            vincent.douglas58@nhs.net
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Organisation
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            	Barsetshire NHS Foundation Trust (RWA)
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Submitted on
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            11th March 2022 5.42am
+            </dd>
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Added by 
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            	Joanna Blogs on 12th March 2022 12.12pm
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            On hold reasons
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Possible duplicate found. Duplicate check in CIM required
+            </dd>
+          </div>
+        
+        </dl>
+
+      </div>
+    </div>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5" id="notes">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Notes</h2>
+        
+
+        <p>No notes added to this application</p>
+
+        <a class="nhsuk-button nhsuk-button--secondary" href="/idchecker/v5/new-note">Add note</a>
+
+      </div>
+    </div>
+ 
+
+    <!-- Duplicate profile check -->
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5" id="duplicate">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading">Duplicate profile check</h2>
+        <p class="nhsuk-u-reading-width">You must check Care Identity Management (CIM) to confirm if this application is a duplicate.</p>
+
+        <h2 class="nhsuk-heading-s">Possible duplicate profile</h2>
+
+        <dl class="nhsuk-summary-list nhsuk-u-width-one-half">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              UUID
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <a href="">8745 9348 4398</a>
+            </dd>
+          </div>      
+        </dl>
+
+
+        <table role="table" class="nhsuk-table-responsive">
+          <caption class="nhsuk-table__caption">Applicant details</caption>
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                Profile photo
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Full name
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Date of birth
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Unique identifier
+              </th>
+              
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell nhsuk-u-width-one-quarter">
+                <span class="nhsuk-table-responsive__heading">Profile photo</span>
+                <figure class="nhsuk-image nhsuk-u-margin-top-1 nhsuk-u-margin-bottom-3" style="width:100%">
+                  <img class="nhsuk-image__img" src="/images/preview-original.png" alt="photo of your face">
+                </figure>
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Full name</span>
+                <p class="nhsuk-u-margin-bottom-1">James Stenberg</p>
+                <p>(Match found)</p>
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Date of birth</span>
+                <p class="nhsuk-u-margin-bottom-1">07/05/1998</p>
+                <p>(Match found)</p>
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Unique identifier</span>
+                <p class="nhsuk-u-margin-bottom-1">NI Number: FH837382A</p>
+                <p>(Match found)</p>
+                <p class="nhsuk-u-margin-bottom-1">Passport number: 745405493</p>
+                <p>(No match)</p>
+                <p>Driving licence number not available</p>
+              </td>
+              
+            </tr>
+          </tbody>
+        </table>
+
+        
+
+      </div>
+    </div>
+
+    <!-- Actions -->
+
+    <div id="actions">
+      <a class="nhsuk-button nhsuk-u-margin-right-5" href="/idchecker/v5/not-dup">Approve</a>
+      <a class="nhsuk-button nhsuk-button--secondary delete-button" href="/idchecker/v5/reject-dup">Reject</a>
+    </div>
+
+    <!-- end content -->
+
+  </div>
+</div>
+{% endblock %}

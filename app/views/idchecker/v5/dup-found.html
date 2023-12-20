@@ -4,129 +4,87 @@
   Possible duplicate profile found
 {% endblock %}
 
-{% block outerContent %}
-  {{ backLink({
-    "href": "/idchecker/v5/confirm-details",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
-  }) }}
-{% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
 
-      <form action="/idchecker/v5/reject-dup" method="post" class="form">
+      <h1>Possible duplicate profile found</h1>
 
-        <div class="nhsuk-form-group">
+      <p>This application has been put on hold with the following reason:</p>
 
-          <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
-              <h1 class="nhsuk-fieldset__heading">
-                Possible duplicate profile found
-              </h1>
-            </legend>
+      <ul>
+        <li>Possible duplicate found. Duplicate check in CIM required</li>
+      </ul>
 
-            <p>You must check <a href="#">Care Identity Management (CIM)</a> to confirm if this application is a duplicate.</p>
+      <p>An ID checker supervisor will carry out a manual check in CIM to confirm if the application is a duplicate.</p>
 
-            <dl class="nhsuk-summary-list">
+      <a class="nhsuk-button" href="/idchecker/v5/dashboard">Return to dashboard</a>
 
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  UUID
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  <a href="#">4628 3347 0474</a>
-                </dd>
-              </div>
-      
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  Full name
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  Part match
-                </dd>
-              </div>
-            
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  Date of birth
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  Exact match
-                </dd>
-              </div>
-            
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  National Insurance number
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  Exact match
-                </dd>
-              </div>
-             
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  Passport number
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  Not available
-                </dd>
-              </div>
-      
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  Driving licence
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  Not available
-                </dd>
-              </div>
-          
-            </dl>
 
-      
-        
-            <div class="nhsuk-radios">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="create-id" name="dup-found" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="create-id">
-                  I need to create a new Care ID profile
-                </label>
-              </div>
-      
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="reject-dup" name="dup-found" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="reject-dup">
-                  This application is a duplicate
-                </label>
-              </div>
+      <dl class="nhsuk-summary-list">
 
-              <div class="nhsuk-radios__divider">or</div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="refer-dup" name="dup-found" type="radio" value="unable">
-                <label class="nhsuk-label nhsuk-radios__label" for="refer-dup">
-                  I am not able to check CIM for a duplicate
-                </label>
-              </div>
-        
-            </div>
-          </fieldset>
-        
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            UUID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <a href="#">4628 3347 0474</a>
+          </dd>
         </div>
 
-        {{ button({
-          "text": "Continue"
-        }) }}
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Full name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Part match
+          </dd>
+        </div>
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Exact match
+          </dd>
+        </div>
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Exact match
+          </dd>
+        </div>
+        
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Passport number
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            No match
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Driving licence
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Not available
+          </dd>
+        </div>
+    
+      </dl>
+
+ 
 
 
-      </form>
+      <p>You must check <a href="#">Care Identity Management (CIM)</a> to confirm if this application is a duplicate.</p>
     
 
     </div>
