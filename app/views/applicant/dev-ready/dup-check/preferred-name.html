@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your smartcard name
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/dev-ready/dup-check/your-name",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <form action="/applicant/dev-ready/dup-check/date-of-birth" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+          <h1 class="nhsuk-label-wrapper">
+            <label class="nhsuk-label nhsuk-label--xl" for="preferred-name">
+              Enter name on smartcard (optional)
+            </label>
+          </h1>
+          <p>You can choose a name to appear on your smartcard (if applicable).</p>
+          <div class="nhsuk-hint" id="preferred-name-hint">
+            For example, if your name is Matthew Smith you can choose Matt Smith.
+            </div>
+          <input class="nhsuk-input nhsuk-input--width-20" id="preferred-name" name="preferred-name" type="text" aria-describedby="preferred-name-hint" value="{{ data['preferred-name'] }} {{ data['first-name'] }} {{ data['last-name'] }}">
+          <div class="nhsuk-hint nhsuk-u-padding-top-2" id="character-count-hint">
+            You have 20 characters remaining
+            </div>
+        </div>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

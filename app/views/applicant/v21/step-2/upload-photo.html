@@ -1,0 +1,314 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Upload a professional photo for your smartcard
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <div id="instructions">
+
+        <h1>
+          Upload a professional photo for your smartcard
+        </h1>
+
+        <div class="nhsuk-do-dont-list nhsuk-u-margin-bottom-4">
+          <h2 class="nhsuk-do-dont-list__label">Your photo must:</h2>
+          <ul class="nhsuk-list nhsuk-list--tick" role="list">
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              be clear and in focus
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              be taken against a plain, light coloured background
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              show you facing forwards and looking straight at the camera
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              show you with a plain expression and your mouth closed
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              have your head and shoulders visible
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              only include a head covering for religious or medical reasons
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              be suitable for a work setting
+            </li>
+          </ul>
+          
+        </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-three-quarters">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+                <figure class="nhsuk-image guideline-photo nhsuk-u-margin-top-2">
+                  <img class="nhsuk-image__img" src="/images/correct.png" alt="NHS Care ID smartcard">
+                  <figcaption class="nhsuk-image__caption">
+                    <ul class="nhsuk-list nhsuk-list--tick nhsuk-u-margin-bottom-0 nhsuk-body-s">
+                      <li>
+                        <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                          <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+                        </svg>
+                        photo that meets guidelines
+                      </li>
+                    </ul>
+                  </figcaption>
+                </figure> 
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nhsuk-do-dont-list nhsuk-u-margin-bottom-4">
+          <h2 class="nhsuk-do-dont-list__label">Your photo must not:</h2>
+          <ul class="nhsuk-list nhsuk-list--cross" role="list">
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+              </svg>
+              contain other people or objects in the background
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+              </svg>
+              have hair or other objects obscuring your face
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+              </svg>
+              have any shadows on your face or behind you
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+              </svg>
+              be edited by photo filters
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+              </svg>
+              contain sunglasses or tinted glasses
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+              </svg>
+              be a photo of a physical document, like a passport
+            </li>
+          </ul>
+        </div>
+
+       <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-three-quarters">
+          <div class="nhsuk-grid-row">   
+            <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+              <figure class="nhsuk-image guideline-photo nhsuk-u-margin-top-2">
+                <img class="nhsuk-image__img" src="/images/not-work.png" alt="NHS Care ID smartcard">
+                <figcaption class="nhsuk-image__caption">
+                  <ul class="nhsuk-list nhsuk-list--cross nhsuk-u-margin-bottom-0 nhsuk-body-s">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                      </svg>
+                      not suitable for work
+                    </li>
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                      </svg>
+                      wearing sunglasses
+                    </li>
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                      </svg>
+                      objects in the background
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure> 
+            </div> 
+            <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+              <figure class="nhsuk-image guideline-photo nhsuk-u-margin-top-2">
+                <img class="nhsuk-image__img" src="/images/id-doc.png" alt="NHS Care ID smartcard">
+                <figcaption class="nhsuk-image__caption">
+                  <ul class="nhsuk-list nhsuk-list--cross nhsuk-u-margin-bottom-0 nhsuk-body-s">
+                    <li>
+                      <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                        <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                        <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+                      </svg>
+                      photo of a physical document
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure> 
+            </div>
+          </div>
+        </div>
+       </div>
+      
+
+        <h2 class="nhsuk-u-margin-top-3">Upload your photo</h2>
+
+     
+
+        <label for="upload-image-1">
+          <span class="nhsuk-button">Choose your photo</span>
+          <!-- The hidden file `input` for opening the native camera -->
+          <input class="nhsuk-u-visually-hidden"
+            id="upload-image-1"
+            type="file"
+            accept="image/*"
+          />
+        </label>
+
+        <p><a id="take-photo-option" href="#00">Or take a photo using your device's camera</a></p>
+
+          <label for="mobile-camera">
+            <span class="camera-link">Or take a photo using your device's camera</span>
+  
+            <!-- The hidden file `input` for opening the native camera -->
+            <input class="nhsuk-u-visually-hidden"
+              id="mobile-camera"
+              type="file"
+              accept="image/*"
+              capture="user"
+            />
+          </label>
+
+
+        <div class="no-photo nhsuk-u-margin-top-7">
+          <details class="nhsuk-details" id="no-photo">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                I do not have a photo ready to upload
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>You must take a photo and return to your application to upload it.</p>
+              <p>If you cannot take a photo right now, you can use the link in your invite email to return to your application at another time.</p>
+          
+            </div>
+          </details>
+        </div>
+
+
+      </div>
+
+        
+      <div id="photo-booth" style="display: none;">
+  
+        <div class="nhsuk-grid-row nhsuk-u-margin-bottom-4">
+          <div class="nhsuk-grid-column-one-half">
+            <h2 class="nhsuk-heading-xl">
+              Take photo
+            </h2>
+            <video id="target" width="400" height="300"></video>
+            <a id="capture" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-4" href="/applicant/v21/step-2/review-photo">Take photo</a>
+          </div>
+          <div class="nhsuk-grid-column-one-third">
+          </div>
+        </div>
+    
+    
+      </div>
+    
+
+    </div>
+  </div>
+
+
+  <script>
+
+
+    /// Take photo functionality
+
+    // Trigger the photo capture when link is pressed
+
+    var video = document.getElementById('target');
+    var instructions = document.getElementById('instructions');
+    var takePhotoOption = document.getElementById('take-photo-option');
+    var takePhoto = document.getElementById('capture');
+    var photoBooth = document.getElementById('photo-booth');
+
+   takePhotoOption.addEventListener("click", function() {
+     photoBooth.style.display = "block";
+     instructions.style.display = "none";
+
+     navigator.mediaDevices.getUserMedia({
+       video: true,
+       audio:false
+     }).then( stream => {
+       video.srcObject = stream;
+       video.play();
+     }).catch( error => console.log(error) );
+    });  
+
+    document
+      .getElementById("upload-image-1")
+      .addEventListener("change", function () {
+        window.location.assign("/applicant/v21/step-2/review-photo");
+      
+      });
+
+
+    document
+      .getElementById("mobile-camera")
+      .addEventListener("change", function () {
+        window.location.assign("/applicant/v21/step-2/review-photo");
+      
+      });
+
+
+  </script>
+ 
+{% endblock %}

@@ -19,78 +19,74 @@
 
       <dl class="nhsuk-summary-list">
 
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Full name
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      {{ data['title'] }} {{ data['first-name'] }} {{ data['middle-name'] }} {{ data['last-name'] }}
-    </dd>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Full name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['title'] }} {{ data['first-name'] }} {{ data['middle-name'] }} {{ data['last-name'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/dev-ready/dup-check/your-name">
+              Change<span class="nhsuk-u-visually-hidden"> first name</span>
+            </a>
+          </dd>
+        </div>
 
-    <dd class="nhsuk-summary-list__actions">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Name on smartcard
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['preferred-name'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/dev-ready/dup-check/preferred-name">
+              Change<span class="nhsuk-u-visually-hidden"> first name</span>
+            </a>
+          </dd>
+        </div>
 
-      <a href="/applicant/dev-ready/dup-check/your-name">
-        Change<span class="nhsuk-u-visually-hidden"> first name</span>
-      </a>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['day-1'] }}   {{ data['month-1'] }}   {{ data['year-1'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/dev-ready/dup-check/date-of-birth">
+              Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
 
-    </dd>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['ni-number'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/dev-ready/dup-check/ni-number">
+              Change<span class="nhsuk-u-visually-hidden"> national insurance number</span>
+            </a>
+          </dd>
+        </div>
 
-  </div>
+      </dl>
 
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      Date of birth
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      {{ data['day-1'] }}   {{ data['month-1'] }}   {{ data['year-1'] }}
-    </dd>
-
-    <dd class="nhsuk-summary-list__actions">
-
-      <a href="/applicant/dev-ready/dup-check/date-of-birth">
-        Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
-      </a>
-
-    </dd>
-
-  </div>
-
-  <div class="nhsuk-summary-list__row">
-    <dt class="nhsuk-summary-list__key">
-      National Insurance number
-    </dt>
-    <dd class="nhsuk-summary-list__value">
-      {{ data['ni-number'] }}
-    </dd>
-
-    <dd class="nhsuk-summary-list__actions">
-
-      <a href="/applicant/dev-ready/dup-check/ni-number">
-        Change<span class="nhsuk-u-visually-hidden"> national insurance number</span>
-      </a>
-
-    </dd>
-
-  </div>
-
-</dl>
-
-<form action="/applicant/dev-ready/start-application" method="post" class="form">
-
-
-    <p>Check and confirm the information you have provided is correct before you submit it.</p>
-
-    {{ button({
-      "text": "Submit now"
-    }) }}
-
-    </form>
+      <form action="/applicant/dev-ready/dup-check/spinner-dup" method="post" class="form">
 
 
+      <p>Check and confirm the information you have provided is correct before you submit it.</p>
 
+      {{ button({
+        "text": "Submit now"
+      }) }}
 
-
-
+      </form>
 
     </div>
   </div>

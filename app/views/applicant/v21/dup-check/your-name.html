@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Enter your full name
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/applicant/v21/dup-check/preferred-name" method="post" class="form">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+            <h1 class="nhsuk-fieldset__heading">
+              Enter your full name
+            </h1>
+          </legend>
+
+          
+          <p>The name you enter must be the same as it appears on your photo IDs.</p>
+
+          <p>Your name will be stored on your NHS Care ID profile.</p>
+
+       
+          
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="title">
+              Title
+            </label>
+            <select class="nhsuk-select" id="title" name="title">
+              <option value=""selected>Select a title</option>
+              <option value="Mr" >Mr</option>
+              <option value="Mrs" >Mrs</option>
+              <option value="Ms" >Ms</option>
+              <option value="Miss" >Miss</option>
+              <option value="Mx" >Mx</option>
+              <option value="Dr" >Dr</option>
+              <option value="Sister" >Sister</option>
+              <option value="Brother" >Brother</option>
+              <option value="Sir" >Sir</option>
+              <option value="Cannon" >Cannon</option>
+              <option value="Dame" >Dame</option>
+              <option value="Father" >Father</option>
+              <option value="Imam" >Imam</option>
+              <option value="Lady" >Lady</option>
+              <option value="Lord" >Lord</option>
+              <option value="Major" >Major</option>
+              <option value="Rabbi" >Rabbi</option>
+              <option value="Right Reverend Monsigneur" >Right Reverend Monsigneur</option>
+              <option value="Reverend" >Reverend</option>
+              <option value="Professor" >Professor</option>
+              <option value="Baron" >Baron</option>
+              <option value="Baroness" >Baroness</option>
+            </select>
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              Given name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" type="text" value="{{ data['first-name'] }}">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="middle-name">
+              Middle name(s) (if you have one)
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="middle-name" name="middle-name" type="text" value="{{ data['middle-name'] }}">
+          </div>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Surname
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" type="text" value="{{ data['last-name'] }}">
+          </div>
+        
+        </fieldset>
+
+        <p class="nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-6"><a href="/applicant/v21/offline/names">My name does not match my photo IDs</a></p>
+
+        
+        
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+     
+      
+    </div>
+  </div>
+
+{% endblock %}
