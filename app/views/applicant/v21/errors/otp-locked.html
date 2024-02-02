@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Incorrect security code
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Incorrect security code
+      </h1>
+
+      <p>You have entered an incorrect security code too many times.</p>
+
+      <p>The team managing your application have been notified. They will send you a new invite email shortly. </p>
+
+      <p>Use the link in the email to continue your application.</p>
+
+      <details class="nhsuk-details nhsuk-u-margin-top-6">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I have not received a new invite email
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Email <a href="">[inviter-support-email]</a> to continue.</p>
+
+          <p>What to include in your email:</p>
+
+          <ul>
+            <li>subject line: Apply for Care ID - resend required</li>
+            <li>your application ID (4650349sc-28449347-ck340347-cn34834)</li>
+            <li>this description: I have entered the incorrect security code too many times. I am asking for my invite email to be resent so I can continue my application.</li>
+          </ul>
+
+          <h2 class="nhsuk-heading-m">What happens next</h2>
+
+          <p>The team managing your application will send you a new invite email.</p>
+
+          <p>Use the link in the new invite email to continue your application.</p>
+      
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Security code could not be sent
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Security code could not be sent
+      </h1>
+
+      <p>The security code could not be sent to ******<strong>7435</strong>.</p>
+
+      <p><a href="/applicant/v10/send-otp">Send a new security code</a></p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            My mobile number is incorrect
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Email <a href="#">[invite-support-email]</a> to get your mobile number updated.</p>
+          <p>What to include in your email:</p>
+          <ul>
+            <li>subject line: Apply for Care ID - update mobile number</li>
+            <li>your application ID (4650349sc-28449347-ck340347-cn34834)</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+{% endblock %}
