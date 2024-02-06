@@ -1,0 +1,73 @@
+{% extends 'layout-email.html' %}
+
+{% block pageTitle %}
+There is a problem with your NHS Care ID application
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full"> 
+      <p class="nhsuk-u-padding-top-5"><strong>Subject: </strong>There is a problem with your NHS Care ID application</p>
+      <p><strong>From:</strong> NHS Care ID (invitation@apply-for-care-identity.care-identity-service2.nhs.uk) </p>
+      <p><strong>To:</strong> name@nhs.net</p>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row" >
+
+    <div class="nhsuk-grid-column-two-thirds email-layout">
+
+      <!-- Add your content here -->
+
+      <div class="email-header">
+        <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+          <path class="nhsuk-logo__background" fill="#ffffff" d="M0 0h40v16H0z"></path>
+          <path class="nhsuk-logo__text" fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+        </svg>
+      </div>
+
+      <div class="nhsuk-u-padding-5">
+
+        <p class="nhsuk-body">Dear [firstName lastName],</p>
+        <p>There is a problem with your NHS Care ID application.</p>
+        <p>Photo ID 1 [evidence-type]:</p>
+        <ul>
+          <li>does not show an original document</li>
+        </ul>
+
+        <p>Photo ID 2 [evidence-type]</p>
+        <ul>
+          <li>does not show an original document</li>
+        </ul>
+
+        <p>Your proof of address document: </p>
+        <ul>
+          <li>does not show an original document/li>
+        </ul>
+
+        <p>For your next application to be approved, you'll need to:</p>
+        <ul>
+          <li>photograph your original, physical photo ID</li>
+          <li>photograph your original, physical proof of address document</li>
+        </ul>
+
+        <h2 class="nhsuk-heading-m">How to resubmit your application</h2>
+
+        <p>Email <a href="">[inviter-support-email]</a> and include your previous application ID number, which you can find in your initial email invite. Ask them to send you a new invite so that you can resubmit your application.  </p>
+        <p>You will need to complete both parts of your application again.  </p>
+
+        <h2 class="nhsuk-heading-m">Help and support </h2>
+
+        <p><p>View our support pages for information about how to use this service: <a href="https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2/apply-for-care-id/support-with-applying-for-my-care-id">https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2/apply-for-care-id/support-with-applying-for-my-care-id</a>. These include what documents you'll need and help with known issues.  </p>
+        <p>If you cannot use this service to verify your identity, contact <a href="">[inviter-support-email]</a>.  Include a detailed description of the problem, this will help us to support you. </p>
+        
+        <p>Do not reply to this email</p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+{% endblock %}
