@@ -1,0 +1,272 @@
+{% extends 'layout-inviter-v10.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Application: Greta Brown
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/inviter/v10/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">
+      Application: Greta Brown
+    </h1>
+
+    <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text nhsuk-u-margin-bottom-2">Status: Rejected</p>
+    <p class="grey-text nhsuk-u-margin-bottom-5">(Rejected too many times)</p>
+
+    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-5" href="#">Mark as done</a>  <a class="nhsuk-button nhsuk-button--secondary" href="/inviter/v10/applications/reopened">Reopen application</a>
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          Application summary
+        </h3>
+
+        <dl class="nhsuk-summary-list">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Application ID
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              J4V5-D6s7Y-LyMVZF-xIYAz
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Raised by
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            Stuart Little on 8 April 2023
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Requestor email address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            stuart.little3@nhs.net
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Organisation
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            	Barsetshire NHS Foundation Trust (RWA)
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Last updated on
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            23 April 2023
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Requestor notes
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            -
+            </dd>
+          </div>
+        </dl>
+
+      </div>
+    </div> 
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5" >
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          Rejection details
+        </h3>
+
+        <div class="nhsuk-expander-group">
+
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Rejection 1
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Rejected on
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    14 April 2023
+                  </dd>
+                </div>
+              
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Rejection reasons
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Photo ID 1 (driving licence) does not show both sides of the ID document. 
+                  </dd>
+                </div>  
+
+              </dl>
+            </div>
+          </details>
+
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Rejection 2
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Rejected on
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    18 April 2023
+                  </dd>
+                </div>
+              
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Rejection reasons
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Proof of address document is not accepted
+                  </dd>
+                </div>
+              
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Rejection notes
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Applicant provided a parking penalty notice.
+                  </dd>
+                </div>
+
+              </dl>
+            </div>
+          </details>
+
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Rejection 3
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Rejected on
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    23 April 2023
+                  </dd>
+                </div>
+              
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Rejection reasons
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Smartcard photo is a photo of an ID document
+                  </dd>
+                </div>
+
+              </dl>
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </div>
+
+   
+
+
+
+    <div class="nhsuk-card nhsuk-u-margin-bottom-5">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          Applicant details
+        </h3>
+
+        <dl class="nhsuk-summary-list">
+
+          
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Full name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Greta Brown
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Work email address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              greta.brown@ox.ac.uk
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Mobile number
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              079946823098
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Delivery address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Not required
+            </dd>
+          </div>
+
+        </dl>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
