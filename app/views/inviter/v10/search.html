@@ -11,9 +11,9 @@
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h1>Search all applications</h1>
+    <h1>Search applications</h1>
 
-    <form action="/inviter/v10/search-results-2" method="post" class="form">
+    <form action="/inviter/v10/search-results" method="post" class="form">
     
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
         <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
@@ -31,6 +31,26 @@
         </div>
         <input class="nhsuk-input  nhsuk-u-width-one-half" id="search-2" name="search-2" type="text">
       </div>
+
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+      
+        <fieldset class="nhsuk-fieldset">
+    
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="child" name="child" type="checkbox" value="child">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="child">
+                Include child organisations
+              </label>
+            </div>   
+    
+          </div>
+        </fieldset>
+    
+      </div>
+
+      
 
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
       

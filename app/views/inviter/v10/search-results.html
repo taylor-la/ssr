@@ -1,16 +1,21 @@
 {% extends 'layout-inviter-v10.html' %}
 {% block pageTitle %}
- Showing 2 results for 'Stenberg'
+  Search applications
 {%endblock %}
 
 {% block beforeContent %}
 {% endblock %}
 
 
+
+
 {% block content %}
+
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h1>Search all applications</h1>
+
+
+    <h1>Search applications</h1>
 
     <form action="#" method="post" class="form">
     
@@ -18,14 +23,35 @@
         <label class="nhsuk-label nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-1">
           Name, email address or application ID
         </label>
-        <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search-1" type="text" value="stenberg">
+        <input class="nhsuk-input nhsuk-input--width-20" id="search-1" name="search-1" type="text">
       </div>
 
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
         <label class="nhsuk-label  nhsuk-label--s nhsuk-u-margin-bottom-1" for="search-2">
           ODS code(s)
         </label>
-        <input class="nhsuk-input nhsuk-input--width-20" id="search-2" name="search-2" type="text">
+        <div class="nhsuk-hint nhsuk-u-reading-width" id="example-with-hint-text-hint">
+          For multiple ODS codes include a space between each one. For example, Y54 A3A8R RW4
+        </div>
+        <input class="nhsuk-input  nhsuk-u-width-one-half" id="search-2" name="search-2" type="text">
+      </div>
+
+      <div class="nhsuk-form-group nhsuk-u-margin-top-3">
+      
+        <fieldset class="nhsuk-fieldset">
+    
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="child" name="child" type="checkbox" value="child">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="child">
+                Include child organisations
+              </label>
+            </div>   
+    
+          </div>
+        </fieldset>
+    
       </div>
 
       <div class="nhsuk-form-group nhsuk-u-margin-top-3">
@@ -45,12 +71,6 @@
                 Applications I have raised
               </label>
             </div>   
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="my-apps-1" name="search-filter-1" type="checkbox" value="my-apps">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="my-apps-1">
-                Organisations I have access to
-              </label>
-            </div>  
     
           </div>
         </fieldset>
@@ -122,112 +142,468 @@
    
     </form>
 
-    <div style="float:right;">
-      <div class="nhsuk-form-group" >
-        <label class="nhsuk-label" for="select-1">
-          Sort by
-        </label>
-        <select class="nhsuk-select" id="select-1" name="select-1">
-          <option value="1" >Applicant name</option>
-          <option value="2" >Email address</option>
-          <option value="3" selected>Newest</option>
-          <option value="4" >Oldest</option>
-          <option value="5" >Raised by</option>
-          <option value="6" >ODS Code</option>
-          <option value="7" >Application ID</option>
-          <option value="8" >Status</option>
-        </select>
+    <h2 class="nhsuk-heading-m  nhsuk-u-margin-top-8"> Showing 104 results for 'X26 X35 Y54'</h2>
+
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        
+        <details class="nhsuk-details nhsuk-u-margin-top-5">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Show more information
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+    
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+                <h4 class="nhsuk-fieldset__heading">
+                  Select what to include
+                </h4>
+              </legend>
+      
+              <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="date-updated" name="options" type="checkbox" value="last updated on">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="date-updated">
+                    Date last updated
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="notes" name="options" type="checkbox" value="notes">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="notes">
+                    ID checker notes
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="marked-done" name="options" type="checkbox" value="marked as done">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="marked-done">
+                    Marked as done
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="rejection-reason" name="options" type="checkbox" value="rejection reason">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="rejection-reason">
+                    Rejection reasons
+                  </label>
+                </div>
+      
+              </div>
+            </fieldset>
+
+            <p ><a style="color:#f0f4f5;" href="/inviter/v10/search-results-info">View more info</a></p>
+
+        
+          </div>
+        </details>
       </div>
-    </div> 
+      <div class="nhsuk-grid-column-one-third" >
+        <div style="float:right;">
+          <div class="nhsuk-form-group" >
+            <label class="nhsuk-label" for="select-1">
+              Sort by
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1" >Applicant name</option>
+              <option value="2" >Email address</option>
+              <option value="3" selected>Newest (date raised)</option>
+              <option value="4" >Oldest (date raised)</option>
+              <option value="5" >Raised by</option>
+              <option value="6" >ODS Code</option>
+              <option value="9" >Application ID</option>
+              <option value="10" >Status</option>
+            </select>
+          </div>
+        </div>   
+      </div>
+    </div>
 
-  <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-4" id="search-results">
-    <caption class="nhsuk-table__caption">
-      Showing 2 results for 'Stenberg'
-    </caption>
-    <thead role="rowgroup" class="nhsuk-table__head">
-      <tr role="row">
-        <th role="columnheader" class="" scope="col">Applicant name</th>
-        <th role="columnheader" class="" scope="col">Email address</th>
-        <th role="columnheader" class="" scope="col">Last updated on</th>
-        <th role="columnheader" class="" scope="col">Raised by</th>
-        <th role="columnheader" class="" scope="col">ODS code</th>
-        <th role="columnheader" class="" scope="col">App. ID</th>
-        <th role="columnheader" class="" scope="col">Status</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr role="row" class="nhsuk-table__row">
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v10/applications/in-progress">James Stenberg</a> 
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Email address </span>
-          james.stenberg@nhs.net
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Date sent</span>
-          10 September 2022
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Sender</span>
-          Emerson Jones
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">ODS code</span>
-          Y54
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Application ID</span>	
-          756bba
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Status</span>
-          <strong class="nhsuk-tag nhsuk-tag--white">
-            In progress
-            </strong>
-        </td>
-      </tr>
+    
 
-      <tr role="row" class="nhsuk-table__row">
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Full name </span>
-          <a href="/inviter/v10/applications/cancelled">Lauren Stenberg</a> 
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Email address </span>
-          lauren.stenberg@nhs.net
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Date sent</span>
-          22 July 2022
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Sender</span>
-          Sandra Jones
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">ODS code</span>
-          KJ875
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Application ID</span>	
-          GFH6475
-        </td>
-        <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-          <span class="nhsuk-table-responsive__heading">Status</span>
-          <strong class="nhsuk-tag nhsuk-tag--grey">
-            Cancelled
-            </strong>
-        </td>
-      </tr>
-     
-    </tbody>
-  </table>
+    
+
+    <div style="overflow-x:auto;">
+      <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-4">
+        <caption class="nhsuk-table__caption">
+        </caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">Applicant name</th>
+            <th role="columnheader" class="" scope="col">Email address</th>
+            <th role="columnheader" class="" scope="col">Raised on</th>
+            <th role="columnheader" class="" scope="col">Raised by</th>
+            <th role="columnheader" class="" scope="col">ODS code</th>
+            <th role="columnheader" class="" scope="col">App ID</th>
+            <th role="columnheader" class="" scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/in-progress">James Stenberg</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              james.stenberg@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              21 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Emerson Jones
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              Y54
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              Tr0BW9QzZKHmfiyFQk9F
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--white">
+                In progress
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/in-progress">Tavish Sydney</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              tavish.syndey@gov.uk
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              20 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Kris Peters
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              Y54
+            </td>  
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              tQ1PpJnxoHGUSod4qvyK
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--white">
+                In progress
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/expired">Shirin Peters</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              shirin.peters@ox.ac.uk
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              19 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Nathaniel Clarke
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              Y54
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              ayWDLhFe9JeOs0eIGeAY
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--orange">
+                Resend required
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/approved">Russell Trent</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              russell.trent@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              18 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Nathaniel Clarke
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              X26
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              xR89kvfoI70DqCd1xS9A
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--green">
+                Approved
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/duplicate">Sharon Woods</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              sharon.woods@boots.uk
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              28 March 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Vincent Douglas
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              Y54
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              IlwXLtRB92JdZKwaFDXU
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--yellow">
+                Duplicate
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/rejected">Stacey Atwal</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              stacey.atwal@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              23 March 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Laura Ford
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              Y54
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              AvRFJLVordMl9a8hrlB1
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--red">
+                Rejected
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/expired">Nick Gibson</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              nick.gibson@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              22 March 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Laura Ford
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              X35
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              F3nL55tyCtQXDTCx9AtV
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--orange">
+                Resend required
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/cancelled">Joyce Chueng</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              joyce.chueng@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              22 March 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Sandra Jones
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              X35
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              BU690qC90nk0VCXIIswN
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+                Cancelled
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/in-progress">Dennis Berry</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              dennis.berry@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              21 March 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Sandra Jones
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              X35
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              95SYBHz5PiJ2KfdyTCky
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--white">
+                In progress
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Applicant name </span>
+              <a href="/inviter/v10/applications/in-progress">Liz Thompson</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Email address </span>
+              liz.thompson@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised on</span>
+              20 March 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Laura Ford
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              X35
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Application ID</span>	
+              N03HwFhT1hZZMq2Q4Dnl
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--white">
+                In progress
+                </strong>
+            </td>
+          </tr>
+        
+        </tbody>
+      </table> 
+    </div>
+
+      
+
+  <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+    <ul class="nhsuk-list nhsuk-pagination__list">
+      <li class="nhsuk-pagination-item--next">
+        <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
+          <span class="nhsuk-pagination__title">Next</span>
+          <span class="nhsuk-u-visually-hidden">:</span>
+          <span class="nhsuk-pagination__page">2 of 6</span>
+          <svg
+            class="nhsuk-icon nhsuk-icon__arrow-right"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            width="34"
+            height="34"
+          >
+            <path
+              d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v3H5a1 1 0 0 0 0 2h11v3a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"
+            ></path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
 
   </div>
 </div>
+
+
 
 
 {% endblock %}
