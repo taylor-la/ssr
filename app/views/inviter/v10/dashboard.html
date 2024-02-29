@@ -6,10 +6,10 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-    <h1>Apply for Care ID</h1>
+    <h1 class="nhsuk-heading-l">Apply for Care ID</h1>
 
 
-    <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-u-margin-bottom-7">
+    <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-u-margin-bottom-1">
       <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
         <div class="nhsuk-card nhsuk-card--clickable">
           <div class="nhsuk-card__content">
@@ -32,6 +32,37 @@
       </li>
     </ul>
 
+    <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2">Applications for RWA</h2>
+
+    <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xs">
+          <h4 class="nhsuk-fieldset__heading">
+            Show applications for child organisations
+          </h4>
+        </legend>
+        <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="child-yes-0" name="child-0" type="radio" value="yes" checked>
+            <label class="nhsuk-label nhsuk-radios__label" for="child-yes-0">
+              Yes
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="child-no-0" name="child-0" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="child-no-0">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset> 
+    </div>
+
+   
+
+    
+
+
 
 
     <!-- Tab links -->
@@ -40,8 +71,8 @@
       <button class="tablinks" onclick="openList(event, 'Pending')">In progress (9)</button>
       <button class="tablinks" onclick="openList(event, 'Resend')" >Resend required (3)</button>
       <button class="tablinks" onclick="openList(event, 'Duplicates')">Duplicates (3)</button>
-      <button class="tablinks" onclick="openList(event, 'Rejected')">Rejected (4)</button>
-      <button class="tablinks" onclick="openList(event, 'Closed')">Cancelled (3)</button>
+      <button class="tablinks" onclick="openList(event, 'Rejected')">Rejected (2)</button>
+      <button class="tablinks" onclick="openList(event, 'Closed')">Cancelled (5)</button>
      
     </div>
 
@@ -53,7 +84,7 @@
 
       <div class="nhsuk-grid-row">
 
-        <div class="nhsuk-grid-column-one-third" style="width:20%">
+        <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group nhsuk-u-margin-top-4">
             <label class="nhsuk-label" for="select-1">
               Sort by
@@ -67,34 +98,8 @@
             </select>
           </div>
         </div>
-        
-        <div class="nhsuk-grid-column-one-third" style="width:50%">
-          <div class="nhsuk-form-group nhsuk-u-margin-top-4">
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xs nhsuk-u-margin-bottom-1">
-                <h4 class="nhsuk-fieldset__heading">
-                  Show child organisations
-                </h4>
-              </legend>
-              <div class="nhsuk-radios nhsuk-radios--inline">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-yes-1" name="child-1" type="radio" value="yes" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-yes-1">
-                    Yes
-                  </label>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-no-1" name="child-1" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-no-1">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset> 
-          </div>
-        </div>
 
-        <div class="nhsuk-grid-column-one-quarter" style="width:30%">
+        <div class="nhsuk-grid-column-one-half">
           <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-6" style="padding: 6px 16px; font-weight: normal; float:right;" href="#">Mark as done</a> 
         </div>
 
@@ -336,7 +341,9 @@
         </div>
       </details>
 
-      <p class="nhsuk-body-s nhsuk-u-margin-top-5">Showing applications updated within the last 30 days</p>
+
+    <p class="nhsuk-body-s nhsuk-u-margin-top-5">Showing applications updated within the last 30 days</p>
+
     </div>
 
     <!-- Tab pending -->
@@ -345,7 +352,7 @@
 
       <div class="nhsuk-grid-row">
 
-        <div class="nhsuk-grid-column-one-third" style="width:25%">
+        <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group nhsuk-u-margin-top-4">
             <label class="nhsuk-label" for="select-1">
               Sort by
@@ -361,34 +368,8 @@
             </select>
           </div>
         </div>
-        
-        <div class="nhsuk-grid-column-one-third" style="width:50%">
-          <div class="nhsuk-form-group nhsuk-u-margin-top-4">
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xs nhsuk-u-margin-bottom-1">
-                <h4 class="nhsuk-fieldset__heading">
-                  Show child organisations
-                </h4>
-              </legend>
-              <div class="nhsuk-radios nhsuk-radios--inline">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-yes-2" name="child-2" type="radio" value="yes" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-yes-2">
-                    Yes
-                  </label>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-no-2" name="child-2" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-no-2">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset> 
-          </div>
-        </div>
 
-        <div class="nhsuk-grid-column-one-quarter" style="width:25%">
+        <div class="nhsuk-grid-column-one-half">
         </div>
 
       </div>
@@ -632,7 +613,7 @@
 
       <div class="nhsuk-grid-row">
 
-        <div class="nhsuk-grid-column-one-third" style="width:25%">
+        <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group nhsuk-u-margin-top-4">
             <label class="nhsuk-label" for="select-1">
               Sort by
@@ -648,34 +629,9 @@
             </select>
           </div>
         </div>
-        
-        <div class="nhsuk-grid-column-one-third" style="width:30%">
-          <div class="nhsuk-form-group nhsuk-u-margin-top-4">
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xs nhsuk-u-margin-bottom-1">
-                <h4 class="nhsuk-fieldset__heading">
-                  Show child organisations
-                </h4>
-              </legend>
-              <div class="nhsuk-radios nhsuk-radios--inline">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-yes-3" name="child-3" type="radio" value="yes" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-yes-3">
-                    Yes
-                  </label>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-no-3" name="child-3" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-no-3">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset> 
-          </div>
-        </div>
+      
 
-        <div class="nhsuk-grid-column-one-quarter" style="width:45%">
+        <div class="nhsuk-grid-column-one-half">
           <div style="float:right;">
             <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-3 nhsuk-u-margin-top-6" style="padding: 6px 16px; font-weight: normal;" href="#">Resend selected</a> 
             <a class="nhsuk-button nhsuk-button--secondary delete-button nhsuk-u-margin-top-6" style="padding: 6px 16px; font-weight: normal;" href="/inviter/v10/cancel-applications">Cancel selected</a>
@@ -826,7 +782,7 @@
 
       <div class="nhsuk-grid-row">
 
-        <div class="nhsuk-grid-column-one-third" style="width:20%">
+        <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group nhsuk-u-margin-top-4">
             <label class="nhsuk-label" for="select-1">
               Sort by
@@ -840,34 +796,8 @@
             </select>
           </div>
         </div>
-        
-        <div class="nhsuk-grid-column-one-third" style="width:50%">
-          <div class="nhsuk-form-group nhsuk-u-margin-top-4">
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xs nhsuk-u-margin-bottom-1">
-                <h4 class="nhsuk-fieldset__heading">
-                  Show child organisations
-                </h4>
-              </legend>
-              <div class="nhsuk-radios nhsuk-radios--inline">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-yes-4" name="child-4" type="radio" value="yes" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-yes-4">
-                    Yes
-                  </label>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-no-4" name="child-4" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-no-4">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset> 
-          </div>
-        </div>
 
-        <div class="nhsuk-grid-column-one-quarter" style="width:30%">
+        <div class="nhsuk-grid-column-one-half">
           <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-6" style="padding: 6px 16px; font-weight: normal; float:right;" href="#">Mark as done</a> 
         </div>
 
@@ -1006,7 +936,7 @@
 
       <div class="nhsuk-grid-row">
 
-        <div class="nhsuk-grid-column-one-third" style="width:20%">
+        <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group nhsuk-u-margin-top-4">
             <label class="nhsuk-label" for="select-1">
               Sort by
@@ -1020,34 +950,8 @@
             </select>
           </div>
         </div>
-        
-        <div class="nhsuk-grid-column-one-third" style="width:50%">
-          <div class="nhsuk-form-group nhsuk-u-margin-top-4">
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xs nhsuk-u-margin-bottom-1">
-                <h4 class="nhsuk-fieldset__heading">
-                  Show child organisations
-                </h4>
-              </legend>
-              <div class="nhsuk-radios nhsuk-radios--inline">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-yes-5" name="child-5" type="radio" value="yes" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-yes-5">
-                    Yes
-                  </label>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-no-5" name="child-5" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-no-5">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset> 
-          </div>
-        </div>
 
-        <div class="nhsuk-grid-column-one-quarter" style="width:30%">
+        <div class="nhsuk-grid-column-one-half">
           <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-6" style="padding: 6px 16px; font-weight: normal; float:right;" href="#">Mark as done</a> 
         </div>
 
@@ -1134,66 +1038,6 @@
               Rejected 3 times
             </td>
           </tr>
-          <tr role="row" class="nhsuk-table__row">
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Select item </span>
-              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
-                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                </label>
-              </div>
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Full name </span>
-              <a href="/inviter/v10/applications/app-expired">Fiona Carson </a>
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Rejected on</span>
-              9 April 2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Raised by</span>
-              Stuart Little
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">ods code</span>
-              H6834
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Reason</span>
-             Application expired. Did not submit ID documents after being sent 3 texts to download the app
-            </td>
-          </tr>
-          <tr role="row" class="nhsuk-table__row">
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Select item </span>
-              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
-                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                </label>
-              </div>
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Full name </span>
-              <a href="/inviter/v10/applications/app-expired">Graham Lewis </a>
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Rejected on</span>
-              9 April 2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Raised by</span>
-              Stuart Little
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">ods code</span>
-              H6834
-            </td>
-            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
-              <span class="nhsuk-table-responsive__heading">Reason</span>
-             Invite email expired. Did not respond to 3 invite emails.
-            </td>
-          </tr>
         </tbody>
       </table>
       <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-top-6">
@@ -1216,7 +1060,7 @@
 
       <div class="nhsuk-grid-row">
 
-        <div class="nhsuk-grid-column-one-third" style="width:20%">
+        <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group nhsuk-u-margin-top-4">
             <label class="nhsuk-label" for="select-1">
               Sort by
@@ -1230,34 +1074,9 @@
             </select>
           </div>
         </div>
-        
-        <div class="nhsuk-grid-column-one-third" style="width:50%">
-          <div class="nhsuk-form-group nhsuk-u-margin-top-4">
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xs nhsuk-u-margin-bottom-1">
-                <h4 class="nhsuk-fieldset__heading">
-                  Show child organisations
-                </h4>
-              </legend>
-              <div class="nhsuk-radios nhsuk-radios--inline">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-yes-6" name="child-6" type="radio" value="yes" checked>
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-yes-6">
-                    Yes
-                  </label>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="child-no-6" name="child-6" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="child-no-6">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset> 
-          </div>
-        </div>
 
-        <div class="nhsuk-grid-column-one-quarter" style="width:30%">
+        <div class="nhsuk-grid-column-one-half">
+          <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-6" style="padding: 6px 16px; font-weight: normal; float:right;" href="#">Mark as done</a> 
         </div>
 
       </div>
@@ -1268,6 +1087,12 @@
         </caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1"></label>
+             </div>
+            </th>
             <th role="columnheader" class="" scope="col">Applicant name</th>
             <th role="columnheader" class="" scope="col">Cancelled on</th>
             <th role="columnheader" class="" scope="col">Raised by</th>
@@ -1280,6 +1105,14 @@
           
 
           <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
             <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
               <span class="nhsuk-table-responsive__heading">Full name </span>
               <a href="/inviter/v10/applications/cancelled">Janet Baylis</a> 
@@ -1303,6 +1136,74 @@
           </tr>
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v10/applications/app-expired">Fiona Carson</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Closed on</span>
+              11 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Stuart Little
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              RWA
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Reason</span>
+               Application expired
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v10/applications/invite-expired">Bob Danns</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Closed on</span>
+              10 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Raised by</span>
+              Tim Bond
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">ODS code</span>
+              RWA
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Reason</span>
+               Application expired
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
               <span class="nhsuk-table-responsive__heading">Full name </span>
               <a href="/inviter/v10/applications/cancelled">James Stenberg</a> 
             </td>
@@ -1324,6 +1225,14 @@
             </td>
           </tr>
           <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
             <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
               <span class="nhsuk-table-responsive__heading">Full name </span>
               <a href="/inviter/v10/applications/cancelled">Laurel Taylor</a> 
@@ -1349,6 +1258,7 @@
       </table>
       <p class="nhsuk-body-s nhsuk-u-margin-top-5">Showing applications updated within the last 30 days</p>
     </div>
+
 
     <p class="nhsuk-u-margin-top-6">This is a new service - your <a href="">feedback</a> will help us improve it.</p>
 
