@@ -1,0 +1,302 @@
+{% extends 'layout-service-dev-ready.html' %}
+
+{% block pageTitle %}
+  Approved applications
+{%endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/service/dev-ready/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <div class="nhsuk-alert nhsuk-alert--success nhsuk-alert--icon" style="display:none;">
+      <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-alert__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+      </svg>
+      <h1 class="nhsuk-u-visually-hidden">Success:</h1>
+      <p class="nhsuk-u-font-weight-bold">Download App link SMSs successfully resent</p>
+    </div>
+    <h1>Download app text messages that could not be sent</h1>
+
+    
+
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group" >
+          <label class="nhsuk-label" for="select-1">
+            Sort by
+          </label>
+          <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="1" >Applicant name</option>
+            <option value="2" >ODS Code</option>
+            <option value="3" selected>Newest</option>
+            <option value="4">Oldest</option> 
+          </select>
+        </div>
+  
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-2" href="" style="float:right;">Resend SMS</a>
+      </div>
+    </div>
+      
+    <table role="table" class="nhsuk-table-responsive">
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1"></label>
+           </div>
+          </th>
+          <th role="columnheader" class="" scope="col">Applicant name</th>
+          <th role="columnheader" class="" scope="col">Application ID</th>
+          <th role="columnheader" class="" scope="col">ODS code</th>
+          <th role="columnheader" class="" scope="col">Last updated</th>         
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>  
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">James Stenberg</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>owIFw-U6Yf-CfosQCA
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>RWA
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>13 September 2021 12.56pm
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row"> 
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>  
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">Tavish Sydney</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>9bqjG6-66P1R0-T8C1
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>K734
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>9 September 2021 9.12am
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>   
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">Shirin Peters</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>Xw6-4QbCp-1QjTE9vp
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>X634
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>4 September 2021 6.56pm
+          </td>
+
+        </tr>
+        <tr role="row" class="nhsuk-table__row"> 
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>  
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">Diana Ingram</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>4Ir-ApKYVh-ZDpte2F
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>KL452
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>22 August 2021 9.54pm
+          </td>
+
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>  
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">Charita Dane</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>raoC-81vd7N-kEemtU
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>754C
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>3 August 2021 3.51am
+          </td>
+
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>  
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">Joyce Chung</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>fsTem-EPEdU7-YRuXZ
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>RWA
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>22 July 2021 10.32am
+          </td>
+
+        </tr>
+        <tr role="row" class="nhsuk-table__row"> 
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>  
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">Christoper Ruiz</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>1bs9T-CHLiGML-5JeE
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>KGE
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>13 July 2021 11.45am
+          </td>
+
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>  
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">Henrietta Wilkerson</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>Ey9H-fuzTA-DXZ0l2U
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>KGE
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>28 June 2021 2.05pm
+          </td>
+
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>  
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">Arnold Meyer</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>BzfN-ybPCrE-iCqSZU
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>CB634
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>15 June 2021 6.12am
+          </td>
+ 
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Select item </span>
+            <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </td>  
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="#">Laurel Stenberg</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>CQrT-ufjbD-uRP4Xdz
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>KJ834
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>4 June 2021 5.45pm
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+{% endblock %}
