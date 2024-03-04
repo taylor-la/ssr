@@ -1,4 +1,4 @@
-{% extends 'layout-inviter-v10.html' %}
+{% extends 'layout-inviter-dev-ready.html' %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -11,7 +11,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/inviter/v10/dashboard",
+    "href": "/inviter/dev-ready/dashboard",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -29,8 +29,8 @@
     <p class="nhsuk-body-l nhsuk-u-font-weight-bold grey-text nhsuk-u-margin-bottom-2">Status: Resend required</p>
     <p class="grey-text nhsuk-u-margin-bottom-5">(Security code issue)</p>
 
-    <a class="nhsuk-button nhsuk-u-margin-right-4" href="/inviter/v10/application-sent">Resend invite email</a>
-    <a class="nhsuk-button nhsuk-button--secondary delete-button" href="/inviter/v10/cancel-application">Cancel application</a>
+    <a class="nhsuk-button nhsuk-u-margin-right-4" href="#">Resend invite email</a>
+    <a class="nhsuk-button nhsuk-button--secondary delete-button" href="/inviter/dev-ready/cancel-application">Cancel application</a>
 
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-5">
@@ -90,18 +90,19 @@
 
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-            Requestor notes
+            Invite emails sent
             </dt>
             <dd class="nhsuk-summary-list__value">
-            -
+            2
             </dd>
           </div>
+
+          
 
         </dl>
 
       </div>
     </div>
-
 
 
     <div class="nhsuk-card nhsuk-u-margin-bottom-5">
@@ -120,7 +121,7 @@
               James Stenberg
             </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/inviter/v10/enter-details">
+              <a href="/inviter/dev-ready/enter-details">
                 Change<span class="nhsuk-u-visually-hidden"> name</span>
               </a>
             </dd>
@@ -134,7 +135,7 @@
               James.stenberg@nhs.net
             </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/inviter/v10/enter-details">
+              <a href="/inviter/dev-ready/enter-details">
                 Change<span class="nhsuk-u-visually-hidden"> name</span>
               </a>
             </dd>
@@ -148,7 +149,7 @@
               079946823098
             </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/inviter/v10/enter-details">
+              <a href="/inviter/dev-ready/enter-details">
                 Change<span class="nhsuk-u-visually-hidden"> name</span>
               </a>
             </dd>
@@ -162,7 +163,7 @@
               Required
             </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/inviter/v10/enter-details">
+              <a href="/inviter/dev-ready/enter-details">
                 Change<span class="nhsuk-u-visually-hidden"> name</span>
               </a>
             </dd>
@@ -176,7 +177,7 @@
               smartcard with nurse practitioner role
             </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/inviter/v10/enter-details">
+              <a href="/inviter/dev-ready/enter-details">
                 Change<span class="nhsuk-u-visually-hidden"> name</span>
               </a>
             </dd>
@@ -202,17 +203,6 @@
               Enter personal details
             </dt>
             
-            <dd class="nhsuk-summary-list__actions">
-              <strong class="nhsuk-tag nhsuk-tag--grey">
-                Not started
-                </strong>
-            </dd>
-          </div>
-
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Upload smartcard photo
-            </dt>
             <dd class="nhsuk-summary-list__actions">
               <strong class="nhsuk-tag nhsuk-tag--grey">
                 Not started
@@ -251,4 +241,25 @@
   </div>
 </div>
 
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          How long does an applicant have to complete their application?
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Applicants must:</p>
+        <ul>
+          <li>complete the duplicate check within <strong>4 days</strong> of receiving the invite email</li>
+          <li>submit their ID documents within <strong>15 days</strong> of receiving a link to download the app</li>
+        </ul>
+        <p>Reminders to submit their ID documents are sent via text and email 2 days and 7 days after receiving the link to download the app.</p> 
+      </div>
+    </details>
+
+  </div>
+</div>
 {% endblock %}
