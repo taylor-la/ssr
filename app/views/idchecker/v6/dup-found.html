@@ -1,0 +1,92 @@
+{% extends 'layout-idchecker-v5.html' %}
+
+{% block pageTitle %}
+  Possible duplicate profile found
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <h1>Possible duplicate profile found</h1>
+
+      <p>This application has been put on hold with the following reason:</p>
+
+      <ul>
+        <li>Possible duplicate found. Duplicate check in CIM required</li>
+      </ul>
+
+      <p>An ID checker supervisor will carry out a manual check in CIM to confirm if the application is a duplicate.</p>
+
+      <a class="nhsuk-button" href="/idchecker/v6/dashboard">Return to dashboard</a>
+
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            UUID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <a href="#">4628 3347 0474</a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Full name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Part match
+          </dd>
+        </div>
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Exact match
+          </dd>
+        </div>
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Exact match
+          </dd>
+        </div>
+        
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Passport number
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            No match
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Driving licence
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Not available
+          </dd>
+        </div>
+    
+      </dl>
+
+ 
+
+
+      <p>You must check <a href="#">Care Identity Management (CIM)</a> to confirm if this application is a duplicate.</p>
+    
+
+    </div>
+  </div>
+{% endblock %}

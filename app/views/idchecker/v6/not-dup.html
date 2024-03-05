@@ -1,0 +1,63 @@
+{% extends 'layout-idchecker-v5.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Create a new Care ID profile
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v6/applications/duplicate",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+
+      <form action="/idchecker/v6/applications/dpoa-plus" method="post" class="form">
+
+          <div class="nhsuk-form-group">
+        
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+                <h1 class="nhsuk-fieldset__heading">
+                  Create a new Care ID profile
+                </h1>
+              </legend>
+      
+        
+              <div class="nhsuk-checkboxes">
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    I have checked the profiles and confirm I am not creating a duplicate user profile
+                  </label>
+                </div>
+        
+              </div>
+            </fieldset>
+        
+          </div>
+    
+
+          {{ button({
+            "text": "Create Care ID profile"
+          }) }}
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}

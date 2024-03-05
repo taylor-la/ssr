@@ -2324,21 +2324,6 @@ router.post('/applicant/v21/step-1/address-postcode', function (req, res) {
 })
 
 
-router.post('/applicant/v21/step-1/1-photo-id', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var passport = req.session.data['passport']
-
-  // Check whether the variable matches a condition
-  if (passport == "other"){
-    // Send user to next page
-    res.redirect('/applicant/v21/step-1/1-photo-id')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/applicant/v21/step-2/upload-photo')
-  }
-
-})
 
 router.post('/applicant/v21/step-2/upload-photo', function (req, res) {
 

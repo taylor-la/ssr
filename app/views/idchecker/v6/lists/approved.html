@@ -1,0 +1,282 @@
+{% extends 'layout-idchecker-v5.html' %}
+
+{% block pageTitle %}
+  Approved applications
+{%endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/idchecker/v6/dashboard",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h1>Approved applications</h1>
+
+    <div style="float:right;">
+      <div class="nhsuk-form-group" >
+        <label class="nhsuk-label" for="select-1">
+          Sort by
+        </label>
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1" >Applicant name</option>
+          <option value="2" >ODS Code</option>
+          <option value="3" selected>Newest</option>
+          <option value="4">Oldest</option>
+          <option value="5">Approved by</option>
+        </select>
+      </div>
+    </div>   
+
+      
+    <table role="table" class="nhsuk-table-responsive">
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">Applicant name</th>
+          <th role="columnheader" class="" scope="col">Application ID</th>
+          <th role="columnheader" class="" scope="col">ODS code</th>
+          <th role="columnheader" class="" scope="col">Date approved</th>
+          <th role="columnheader" class="" scope="col">Approved by</th>
+          <th role="columnheader" class="" scope="col">UUID</th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">James Stenberg</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>owIFw-U6Yf-CfosQCA
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>RWA
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>13 September 2021 12.56pm
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>9237 0347 9347
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">   
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">Tavish Sydney</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>9bqjG6-66P1R0-T8C1
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>K734
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>9 September 2021 9.12am
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Kris Emerson
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>3487 9347 0238
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row"> 
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">Shirin Peters</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>Xw6-4QbCp-1QjTE9vp
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>X634
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>4 September 2021 6.56pm
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>9347 2393 9584
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row"> 
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">Diana Ingram</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>4Ir-ApKYVh-ZDpte2F
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>KL452
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>22 August 2021 9.54pm
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Connie Shepard
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>7437 9237 9347
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">Charita Dane</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>raoC-81vd7N-kEemtU
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>754C
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>3 August 2021 3.51am
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>9473 0238 3487
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">Joyce Chung</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>fsTem-EPEdU7-YRuXZ
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>RWA
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>22 July 2021 10.32am
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Connie Shepard
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>3276 8378 9237
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row"> 
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">Christoper Ruiz</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>1bs9T-CHLiGML-5JeE
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>KGE
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>13 July 2021 11.45am
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Added by</span>	Kris Emerson
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>4673 9823 0238
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">Henrietta Wilkerson</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>Ey9H-fuzTA-DXZ0l2U
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>KGE
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>28 June 2021 2.05pm
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Reviewed by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>7654 9347 4372
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">Arnold Meyer</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>BzfN-ybPCrE-iCqSZU
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>CB634
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>15 June 2021 6.12am
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Kris Emerson
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>3467 8346 9238
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Applicant name</span><a href="/idchecker/v6/applications/approved">Laurel Stenberg</a>
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Application ID</span>CQrT-ufjbD-uRP4Xdz
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">ODS code</span>KJ834
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Date reviewed</span>4 June 2021 5.45pm
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">Added by</span>Joanna Bloggs
+          </td>
+          <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+            <span class="nhsuk-table-responsive__heading">UUID</span>7358 7938 5890
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+      <ul class="nhsuk-list nhsuk-pagination__list">
+        <li class="nhsuk-pagination-item--next">
+          <a
+            class="nhsuk-pagination__link nhsuk-pagination__link--next"
+            href="#"
+          >
+            <span class="nhsuk-pagination__title">Next</span>
+            <span class="nhsuk-u-visually-hidden">:</span>
+            <span class="nhsuk-pagination__page">2 of 6</span>
+            <svg
+              class="nhsuk-icon nhsuk-icon__arrow-right"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              width="34"
+              height="34"
+            >
+              <path
+                d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v3H5a1 1 0 0 0 0 2h11v3a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% endblock %}
