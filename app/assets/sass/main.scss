@@ -15,6 +15,19 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
+.nhsuk-card__content--primary {
+  padding-right: 75px;
+}
+
+.nhsuk-card__content--primary .nhsuk-icon {
+  display: block;
+  fill: #005eb8;
+  margin-top: -8px;
+  pointer-events: none;
+  position: absolute;
+  right: 24px;
+  top: 50%; }
+
 .inner
 {
     display: inline-block;
