@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  How to use the link in your invite email
+{% endblock %}
+
+{% block beforeContent %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/applicant/v21/help/home">Apply for Care ID</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/applicant/v21/help/help">Help with Apply for Care ID</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="">How to use the link in your invite email</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+        Level three
+      </a>
+    </p>
+  </div>
+</nav>
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1 id="top">
+        How to use the link in your invite email
+      </h1>
+
+    </div>
+  </div>   
+  
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+
+    <div class="nhsuk-grid-column-one-third" style="position: sticky; top: 32px;">
+      <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+        <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+        <ol class="nhsuk-contents-list__list nhsuk-body-s">
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#top">Top of the page</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#about">I have not received an email inviting me to use Apply for Care ID</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#who">My email link has expired</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#benefits">I keep getting an error when I select the link</a>
+          </li>
+        </ol>
+      </nav>
+
+    </div>
+
+    <div class="nhsuk-grid-column-two-thirds" >
+
+
+      <h2 id="about">I have not received an email inviting me to use Apply for Care ID</h2>
+
+      <ol>
+        <li>Check your junk or spam folder</li>
+        <li>If it's not in there, go back to the person that invited you into the process to see if they can resend the email</li>
+        <li>If the email does not seem to be sending, this may be a technical issue so email <a href="">ssd.nationalservicedesk@nhs.net</a>, include your application ID and full details of the issue in the email,</li>
+      </ol>
+
+      <h2 id="who">My email link has expired</h2>
+
+      <ul>
+        <li>If your email has expired you do not need to do anything. The Registration Authority (RA) manager, agent or sponsor who invited you to start the process will see your application link has expired and they will send a new link.</li>
+        <li>If you do not receive a new link from the Registration Authority within a few days, you can contact them and them to resend you a new link. You can do this by emailing them using the email address included in your invitation email.</li>
+      </ul>
+      
+      <p>Do not contact the National Service Desk email address, the central team cannot resend your invitation.</p>
+
+      <h2 id="benefits">I keep getting an error when I select the link</h2>
+
+      <ul>
+        <li>You will most likely be seeing this error because you are trying to access the service from outside of the UK. Unfortunately, you cannot access this service from overseas. You must complete your application on your return.</li>
+        <li>Contact the team or individual that invited you to let them know about the delay to completing your application, their email address will be included in your invitation email.</li>
+      </ul>
+
+      <p>Do not contact the National Service Desk email address, this team will not be able to contact your inviter on your behalf.</p>
+
+    </div>
+
+  </div>
+{% endblock %}
