@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Upload your ID documents
+ A link for the NHS Verify Care ID app has been sent to your mobile
 {% endblock %}
 
 {% block content %}
@@ -9,18 +9,48 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        Upload your ID documents
+        A link for the NHS Verify Care ID app has been sent to your mobile
       </h1>
 
-      <p>You have completed the first part of this process and now need to upload your ID documents.</p>
+      <p>Use the link that has been sent to your mobile phone number ending <strong>*********5314</strong> to download the secure mobile app.</p>
 
-      <p>Download the Verify Care ID app onto your mobile phone and use the app to upload your documents.</p>
+      
 
-      <p>Use the link that has been sent to you by text message and email to download the Care ID app and continue with your application.</p>
+      <p>The app will photograph your ID documents and scan your face to verify your identity.</p>
 
-      <p>If you have not received the link email <a href="">[inviter-support-email]</a> with the subject line “Verify Care ID app link not received.</p>
+      <p>You will need:</p>
+      <ul>
+        <li>your {{ data['passport'] }} {{ data['1-photo-id'] }} {{ data['2-photo-id'] }} {{ data['poa'] }}</li>
+      </ul>   
 
+      <p>You must submit your ID documents by <strong>Wednesday 27 December 2023 5pm</strong>.</p>
+     
+      <p><a href="/applicant/dev-ready/offline/no-mobile">I cannot use a mobile phone to take photos and scan my face</a></p>
+      
 
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I have not received the link
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+
+          <p>The link should be sent to you within 5 minutes.</p>
+
+          <p>Email <a href="#">ssd.nationalservicedesk@nhs.net</a> if you have not recieved a text message with a link.</p>
+
+          <p>What to include in your email:</p>
+
+          <ul>
+            <li>subject line: Apply for Care ID - mobile app link not received</li>
+            <li>your application ID (4650349sc-28449347-ck340347-cn34834)</li>
+          </ul>
+
+        </div>
+      </details>
+
+      <p>This is a new service, your <a href="">feedback</a> will help us improve it.</p>
 
     </div>
 
