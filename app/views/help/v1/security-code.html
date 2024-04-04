@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  How to enter your security code
+{% endblock %}
+
+{% block beforeContent %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/help/v1/home">Apply for Care ID</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/help/v1/help">Help with Apply for Care ID</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="">How to enter your security code</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+        Level three
+      </a>
+    </p>
+  </div>
+</nav>
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1 id="top">
+        How to enter your security code
+      </h1>
+
+    </div>
+  </div>   
+  
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+
+    <div class="nhsuk-grid-column-one-third" style="position: sticky; top: 32px;">
+      <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+        <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+        <ol class="nhsuk-contents-list__list nhsuk-body-s">
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#top">Top of the page</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#about">I have not received a 6-digit security code to my phone</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#who">I need to change the mobile number associated with my application</a>
+          </li>
+        </ol>
+      </nav>
+
+    </div>
+
+    <div class="nhsuk-grid-column-two-thirds" >
+
+
+      <h2 id="about">I have not received a 6-digit security code to my phone</h2>
+
+      <p>Check that the mobile phone number looks correct. If it looks incorrect, see the advice in the <a href="#who">I need to change the mobile number associated with my application</a> section.</p>
+
+      <p>If the number looks correct, this issue could be because:</p>
+
+      <ul>
+        <li>You do not have sufficient mobile phone signal to receive the text, try to send it again in a different location.</li>
+        <li>Your mobile phone provider is preventing the delivery of the text message, unfortunately, this is something we are unable to support with and you may need to contact them or provide a different mobile phone number for your inviter to use to re-invite you.</li>
+        <li>There is an issue with the service, contact <a href="">ssd.nationalservicedesk@nhs.net</a>, including your application ID and full details of the issue for the team to investigate.</li>
+      </ul>
+
+      <h2 id="who">I need to change the mobile number associated with my application</h2>
+
+      <ul>
+        <li>If you need to change the mobile number on your application contact your Registration Authority manager, agent or sponsor, their email address will be included in your invitation email.</li>
+        <li>You may need to be sent a new application invitation, depending on how far you are through the process. </li>
+      </ul>
+
+      <p>Do not contact the National Service Desk email address, this team will not be able to contact your inviter on your behalf.</p>
+    </div>
+
+  </div>
+{% endblock %}

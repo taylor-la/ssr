@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Errors and troubleshooting
+{% endblock %}
+
+{% block beforeContent %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/help/v1/home">Apply for Care ID</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/help/v1/help">Help with Apply for Care ID</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="">Errors and troubleshooting</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+        Level three
+      </a>
+    </p>
+  </div>
+</nav>
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1 id="top">
+        Errors and troubleshooting
+      </h1>
+
+    </div>
+  </div>   
+  
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+
+    <div class="nhsuk-grid-column-one-third" style="position: sticky; top: 32px;">
+      <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+        <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+        <ol class="nhsuk-contents-list__list nhsuk-body-s">
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#top">Top of the page</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#about">I do not have a National Insurance number</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#who">The service is telling me that I already have an NHS Care ID profileo</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link nhsuk-link--no-visited-state" href="#benefits">My application was unsuccessful</a>
+          </li>
+        </ol>
+      </nav>
+
+    </div>
+
+    <div class="nhsuk-grid-column-two-thirds" >
+
+
+      <h2 id="about">I do not have a National Insurance number</h2>
+
+      <p> If you do not have a National Insurance number, then you must contact the team managing your application. Their email address will be included in your invite email.</p>
+
+      <p>You may need to book a face-to-face meeting with them instead.</p>
+
+      <h2 id="who">The service is telling me that I already have an NHS Care ID profile</h2>
+
+      <p> The team managing your application will be able to see that we've found an existing profile and should contact you with next steps.</p>
+
+      <p>Alternatively, you could contact them, their email address will be included in your invitation email. You may need to book a face-to-face meeting for them to check and update your existing profile.</p>
+
+      <h2 id="benefits">My application was unsuccessful</h2>
+
+      <p>Check your emails, we’ll let you know that your application has not been successful and why, we’ll tell you how to resolve this for your next application.</p>
+
+      <p>Contact your the team managing your application, their contact email address will be included in your invitation and rejection email. They will need to send you a new application link for you to try again.</p>
+
+    </div>
+
+  </div>
+{% endblock %}
