@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+ Check the photo of your passport
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v21/step-3/passport",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        Check the photo of your passport
+      </h1>
+
+      <p>Make sure:</p>
+
+      <ul>
+        <li>your photo is of the whole page</li>
+        <li>you can see all words, numbers and codes</li>
+        <li>there is no light shining directly onto the passport</li>
+        <li>the text is not blurred</li>
+      </ul>
+
+      <figure class="nhsuk-image">
+        <img class="nhsuk-image__img" src="/images/uk-passport.png" alt="photo of passport">
+      </figure>
+
+
+      <form action="/applicant/v21/step-3/id-front" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-5">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h2 class="nhsuk-fieldset__heading">
+                Do you want to use this photo?
+              </h2>
+            </legend>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="passport-yes-1" name="review-passport" type="radio" value="yes" {{ checked("review-passport", "yes") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="passport-yes-1">
+                  Yes, use this photo
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="passport-no-1" name="review-passport" type="radio" value="no" {{ checked("review-passport", "no") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="passport-no-1">
+                  No, upload a different photo
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+  
+
+          {{ button({
+            "text": "Submit"
+          }) }}
+          
+        </div>
+      </form>
+      
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Take a selfie
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v21/step-3/review-poa",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        Take a selfie
+      </h1>
+
+      <p>This will be used to match the ID documents you have provided.</p>
+
+      <p>Make sure you</p>
+
+      <ul>
+        <li>face forwards and look straight at the camera</li>
+        <li>do not have anything covering your face</li>
+        <li>do not have shadows on your face or behind you</li> 
+        <li>OTHER INSTRUCTIONS</li>
+      </ul>
+
+     
+
+      <a href="/applicant/v21/step-3/review-selfie" class="nhsuk-button">
+        Open camera
+      </a>
+      
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+ Check your selfie
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v21/step-3/selfie",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        Check your selfie
+      </h1>
+
+      <p>Make sure:</p>
+
+      <ul>
+        <li>face forwards and look straight at the camera</li>
+        <li>do not have anything covering your face</li>
+        <li>do not have shadows on your face or behind you</li> 
+        <li>OTHER INSTRUCTIONS</li>
+      </ul>
+
+      <figure class="nhsuk-image">
+        <img class="nhsuk-image__img" src="/images/biometric.png" alt="photo of passport">
+      </figure>
+
+
+      <form action="/applicant/v21/step-3/submitted" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-5">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h2 class="nhsuk-fieldset__heading">
+                Do you want to use this photo?
+              </h2>
+            </legend>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="selfie-yes-1" name="review-selfie" type="radio" value="yes" {{ checked("review-selfie", "yes") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="selfie-yes-1">
+                  Yes, use this photo
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="selfie-no-1" name="review-selfie" type="radio" value="no" {{ checked("review-selfie", "no") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="selfie-no-1">
+                  No, upload a different photo
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+  
+
+          {{ button({
+            "text": "Submit"
+          }) }}
+          
+        </div>
+      </form>
+      
+    </div>
+  </div>
+
+
+{% endblock %}

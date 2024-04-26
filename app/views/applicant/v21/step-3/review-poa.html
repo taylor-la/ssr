@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+ Check the photo of your bank statement
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/applicant/v21/step-3/poa",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        Check the photo of your bank statement
+      </h1>
+
+      <p>Make sure:</p>
+
+      <ul>
+        <li>your photo is of the whole page</li>
+        <li>your photo includes all 4 corners</li>
+        <li>you can see all words, numbers and codes</li> 
+        <li>the text is not blurred</li>
+        <li>SOME EXTRA STUFF ABOUT DATE, ADDRESS AND BRANDING BEING VISIBLE</li>
+      </ul>
+
+      <figure class="nhsuk-image">
+        <img class="nhsuk-image__img" src="/images/poa-2.png" alt="photo of passport">
+      </figure>
+
+
+      <form action="/applicant/v21/step-3/selfie" method="post" class="form">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-5">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h2 class="nhsuk-fieldset__heading">
+                Do you want to use this photo?
+              </h2>
+            </legend>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="poa-yes-1" name="review-poa" type="radio" value="yes" {{ checked("review-poa", "yes") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="poa-yes-1">
+                  Yes, use this photo
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="poa-no-1" name="review-poa" type="radio" value="no" {{ checked("review-poa", "no") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="poa-no-1">
+                  No, upload a different photo
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+  
+
+          {{ button({
+            "text": "Submit"
+          }) }}
+          
+        </div>
+      </form>
+      
+    </div>
+  </div>
+
+
+{% endblock %}
