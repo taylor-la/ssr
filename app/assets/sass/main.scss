@@ -270,6 +270,8 @@
 
 
 @media all and (min-width: 769px) {
+  #move-to-mobile {display:block;}
+  #stay-on-mobile {display:none;}
   .no-photo {display:block;}
   #take-photo-option {display:block;}
   .camera-link {display:none;}
@@ -328,6 +330,8 @@
 }
 
 @media all and (min-width:641px) and (max-width: 768px) {
+  #move-to-mobile {display:none;}
+  #stay-on-mobile {display:block;}
   .no-photo {display:none;}
   #take-photo-option {display:none;}
   .camera-link {display:block;}
@@ -390,6 +394,8 @@
 
 
 @media all and (max-width: 640px) {
+  #move-to-mobile {display:none;}
+  #stay-on-mobile {display:block;}
   .no-photo {display:none;}
   #take-photo-option {display:none;}
   .camera-link {display:block;}

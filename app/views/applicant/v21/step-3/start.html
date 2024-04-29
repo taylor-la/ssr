@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Placeholder
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+
+      <div id="move-to-mobile">
+
+        <h1 class="nhsuk-heading-xl">
+          Desktop content goes here
+        </h1>
+
+        <p>You will need your:</p>
+
+        <ul>
+          <li>passport</li>
+          <li>driving licence</li>
+          <li>bank statement</li>
+        </ul>
+
+        <h2>Scan the QR Code</h2>
+  
+        <ol>
+          <li>Open your mobile phone camera</li>
+          <li>Hold your device in front of the code and move it closer until the code is recognised</li>
+          <li>Open the link that appears</li>
+        </ol>
+
+          <figure class="nhsuk-image nhsuk-u-width-one-half ">
+            <img class="nhsuk-image__img" src="/images/qr-code-v21.svg" alt="QR code">
+          </figure>
+  
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Cannot scan QR code
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>Content goes here.</p>      
+          </div>
+        </details>
+
+      </div>
+
+
+      <div id="stay-on-mobile">
+
+        <h1 class="nhsuk-heading-xl">
+          Mobile content goes here
+        </h1>
+
+        <p>You will need your:</p>
+
+        <ul>
+          <li>passport</li>
+          <li>driving licence</li>
+          <li>bank statement</li>
+        </ul>
+
+        <a href="/applicant/v21/step-3/passport" class="nhsuk-button">
+          Continue
+        </a>
+
+      </div>
+  
+
+    </div>
+
+  </div>
+{% endblock %}
