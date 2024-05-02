@@ -22,10 +22,24 @@
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Photo ID selected
+            Photo IDs selected
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['passport'] }}{{ data['1-photo-id'] }}
+            passport, driving licence
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/applicant/v21/step-1/1-photo-id">
+              Change<span class="nhsuk-u-visually-hidden"> Photo ID document</span>
+            </a>
+          </dd>
+        </div> 
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Proof of address document selected
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            bank statement
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="/applicant/v21/step-1/1-photo-id">
@@ -48,8 +62,6 @@
         </div>
 
       </dl>
-
-      <p>REPLACE You will then be sent a link to download our secure mobile app to verify your identity.</p>
 
 
       <form action="/applicant/v21/step-2/spinner-details" method="post" class="form">
