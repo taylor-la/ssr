@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+ A link to has been sent to your mobile
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here --> 
+
+        <h1>
+          Prove your identity
+        </h1>
+
+        <p>At the stage of the application you will be asked to prove your identity.</p>
+  
+        <p>You will be asked to take photos of your ID documents, and take a photo of your face which should match the ID documents you've provided.</p>
+  
+        <a href="/applicant/v21/step-3/passport" class="nhsuk-button">
+          Continue
+        </a>
+  
+
+    </div>
+
+  </div>
+{% endblock %}
