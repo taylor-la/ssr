@@ -16,6 +16,15 @@
       <p class="nhsuk-u-font-weight-bold">Role changed to Registration Authority Manager, Aspire Limted OOH (B36648)</p>
     </div>
 
+    <div class="nhsuk-alert nhsuk-alert--info nhsuk-alert--icon" style="display:none;">
+      <svg class="nhsuk-icon nhsuk-icon__info nhsuk-alert__icon" fill="none" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+        <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+        C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+      </svg>
+      <h3 class="nhsuk-u-visually-hidden">Information:</h3>
+      <p class="nhsuk-u-font-weight-bold"><a class="nhsuk-link--no-visited-state" href="/inviter/dev-ready/settings">Go to settings</a> to set your contact email address and help for applicants</p>
+    </div>
+
     <h1>Apply for Care ID</h1>
 
 
@@ -1069,26 +1078,40 @@
 
     <div id="Closed" class="tabcontent">
       <h3 class="nhsuk-u-margin-bottom-0">Cancelled applications</h3>
-      <div style="float:right;">
-        <div class="nhsuk-form-group" >
-          <label class="nhsuk-label" for="select-1">
-            Sort by
-          </label>
-          <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1" >Applicant name</option>
-            <option value="2" selected>Newest</option>
-            <option value="3">Oldest</option>
-            <option value="4">Raised by</option>
-            <option value="5">ODS code</option>
-          </select>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-3 nhsuk-u-margin-top-4" style="padding: 6px 16px; font-weight: normal;" href="#">Mark as done</a> 
         </div>
-      </div>   
+        <div class="nhsuk-grid-column-one-third" >
+          <div style="float:right;">
+            <div class="nhsuk-form-group" >
+              <label class="nhsuk-label" for="select-1">
+                Sort by
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1" >Applicant name</option>
+                <option value="2" selected>Newest</option>
+                <option value="3">Oldest</option>
+                <option value="4">Raised by</option>
+                <option value="5">ODS code</option>
+              </select>
+            </div>
+          </div>   
+        </div>
+      </div>
+
       <table role="table" class="nhsuk-table-responsive">
         <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
           Cancelled list
         </caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
+            <th role="columnheader" class="" scope="col"> <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div></th>
             <th role="columnheader" class="" scope="col">Applicant name</th>
             <th role="columnheader" class="" scope="col">Cancelled on</th>
             <th role="columnheader" class="" scope="col">Raised by</th>
@@ -1098,6 +1121,14 @@
         </thead>
         <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
             <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
               <span class="nhsuk-table-responsive__heading">Full name </span>
               <a href="/inviter/dev-ready/applications/cancelled">James Stenberg</a> 
@@ -1121,6 +1152,14 @@
           </tr>
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Select item </span>
+              <div class="nhsuk-checkboxes__item nhsuk-checkboxes--small">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                </label>
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
               <span class="nhsuk-table-responsive__heading">Full name </span>
               <a href="/inviter/dev-ready/applications/cancelled">Laurel Taylor</a> 
             </td>
@@ -1143,6 +1182,16 @@
           </tr>
         </tbody>
       </table>
+      <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-top-6">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Marked as done (0)
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          No applications have been marked as done
+        </div>
+      </details>
     </div>
 
     <p class="nhsuk-u-margin-top-6">This is a new service - your <a href="">feedback</a> will help us improve it.</p>
