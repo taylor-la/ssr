@@ -1,16 +1,16 @@
 {% extends 'layout-email.html' %}
 
 {% block pageTitle %}
-  Reminder: you have been invited by your organisation to apply for an NHS Care ID
+  Your organisation requires you to apply for an NHS Care ID
 {% endblock %}
 
 {% block content %}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full"> 
-      <h1 class="nhsuk-heading-xs nhsuk-u-padding-top-5 "><strong>Subject:</strong> A reminder to apply for your NHS Care ID</h1>
+      <h1 class="nhsuk-heading-xs nhsuk-u-padding-top-5 "><strong>Subject:</strong> Your organisation requires you to apply for an NHS Care ID</h1>
       <p><strong>To:</strong> robyn.jones@nhs.net</p>
-      <p><strong>Date sent:</strong> Tuesday 28 November, 5:02pm</p>
+      <p><strong>Date sent:</strong> Tuesday 12 December, 5:02pm</p>
     </div>
   </div>
   
@@ -37,11 +37,19 @@
   
         <p>You are required to apply for an NHS Care ID by your organisation.</p>
 
-        <p>Your link to apply will expire in XX days on Friday 24 February 2024 5pm.</p>
-
         <p>If you do not complete the online application you may need to arrange an in-person meeting with your local support team.</p>
 
-        <p>Start application: <a href="/applicant/v21/expiry/invite-expired">https://apply-for-care-id.nhs.uk/invitee/accept?invitation=5b91f477-1046-4e4f-86653-53f6abjg1c5</a></p>
+        <h2 class="nhsuk-heading-m">Why do I need an NHS Care ID?</h2>
+
+        <p>An NHS Care ID will give you access to national systems, clinical data and patient information.</p>
+
+        <p>You need an NHS Care ID profile to get an authenticator, such as a <strong>smartcard</strong>.</p>
+
+        <h2>Get started</h2>
+
+        <p>Your link to apply will expire on <strong>Friday 15 December 2023 5pm.</strong></p>
+
+        <p>Start application: <a href="/applicant/v21/dup-check/spinner-start">https://apply-for-care-id.nhs.uk/invitee/accept?invitation=5b91f477-1046-4e4f-86653-53f6abjg1c5</a></p>
 
 
         <h2 class="nhsuk-u-margin-top-3">Help and support</h2>
